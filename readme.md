@@ -34,13 +34,13 @@
 
 
 #  🧑‍💻About Me:
-## I'm javascript  Full-stack developer from  Ethiopia 
-- I'm react based next.js remix  and svelte developer. 
-- I use React-native and ionic to build cross platform applications.
-- I use  ExpressJS  and NestJS  to work with backend functionality for an applications 
--  I’m working as a Software Engineer and contributing to frontend and backend for building web and mobile applications.
-- I have good understanding on relational (MYSQL) and non-relational (MONGODB) databases.
-- In my free time, I solve problems on leetcode and read tech articles on <a href="medium.com">meduim </a> and <a href="hashnode.com">hashnode </a>.
+## I'm a JavaScript Full-stack developer from Ethiopia
+- I specialize in React-based technologies like Next.js, Remix, and Svelte.
+- I use React Native and Ionic to build cross-platform applications.
+- I work with backend functionality using ExpressJS and NestJS.
+- I am a Software Engineer, contributing to both frontend and backend development for web and mobile applications.
+- I have a good understanding of relational (MySQL) and non-relational (MongoDB) databases.
+- In my free time, I solve problems on LeetCode and read tech articles on [Medium](https://medium.com) and [Hashnode](https://hashnode.com).
 
 - How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-onesamket-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/tewodros-birhanu-7497a2242/)
 
