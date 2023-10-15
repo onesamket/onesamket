@@ -33,8 +33,8 @@
 
 
 
-###  🧑‍💻About Me:
-I'm javascript  Full-stack developer from  Ethiopia 
+#  🧑‍💻About Me:
+## I'm javascript  Full-stack developer from  Ethiopia 
 - I'm react based next.js remix  and svelte developer. 
 - I use React-native and ionic to build cross platform applications.
 - I use  ExpressJS  and NestJS  to work with backend functionality for an applications 
