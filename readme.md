@@ -42,7 +42,7 @@
 - I have a good understanding of relational (MySQL) and non-relational (MongoDB) databases.
 - In my free time, I solve problems on LeetCode and read tech articles on [Medium](https://medium.com) and [Hashnode](https://hashnode.com).
 
-- How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-onesamket-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/tewodros-birhanu-7497a2242/)
+- How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-onesamket-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/onesamket/)
 
 ## Languages and Tools  I use :
 <div>
