@@ -14,8 +14,8 @@
   <a href="https://www.linkedin.com/in/onesamket/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
-  <a href="https://facebook.com/onesamket">
-    <img src="https://img.shields.io/badge/facebook-red?style=for-the-badge&logo=facebook&logoColor=white" alt="Youtube Badge"/>
+  <a href="https://www.facebook.com/profile.php?id=100082250475833&sk">
+    <img src="https://img.shields.io/badge/facebook-red?style=for-the-badge&logo=facebook&logoColor=white" alt="facebook Badge"/>
   </a>
   <a href="https://x.com/onesamket">
     <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
@@ -24,7 +24,7 @@
 
 
    <a href="https://instagram.com/1_onesamket">
-    <img src="https://img.shields.io/badge/instagram-blue?style=for-the-badge&logo=instagram&logoColor=white" alt="Twitter Badge"/>
+    <img src="https://img.shields.io/badge/instagram-blue?style=for-the-badge&logo=instagram&logoColor=white" alt="instagram Badge"/>
   </a>
 </div
 
