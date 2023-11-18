@@ -37,7 +37,7 @@
 ## I'm a JavaScript Full-stack developer from Ethiopia
 - I specialize in React-based technologies like Next.js, Remix, and Svelte.
 - I use React Native and Ionic to build cross-platform applications.
-- I work with backend functionality using ExpressJS and NestJS.
+- I work with backend functionality using ExpressJS.
 - I am a Software Engineer, contributing to both frontend and backend development for web and mobile applications.
 - I have a good understanding of relational (MySQL) and non-relational (MongoDB) databases.
 - In my free time, I solve problems on LeetCode and read tech articles on [Medium](https://medium.com) and [Hashnode](https://hashnode.com).
