@@ -5,9 +5,11 @@ export default {
     "./index.html",
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {},
   },
+
   daisyui: {
     themes: ["light", "dark", "nord"],
   },
