@@ -1,5 +1,6 @@
 import { ArrowUpRight, Github } from "iconoir-react"
 import { SAMPLE_PROJECTS } from "../assets/constant/projects"
+import React, { Suspense } from "react"
 
 const ShowCases = () => {
     return (
@@ -9,7 +10,11 @@ const ShowCases = () => {
                 {SAMPLE_PROJECTS.map(project => (
 
                     <div className="card  w-[22rem] md:w-96 bg-base-100 shadow-xl">
-                        <figure><img src={project.image} alt={project.title} className="w-full h-64" /></figure>
+                        <Suspense fallback={<span className="loading loading-ring loading-lg"></span>
+                        }>
+                            <figure><img src={project.image} alt={project.title} className="w-full h-64" /></figure>
+                        </Suspense>
+
                         <div className="card-body">
                             <h2 className="card-title">
                                 {project.title}

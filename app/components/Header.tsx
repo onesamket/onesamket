@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion';
 import { Github } from 'iconoir-react';
 import { logo } from '../assets/profile';
+import React from 'react';
 export default function Header() {
 
     const [state, setState] = useState(false)
@@ -75,8 +76,10 @@ export default function Header() {
                     </ul>
                 </div>
 
-                <div className="hidden md:inline-block">
-                    <a href="http://github.com/onesamket" target="_blank" rel="noopener noreferrer"> <Github className='cursor-pointer' /></a>
+                <div className="tooltip  tooltip-info tooltip-left" data-tip="View my github">
+                    <div className="hidden md:inline-block">
+                        <a href="http://github.com/onesamket" target="_blank" rel="noopener noreferrer"> <Github className='cursor-pointer' /></a>
+                    </div>
                 </div>
             </div>
         </nav>

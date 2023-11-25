@@ -1,14 +1,11 @@
-
-
 <div align="center">
  <h1>Hay There 👋
 <h2>  I'm Tewodros Birhanu </h2>
 </div>
 
 <div id="header" align="center">
-  <img src="./Images/images.png" width="100%"/>
+ <img width="100" height="100" src="https://img.icons8.com/external-flat-icons-inmotus-design/100/external-JS-web-technologies-flat-icons-inmotus-design-5.png" alt="external-JS-web-technologies-flat-icons-inmotus-design-5"/>
 </div>
-
 
 <div id="badges" align="center">
   <a href="https://www.linkedin.com/in/onesamket/">
@@ -21,22 +18,17 @@
     <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
   </a>
 
-
-
    <a href="https://instagram.com/1_onesamket">
     <img src="https://img.shields.io/badge/instagram-blue?style=for-the-badge&logo=instagram&logoColor=white" alt="instagram Badge"/>
   </a>
 </div
 
+# 🧑‍💻About Me:
 
-
-
-
-
-#  🧑‍💻About Me:
 ## I'm a JavaScript Full-stack developer from Ethiopia
+
 - I specialize in React-based technologies like Next.js, Remix and sometimes Astro and svelte stuff.
-- I use React Native  to build cross-platform applications.
+- I use React Native to build cross-platform applications.
 - I work with backend functionality using ExpressJS.
 - I am a Software Engineer, contributing to both frontend and backend development for web and mobile applications.
 - I have a good understanding of relational (MySQL) and non-relational (MongoDB) databases.
@@ -44,7 +36,8 @@
 
 - How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-onesamket-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/onesamket/)
 
-## Languages and Tools  I use :
+## Languages and Tools I use :
+
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/mongodb/mongodb-original-wordmark.svg" title="mongo db" alt="mongo db" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>&nbsp;
@@ -61,7 +54,6 @@
   <img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg" title="MySQL"  alt="MySQL" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/express/express-original.svg" title="Express" alt="Express" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="Git" **alt="Git" width="40" height="40"/>
- <img src="./Images/remix.jfif" width="40" height="40" alt="Remix.run">
+ <img src="./app/assets/icons/remix-logo-icon.png" width="40" height="40" alt="Remix.run">
 
 </div>"
-

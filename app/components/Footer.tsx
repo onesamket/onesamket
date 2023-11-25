@@ -1,0 +1,37 @@
+import { Github, Linkedin, Twitter } from "iconoir-react"
+import React from "react"
+
+const Footer = () => {
+    return (
+        <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
+            <nav className="flex flex-col md:flex-row">
+                <a href="#" className="link link-hover">Home </a>
+                <a href="#experience" className="link link-hover">Experience</a>
+                <a href="#showcase" className="link link-hover">Projects</a>
+                <a href="#about" className="link link-hover">About </a>
+                <a href="#contact" className="link link-hover">Contact </a>
+            </nav>
+            <nav className=" mx-auto">
+                <div className="grid grid-flow-col gap-4">
+                    <div className="tooltip" data-tip="Github">
+                        <a className="btn"><Github /></a>
+                    </div>
+                    <div className="tooltip" data-tip="Linkedin">
+                        <a className="btn"><Linkedin /></a>
+                    </div>
+                    <div className="tooltip" data-tip="Twitter">
+                        <a className="btn"><Twitter /></a>
+                    </div>
+                    <div className="tooltip" data-tip="Github">
+                        <a className="btn"><Github /></a>
+                    </div>
+                </div>
+            </nav>
+            <aside>
+                <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+            </aside>
+        </footer>
+    )
+}
+
+export default Footer
