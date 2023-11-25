@@ -12,7 +12,7 @@ export default function Header() {
         { title: "Experience", path: "#experience" },
         { title: "Showcases", path: "#showcase" },
         { title: "About", path: "#about" },
-        { title: "Blogs", path: "#blogs" },
+        { title: "Blogs", path: "https://onesamket-js.hashnode.dev" },
         { title: "Contact", path: "#contact" }
     ]
 

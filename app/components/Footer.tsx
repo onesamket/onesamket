@@ -8,6 +8,7 @@ const Footer = () => {
                 <a href="#" className="link link-hover">Home </a>
                 <a href="#experience" className="link link-hover">Experience</a>
                 <a href="#showcase" className="link link-hover">Projects</a>
+                <a href="https://onesamket-js.hashnode.dev" className="link link-hover">Blogs</a>
                 <a href="#about" className="link link-hover">About </a>
                 <a href="#contact" className="link link-hover">Contact </a>
             </nav>
