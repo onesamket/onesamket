@@ -1,6 +1,7 @@
 import { TypeAnimation } from 'react-type-animation'
 import { profile } from '../assets/profile'
 import { resume } from '../assets/doc'
+import React from 'react'
 const Hero = () => {
     return (
         <div id='' className="hero min-h-screen bg-base-200">
@@ -41,7 +42,7 @@ const Hero = () => {
 
                         repeat={Infinity}
                     />
-                    <p className="py-6">React based Javascript Full-stack engineer and Application developer with over three years of experience  </p>
+                    <p className="py-6">React based Javascript Full-stack engineer and Application developer with over three years of experience. </p>
                     <a href={resume} target='_blank' download={true} className="btn btn-primary">Download CV</a>
                 </div>
             </div>

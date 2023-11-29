@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from "iconoir-react"
+import { Github, Instagram, Linkedin, Twitter } from "iconoir-react"
 import React from "react"
 
 const Footer = () => {
@@ -15,16 +15,16 @@ const Footer = () => {
             <nav className=" mx-auto">
                 <div className="grid grid-flow-col gap-4">
                     <div className="tooltip" data-tip="Github">
-                        <a className="btn"><Github /></a>
+                        <a href="https://github.com/onesamket" className="btn"><Github /></a>
                     </div>
                     <div className="tooltip" data-tip="Linkedin">
-                        <a className="btn"><Linkedin /></a>
+                        <a href="https://linkedin.com/in/onesamket/" className="btn"><Linkedin /></a>
                     </div>
                     <div className="tooltip" data-tip="Twitter">
-                        <a className="btn"><Twitter /></a>
+                        <a href="https://x.com/onesmaket" className="btn"><Twitter /></a>
                     </div>
                     <div className="tooltip" data-tip="Github">
-                        <a className="btn"><Github /></a>
+                        <a href="https://instagram.com/1_onesamket" className="btn"><Instagram /></a>
                     </div>
                 </div>
             </nav>

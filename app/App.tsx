@@ -15,9 +15,7 @@ function App() {
       <Hero />
       <Experience />
       <ShowCases />
-
       <About />
-
       <Contact />
       <Toggle />
       <Footer />

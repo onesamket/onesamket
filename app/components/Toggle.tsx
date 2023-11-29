@@ -6,7 +6,6 @@ const Toggle = () => {
 
         <div className="fixed bottom-3 right-3">
             <label className="swap swap-rotate">
-
                 <input type="checkbox" className="theme-controller" value="nord" />
                 <HalfMoon className="swap-on  w-6 h-6" />
                 <SunLight className="swap-off  w-6 h-6" />
@@ -15,4 +14,4 @@ const Toggle = () => {
     )
 }
 
-export default Toggle
+export default Toggle;
