@@ -14,6 +14,7 @@ import web from "./icons8-web-48.png";
 import accessability from "./icons8-accessibility-48.png";
 import deployment from "./icons8-deployment-64.png";
 import svelte from "./icons8-svelte-48.png";
+import authentication from "./icons8-authentication-48.png";
 export {
   accessability,
   deployment,
@@ -23,6 +24,7 @@ export {
   nextjs,
   js,
   astro,
+  authentication,
   ts,
   prisma,
   tailwind,

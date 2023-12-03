@@ -5,4 +5,5 @@ import student from "./student.jpg";
 import rest from "./rest.jpg";
 import research from "./research.jpg";
 import { logo } from "../profile";
-export { bookmark, chat, note, student, research, rest, logo };
+import dBooks from "./dbooks.jpg";
+export { bookmark, chat, note, student, research, rest, dBooks, logo };

@@ -6,6 +6,7 @@ import {
   research,
   chat,
   note,
+  dBooks,
 } from "../unsplash";
 export const SAMPLE_PROJECTS = [
   {
@@ -71,5 +72,14 @@ export const SAMPLE_PROJECTS = [
     projectURL: "https://github.com/onesamket/chat-app-nextjs",
     websiteURL: "https://sample-chat-app.vercel.app",
     language: ["Next.js", "Socket.io", "Tailwind CSS"],
+  },
+  {
+    image: dBooks,
+    title: "dBooks.org Clone - Online Bookstore",
+    description:
+      "A dBooks.org clone built with Remix, DaisyUI, Tailwind CSS, and Axios. This online bookstore allows users to explore, search, and purchase books seamlessly. The project showcases the power of Remix for server-rendered React applications, the rich UI components from DaisyUI, and the styling capabilities of Tailwind CSS.",
+    projectURL: "https://github.com/onesamket/dbooks-clone",
+    websiteURL: "https://sample-dbooks-clone.vercel.app",
+    language: ["Remix", "DaisyUI", "Tailwind CSS", "Axios"],
   },
 ];
