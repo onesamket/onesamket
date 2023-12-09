@@ -9,17 +9,29 @@ const ShowCases = () => {
             <div className="px-12 grid  gap-6 place-content-center  md:grid-cols-3">
                 {SAMPLE_PROJECTS.map(project => (
 
-                    <div className="card  w-[22rem] md:w-96 bg-base-100 shadow-xl">
+                    <div className="card  w-[22rem]  h-fit md:w-96 bg-base-100 shadow-md border border-gray-600">
                         <Suspense fallback={<span className="loading loading-ring loading-lg"></span>
                         }>
                             <figure><img src={project.image} alt={project.title} className="w-full h-64" /></figure>
                         </Suspense>
 
                         <div className="card-body">
-                            <h2 className="card-title">
+                            {/* <h2 className="card-title">
                                 {project.title}
-                            </h2>
-                            <p>{project.description}</p>
+                            </h2> */}
+
+                            <div className="collapse collapse-arrow bg-base-200">
+                                <input type="checkbox" />
+                                <h1 className="collapse-title text-xl font-medium">
+                                    {project.title}
+                                </h1>
+                                <div className="collapse-content">
+                                    <p>{project.description}</p>
+                                </div>
+                            </div>
+
+
+                            {/* <p>{project.description}</p> */}
                             <div className="card-actions flex justify-between items-center">
                                 <div className="flex flex-wrap">
                                     {project.language.map(language => (

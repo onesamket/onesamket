@@ -17,7 +17,7 @@ const TimeLine = () => {
         { label: "State Management", icon: apollo, dataTip: "apollo server" },
         { label: "Node Express Developer", icon: nodejs, dataTip: "NodeJs" },
         { label: "Prisma with various Database", icon: prisma, dataTip: "Prisma" },
-        { label: "Authentication", icon: authentication, dataTip: "security" },
+        { label: "Security", icon: authentication, dataTip: "security" },
         { label: "Version Control", icon: code, dataTip: "Git & github" },
         { label: "Collaboration", icon: collaboration, dataTip: "Github workflow" },
         { label: "Deployment", icon: deployment, dataTip: "Deployment" },

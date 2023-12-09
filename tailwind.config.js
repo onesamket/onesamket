@@ -13,7 +13,7 @@ export default {
   },
 
   daisyui: {
-    themes: ["light", "dark", "nord"],
+    themes: ["nord", "corporate", "lofi", "black"],
   },
   plugins: [
     daiayui,
