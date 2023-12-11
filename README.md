@@ -25,18 +25,21 @@
 
 # 🧑‍💻About Me:
 
-## I'm a JavaScript Full-stack developer from Ethiopia
+## I'm a JavaScript Full-stack developer
 
-- I specialize in React-based technologies like Next.js, Remix and sometimes Astro and svelte stuff.
-- I use React Native to build cross-platform applications.
+- I specialize in javascript technologies like Next.js, Remix, and sometimes Astro and Svelte.
+- I use React Native and Ionic to build cross-platform applications.
+- I'm comfortable with any UI framework with time wast.
 - I work with backend functionality using ExpressJS.
 - I am a Software Engineer, contributing to both frontend and backend development for web and mobile applications.
-- I have a good understanding of relational (MySQL) and non-relational (MongoDB) databases.
-- In my free time, I solve problems on LeetCode and read tech articles on [Medium](https://medium.com) and [Hashnode](https://hashnode.com).
+- I understand relational (MySQL) and non-relational (MongoDB) databases well.
+- I love Prisma  for ORM and sometimes I use mongoose.
+- Team collaboration.
+- In my free time, I solve problems on LeetCode, listen to  podcasts,  watch conf,  and read tech articles on [Medium](https://medium.com) and [Hashnode](https://hashnode.com).
 
 - How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-onesamket-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/onesamket/)
 
-## Languages and Tools I use :
+## Languages and Tools I use:
 
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/mongodb/mongodb-original-wordmark.svg" title="mongo db" alt="mongo db" width="40" height="40"/>&nbsp;
