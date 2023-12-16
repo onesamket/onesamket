@@ -33,9 +33,9 @@
 - I work with backend functionality using ExpressJS.
 - I am a Software Engineer, contributing to both frontend and backend development for web and mobile applications.
 - I understand relational (MySQL) and non-relational (MongoDB) databases well.
-- I love Prisma  for ORM and sometimes I use mongoose.
+- I love Prisma for ORM and sometimes I use mongoose.
 - Team collaboration.
-- In my free time, I solve problems on LeetCode, listen to  podcasts,  watch conf,  and read tech articles on [Medium](https://medium.com) and [Hashnode](https://hashnode.com).
+- In my free time, I solve problems on LeetCode, listen to podcasts, watch conf, and read tech articles on [Medium](https://medium.com) and [Hashnode](https://hashnode.com).
 
 - How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-onesamket-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/onesamket/)
 
@@ -58,5 +58,11 @@
   <img src="https://github.com/devicons/devicon/blob/master/icons/express/express-original.svg" title="Express" alt="Express" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="Git" **alt="Git" width="40" height="40"/>
  <img src="./app/assets/icons/remix-logo-icon.png" width="40" height="40" alt="Remix.run">
+ <img src="./app/assets/icons/icons8-ionic-48.png"  width="40" height="40"   alt="Ionic">
+ <img src="./app/assets/icons/icons8-nextjs-48.png"  width="40" height="40"   alt="Next.js">
+ <img src="./app/assets/icons/icons8-prisma-orm-48.png"  width="40" height="40"   alt="Prisma">
+ <img src="./app/assets/icons/icons8-astro-js-64.png"  width="40" height="40"   alt="Astro">
+ <img src="./app/assets/icons/icons8-apollo-48.png"  width="40" height="40"   alt="Apollo">
+ <img src="./app/assets/icons/icons8-svelte-48.png"  width="40" height="40"   alt="svelte">
 
 </div>"
