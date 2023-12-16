@@ -17,7 +17,7 @@ export default function Header() {
     ]
 
     return (
-        <nav className=" w-full shadow md:sticky px-5 md:px-10">
+        <nav className=" w-full shadow md:sticky px-1 md:px-10">
             <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                 <div className="flex items-center justify-between py-3 md:py-5 md:block">
                     <a href="/">
