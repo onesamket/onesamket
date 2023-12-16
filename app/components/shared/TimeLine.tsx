@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { accessability, apollo, astro, authentication, code, collabraion as collaboration, deployment, js, nextjs, nodejs, prisma, react, remix, svelte, tailwind, ts, web } from "../assets/icons";
+import { accessability, apollo, astro, authentication, code, collabraion as collaboration, deployment, ionic, js, nextjs, nodejs, prisma, react, remix, svelte, tailwind, ts, web } from "../../assets/icons";
 
 const TimeLine = () => {
     const items = [
@@ -10,15 +10,16 @@ const TimeLine = () => {
         { label: "Modern Javascript", icon: js, dataTip: "Javascript" },
         { label: "Typescript", icon: ts, dataTip: "Typescript" },
         { label: "React & React-native", icon: react, dataTip: "React" },
+        { label: "Ionic Framework", icon: ionic, dataTip: "Ionic" },
         { label: "AstroJs framework", icon: astro, dataTip: "Astro" },
         { label: "React-router & Remix", icon: remix, dataTip: "Remix" },
         { label: "NextJs App Router", icon: nextjs, dataTip: "NextJS" },
         { label: "Svelte Framework", icon: svelte, dataTip: "Svelte" },
-        { label: "State Management", icon: apollo, dataTip: "apollo server" },
+        { label: "Redux,TanStack,Apollo client ", icon: apollo, dataTip: "apollo" },
         { label: "Node Express Developer", icon: nodejs, dataTip: "NodeJs" },
-        { label: "Prisma with various Database", icon: prisma, dataTip: "Prisma" },
+        { label: "Prisma Mongoose Sequelize", icon: prisma, dataTip: "Prisma" },
         { label: "Security", icon: authentication, dataTip: "security" },
-        { label: "Version Control", icon: code, dataTip: "Git & github" },
+        { label: "Version Control", icon: code, dataTip: "Git" },
         { label: "Collaboration", icon: collaboration, dataTip: "Github workflow" },
         { label: "Deployment", icon: deployment, dataTip: "Deployment" },
     ];

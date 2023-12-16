@@ -1,5 +1,5 @@
 import React from 'react'
-import { SAMPLE_PROJECTS } from '../assets/constant/projects'
+import { SAMPLE_PROJECTS } from '../../assets/constant/projects'
 import { ArrowUpRight, Github } from 'iconoir-react'
 
 const Card = () => {

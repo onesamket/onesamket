@@ -1,12 +1,13 @@
 import React from "react"
-import Experience from "./components/Experience"
-import Header from "./components/Header"
+import Footer from "./components/shared/Footer"
+import Header from "./components/shared/Header"
+import Toggle from "./components/shared/Toggle"
 import Hero from "./components/Hero"
-import ShowCases from "./components/ShowCases"
-import Toggle from "./components/Toggle"
-import Footer from "./components/Footer"
+import Experience from './components/Experience';
+import Contact from './components/Contact';
 import About from './components/About';
-import Contact from "./components/Contact"
+import ShowCases from './components/ShowCases';
+
 function App() {
 
   return (

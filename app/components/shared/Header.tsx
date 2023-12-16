@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion';
 import { Github } from 'iconoir-react';
-import { logo } from '../assets/profile';
 import React from 'react';
+import { logo } from '../../assets/profile';
 export default function Header() {
 
     const [state, setState] = useState(false)
@@ -17,7 +17,7 @@ export default function Header() {
     ]
 
     return (
-        <nav className=" w-full shadow md:static">
+        <nav className=" w-full shadow md:sticky px-5 md:px-10">
             <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                 <div className="flex items-center justify-between py-3 md:py-5 md:block">
                     <a href="/">
@@ -25,12 +25,12 @@ export default function Header() {
                             src={logo}
 
                             alt="Profile picture"
-                            className='w-14 h-14 rounded-full'
+                            className='w-12 h-12 rounded-full'
                         />
                     </a>
                     <div className="md:hidden">
                         <button className="text-gray-400 outline-none p-2 rounded-md transition-all duration-200 delay-100"
-                            onClick={() => setState(!state)}
+                            onClick={() => setState(prev => !prev)}
                         >
                             {
                                 state ? (

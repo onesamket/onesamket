@@ -1,5 +1,5 @@
 import React from "react"
-import TimeLine from "./TimeLine"
+import TimeLine from "./shared/TimeLine"
 const Experience = () => {
     return (
         <div id="experience" className="my-5 py-5">

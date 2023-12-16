@@ -1,22 +1,22 @@
 /** @type {import('tailwindcss').Config} */
-import daiayui from 'daisyui';
-import preline from 'preline/plugin';
+import ui from 'daisyui';
 export default {
   content: [
     "./index.html",
     "./app/**/*.{js,ts,jsx,tsx}",
-    './node_modules/preline/preline.js',
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    screens: {
+      'sm': '576px',
+      'md': '960px',
+      'lg': '1440px',
+    },
   },
-
   daisyui: {
     themes: ["nord", "corporate", "lofi", "black"],
   },
   plugins: [
-    daiayui,
-    preline
+    ui,
   ],
 }
