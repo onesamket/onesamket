@@ -65,4 +65,4 @@
  <img src="./app/assets/icons/icons8-apollo-48.png"  width="40" height="40"   alt="Apollo">
  <img src="./app/assets/icons/icons8-svelte-48.png"  width="40" height="40"   alt="svelte">
 
-</div>"
+</div>
