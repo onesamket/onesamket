@@ -17,7 +17,7 @@ export default function Header() {
     ]
 
     return (
-        <nav className=" w-full shadow md:sticky px-1 md:px-10">
+        <nav className=" w-full shadow  px-1 md:px-10">
             <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                 <div className="flex items-center justify-between py-3 md:py-5 md:block">
                     <a href="/">
@@ -47,29 +47,16 @@ export default function Header() {
                     </div>
                 </div>
 
-                <div className={`flex-1 justify-self-center ml-4  pb-3 mt-8 md:block md:pb-0 md:mt-0 ${state ? 'block' : 'hidden'}`}>
+                <div className={` md:block ${state ? 'block' : 'hidden'}`}>
                     <ul className="justify-center items-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                         {
                             navigation.map((item, idx) => {
                                 return (
-                                    <motion.li key={idx} className=" hover:text-indigo-600"
-                                        initial={{
-                                            opacity: 0,
-                                            // x: -100
-                                        }}
-                                        whileInView={{
-                                            opacity: 1,
-                                            // x: 0
-                                        }}
-                                        transition={{
-                                            delay: idx / 30 * 10,
-                                            duration: 0.4
-                                        }}
-                                    >
-                                        <a href={item.path}>
+                                    <li key={idx} className="hover:text-indigo-600">
+                                        <a className="text-gray-500" href={item.path}>
                                             {item.title}
                                         </a>
-                                    </motion.li>
+                                    </li>
                                 )
                             })
                         }
@@ -107,7 +94,7 @@ export default function Header() {
                 </div>
 
                 <div className="tooltip  tooltip-info tooltip-left" data-tip="View my github">
-                    <div className="hidden md:inline-block">
+                    <div className="hidden md:block">
                         <a href="http://github.com/onesamket" target="_blank" rel="noopener noreferrer"> <Github className='cursor-pointer' /></a>
                     </div>
                 </div>
