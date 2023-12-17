@@ -11,7 +11,7 @@ import ShowCases from './components/ShowCases';
 function App() {
 
   return (
-    <>
+    <main>
       <Header />
       <Hero />
       <Experience />
@@ -20,7 +20,7 @@ function App() {
       <Contact />
       <Toggle />
       <Footer />
-    </>
+    </main>
   )
 }
 
