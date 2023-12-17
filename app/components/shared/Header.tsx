@@ -5,7 +5,7 @@ import React from 'react';
 import { logo } from '../../assets/profile';
 export default function Header() {
 
-    const [state, setState] = useState(false)
+    const [state, setState] = useState(true)
 
     const navigation = [
         { title: "Home", path: "#" },
