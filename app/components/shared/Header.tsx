@@ -52,24 +52,11 @@ export default function Header() {
                         {
                             navigation.map((item, idx) => {
                                 return (
-                                    <motion.li key={idx} className=" hover:text-indigo-600"
-                                        initial={{
-                                            opacity: 0,
-                                            // x: -100
-                                        }}
-                                        whileInView={{
-                                            opacity: 1,
-                                            // x: 0
-                                        }}
-                                        transition={{
-                                            delay: idx / 30 * 10,
-                                            duration: 0.4
-                                        }}
-                                    >
-                                        <a href={item.path}>
+                                    <li key={idx} className="hover:text-indigo-600">
+                                        <a className="text-gray-500" href={item.path}>
                                             {item.title}
                                         </a>
-                                    </motion.li>
+                                    </li>
                                 )
                             })
                         }
