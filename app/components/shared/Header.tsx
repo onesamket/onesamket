@@ -74,6 +74,36 @@ export default function Header() {
                             })
                         }
                     </ul>
+
+                    {/* for mobile screen  */}
+                    <div>
+                        <ul className="justify-center items-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                            {
+                                navigation.map((item, idx) => {
+                                    return (
+                                        <motion.li key={idx} className=" hover:text-indigo-600"
+                                            initial={{
+                                                opacity: 0,
+                                                // x: -100
+                                            }}
+                                            whileInView={{
+                                                opacity: 1,
+                                                // x: 0
+                                            }}
+                                            transition={{
+                                                delay: idx / 30 * 10,
+                                                duration: 0.4
+                                            }}
+                                        >
+                                            <a href={item.path}>
+                                                {item.title}
+                                            </a>
+                                        </motion.li>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </div>
                 </div>
 
                 <div className="tooltip  tooltip-info tooltip-left" data-tip="View my github">
