@@ -18,10 +18,11 @@
 - 🌍  I'm based in Ethiopia
 - 🖥️  See my portfolio at [onesamket.dev](http://onesamket.vercel.app)
 - ✉️  You can contact me at [onesamket@gmail.com](mailto:onesamket@gmail.com)
-- 🚀  I'm currently working on [Instagram clone using react-native](http://instagram.com)
-- 🧠  I'm learning Testing Javascript, Deno, TensorFlow.js & GO
+- 🚀  I'm currently working on  ➖ projects
+- 🧠  I'm learning Testing Javascript, Deno, TensorFlow.js & bun
+- ❤️ I love Remix, Typescript, NestJS, NextJS, TailwindCss, Prisma, and also  🎼Music🎧➕☕
 - 🤝  I'm open to collaborating on Very cool projects.
-- ⚡  I have not employed Hire Me?
+- ❔ I'm available for Work to Hire Me.
 
 <div align="center">
 <a href="https://www.x.com/onesamket" target="_blank" rel="noreferrer"><img
