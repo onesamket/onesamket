@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { accessability, apollo, astro, authentication, code, collabraion as collaboration, deployment, ionic, js, nextjs, nodejs, prisma, react, remix, svelte, tailwind, ts, web } from "../../assets/icons";
+import { accessability, apollo, astro, authentication, code, collabraion as collaboration, deployment, ionic, js, nestjs, nextjs, nodejs, prisma, react, remix, svelte, tailwind, ts, web } from "../../assets/icons";
 
 const TimeLine = () => {
     const items = [
@@ -17,6 +17,7 @@ const TimeLine = () => {
         { label: "Svelte Framework", icon: svelte, dataTip: "Svelte" },
         { label: "State management  ", icon: apollo, dataTip: "apollo" },
         { label: "Node Express Developer", icon: nodejs, dataTip: "NodeJs" },
+        { label: "NestJs framework", icon: nestjs, dataTip: "nestjs" },
         { label: "Prisma & Mongoose", icon: prisma, dataTip: "Prisma" },
         { label: "Security", icon: authentication, dataTip: "security" },
         { label: "Version Control", icon: code, dataTip: "Git" },

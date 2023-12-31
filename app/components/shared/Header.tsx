@@ -52,7 +52,7 @@ export default function Header() {
                             navigation.map((item, idx) => {
                                 return (
                                     <li key={idx} className="hover:text-indigo-600">
-                                        <a className="dark:text-gray-300 text-gray-600" href={item.path}>
+                                        <a className="dark:text-gray-500 text-gray-600" href={item.path}>
                                             {item.title}
                                         </a>
                                     </li>

@@ -16,7 +16,7 @@ import deployment from "./icons8-deployment-64.png";
 import svelte from "./icons8-svelte-48.png";
 import authentication from "./icons8-authentication-48.png";
 import ionic from "./icons8-ionic-48.png";
-import star from "./star.png";
+import nestjs from "./icons8-nestjs-96.png";
 export {
   accessability,
   deployment,
@@ -37,4 +37,5 @@ export {
   nodejs,
   remix,
   svelte,
+  nestjs,
 };

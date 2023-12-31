@@ -5,10 +5,10 @@ export default {
     "./index.html",
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class',
+  darkMode: 'media',
 
   daisyui: {
-    themes: ["nord", "corporate", "lofi", "black", "night"],
+    themes: ["night", "nord", "corporate", "lofi", "black",],
   },
   plugins: [
     ui,

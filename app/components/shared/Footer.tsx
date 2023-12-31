@@ -23,13 +23,15 @@ const Footer = () => {
                     <div className="tooltip" data-tip="Twitter">
                         <a href="https://x.com/onesmaket" className="btn"><Twitter /></a>
                     </div>
-                    <div className="tooltip" data-tip="Github">
+                    {/* <div className="tooltip" data-tip="Github">
                         <a href="https://instagram.com/1_onesamket" className="btn"><Instagram /></a>
-                    </div>
+                    </div> */}
                 </div>
             </nav>
-            <aside>
-                <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+            <aside className="flex space-x-1">
+                <p>Deployed on Vercel</p>
+                <a href="vercel.com"> <img src="logo-vercel.svg" className="w-5 h-5 " /></a>
+                <p> {new Date().getFullYear()} by Teddy</p>
             </aside>
         </footer>
     )

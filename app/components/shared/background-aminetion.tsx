@@ -176,7 +176,7 @@ const Background = () => {
                     },
                     particles: {
                         shape: {
-                            type: "star",
+                            type: "bool",
                         },
                         size: {
                             value: 40,
