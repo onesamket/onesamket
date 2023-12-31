@@ -22,7 +22,7 @@
 - 🧠  I'm learning Testing Javascript, Deno, TensorFlow.js & bun
 - ❤️ I love Remix, Typescript, NestJS, NextJS, TailwindCss, Prisma, and also  🎼Music🎧➕☕
 - 🤝  I'm open to collaborating on Very cool projects.
-- ❔ I'm available for Work to Hire Me.
+- ❔ I'm available for Work Hire Me.
 
 <div align="center">
 <a href="https://www.x.com/onesamket" target="_blank" rel="noreferrer"><img
