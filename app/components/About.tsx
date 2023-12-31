@@ -3,7 +3,7 @@ import React from "react"
 const About = () => {
     return (
         <div className='w-[70vw] md:w-[50vw] flex flex-col mx-auto space-y-1 items-center  justify-center'>
-            <section id='about' className='my-10 px-5 py-20  space-y-1'
+            <section id='about' className='px-5 py-20  space-y-1'
             >
                 <h1 className='text-4xl italic self-start font-bold flex items-center justify-center'>About Me</h1>
                 <blockquote className="relative flex flex-col items-center">
@@ -12,7 +12,7 @@ const About = () => {
                     </svg>
 
                     <div className="relative z-10">
-                        <p className=' p-3  mx-auto first-letter:text-3xl'>Hello, I&apos;m Tewodros Birhanu, a passionate and experienced Fullstack JavaScript Developer. With a love for coding and a creative approach to problem-solving, Currently I'm student at Haramaya University. I specialize in crafting elegant, user-friendly, and high-performance web applications that not only look great but also rank well in search engines.</p>
+                        <p className=' p-3 italic  mx-auto first-letter:text-3xl'>Hello, I&apos;m Tewodros Birhanu, a passionate and experienced Fullstack JavaScript Developer. With a love for coding and a creative approach to problem-solving, Currently I'm student at Haramaya University. I specialize in crafting elegant, user-friendly, and high-performance web applications that not only look great but also rank well in search engines.</p>
 
                     </div>
 

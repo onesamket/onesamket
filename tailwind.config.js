@@ -8,7 +8,7 @@ export default {
   darkMode: 'class',
 
   daisyui: {
-    themes: ["nord", "corporate", "lofi", "black"],
+    themes: ["nord", "corporate", "lofi", "black", "night"],
   },
   plugins: [
     ui,

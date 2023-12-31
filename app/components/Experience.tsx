@@ -2,8 +2,8 @@ import React from "react"
 import TimeLine from "./shared/TimeLine"
 const Experience = () => {
     return (
-        <div id="experience" className="my-5 py-5">
-            <h3 className="flex items-center justify-center text-3xl">Experience </h3>
+        <div id="skills" className=" py-5 bg-base-300">
+            <h3 className="flex items-center justify-center text-3xl">Skills </h3>
             <div>
                 <TimeLine />
             </div>

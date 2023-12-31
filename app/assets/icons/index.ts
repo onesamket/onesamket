@@ -16,6 +16,7 @@ import deployment from "./icons8-deployment-64.png";
 import svelte from "./icons8-svelte-48.png";
 import authentication from "./icons8-authentication-48.png";
 import ionic from "./icons8-ionic-48.png";
+import star from "./star.png";
 export {
   accessability,
   deployment,
@@ -25,6 +26,7 @@ export {
   react,
   nextjs,
   js,
+  star,
   astro,
   authentication,
   ts,

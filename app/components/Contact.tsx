@@ -1,7 +1,7 @@
 import React from "react";
 const Contact = () => {
     return (
-        <main id="contact" className="pb-7 px-6 mx-auto flex flex-col items-center justify-center gap-7">
+        <main id="contact" className="pb-7 px-6 bg-base-300 mx-auto flex flex-col items-center justify-center gap-7">
 
             <p className="text-3xl font-medium">
                 for business contact or Say hello?

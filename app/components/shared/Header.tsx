@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion';
 import { Github } from 'iconoir-react';
 import React from 'react';
 import { logo } from '../../assets/profile';
@@ -9,27 +8,27 @@ export default function Header() {
 
     const navigation = [
         { title: "Home", path: "#" },
-        { title: "Experience", path: "#experience" },
+        { title: "Skills", path: "#skills" },
         { title: "Showcases", path: "#showcase" },
-        { title: "About", path: "#about" },
         { title: "Blogs", path: "https://onesamket-js.hashnode.dev" },
+        { title: "About", path: "#about" },
         { title: "Contact", path: "#contact" }
     ]
 
     return (
-        <nav className=" w-full shadow  md:static md:px-10">
-            <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
+        <nav className=" w-full shadow sticky top-0 z-50 backdrop-filter backdrop-blur-lg bg-opacity-30   bg-base-200 sm:bg-inherit  md:px-10">
+            <div className="items-center -z-50 px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                 <div className="flex items-center justify-between py-3 md:py-5 md:block">
                     <a href="/">
                         <img
                             src={logo}
 
                             alt="Profile picture"
-                            className='w-12 h-12 rounded-full'
+                            className=' w-12 h-12 rounded-full'
                         />
                     </a>
                     <div className="md:hidden">
-                        <button className="text-gray-400 outline-none p-2 rounded-md transition-all duration-200 delay-100"
+                        <button className="text-gray-500 outline-none p-2 rounded-md transition-all duration-200 delay-100"
                             onClick={() => setState(prev => !prev)}
                         >
                             {
@@ -53,7 +52,7 @@ export default function Header() {
                             navigation.map((item, idx) => {
                                 return (
                                     <li key={idx} className="hover:text-indigo-600">
-                                        <a className="text-gray-500" href={item.path}>
+                                        <a className="dark:text-gray-300 text-gray-600" href={item.path}>
                                             {item.title}
                                         </a>
                                     </li>
@@ -63,10 +62,8 @@ export default function Header() {
                     </ul>
 
                 </div>
-                <div className="tooltip  tooltip-info tooltip-left" data-tip="View my github">
-                    <div className="hidden md:block">
-                        <a href="http://github.com/onesamket" target="_blank" rel="noopener noreferrer"> <Github className='cursor-pointer' /></a>
-                    </div>
+                <div className="hidden md:block">
+                    <a href="http://github.com/onesamket" target="_blank" rel="noopener noreferrer"> <Github className='cursor-pointer text-gray-400' /></a>
                 </div>
             </div>
         </nav >

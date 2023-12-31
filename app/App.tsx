@@ -16,7 +16,9 @@ function App() {
       <Hero />
       <Experience />
       <ShowCases />
-      <About />
+      <div className="bg-base-300 ">
+        <About />
+      </div>
       <Contact />
       <Toggle />
       <Footer />

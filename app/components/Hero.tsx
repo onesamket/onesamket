@@ -2,14 +2,17 @@ import { TypeAnimation } from 'react-type-animation'
 import { profile } from '../assets/profile'
 import { resume } from '../assets/doc'
 import React from 'react'
+import Background from './shared/background-aminetion'
+import { GoogleDocs } from 'iconoir-react'
 const Hero = () => {
     return (
-        <div id='' className="hero min-h-screen bg-base-200">
+        <div id='' className="hero min-h-screen">
+            <Background />
             <div className="hero-content text-center">
                 <div className="max-w-md">
                     <img src={profile} alt="profile" className='h-56 w-56 mx-auto rounded-full ' />
-                    <h1 className="text-3xl font-bold">Hello there 👋</h1>
-                    <h3>I'm Tewodros </h3>
+                    <h1 className="text-3xl md:text-4xl py-2 font-bold">Hi 👋 I'm Tewodros </h1>
+                    <h3></h3>
                     <TypeAnimation
                         sequence={[
                             "I'm  Tewodros  Birhanu",
@@ -42,8 +45,8 @@ const Hero = () => {
 
                         repeat={Infinity}
                     />
-                    <p className="py-6">React based Javascript Full-stack engineer and Application developer with over three years of experience. </p>
-                    <a href={resume} target='_blank' download={true} className="btn btn-primary">Download CV</a>
+                    <p className="py-6">Passionate Javascript Full-stack engineer and application developer with over three years of experience. </p>
+                    <a href={resume} target='_blank' download={true} className="btn btn-primary"><GoogleDocs /> Download CV</a>
                 </div>
             </div>
         </div>
