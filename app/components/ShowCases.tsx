@@ -5,11 +5,12 @@ import { SAMPLE_PROJECTS } from "../assets/constant/projects"
 
 const ShowCases = () => {
     return (
-        <main id="showcase" className="px-12 py-5 bg-base-200">
+        <main id="showcase" className="px-4 md:px-12 py-5 bg-base-200">
             <h3 className=" text-4xl font-bold  py-3  flex items-center justify-center mb-10">Show case Projects</h3>
             <div className="  grid gap-6 place-content-center  md:grid-cols-3">
                 {SAMPLE_PROJECTS.map(project => (
                     <motion.div
+
                         initial={{
                             opacity: 0,
                             scale: 0.8
@@ -23,8 +24,12 @@ const ShowCases = () => {
                             delay: 0.5,
                             duration: .8
                         }}
-                        className="container w-full rounded flex p-5 flex-col hover:bg-base-100 justify-center  space-y-3 dark:shadow-md" key={project.projectURL}>
-                        <h1>{project.title}</h1>
+                        className="container w-full rounded flex p-5 flex-col hover:bg-base-100 justify-center  space-y-3 shadow-sm"
+                        key={project.title}>
+                        <div>
+                            <h1>{project.title}</h1>
+                            <p className=" text-primary">{project.status}</p>
+                        </div>
                         <div className="flex flex-wrap space-x-1">
                             {project.language.map((language, index) => (
                                 <div key={index}><p className="badge badge-outline p-1">{language}</p></div>

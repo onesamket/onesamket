@@ -4,11 +4,23 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadAll } from "@tsparticles/all";
-import { type Container, type ISourceOptions } from "@tsparticles/engine";
+import { type ISourceOptions } from "@tsparticles/engine";
 import React from "react";
+import { generateRandomColor } from "../../lib/color";
 
 const Background = () => {
     const [init, setInit] = useState(false);
+    const [currentShape, setShape] = useState('star');
+    const [currentColor, setCurrentColor] = useState(generateRandomColor());
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            const newColor = generateRandomColor();
+            setCurrentColor(newColor);
+        }, 5000);
+
+        return () => clearInterval(intervalId);
+    }, []);
 
     // @ts-ignore 
     const options: ISourceOptions = useMemo(
@@ -61,19 +73,19 @@ const Background = () => {
                         },
                     },
                     color: {
-                        value: "#193ad0",
+                        value: ["#e02c2c", "#1940d1", "#edf416", "#23c60d", "#b57405", "#b10dc6", "#f3ebf4", "#0fbdc6"],
                         animation: {
                             enable: false,
-                            speed: 20,
+                            speed: 10,
                             sync: true,
                         },
                     },
                     shape: {
-                        type: "circle",
+                        type: ["circle", "star", "polygon", "stroke"],
                     },
                     opacity: {
                         value: 1,
-                        random: false,
+                        random: true,
                         animation: {
                             enable: false,
                             speed: 3,
@@ -83,6 +95,7 @@ const Background = () => {
                     },
                     size: {
                         value: 3,
+                        random: true
                     },
                     links: {
                         enable: false,
@@ -98,9 +111,9 @@ const Background = () => {
                         },
                         enable: true,
                         speed: 5,
-                        direction: "right",
-                        random: false,
-                        straight: true,
+                        direction: ["inside", "outside"],
+                        random: true,
+                        straight: false,
                         outModes: {
                             default: "out",
                         },
@@ -119,7 +132,7 @@ const Background = () => {
                     detectsOn: "canvas",
                     events: {
                         onHover: {
-                            enable: false,
+                            enable: true,
                             mode: "repulse",
                         },
                         onClick: {
@@ -176,10 +189,11 @@ const Background = () => {
                     },
                     particles: {
                         shape: {
-                            type: "bool",
+                            type: ["circle", "polygon", "star"],
+
                         },
                         size: {
-                            value: 40,
+                            value: 20,
                         },
                         move: {
                             speed: 10,
@@ -187,7 +201,7 @@ const Background = () => {
                                 default: "destroy",
                                 left: "none",
                             },
-                            straight: true,
+                            straight: false,
                         },
                         zIndex: {
                             value: 0,
@@ -210,10 +224,6 @@ const Background = () => {
         [],
     );
 
-    const particlesLoaded = async (container?: Container): Promise<void> => {
-        console.log(container);
-    };
-
     useEffect(() => {
         initParticlesEngine(async (engine) => {
             await loadAll(engine);
@@ -224,7 +234,7 @@ const Background = () => {
 
     if (!init) return <div className="loading-spinner " />;
 
-    return <Particles className="-z-50 h-full w-full" id="tsparticles" particlesLoaded={particlesLoaded} options={options} />
+    return <Particles className="-z-50 h-full w-full" id="tsparticles" options={options} />
 };
 
 export default Background;

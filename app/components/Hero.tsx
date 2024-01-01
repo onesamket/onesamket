@@ -56,7 +56,6 @@ const Hero = () => {
                     <div className="display">
                         <div className="artboard artboard-demo phone-1">
                             <iframe className='min-h-screen overflow-hidden' src="https:onesamket.vercel.app" />
-
                         </div>
                     </div>
                 </div>

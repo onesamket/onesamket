@@ -11,6 +11,7 @@ import {
 export const SAMPLE_PROJECTS = [
   {
     image: rest,
+    status: "Ready",
     title: "Simple MERN Todo rest-full API",
     description:
       "A RESTful API for managing to-do tasks using Express.js, React, MongoDB, and Typescript. This project showcases the integration of these technologies for building a simple yet effective to-do application.",
@@ -20,6 +21,7 @@ export const SAMPLE_PROJECTS = [
   },
   {
     image: logo,
+    status: "Ready",
     title: "Developer Portfolio website using NextJs and Tailwind CSS",
     description:
       "A portfolio website built with Next.js and styled using Tailwind CSS. This project serves as a showcase of skills, projects, and experiences, utilizing the power of Next.js for server-side rendering and Tailwind CSS for a modern and responsive design.",
@@ -29,6 +31,7 @@ export const SAMPLE_PROJECTS = [
   },
   {
     image: bookmark,
+    status: "Ready",
     title: "URL Bookmark Application using React Express and PostgresSQL",
     description:
       "An application for managing and bookmarking URLs created with React, Express, and PostgreSQL. This project demonstrates the use of a relational database (PostgreSQL) along with a server built using Express to create a robust URL bookmarking system.",
@@ -38,6 +41,7 @@ export const SAMPLE_PROJECTS = [
   },
   {
     image: research,
+    status: "Private repo",
     title: "Research Granting management system",
     description:
       "During my university internship, I developed a Research Grant Management System using Next.js, MongoDB, Supabase, and Typescript. This system facilitates the management and tracking of research grants, providing an efficient solution for academic institutions.",
@@ -47,6 +51,7 @@ export const SAMPLE_PROJECTS = [
   },
   {
     image: student,
+    status: "Planned",
     title: "Student Management Website",
     description:
       "Currently, I'm working on a student management website for my early high-school, developed during my early high school years as a Vulnerary project. The project is built with Remix, MongoDB, Supabase, and Tailwind CSS, showcasing my early exploration into web development and database management.",
@@ -56,6 +61,7 @@ export const SAMPLE_PROJECTS = [
   },
   {
     image: student,
+    status: "On progress",
     title: "Instagram mobile app  UI clone ",
     description:
       "Currently, I'm working on a student management website for my early high-school, developed during my early high school years as a Vulnerary project. The project is built with Remix, MongoDB, Supabase, and Tailwind CSS, showcasing my early exploration into web development and database management.",
@@ -65,6 +71,7 @@ export const SAMPLE_PROJECTS = [
   },
   {
     image: note,
+    status: "Ready",
     title: "Note App using Remix, SQLite, DaisyUI, and Typescript",
     description:
       "A note-taking application built with Remix, SQLite, DaisyUI, and Typescript. This project allows users to create, edit, and delete notes in a simple and intuitive interface.",
@@ -74,6 +81,7 @@ export const SAMPLE_PROJECTS = [
   },
   {
     image: chat,
+    status: "SOON",
     title: "Chat App using Next.js, Socket.io, and Tailwind CSS",
     description:
       "A real-time chat application developed with Next.js, Socket.io, and Tailwind CSS. This project enables users to engage in instant messaging with a clean and responsive user interface.",
@@ -83,6 +91,7 @@ export const SAMPLE_PROJECTS = [
   },
   {
     image: dBooks,
+    status: "Ready",
     title: "dBooks.org Clone - Online Bookstore",
     description:
       "A dBooks.org clone built with Remix, DaisyUI, Tailwind CSS, and Axios. This online bookstore allows users to explore, search, and purchase books seamlessly. The project showcases the power of Remix for server-rendered React applications, the rich UI components from DaisyUI, and the styling capabilities of Tailwind CSS.",
@@ -92,6 +101,7 @@ export const SAMPLE_PROJECTS = [
   },
   {
     image: dBooks,
+    status: "Ready",
     title: "Zustand Todo application",
     description:
       "A dBooks.org clone built with Remix, DaisyUI, Tailwind CSS, and Axios. This online bookstore allows users to explore, search, and purchase books seamlessly. The project showcases the power of Remix for server-rendered React applications, the rich UI components from DaisyUI, and the styling capabilities of Tailwind CSS.",
@@ -101,6 +111,7 @@ export const SAMPLE_PROJECTS = [
   },
   {
     image: dBooks,
+    status: "Ready",
     title: "Terminal look portfolio",
     description:
       "A dBooks.org clone built with Remix, DaisyUI, Tailwind CSS, and Axios. This online bookstore allows users to explore, search, and purchase books seamlessly. The project showcases the power of Remix for server-rendered React applications, the rich UI components from DaisyUI, and the styling capabilities of Tailwind CSS.",
