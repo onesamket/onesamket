@@ -2,7 +2,7 @@
 import ui from 'daisyui';
 export default {
   content: [
-    "./index.html",
+    "./public/**/*.{html}",
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: 'media',

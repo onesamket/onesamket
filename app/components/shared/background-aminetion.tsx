@@ -6,21 +6,11 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadAll } from "@tsparticles/all";
 import { type ISourceOptions } from "@tsparticles/engine";
 import React from "react";
-import { generateRandomColor } from "../../lib/color";
 
 const Background = () => {
     const [init, setInit] = useState(false);
-    const [currentShape, setShape] = useState('star');
-    const [currentColor, setCurrentColor] = useState(generateRandomColor());
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            const newColor = generateRandomColor();
-            setCurrentColor(newColor);
-        }, 5000);
 
-        return () => clearInterval(intervalId);
-    }, []);
 
     // @ts-ignore 
     const options: ISourceOptions = useMemo(
