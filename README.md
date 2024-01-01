@@ -102,7 +102,7 @@
         src="https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg" title="github"
         alt="github" width="40" height="40" />
       <img src="./app/assets/icons/icons8-apollo-48.png" width="40" height="40" alt="Apollo">
-      <img src="./app/assets/icons/icons8-svelte-48.png" width="40" height="40" alt="svelte"><img
+        <img
         src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/redux-colored.svg"
         width="36" height="36" alt="Redux" />
       </a>
