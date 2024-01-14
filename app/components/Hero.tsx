@@ -17,6 +17,8 @@ const Hero = () => {
                         sequence={[
                             "I'm  Tewodros  Birhanu",
                             1000,
+                               'Self-taught Developer',
+                            1000,
                             'Full-stack Developer',
                             1000,
                             'React-native Developer',
@@ -41,21 +43,10 @@ const Hero = () => {
 
                         repeat={Infinity}
                     />
-                    <p className="py-6">Passionate Javascript Full-stack engineer and application developer with over three years of experience. </p>
+                    <p className="py-6">Self-taught Javascript Full-stack engineer and application developer with over three years of experience. </p>
                     <a href={resume} target='_blank' download={true} className="btn btn-primary"><GoogleDocs /> Download CV</a>
                 </div>
             </div>
-            {/* 
-            <section className='hidden lg:block absolute top-10 right-5 '>
-                <div className="mockup-phone border-primary">
-                    <div className="camera"></div>
-                    <div className="display">
-                        <div className="artboard artboard-demo phone-1">
-                            <iframe className='min-h-screen overflow-hidden' src="https:onesamket.vercel.app" />
-                        </div>
-                    </div>
-                </div>
-            </section> */}
         </div>
     )
 }
