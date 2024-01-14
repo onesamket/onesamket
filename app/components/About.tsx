@@ -12,7 +12,7 @@ const About = () => {
                     </svg>
 
                     <div className="relative z-10">
-                        <p className=' p-3 italic  mx-auto first-letter:text-3xl'>Hello, I&apos;m Tewodros Birhanu, a passionate and experienced Fullstack JavaScript Developer. With a love for coding and a creative approach to problem-solving, Currently I'm student at Haramaya University. I specialize in crafting elegant, user-friendly, and high-performance web applications that not only look great but also rank well in search engines.</p>
+                        <p className=' p-3 italic  mx-auto first-letter:text-3xl'>Hello, I&apos;m Tewodros Birhanu, a self-taught  experienced Fullstack JavaScript Developer. With a love for coding and a creative approach to problem-solving and collaborating on open-source projects, Currently I'm a student at Haramaya University. I specialize in crafting elegant, user-friendly, and high-performance web applications that not only look great but also rank well in search engines.</p>
 
                     </div>
 
