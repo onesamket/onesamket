@@ -15,12 +15,12 @@
 
   <ul>
     <h1>About Me</h1>
-    <li>🧑‍💻 I'm Teddy</li>
-    <li>🖥️ See my portfolio at <a href="http://onesamket.vercel.app">onesamket.dev</a></li>
+    <li>🧑‍💻 I'm Tewodros</li>
+    <li>🖥️ See my portfolio at <a href="http://onesamket.vercel.app">onesamket.vercel.app</a></li>
     <li>🚀 I'm currently working on ➖ projects</li>
     <li>🧠 I'm learning Testing JavaScript, Deno, TensorFlow.js & bun</li>
     <li>❤️ I love Remix, TypeScript, NestJS, NextJS, TailwindCss, Prisma, and also 🎼Music🎧➕☕</li>
-    <li>🤝 I'm open to collaborating on Very cool projects.</li>
+    <li>🤝 I'm open to collaborate open source projects.</li>
     <li>❔ I'm available for Work Hire Me.</li>
   </ul>
 
@@ -33,7 +33,7 @@
 
   <!-- Skills Section -->
   <main>
-    <h2>SKILLS</h2>
+    <h2>Skills and Tools I use</h2>
     <div align="left">
     <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
       <img
