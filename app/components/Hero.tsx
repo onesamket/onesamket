@@ -6,7 +6,7 @@ import Background from './shared/background-aminetion'
 import { GoogleDocs } from 'iconoir-react'
 const Hero = () => {
     return (
-        <div id='' className="hero min-h-screen">
+        <main id='' className="hero min-h-screen">
             <Background />
             <div className="hero-content text-center">
                 <div className="max-w-md">
@@ -38,25 +38,14 @@ const Hero = () => {
 
                         ]}
                         className='text-3xl font-bold bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text p-2'
-
+                        cursor={true}
                         repeat={Infinity}
                     />
                     <p className="py-6">Passionate Javascript Full-stack engineer and application developer with over three years of experience. </p>
                     <a href={resume} target='_blank' download={true} className="btn btn-primary"><GoogleDocs /> Download CV</a>
                 </div>
             </div>
-            {/* 
-            <section className='hidden lg:block absolute top-10 right-5 '>
-                <div className="mockup-phone border-primary">
-                    <div className="camera"></div>
-                    <div className="display">
-                        <div className="artboard artboard-demo phone-1">
-                            <iframe className='min-h-screen overflow-hidden' src="https:onesamket.vercel.app" />
-                        </div>
-                    </div>
-                </div>
-            </section> */}
-        </div>
+        </main >
     )
 }
 
