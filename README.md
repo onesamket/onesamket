@@ -34,7 +34,7 @@
   <!-- Skills Section -->
  ## **Skills**
 
- [![My Skills](https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,react,wasm,nodejs,expressjs,astro,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,nextjs,graphql,tailwind,vite,&theme=light)](https://skillicons.dev)
+ [![My Skills](https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,react,svelte,ionic,nodejs,expressjs,astro,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,nextjs,graphql,tailwind,vite,&theme=light)](https://skillicons.dev)
 
 ##  **Tools**
  [![My Skills](https://skillicons.dev/icons?i=chrome,figma,vercel,powershell,github,git,postman,vscode,devto,discord,supabase,linkedin,&theme=dark)](https://skillicons.dev)
