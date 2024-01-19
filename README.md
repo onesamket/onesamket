@@ -32,15 +32,15 @@
   </div>
 
   <!-- Skills Section -->
- ## **Skills**
+ ## **Skills I Have to build softwares**
 
  [![My Skills](https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,react,svelte,nodejs,expressjs,astro,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,nextjs,graphql,tailwind,vite,&theme=light)](https://skillicons.dev)
 
-##  **Tools**
+##  **Tools and Apps I use**
  [![My Skills](https://skillicons.dev/icons?i=chrome,figma,vercel,powershell,github,git,postman,vscode,devto,discord,supabase,linkedin,&theme=dark)](https://skillicons.dev)
 
   <!-- Socials Section -->
-  <h2>Socials</h2>
+  <h2>Find Me on</h2>
 
 [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=#d16c06)](https://github.com/Onesamket)
 [![Facebook](https://img.shields.io/badge/Onesamket-Facebook-1877f2?style=for-the-badge&logo=Facebook&logoColor=#d16c06)](https://www.facebook.com/Onesamket)
