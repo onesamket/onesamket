@@ -13,16 +13,16 @@
     <b>Self-taught JavaScript full-stack Developer.</b>
   </div>
 
-  <ul>
-    <h1>About Me</h1>
-    <li>🧑‍💻 I'm Tewodros</li>
-    <li>🖥️ See my portfolio at <a href="http://onesamket.vercel.app">onesamket.vercel.app</a></li>
-    <li>🚀 I'm currently working on ➖ projects</li>
-    <li>🧠 I'm learning Testing JavaScript, Deno, TensorFlow.js & bun</li>
-    <li>❤️ I love Remix, TypeScript, NestJS, NextJS, TailwindCss, Prisma, and also 🎼Music🎧➕☕</li>
-    <li>🤝 I'm open to collaborate open source projects.</li>
-    <li>❔ I'm available for Work Hire Me.</li>
-  </ul>
+<ul>
+  <h1>About Me</h1>
+  <li>🧑‍💻 My name is Tewodros.</li>
+  <li>🖥️ Check out my portfolio at <a href="http://onesamket.vercel.app">onesamket.vercel.app</a>.</li>
+  <li>🚀 Currently, I am working on various projects to enhance my skills.</li>
+  <li>🧠 I am learning Testing JavaScript, Deno, TensorFlow.js & bun to expand my knowledge and expertise.</li>
+  <li>❤️ My favorite technologies include Remix, TypeScript, NestJS, NextJS, TailwindCss, and Prisma. Also, I love listening to 🎼Music🎧 while drinking ☕.</li>
+  <li>🤝 I'm always open to collaborating on open-source projects.</li>
+  <li>❔ In case you're interested, I am available for hire.</li>
+</ul>
 
   <!-- Twitter Badge -->
   <div align="center">
@@ -32,7 +32,7 @@
   </div>
 
   <!-- Skills Section -->
- ## **Skills I Have to build softwares**
+ ## **Skills I Have to build software**
 
  [![My Skills](https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,md,react,svelte,nodejs,expressjs,astro,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,nextjs,graphql,tailwind,vite,&theme=light)](https://skillicons.dev)
 
