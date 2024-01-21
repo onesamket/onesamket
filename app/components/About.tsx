@@ -12,7 +12,8 @@ const About = () => {
                     </svg>
 
                     <div className="relative z-10">
-                        <p className=' p-3 italic  mx-auto first-letter:text-3xl'>Hello, I&apos;m Tewodros Birhanu, a self-taught  experienced Fullstack JavaScript Developer. With a love for coding and a creative approach to problem-solving and collaborating on open-source projects, Currently I'm a student at Haramaya University. I specialize in crafting elegant, user-friendly, and high-performance web applications that not only look great but also rank well in search engines.</p>
+                        <p className=' p-3 italic  mx-auto first-letter:text-3xl'>Hello! My name is Tewodros Birhanu, and I am a Mid-level  Fullstack JavaScript Developer. Through years of dedication and hard work, I have developed an exceptional skill set that allows me to craft elegant, user-friendly, and high-performance web applications. Whether you need a website that looks great or one that ranks well in search engines, I have got you covered. I am passionate about coding and love to collaborate with others on open-source projects. I am also a student at Haramaya University, constantly learning and adapting to the latest technologies. Let me put my expertise to work for you and bring your web development ideas to life!
+</p>
 
                     </div>
 
