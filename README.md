@@ -34,10 +34,10 @@
   <!-- Skills Section -->
  ## **Skills I Have to build softwares**
 
- [![My Skills](https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,react,svelte,nodejs,expressjs,astro,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,nextjs,graphql,tailwind,vite,&theme=light)](https://skillicons.dev)
+ [![My Skills](https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,md,react,svelte,nodejs,expressjs,astro,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,nextjs,graphql,tailwind,vite,&theme=light)](https://skillicons.dev)
 
 ##  **Tools and Apps I use**
- [![My Skills](https://skillicons.dev/icons?i=notion,chrome,brave,figma,vercel,powershell,github,git,postman,vscode,devto,discord,supabase,LinkedIn,slack,twitter,meduim,&theme=dark)](https://skillicons.dev)
+ [![My Skills](https://skillicons.dev/icons?i=slack,chrome,gmail,figma,vercel,powershell,github,git,postman,vscode,devto,discord,firebase,supabase,LinkedIn,twitter,&theme=dark)](https://skillicons.dev)
 
   <!-- Socials Section -->
   <h2>Find Me on</h2>
