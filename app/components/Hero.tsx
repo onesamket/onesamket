@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="hero-content text-center">
         <div className="max-w-md">
           <img
-            src="htpps://github.com/onesamket.png"
+            src="https://github.com/onesamket.png"
             alt="profile"
             className="h-56 w-56 mx-auto rounded-full "
           />
