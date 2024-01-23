@@ -1,13 +1,11 @@
 import { GoogleDocs } from "iconoir-react";
 import { TypeAnimation } from "react-type-animation";
 import { profile } from "@/assets/profile";
-import Background from "@/components/shared/background-animation";
 import Image from "next/image";
 import Link from "next/link";
 const Hero = () => {
   return (
     <main id="" className="hero min-h-screen">
-      <Background />
       <div className="hero-content text-center">
         <div className="max-w-md">
           <Image
