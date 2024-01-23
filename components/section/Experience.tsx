@@ -1,5 +1,5 @@
 import React from "react"
-import TimeLine from "../components/TimeLine"
+import TimeLine from "@/components/shared/TimeLine"
 const Experience = () => {
     return (
         <div id="skills" className=" py-5 bg-base-300">

@@ -1,16 +1,17 @@
-import { TypeAnimation } from "react-type-animation";
-import { profile } from "../assets/profile";
-import { resume } from "../assets/doc";
-import React from "react";
-import Background from "../components/background-animation";
 import { GoogleDocs } from "iconoir-react";
+import { TypeAnimation } from "react-type-animation";
+// import { resume } from "@/assets/doc";
+import { profile } from "@/assets/profile";
+import Background from "@/components/shared/background-animation";
+import Image from "next/image";
+import Link from "next/link";
 const Hero = () => {
   return (
     <main id="" className="hero min-h-screen">
       <Background />
       <div className="hero-content text-center">
         <div className="max-w-md">
-          <img
+          <Image
             src={profile}
             alt="profile"
             className="h-56 w-56 mx-auto rounded-full "
@@ -52,14 +53,12 @@ const Hero = () => {
             React-based Full-stack engineer, React-native developer
             MERN-stack Developer{" "}
           </p>
-          <a
-            href={resume}
-            target="_blank"
-            download={true}
+          <Link
+            href={'/resume'}
             className="btn btn-primary"
           >
-            <GoogleDocs /> Download CV
-          </a>
+            <GoogleDocs /> View  Resume
+          </Link>
         </div>
       </div>
     </main>

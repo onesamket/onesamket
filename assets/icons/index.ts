@@ -18,6 +18,8 @@ import nodejs from "./node-js.png";
 import react from "./react.png";
 import remix from "./remix-logo-icon.png";
 import tanstack from "./tanstack.png";
+import mongodb from "./icons8-mongodb-48.png";
+import sql from "./icons8-my-sql-48.png";
 export {
   accessability,
   apollo,
@@ -29,6 +31,8 @@ export {
   ionic,
   js,
   nestjs,
+  sql,
+  mongodb,
   nextjs,
   nodejs,
   prisma,

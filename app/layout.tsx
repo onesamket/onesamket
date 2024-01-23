@@ -1,20 +1,37 @@
-import React from 'react'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import { Outlet } from 'react-router-dom'
-import Toggle from './components/Toggle'
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/Footer";
+import Toggle from "@/components/shared/Toggle";
 
-const RootLayout = () => {
-    return (
-        <div>
-            <Header />
-            <Outlet />
-            <Footer />
-            {/* theme  controller */}
-            <Toggle />
+const inter = Inter({
+  subsets: ["latin"],
+  preload: true
+});
 
-        </div>
-    )
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <head>
+        <title>Tewodros Birhanu personal website</title>
+        <meta
+          name="description"
+          content="Personal website to showcase my experience for the people"
+        />
+      </head>
+      <body className={inter.className}>
+        <Header />
+        <main>
+          {children}
+        </main>
+        <Toggle />
+        <Footer />
+      </body>
+    </html>
+  );
 }
-
-export default RootLayout

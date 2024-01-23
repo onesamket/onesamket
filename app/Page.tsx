@@ -1,23 +1,12 @@
-import React from "react"
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Experience from './pages/Experience'
-import Hero from "./pages/Hero"
-import ShowCases from './pages/ShowCases'
+import Pages from '@/components'
+import React from 'react'
 
-function Page() {
-
+const HomePage = () => {
   return (
-    <main>
-      <Hero />
-      <Experience />
-      <ShowCases />
-      <div className="bg-base-300 ">
-        <About />
-      </div>
-      <Contact />
-    </main>
+    <div>
+      <Pages />
+    </div>
   )
 }
 
-export default Page
+export default HomePage

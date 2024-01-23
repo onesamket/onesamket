@@ -1,8 +1,16 @@
-import React from "react"
-import { profile } from "../assets/profile"
+import { Roboto } from "next/font/google"
+import Image from "next/image"
+
+import { profile } from "@/assets/profile"
+const roboto = Roboto({
+    weight: '300',
+    style: 'italic',
+    subsets: ['latin'],
+    display: 'swap',
+})
 const About = () => {
     return (
-        <div className='w-[70vw] md:w-[50vw] flex flex-col mx-auto space-y-1 items-center  justify-center'>
+        <div className='w-[70vw] md:w-[50vw]  flex flex-col mx-auto space-y-1 items-center  justify-center'>
             <section id='about' className='px-5 py-20  space-y-1'
             >
                 <h1 className='text-4xl italic self-start font-bold flex items-center justify-center'>About Me</h1>
@@ -12,7 +20,7 @@ const About = () => {
                     </svg>
 
                     <div className="relative z-10">
-                        <p className=' p-3 italic  mx-auto first-letter:text-4xl'>Hello! My name is Tewodros Birhanu, and I am a Mid-level  Fullstack JavaScript Developer. Through years of dedication and hard work, I have developed an exceptional skill set that allows me to craft elegant, user-friendly, and high-performance web applications. Whether you need a website that looks great or one that ranks well in search engines, I have got you covered. I am passionate about coding and love to collaborate with others on open-source projects. I am also a student at Haramaya University, constantly learning and adapting to the latest technologies. Let me put my expertise to work for you and bring your web development ideas to life!
+                        <p className={`${roboto.className} p-3 italic   mx-auto first-letter:text-4xl`}>Hello! My name is Tewodros Birhanu, and I am a Mid-level  Fullstack JavaScript Developer. Through years of dedication and hard work, I have developed an exceptional skill set that allows me to craft elegant, user-friendly, and high-performance web applications. Whether you need a website that looks great or one that ranks well in search engines, I have got you covered. I am passionate about coding and love to collaborate with others on open-source projects. I am also a student at Haramaya University, constantly learning and adapting to the latest technologies. Let me put my expertise to work for you and bring your web development ideas to life!
                         </p>
 
                     </div>
@@ -20,7 +28,7 @@ const About = () => {
                     <footer className="mt-6">
                         <div className="flex items-center">
                             <div className="flex-shrink-0">
-                                <img className="h-10 w-10 rounded-full" src={profile} alt="onesamket" />
+                                <Image className="h-10 w-10 rounded-full" src={profile} alt="onesamket" />
                             </div>
                             <div className="ms-4">
                                 <div className="text-base font-semibold">Tewodros Birhanu</div>

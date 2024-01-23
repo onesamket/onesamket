@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { accessability, authentication, code, collabraion as collaboration, deployment, js, nestjs, nextjs, nodejs, prisma, react, remix, tailwind, tanstack, ts, web } from "../assets/icons";
+import { accessability, authentication, code, collabraion as collaboration, deployment, js, mongodb, nestjs, nextjs, nodejs, prisma, react, remix, sql, tailwind, tanstack, ts, web } from "../../assets/icons";
+import Image from "next/image";
 
 const TimeLine = () => {
     const items = [
@@ -15,6 +16,8 @@ const TimeLine = () => {
         { label: "NextJs App Router", icon: nextjs, dataTip: "NextJS" },
         { label: "Node Express Developer", icon: nodejs, dataTip: "NodeJs" },
         { label: "NestJs framework", icon: nestjs, dataTip: "nestjs" },
+        { label: "SQL Databases", icon: sql, dataTip: "MySQL" },
+        { label: "Mongo Database", icon: mongodb, dataTip: "MongoDB" },
         { label: "Prisma & Mongoose", icon: prisma, dataTip: "Prisma" },
         { label: "Security", icon: authentication, dataTip: "security" },
         { label: "Version Control", icon: code, dataTip: "Git" },
@@ -36,7 +39,7 @@ const TimeLine = () => {
                             {item.label}
                         </motion.div>
                         <div className=" tooltip timeline-middle" data-tip={item.dataTip}>
-                            <img className="cursor-pointer" width="25" height="25" src={item.icon} alt={item.label} />
+                            <Image className="cursor-pointer" width="25" height="25" src={item.icon} alt={item.label} />
                         </div>
                         <hr />
                     </li>

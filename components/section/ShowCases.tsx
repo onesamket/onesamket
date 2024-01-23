@@ -1,7 +1,7 @@
 import { ArrowUpRight, Github } from "iconoir-react"
 import React from "react"
 import { motion } from "framer-motion"
-import { SAMPLE_PROJECTS } from "../assets/constant/projects"
+import { SAMPLE_PROJECTS } from "@/assets/constant/projects"
 
 const ShowCases = () => {
     return (

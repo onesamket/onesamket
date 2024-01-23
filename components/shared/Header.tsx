@@ -1,6 +1,15 @@
+"use client";
+import { profile } from '@/assets/profile';
 import { Github } from 'iconoir-react';
-import React, { useState } from 'react';
-import { profile } from '../assets/profile';
+import { Inter } from 'next/font/google';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+const inter = Inter({
+    subsets: ["latin"],
+    preload: true,
+    weight: '600'
+});
 export default function Header() {
 
     const [state, setState] = useState(false)
@@ -16,11 +25,11 @@ export default function Header() {
     ]
 
     return (
-        <nav className=" w-full shadow sticky top-0 z-50 backdrop-filter backdrop-blur-lg bg-opacity-30   bg-base-200 sm:bg-inherit  md:px-10">
+        <nav className={` ${inter.className} w-full shadow sticky top-0 z-50 backdrop-filter backdrop-blur-lg bg-opacity-30   bg-base-200 sm:bg-inherit  md:px-10`}>
             <div className="items-center -z-50 px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                 <div className="flex items-center justify-between py-3 md:py-5 md:block">
                     <a href="/">
-                        <img
+                        <Image
                             src={profile}
 
                             alt="Profile picture"
@@ -52,13 +61,13 @@ export default function Header() {
                             navigation.map((item, idx) => {
                                 return (
                                     <li key={idx} className="hover:text-indigo-600">
-                                        <a
+                                        <Link
                                             className="dark:text-gray-500 text-gray-600"
                                             href={item.path}>
 
                                             {item.title}
 
-                                        </a>
+                                        </Link>
                                     </li>
                                 )
                             })

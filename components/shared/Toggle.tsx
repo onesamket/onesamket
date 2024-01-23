@@ -1,3 +1,4 @@
+"use client";
 import { HalfMoon, SunLight } from "iconoir-react"
 import React from "react"
 

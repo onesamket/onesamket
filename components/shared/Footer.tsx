@@ -1,5 +1,4 @@
-import { Github, Instagram, Linkedin, Twitter } from "iconoir-react"
-import React from "react"
+import { Github, Linkedin, Twitter } from "iconoir-react"
 
 const Footer = () => {
     return (
@@ -8,7 +7,8 @@ const Footer = () => {
                 <a href="#" className="link link-hover">Home </a>
                 <a href="#experience" className="link link-hover">Experience</a>
                 <a href="#showcase" className="link link-hover">Projects</a>
-                <a href="https://onesamket-js.hashnode.dev" className="link link-hover">Blogs</a>
+                <a href="https://onesamket-js.hashnode.dev" className="link link-hover">Resume</a>
+                <a href="https://onesamket-js.hashnode.dev" className="link link-hover">Articles</a>
                 <a href="#about" className="link link-hover">About </a>
                 <a href="#contact" className="link link-hover">Contact </a>
             </nav>
@@ -23,9 +23,6 @@ const Footer = () => {
                     <div className="tooltip" data-tip="Twitter">
                         <a href="https://x.com/onesmaket" className="btn"><Twitter /></a>
                     </div>
-                    {/* <div className="tooltip" data-tip="Github">
-                        <a href="https://instagram.com/1_onesamket" className="btn"><Instagram /></a>
-                    </div> */}
                 </div>
             </nav>
             <aside className="flex space-x-1">
