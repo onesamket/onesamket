@@ -47,6 +47,7 @@
 [![Twitter](https://img.shields.io/badge/Onesamket-Twitter-1da1f2?style=for-the-badge&logo=Twitter&logoColor=#d16c06)](https://twitter.com/Onesamket)
 [![Medium](https://img.shields.io/badge/Onesamket-Medium-12100e?style=for-the-badge&logo=Medium&logoColor=#d16c06)](https://medium.com/@Onesamket)
 [![LinkedIn](https://img.shields.io/badge/Onesamket-LinkedIn-0077b5?style=for-the-badge&logo=LinkedIn&logoColor=#d16c06)](https://www.linkedin.com/in/onesamket/)
+[![Peerlist](https://github-readme-badge.peerlist.io/api/onesamket)](https://peerlist.io/onesamket)
 
 
  
