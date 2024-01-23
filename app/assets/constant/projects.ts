@@ -1,16 +1,5 @@
-import {
-  rest,
-  logo,
-  bookmark,
-  student,
-  research,
-  chat,
-  note,
-  dBooks,
-} from "../unsplash";
 export const SAMPLE_PROJECTS = [
   {
-    image: rest,
     status: "Ready",
     title: "Simple MERN Todo rest-full API",
     description:
@@ -20,7 +9,6 @@ export const SAMPLE_PROJECTS = [
     language: ["React", "MongoDB", "Typescript", "Express"],
   },
   {
-    image: logo,
     status: "Ready",
     title: "Developer Portfolio website using NextJs and Tailwind CSS",
     description:
@@ -30,7 +18,6 @@ export const SAMPLE_PROJECTS = [
     language: ["NextJs", "Tailwind", "React"],
   },
   {
-    image: bookmark,
     status: "Ready",
     title: "URL Bookmark Application using React Express and PostgresSQL",
     description:
@@ -40,7 +27,6 @@ export const SAMPLE_PROJECTS = [
     language: ["React", "Postgres", "Express", "Prisma"],
   },
   {
-    image: research,
     status: "Private repo",
     title: "Research Granting management system",
     description:
@@ -50,7 +36,6 @@ export const SAMPLE_PROJECTS = [
     language: ["NextJS", "MongoDB", "Supabase", "Typescript"],
   },
   {
-    image: student,
     status: "Planned",
     title: "Student Management Website",
     description:
@@ -60,7 +45,6 @@ export const SAMPLE_PROJECTS = [
     language: ["Remix", "MongoDB", "Supabase", "NextUI"],
   },
   {
-    image: student,
     status: "On progress",
     title: "Instagram mobile app  UI clone ",
     description:
@@ -70,7 +54,6 @@ export const SAMPLE_PROJECTS = [
     language: ["Expo", "Nativewind", "zustand", "react-native"],
   },
   {
-    image: note,
     status: "Ready",
     title: "Note App using Remix, SQLite, DaisyUI, and Typescript",
     description:
@@ -80,7 +63,6 @@ export const SAMPLE_PROJECTS = [
     language: ["Remix", "SQLite", "DaisyUI", "Typescript"],
   },
   {
-    image: chat,
     status: "SOON",
     title: "Chat App using Next.js, Socket.io, and Tailwind CSS",
     description:
@@ -90,7 +72,6 @@ export const SAMPLE_PROJECTS = [
     language: ["Next.js", "Socket.io", "Tailwind CSS"],
   },
   {
-    image: dBooks,
     status: "Ready",
     title: "dBooks.org Clone - Online Bookstore",
     description:
@@ -100,7 +81,6 @@ export const SAMPLE_PROJECTS = [
     language: ["Remix", "DaisyUI", "Tailwind CSS", "Axios"],
   },
   {
-    image: dBooks,
     status: "Ready",
     title: "Zustand Todo application",
     description:
@@ -110,7 +90,6 @@ export const SAMPLE_PROJECTS = [
     language: ["React", "shadcm.ui", "Tailwind CSS", "zustand"],
   },
   {
-    image: dBooks,
     status: "Ready",
     title: "Terminal look portfolio",
     description:

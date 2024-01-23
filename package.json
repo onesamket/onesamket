@@ -3,6 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": {
+    "name": "Tewodros Birhanu",
+    "email": "tewodros.mail@gmail.com",
+    "url": "https://onesamket.vercel.app"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -19,6 +24,7 @@
     "iconoir-react": "^7.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
     "react-type-animation": "^3.2.0",
     "react-wavify": "^1.10.0",
     "tailwindcss": "^3.3.6",
