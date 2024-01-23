@@ -34,7 +34,7 @@
   <!-- Skills Section -->
  ## **Skills I Have to build software**
 
- [![My Skills](https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,md,react,svelte,nodejs,expressjs,astro,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,nextjs,graphql,tailwind,vite,&theme=light)](https://skillicons.dev)
+ [![My Skills](https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,md,react,nodejs,expressjs,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,nextjs,graphql,tailwind,vite,&theme=light)](https://skillicons.dev)
 
 ##  **Tools and Apps I use**
  [![My Skills](https://skillicons.dev/icons?i=,chrome,gmail,figma,vercel,powershell,github,git,postman,vscode,devto,discord,firebase,supabase,LinkedIn,&theme=dark)](https://skillicons.dev)
