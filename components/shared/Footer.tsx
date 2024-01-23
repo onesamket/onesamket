@@ -1,17 +1,18 @@
 import { Github, Linkedin, Twitter } from "iconoir-react"
 import Image from "next/image"
+import Link from "next/link"
 
 const Footer = () => {
     return (
         <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
             <nav className="flex flex-col md:flex-row">
-                <a href="./" className="link link-hover">Home </a>
-                <a href="./tewodros/#experience" className="link link-hover">Experience</a>
-                <a href="./tewodros/#showcase" className="link link-hover">Showcases</a>
-                <a href="./resume" className="link link-hover">Resume</a>
-                <a href="/articles" className="link link-hover">Articles</a>
-                <a href="./tewodros/#about" className="link link-hover">About </a>
-                <a href="./tewodros/#contact" className="link link-hover">Contact </a>
+                <Link href="./" className="link link-hover">Home </Link>
+                <Link href="./tewodros/#experience" className="link link-hover">Experience</Link>
+                <Link href="./tewodros/#showcase" className="link link-hover">Showcases</Link>
+                <Link href="./resume" className="link link-hover">Resume</Link>
+                <Link href="/articles" className="link link-hover">Articles</Link>
+                <Link href="./tewodros/#about" className="link link-hover">About </Link>
+                <Link href="./tewodros/#contact" className="link link-hover">Contact </Link>
             </nav>
             <nav className=" mx-auto">
                 <div className="grid grid-flow-col gap-4">
