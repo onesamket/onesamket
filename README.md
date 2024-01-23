@@ -10,7 +10,7 @@
  <img width="100" height="100" src="https://img.icons8.com/external-flat-icons-inmotus-design/100/external-JS-web-technologies-flat-icons-inmotus-design-5.png" alt="external-JS-web-technologies-flat-icons-inmotus-design-5"/>
 </div>
   <div align="center">
-    <b>Self-taught JavaScript full-stack Developer.</b>
+    <b>React-based full-stack developer and MERN stack Developer.</b>
   </div>
 
 <ul>
