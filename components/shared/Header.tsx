@@ -15,13 +15,13 @@ export default function Header() {
     const [state, setState] = useState(false)
 
     const navigation = [
-        { title: "Home", path: "#" },
-        { title: "Skills", path: "/#skills" },
-        { title: "Showcases", path: "/#showcase" },
+        { title: "Home", path: "/" },
+        { title: "Skills", path: "/tewodros#skills" },
+        { title: "Showcases", path: "/tewodros#showcase" },
         { title: "Resume", path: "/resume" },
         { title: "Articles", path: "/articles" },
-        { title: "About", path: "/#about" },
-        { title: "Contact", path: "/#contact" }
+        { title: "About", path: "/tewodros#about" },
+        { title: "Contact", path: "/tewodros#contact" }
     ]
 
     return (
