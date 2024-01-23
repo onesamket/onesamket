@@ -5,13 +5,13 @@ const Footer = () => {
     return (
         <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
             <nav className="flex flex-col md:flex-row">
-                <a href="#" className="link link-hover">Home </a>
-                <a href="#experience" className="link link-hover">Experience</a>
-                <a href="#showcase" className="link link-hover">Projects</a>
-                <a href="https://onesamket-js.hashnode.dev" className="link link-hover">Resume</a>
-                <a href="https://onesamket-js.hashnode.dev" className="link link-hover">Articles</a>
-                <a href="#about" className="link link-hover">About </a>
-                <a href="#contact" className="link link-hover">Contact </a>
+                <a href="./" className="link link-hover">Home </a>
+                <a href="./tewodros/#experience" className="link link-hover">Experience</a>
+                <a href="./tewodros/#showcase" className="link link-hover">Showcases</a>
+                <a href="./resume" className="link link-hover">Resume</a>
+                <a href="/articles" className="link link-hover">Articles</a>
+                <a href="./tewodros/#about" className="link link-hover">About </a>
+                <a href="./tewodros/#contact" className="link link-hover">Contact </a>
             </nav>
             <nav className=" mx-auto">
                 <div className="grid grid-flow-col gap-4">
