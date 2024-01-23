@@ -1,3 +1,4 @@
+"use client";
 import { ArrowUpRight, Github } from "iconoir-react"
 import React from "react"
 import { motion } from "framer-motion"

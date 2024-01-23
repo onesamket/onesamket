@@ -1,11 +1,14 @@
+"use client";
 import { GoogleDocs } from "iconoir-react";
 import { TypeAnimation } from "react-type-animation";
 import { profile } from "@/assets/profile";
 import Image from "next/image";
 import Link from "next/link";
+import Background from "../shared/background-animation";
 const Hero = () => {
   return (
     <main id="" className="hero min-h-screen">
+      <Background />
       <div className="hero-content text-center">
         <div className="max-w-md">
           <Image

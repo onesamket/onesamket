@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import React from "react";
 import { accessability, authentication, code, collabraion as collaboration, deployment, js, mongodb, nestjs, nextjs, nodejs, prisma, react, remix, sql, tailwind, tanstack, ts, web } from "../../assets/icons";

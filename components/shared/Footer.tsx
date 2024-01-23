@@ -28,7 +28,7 @@ const Footer = () => {
             </nav>
             <aside className="flex space-x-1">
                 <p>Deployed on Vercel</p>
-                <a href="vercel.com"> <Image src="logo-vercel.svg" alt="vercel" className="w-5 h-5 " /></a>
+                <a href="vercel.com"> <Image src="logo-vercel.svg" width={30} height={30} alt="vercel" className="w-5 h-5 " /></a>
                 <p> {new Date().getFullYear()} by Teddy</p>
             </aside>
         </footer>
