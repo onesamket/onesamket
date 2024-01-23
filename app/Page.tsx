@@ -1,12 +1,8 @@
-import Pages from '@/components'
+import { redirect } from 'next/navigation'
 import React from 'react'
 
-const HomePage = () => {
-  return (
-    <div>
-      <Pages />
-    </div>
-  )
+const Page = () => {
+  return redirect('/tewodros')
 }
 
-export default HomePage
+export default Page

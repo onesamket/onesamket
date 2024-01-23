@@ -5,7 +5,7 @@ import ShowCases from './section/ShowCases'
 import About from './section/About'
 import Contact from './section/Contact'
 
-const HomePage = () => {
+const InitialPage = () => {
     return (
         <div>
             <Hero />
@@ -19,4 +19,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage;
+export default InitialPage;
