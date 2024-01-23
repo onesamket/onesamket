@@ -6,7 +6,7 @@ const Article = () => {
     return (
         <div className='h-[50vh] w-full flex items-center flex-col justify-center'>
 
-            <h1 className='text-2xl'>I'm working on This page. it will be available SOON </h1>
+            <h1 className='text-2xl'>I&apos;m working on This page. it will be available SOON </h1>
             <TypeAnimation
                 sequence={[
                     " Web development",

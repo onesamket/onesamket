@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter } from "iconoir-react"
+import Image from "next/image"
 
 const Footer = () => {
     return (
@@ -27,7 +28,7 @@ const Footer = () => {
             </nav>
             <aside className="flex space-x-1">
                 <p>Deployed on Vercel</p>
-                <a href="vercel.com"> <img src="logo-vercel.svg" className="w-5 h-5 " /></a>
+                <a href="vercel.com"> <Image src="logo-vercel.svg" alt="vercel" className="w-5 h-5 " /></a>
                 <p> {new Date().getFullYear()} by Teddy</p>
             </aside>
         </footer>

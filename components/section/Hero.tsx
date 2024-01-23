@@ -1,6 +1,5 @@
 import { GoogleDocs } from "iconoir-react";
 import { TypeAnimation } from "react-type-animation";
-// import { resume } from "@/assets/doc";
 import { profile } from "@/assets/profile";
 import Background from "@/components/shared/background-animation";
 import Image from "next/image";
@@ -17,7 +16,7 @@ const Hero = () => {
             className="h-56 w-56 mx-auto rounded-full "
           />
           <h1 className="text-3xl md:text-4xl py-2 font-bold">
-            Hi 👋 I'm Tewodros{" "}
+            Hi 👋 I&apos;m Tewodros{" "}
           </h1>
           <h3></h3>
           <TypeAnimation

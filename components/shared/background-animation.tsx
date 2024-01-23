@@ -1,8 +1,6 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-// @ts-ignore
 import { loadAll } from "@tsparticles/all";
 import { type ISourceOptions } from "@tsparticles/engine";
 import React from "react";
