@@ -1,12 +1,12 @@
-import Spinner from '@/components/shared/spinner'
-import React from 'react'
+import Spinner from "@/components/shared/spinner";
+import React from "react";
 
 const AppLoading = () => {
-    return (
-        <div>
-            <Spinner />
-        </div>
-    )
-}
+  return (
+    <div>
+      <Spinner />
+    </div>
+  );
+};
 
-export default AppLoading
+export default AppLoading;
