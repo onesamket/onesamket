@@ -33,7 +33,7 @@ const About = () => {
 
           <div className="relative z-10">
             <p
-              className={`${roboto.className} p-3 italic text-justify  mx-auto first-letter:text-4xl`}
+              className={`${roboto.className} p-3 italic md:text-justify  mx-auto first-letter:text-4xl`}
             >
               Hello! My name is Tewodros Birhanu, and I am a Mid-level Fullstack
               JavaScript Developer. Through years of dedication and hard work, I

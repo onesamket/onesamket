@@ -10,7 +10,7 @@ const ShowCases = () => {
       <h3 className=" text-4xl font-bold  py-3  flex items-center justify-center mb-10">
         Show case Projects
       </h3>
-      <div className="  grid gap-6 place-content-center  md:grid-cols-3">
+      <div className="  grid gap-6 place-content-center sm:grid-cols-2 md:grid-cols-3">
         {SAMPLE_PROJECTS.map((project) => (
           <motion.div
             initial={{
