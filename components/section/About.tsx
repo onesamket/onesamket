@@ -6,7 +6,7 @@ const roboto = Roboto({
   weight: "300",
   style: "italic",
   subsets: ["vietnamese"],
-  display: "swap",
+  display: "auto",
 });
 const About = () => {
   return (
@@ -35,15 +35,16 @@ const About = () => {
             <p
               className={`${roboto.className} p-3 italic md:text-justify  mx-auto first-letter:text-4xl`}
             >
-              Hello! My name is Tewodros Birhanu, and I am a Mid-level Fullstack
-              JavaScript Developer. Through years of dedication and hard work, I
-              have developed an exceptional skill set that allows me to craft
-              elegant, user-friendly, and high-performance web applications. I
-              am passionate about coding and love to collaborate with others on
-              open-source projects. I am also a student at Haramaya University,
-              constantly learning and adapting to the latest technologies. Let
-              me put my expertise to work for you and bring your web development
-              ideas to life!
+              Hello! My name is Tewodros Birhanu
+              <small className="text-sm">(Teddy)</small>, and I am a Mid-level
+              Fullstack JavaScript Developer. Through years of dedication and
+              hard work, I have developed an exceptional skill set that allows
+              me to craft elegant, user-friendly, and high-performance web
+              applications. I am passionate about coding and love to collaborate
+              with others on open-source projects. I am also a student at
+              Haramaya University, constantly learning and adapting to the
+              latest technologies. Let me put my expertise to work for you and
+              bring your web development ideas to life!
             </p>
           </div>
 

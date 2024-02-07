@@ -33,19 +33,57 @@ import Image from "next/image";
 
 const TimeLine = () => {
   const items = [
-    { label: "Http and Basic Web design", icon: web, dataTip: "http" },
+    {
+      label: "Http and Basic Web design",
+      icon: web,
+      dataTip: "How Internet  works and basic HTML5,CSS3",
+    },
     {
       label: "Web accessibility",
       icon: accessability,
-      dataTip: "accessibility",
+      dataTip:
+        " It is the practice of ensuring that websites, tools, and technologies are designed and developed to be accessible to people with disabilities.",
     },
-    { label: "Tailwind css 🎉", icon: tailwind, dataTip: "Tailwind css" },
-    { label: "Modern Javascript", icon: js, dataTip: "Javascript" },
-    { label: "Typescript 🥰", icon: ts, dataTip: "Typescript" },
-    { label: "React ❤️", icon: react, dataTip: "React" },
-    { label: "Expo 💪", icon: expo, dataTip: "React Native " },
-    { label: "Svelte & SvelteKit", icon: svelte, dataTip: "Svelte Framework" },
-    { label: "Astro Framework", icon: astro, dataTip: "Astro Framework" },
+    {
+      label: "Tailwind css 🎉",
+      icon: tailwind,
+      dataTip:
+        "Utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.",
+    },
+    {
+      label: "Javascript 👑 of Web",
+      icon: js,
+      dataTip:
+        "Light-weight interpreted (or just-in-time compiled) programming language with first-class functions",
+    },
+    {
+      label: "Typescript 🥰",
+      icon: ts,
+      dataTip: "statically typed super-sets of Javascript. ",
+    },
+    {
+      label: "React ❤️",
+      icon: react,
+      dataTip: "#1 Javascript library to build user interface.",
+    },
+    {
+      label: "Expo 💪",
+      icon: expo,
+      dataTip:
+        "An open-source framework for building native and web applications using React and React Native.",
+    },
+    {
+      label: "Svelte & SvelteKit",
+      icon: svelte,
+      dataTip:
+        "Svelte is a free, open-source JavaScript framework and language for front-end components.",
+    },
+    {
+      label: "Astro Framework",
+      icon: astro,
+      dataTip:
+        "Modern static site generator (SSG) gaining attention in web development",
+    },
     {
       label: "Tanstack Query",
       icon: tanstack,
@@ -73,10 +111,10 @@ const TimeLine = () => {
       label: "NextJs",
       icon: nextjs,
       dataTip:
-        "Power-full React Full-stack framework used to build blazing fast applications. ",
+        "Powerful React Full-stack framework used to build blazing fast applications. ",
     },
     {
-      label: "Node Express Developer",
+      label: "Node-express Developer",
       icon: nodejs,
       dataTip:
         "JavaScript runtime environment that allows to execute JavaScript code on the server side",
@@ -95,12 +133,12 @@ const TimeLine = () => {
     {
       label: "Mongo Database",
       icon: mongodb,
-      dataTip: "Non-Relational Database",
+      dataTip: "Non-Relational Database written in C++",
     },
     {
       label: "Prisma & Mongoose",
       icon: prisma,
-      dataTip: "Prisma-Power-full type-safe Database ORM for nodeJS projects.",
+      dataTip: "Power-full type-safe Database ORM for nodeJS projects.",
     },
     {
       label: "REST API",
