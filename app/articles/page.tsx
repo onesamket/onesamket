@@ -1,12 +1,12 @@
-import Article from '@/components/section/Article'
-import React from 'react'
+import Article from "@/components/section/Article";
+import React from "react";
 
 const ArticlePage = () => {
-    return (
-        <div>
-            <Article />
-        </div>
-    )
-}
+  return (
+    <div>
+      <Article />
+    </div>
+  );
+};
 
-export default ArticlePage
+export default ArticlePage;

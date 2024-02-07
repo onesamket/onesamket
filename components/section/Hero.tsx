@@ -1,9 +1,9 @@
 "use client";
-import { GoogleDocs } from "iconoir-react";
-import { TypeAnimation } from "react-type-animation";
 import { profile } from "@/assets/profile";
+import { FileText } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { TypeAnimation } from "react-type-animation";
 import Background from "../shared/background-animation";
 const Hero = () => {
   return (
@@ -50,14 +50,11 @@ const Hero = () => {
             repeat={Infinity}
           />
           <p className="py-6">
-            React-based Full-stack engineer, React-native developer
-            MERN-stack Developer{" "}
+            React-based Full-stack engineer, React-native developer MERN-stack
+            Developer{" "}
           </p>
-          <Link
-            href={'/resume'}
-            className="btn btn-primary"
-          >
-            <GoogleDocs /> View  Resume
+          <Link href={"/resume"} className="btn btn-primary">
+            <FileText /> View Resume
           </Link>
         </div>
       </div>

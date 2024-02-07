@@ -1,14 +1,14 @@
+import Footer from "@/components/shared/Footer";
+import Header from "@/components/shared/Header";
+import Toggle from "@/components/shared/Toggle";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/shared/Header";
-import Footer from "@/components/shared/Footer";
-import Toggle from "@/components/shared/Toggle";
 
 const inter = Inter({
   subsets: ["latin"],
-  preload: true
+  preload: true,
+  weight: "300",
 });
-
 
 export default function RootLayout({
   children,
@@ -18,17 +18,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Tewodros Birhanu personal website</title>
+        <title>Tewodros Birhanu |Personal website</title>
         <meta
           name="description"
           content="Personal website to showcase my experience for the people"
         />
+        <link rel="shortcut icon" href="profile.jpg" type="image/png" />
       </head>
       <body className={inter.className}>
         <Header />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
         <Toggle />
         <Footer />
       </body>

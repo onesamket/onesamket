@@ -1,22 +1,23 @@
-import React from 'react'
-import Hero from './section/Hero'
-import Experience from './section/Experience'
-import ShowCases from './section/ShowCases'
-import About from './section/About'
-import Contact from './section/Contact'
+import { Suspense } from "react";
+import About from "./section/About";
+import Contact from "./section/Contact";
+import Experience from "./section/Experience";
+import Hero from "./section/Hero";
+import ShowCases from "./section/ShowCases";
+import Loading from "./shared/spinner";
 
 const InitialPage = () => {
-    return (
-        <div>
-            <Hero />
-            <Experience />
-            <ShowCases />
-            <div className="bg-base-300">
-                <About />
-            </div>
-            <Contact />
-        </div>
-    )
-}
+  return (
+    <Suspense fallback={<Loading />}>
+      <Hero />
+      <Experience />
+      <ShowCases />
+      <div className="bg-base-300">
+        <About />
+      </div>
+      <Contact />
+    </Suspense>
+  );
+};
 
 export default InitialPage;

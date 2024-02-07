@@ -1,11 +1,12 @@
-import Resume from '@/components/section/Resume'
-import React from 'react'
+import Resume from '@/components/section/Resume';
+import Spinner from '@/components/shared/spinner';
+import { Suspense } from 'react';
 
-const ResumePage = () => {
+const ResumePage = async () => {
     return (
-        <div>
+        <Suspense fallback={<Spinner />}>
             <Resume />
-        </div>
+        </Suspense>
     )
 }
 

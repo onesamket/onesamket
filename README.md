@@ -5,7 +5,7 @@
   </div>
 
 <div id="header" align="center">
- <img width="100" height="100" src="https://img.icons8.com/external-flat-icons-inmotus-design/100/external-JS-web-technologies-flat-icons-inmotus-design-5.png" alt="external-JS-web-technologies-flat-icons-inmotus-design-5"/>
+ <img width="100" height="100" src="https://camo.githubusercontent.com/48a026f4399514afed27e76efb9f48e139a0ba4b613d933a8c7a094dc1da475c/68747470733a2f2f74656368737461636b2d67656e657261746f722e76657263656c2e6170702f72656163742d69636f6e2e737667" alt="external-JS-web-technologies-flat-icons-inmotus-design-5"/>
 </div>
   <div align="center">
     <b> React-based Full-stack engineer, React-native developer MERN-stack Developer</b>
@@ -17,23 +17,25 @@
   <li>🖥️ Check out my portfolio at <a href="http://onesamket.vercel.app">onesamket.vercel.app</a>.</li>
   <li>🚀 Currently, I am working on various projects to enhance my skills.</li>
   <li>🧠 I am learning Testing JavaScript, Design Pattern, Deno, TensorFlow.js & bun to expand my knowledge and expertise.</li>
-  <li>❤️ My favorite technologies include React, Tanstack, Remix, TypeScript, NestJS, NextJS, TailwindCss, and Prisma. Also, I love listening to 🎼Music🎧 while drinking ☕.</li>
+  <li>❤️ My favorite technologies include React,Astro, Svelte, Tanstack, Remix, TypeScript, NestJS, NextJS, TailwindCss, and Prisma. Also, I love listening to 🎼Music🎧 while drinking ☕.</li>
   <li>🤝 I'm always open to collaborating on open-source projects.</li>
   <li>❔ In case you're interested, I am available for hire.</li>
 </ul>
 
   <!-- Twitter Badge -->
   <div align="center">
+  <button>
     <a href="https://www.x.com/onesamket" target="_blank" rel="noreferrer">
     find me on X
     </a>
+  </button>
   </div>
 
   <!-- Skills Section -->
 
 ## **Skills I Have to build software**
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,md,react,nodejs,expressjs,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,nextjs,graphql,tailwind,vite,&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,md,react,svelte,astro,nodejs,expressjs,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,nextjs,graphql,tailwind,vite,&theme=light)](https://skillicons.dev)
 
 ## **Tools and Apps I use**
 
