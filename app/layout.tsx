@@ -66,7 +66,7 @@ export default function RootLayout({
         />
         <meta name="linkedin:image" content="profile.jpg" />
 
-        <link rel="shortcut icon" href="profile.jpg" type="image/png" />
+        <link rel="icon" href="profile.jpg" type="image/png" />
       </head>
       <body className={inter.className}>
         <Header />
