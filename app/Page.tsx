@@ -1,8 +1,7 @@
-import InitialPage from "@/components";
 import { redirect } from "next/navigation";
 
-const HomePage = () => {
-  <InitialPage />;
+const Page = () => {
+  return redirect("/tewodros");
 };
 
-export default HomePage;
+export default Page;
