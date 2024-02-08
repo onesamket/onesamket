@@ -1,6 +1,6 @@
 <section id="wrapper" style="padding: 0 20px" class="px-20">
   <div align="center">
-    <h1>Hey There 👋</h1>
+    <h1>Welcome Developers 👋</h1>
     <h2>I'm Tewodros Birhanu</h2>
   </div>
 
@@ -8,7 +8,7 @@
  <img width="100" height="100" src="https://camo.githubusercontent.com/48a026f4399514afed27e76efb9f48e139a0ba4b613d933a8c7a094dc1da475c/68747470733a2f2f74656368737461636b2d67656e657261746f722e76657263656c2e6170702f72656163742d69636f6e2e737667" alt="external-JS-web-technologies-flat-icons-inmotus-design-5"/>
 </div>
   <div align="center">
-    <b> React-based Full-stack engineer, React-native developer MERN-stack Developer</b>
+    <b> React-based Full-stack engineer, React-native developer & MERN-stack Developer</b>
   </div>
 
 <ul>
@@ -24,20 +24,20 @@
 
   <!-- Twitter Badge -->
   <div align="center">
-  <button>
-    <a href="https://www.x.com/onesamket" target="_blank" rel="noreferrer">
+    <a 
+    style="color:#fff;padding:10px; background-color:blue; border-radius:7px; margin-top:10px"
+    href="https://www.x.com/onesamket" target="_blank" rel="noreferrer">
     find me on X
     </a>
-  </button>
   </div>
 
   <!-- Skills Section -->
 
-## **Skills I Have to build software**
+## **My Favorite Technologies**
 
 [![My Skills](https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,md,react,svelte,astro,nodejs,expressjs,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,nextjs,graphql,tailwind,vite,&theme=light)](https://skillicons.dev)
 
-## **Tools and Apps I use**
+## **Tools and Apps**
 
 [![My Skills](https://skillicons.dev/icons?i=,chrome,gmail,figma,vercel,powershell,github,git,postman,vscode,devto,discord,firebase,supabase,LinkedIn,&theme=dark)](https://skillicons.dev)
 
@@ -70,4 +70,6 @@
   </a>
     </div>
   </main>
+<img src="https://raw.githubusercontent.com/mayhemantt/mayhemantt/Update/svg/Bottom.svg" />
+
 </section>
