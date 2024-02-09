@@ -1,13 +1,5 @@
-import { Roboto } from "next/font/google";
 import Image from "next/image";
-
 import { profile } from "@/assets/profile";
-const roboto = Roboto({
-  weight: "300",
-  style: "italic",
-  subsets: ["vietnamese"],
-  display: "auto",
-});
 const About = () => {
   return (
     <div className="w-[70vw] md:w-[50vw]  flex flex-col mx-auto space-y-1 items-center  justify-center">
@@ -33,7 +25,7 @@ const About = () => {
 
           <div className="relative z-10">
             <p
-              className={`${roboto.className} p-3 italic md:text-justify  mx-auto first-letter:text-4xl`}
+              className={` p-3 text-xl md:text-justify  mx-auto first-letter:text-4xl`}
             >
               Hello! My name is Tewodros Birhanu
               <small className="text-sm">(Teddy)</small>, and I am a Mid-level

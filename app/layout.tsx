@@ -1,13 +1,15 @@
 import Footer from "@/components/shared/Footer";
 import Header from "@/components/shared/Header";
 import Toggle from "@/components/shared/Toggle";
-import { Inter } from "next/font/google";
+import { Patrick_Hand } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
+const font = Patrick_Hand({
+  subsets: ["vietnamese"],
   preload: true,
-  weight: "300",
+  display: "swap",
+  style: "normal",
+  weight: "400",
 });
 
 export default function RootLayout({
@@ -68,7 +70,7 @@ export default function RootLayout({
 
         <link rel="icon" href="profile.jpg" type="image/png" />
       </head>
-      <body className={inter.className}>
+      <body className={font.className}>
         <Header />
         <main>{children}</main>
         <Toggle />

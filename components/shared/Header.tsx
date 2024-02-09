@@ -1,15 +1,10 @@
 "use client";
 import { profile } from "@/assets/profile";
 import { Github } from "lucide-react";
-import { Inter } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-const inter = Inter({
-  subsets: ["latin"],
-  preload: true,
-  weight: "600",
-});
+
 export default function Header() {
   const [state, setState] = useState(false);
 
@@ -21,7 +16,7 @@ export default function Header() {
 
   return (
     <nav
-      className={` ${inter.className} w-full shadow sticky top-0 z-50 backdrop-filter backdrop-blur-lg bg-opacity-30   bg-base-200 sm:bg-inherit  md:px-10`}
+      className={`w-full shadow sticky top-0 z-50 backdrop-filter backdrop-blur-lg bg-opacity-30   bg-base-200 sm:bg-inherit  md:px-10`}
     >
       <div className="items-center -z-50 px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">

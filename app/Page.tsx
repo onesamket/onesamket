@@ -1,7 +1,13 @@
-import { redirect } from "next/navigation";
+import InitialPage from "@/components";
+import Spinner from "@/components/shared/spinner";
+import React, { Suspense } from "react";
 
-const Page = () => {
-  return redirect("/tewodros");
+const HomePage = () => {
+  return (
+    <Suspense fallback={<Spinner />}>
+      <InitialPage />
+    </Suspense>
+  );
 };
 
-export default Page;
+export default HomePage;

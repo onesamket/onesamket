@@ -25,9 +25,8 @@
   <!-- Twitter Badge -->
   <div align="center">
     <a 
-    style="color:#fff;padding:10px; background-color:blue; border-radius:7px; margin-top:10px"
     href="https://www.x.com/onesamket" target="_blank" rel="noreferrer">
-    find me on X
+    Twitter
     </a>
   </div>
 
@@ -42,10 +41,9 @@
 [![My Skills](https://skillicons.dev/icons?i=,chrome,gmail,figma,vercel,powershell,github,git,postman,vscode,devto,discord,firebase,supabase,LinkedIn,&theme=dark)](https://skillicons.dev)
 
   <!-- Socials Section -->
-  <h2>Find Me on</h2>
+## **Find me on**
 
 [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=#d16c06)](https://github.com/onesamket)
-[![Facebook](https://img.shields.io/badge/onesamket-Facebook-1877f2?style=for-the-badge&logo=Facebook&logoColor=#d16c06)](https://www.facebook.com/onesamket)
 [![Twitter](https://img.shields.io/badge/onesamket-Twitter-1da1f2?style=for-the-badge&logo=Twitter&logoColor=#d16c06)](https://twitter.com/onesamket)
 [![Medium](https://img.shields.io/badge/onesamket-Medium-12100e?style=for-the-badge&logo=Medium&logoColor=#d16c06)](https://medium.com/@onesamket)
 [![LinkedIn](https://img.shields.io/badge/onesamket-LinkedIn-0077b5?style=for-the-badge&logo=LinkedIn&logoColor=#d16c06)](https://www.linkedin.com/in/ln-onesamket/)
