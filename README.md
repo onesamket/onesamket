@@ -16,8 +16,8 @@
   <li>🧑‍💻 My name is Tewodros Birhanu.</li>
   <li>🖥️ Check out my portfolio at <a href="http://onesamket.vercel.app">onesamket.vercel.app</a>.</li>
   <li>🚀 Currently, I am working on various projects to enhance my skills.</li>
-  <li>🧠 I am learning Testing JavaScript, Design Pattern, Deno, TensorFlow.js & bun to expand my knowledge and expertise.</li>
-  <li>❤️ My favorite technologies include React,Astro, Svelte, Tanstack, Remix, TypeScript, NestJS, NextJS, TailwindCss, and Prisma. Also, I love listening to 🎼Music🎧 while drinking ☕.</li>
+  <li>🧠 I am learning Testing JavaScript, Design Pattern, Deno, and ML with Python, Rust, & Go-land to expand my knowledge and expertise.</li>
+  <li>❤️ My favorite technologies include React, Tanstack, Remix, TypeScript, ExpressJs, Hono, NestJS, NextJS, TailwindCss, and Prisma. Also, I love listening to 🎼Music🎧 while drinking ☕.</li>
   <li>🤝 I'm always open to collaborating on open-source projects.</li>
   <li>❔ In case you're interested, I am available for hire.</li>
 </ul>
@@ -34,7 +34,7 @@
 
 ## **My Favorite Technologies**
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,md,react,svelte,astro,nodejs,expressjs,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,nextjs,graphql,tailwind,vite,&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,md,react,nodejs,expressjs,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,nextjs,graphql,tailwind,vite,&theme=light)](https://skillicons.dev)
 
 ## **Tools and Apps**
 
