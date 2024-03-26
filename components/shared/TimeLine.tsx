@@ -73,18 +73,6 @@ const TimeLine = () => {
         "An open-source framework for building native and web applications using React and React Native.",
     },
     {
-      label: "Svelte & SvelteKit",
-      icon: svelte,
-      dataTip:
-        "Svelte is a free, open-source JavaScript framework and language for front-end components.",
-    },
-    {
-      label: "Astro Framework",
-      icon: astro,
-      dataTip:
-        "Modern static site generator (SSG) gaining attention in web development",
-    },
-    {
       label: "Tanstack Query",
       icon: tanstack,
       dataTip:
