@@ -37,7 +37,6 @@
 [![My Skills](https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,md,react,nodejs,expressjs,rust,bun,go,graphql,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,sqlite,nextjs,graphql,tailwind,vite,vitest,&theme=light)](https://skillicons.dev)
 
 ## **Tools and Apps**
-
 [![My Skills](https://skillicons.dev/icons?i=,chrome,gmail,notion,figma,vercel,npm,pnpm,yarn,bun,powershell,github,git,postman,vscode,devto,discord,firebase,supabase,LinkedIn,&theme=dark)](https://skillicons.dev)
 
   <!-- Socials Section -->
