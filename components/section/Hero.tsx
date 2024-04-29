@@ -50,8 +50,7 @@ const Hero = () => {
             repeat={Infinity}
           />
           <p className="py-6">
-            React-based Full-stack engineer, React-native developer MERN-stack
-            Developer{" "}
+           ET Based Full-stack Engineer.
           </p>
           <Link href={"/resume"} className="btn btn-primary">
             <FileText /> View Resume
