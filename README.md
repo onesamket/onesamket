@@ -8,7 +8,7 @@
  <img width="100" height="100" src="https://camo.githubusercontent.com/48a026f4399514afed27e76efb9f48e139a0ba4b613d933a8c7a094dc1da475c/68747470733a2f2f74656368737461636b2d67656e657261746f722e76657263656c2e6170702f72656163742d69636f6e2e737667" alt="external-JS-web-technologies-flat-icons-inmotus-design-5"/>
 </div>
   <div align="center">
-    <b> React-based Full-stack engineer, React-native developer & MERN-stack Developer</b>
+    <b>Et Based full-stack Engineer.</b>
   </div>
 
 <ul>
