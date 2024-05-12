@@ -28,7 +28,7 @@ const About = () => {
               className={` p-3 text-xl md:text-justify  mx-auto first-letter:text-4xl`}
             >
               Hello! My name is Tewodros Birhanu
-              <small className="text-sm">(Teddy)</small>, and I am a Mid-level
+              <small className="text-sm">(ቴዲ)</small>, and I am a Mid-level
               Fullstack JavaScript Developer. Through years of dedication and
               hard work, I have developed an exceptional skill set that allows
               me to craft elegant, user-friendly, and high-performance web
