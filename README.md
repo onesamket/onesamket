@@ -31,14 +31,14 @@
   </div>
 
   <!-- Skills Section -->
-  <h2 align="center">My Favorite Technologies</h2>
+  <h2 >My Favorite Technologies</h2>
   <div align="center" style="margin: 20px 0;">
     <a href="https://skillicons.dev" target="_blank">
       <img src="https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,md,react,nodejs,expressjs,rust,bun,go,graphql,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,sqlite,nextjs,graphql,tailwind,vite,vitest&theme=light" alt="Skills" />
     </a>
   </div>
 
-  <h2 align="center">Tools and Apps</h2>
+  <h2 >Tools and Apps</h2>
   <div align="center" style="margin: 20px 0;">
     <a href="https://skillicons.dev" target="_blank">
       <img src="https://skillicons.dev/icons?i=chrome,gmail,notion,figma,vercel,npm,pnpm,yarn,bun,powershell,github,git,postman,vscode,devto,discord,firebase,supabase,linkedin&theme=dark" alt="Tools and Apps" />
@@ -66,8 +66,8 @@
   </div>
 
   <!-- GitHub Stats Section -->
-  <h2 align="center">My GitHub Stats</h2>
-  <div id="stats-container" align="center" style="margin: 20px 0;">
+  <h2 >My GitHub Stats</h2>
+  <div id="stats-container"  style="margin: 20px 0;">
     <a href="http://www.github.com/onesamket" target="_blank">
       <img src="https://github-readme-stats.vercel.app/api?username=onesamket&show_icons=true&hide=&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&show_icons=true" alt="onesamket's GitHub stats" />
     </a>
@@ -79,7 +79,7 @@
     </a>
   </div>
 
-  <div align="center" style="margin: 20px 0;">
+  <div  style="margin: 20px 0;">
     <a href="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=onesamket&theme=github_dark" target="_blank">
       <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=onesamket&theme=github_dark" alt="Profile Details">
     </a>
@@ -94,7 +94,7 @@
     </a>
   </div>
 
-  <div align="center" style="margin: 20px 0;">
+  <div  style="margin: 20px 0;">
     <img src="https://raw.githubusercontent.com/mayhemantt/mayhemantt/Update/svg/Bottom.svg" alt="Decorative bottom graphic" />
   </div>
 </section>
