@@ -1,10 +1,8 @@
-import Spinner from "@/components/shared/spinner";
-import React from "react";
 
 const AppLoading = () => {
   return (
-    <div>
-      <Spinner />
+    <div className=" h-screen flex items-center justify-center ">
+      <span className="w-32 h-32 loading loading-infinity "></span>
     </div>
   );
 };

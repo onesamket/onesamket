@@ -1,6 +1,6 @@
 "use client";
 
-const Toggle = () => {
+const ThemeToggle = () => {
   return (
     <div className="fixed bottom-3 right-3">
       <label className="swap swap-rotate">
@@ -41,4 +41,4 @@ const Toggle = () => {
   );
 };
 
-export default Toggle;
+export default ThemeToggle;

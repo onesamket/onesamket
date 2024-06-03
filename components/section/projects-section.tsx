@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { SAMPLE_PROJECTS } from "@/assets/constant/projects";
 
-const ShowCases = () => {
+const ProjectSection = () => {
   return (
     <main id="showcase" className="px-4 md:px-12 py-5 bg-base-200">
       <h3 className=" text-4xl font-bold  py-3  flex items-center justify-center mb-10">
@@ -54,4 +54,4 @@ const ShowCases = () => {
   );
 };
 
-export default ShowCases;
+export default ProjectSection;

@@ -1,11 +1,11 @@
 
+"use client";
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadAll } from "@tsparticles/all";
 import { type ISourceOptions } from "@tsparticles/engine";
 import React from "react";
-
-const Background = () => {
+const BackgroundAnimation = () => {
   const [init, setInit] = useState(false);
 
   // @ts-ignore
@@ -161,7 +161,7 @@ const Background = () => {
         },
       },
       detectRetina: true,
-      background: {
+      backgroundAnimation: {
         color: "dark:bg-slate-900 bg-slate-200",
         image: "",
         position: "50% 50%",
@@ -235,4 +235,4 @@ const Background = () => {
   );
 };
 
-export default Background;
+export default BackgroundAnimation;

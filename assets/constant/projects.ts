@@ -14,26 +14,36 @@ export const SAMPLE_PROJECTS = [
     description:
       "A portfolio website built with Next.js and styled using Tailwind CSS. This project serves as a showcase of skills, projects, and experiences, utilizing the power of Next.js for server-side rendering and Tailwind CSS for a modern and responsive design.",
     projectURL: "https://github.com/onesamket/tewodros",
-    websiteURL: "https://sample-portfolio.vercel.app",
+    websiteURL: "https://nati-st.vercel.app",
     language: ["NextJs", "Tailwind", "React"],
+  },
+
+  {
+    status: "Ready",
+    title: "Research Granting management system",
+    description:
+      "During my university internship, I developed a Research Grant Management System using Next.js, Postgres, Supabase, and Typescript. This system facilitates the management and tracking of research grants, providing an efficient solution for academic institutions.",
+    projectURL: "https://github.com/onesamket/researcher",
+    websiteURL: "https://tw-researcher.netlify.app/",
+    language: ["NextJS", "Postgres", "Supabase", "Typescript"],
   },
   {
     status: "Ready",
-    title: "URL Bookmark Application using React Express and PostgresSQL",
-    description:
-      "An application for managing and bookmarking URLs created with React, Express, and PostgreSQL. This project demonstrates the use of a relational database (PostgreSQL) along with a server built using Express to create a robust URL bookmarking system.",
-    projectURL: "https://github.com/onesamket/bookmark-app",
-    websiteURL: "https://sample-bookmark-app.vercel.app",
-    language: ["React", "Postgres", "Express", "Prisma"],
-  },
-  {
-    status: "Private repo",
-    title: "Research Granting management system",
-    description:
-      "During my university internship, I developed a Research Grant Management System using Next.js, MongoDB, Supabase, and Typescript. This system facilitates the management and tracking of research grants, providing an efficient solution for academic institutions.",
-    projectURL: "https://github.com/onesamket/researcher",
-    websiteURL: "https://sample-research-grant.vercel.app",
-    language: ["NextJS", "MongoDB", "Supabase", "Typescript"],
+    title:
+      "Web-based Exit exam platform for both Visually impaired and non visual impaired  exam tackers for MOE ",
+    description: "",
+    projectURL: "https://github.com/onesamket/et-exit",
+    websiteURL: "https://et-exit.netlify.app",
+    language: [
+      "NextJS",
+      "MongoDB",
+      "Supabase",
+      "Typescript",
+      "Prisma",
+      "Twilio",
+      "ExcelJS",
+      "Nodemailer",
+    ],
   },
   {
     status: "Planned",
@@ -45,6 +55,21 @@ export const SAMPLE_PROJECTS = [
     language: ["Remix", "MongoDB", "Supabase", "NextUI"],
   },
   {
+    status: "Ready",
+    title: "Online Food delivery Website",
+    description: "",
+    projectURL: "https://github.com/onesamket/food-delivery",
+    websiteURL: "https://tw-delivery.netlify.app",
+    language: [
+      "NextJs",
+      "ShadcnUI",
+      "zustand",
+      "leafletJs",
+      "Supabase",
+      "Nodemailer",
+    ],
+  },
+  {
     status: "On progress",
     title: "Instagram mobile app  UI clone ",
     description:
@@ -54,22 +79,30 @@ export const SAMPLE_PROJECTS = [
     language: ["Expo", "Nativewind", "zustand", "react-native"],
   },
   {
-    status: "Ready",
-    title: "Note App using Remix, SQLite, DaisyUI, and Typescript",
-    description:
-      "A note-taking application built with Remix, SQLite, DaisyUI, and Typescript. This project allows users to create, edit, and delete notes in a simple and intuitive interface.",
-    projectURL: "https://github.com/onesamket/note-app-remix",
-    websiteURL: "https://sample-note-app.vercel.app",
-    language: ["Remix", "SQLite", "DaisyUI", "Typescript"],
+    status: "On progress",
+    title:
+      "Discussion forum  website  with AI integrated Inspired by  dev.to  ",
+    description: "Currently, I'm working on Forum application",
+    projectURL: "https://github.com/onesamket/high-school",
+    websiteURL: "https://sample-student-management.vercel.app",
+    language: ["Expo", "Nativewind", "zustand", "react-native"],
+  },
+  {
+    status: "Planned",
+    title: "Developer Utility App ",
+    description: "",
+    projectURL: "#",
+    websiteURL: "#",
+    language: ["Hono", "Zod", "Shadcn", "Vite", "Typescript", "Prisma", "Bun"],
   },
   {
     status: "SOON",
-    title: "Chat App using Next.js, Socket.io, and Tailwind CSS",
+    title: "Chat App using Next.js, Express Socket.io",
     description:
       "A real-time chat application developed with Next.js, Socket.io, and Tailwind CSS. This project enables users to engage in instant messaging with a clean and responsive user interface.",
     projectURL: "https://github.com/onesamket/it-chat",
     websiteURL: "https://sample-chat-app.vercel.app",
-    language: ["Next.js", "Socket.io", "Tailwind CSS"],
+    language: ["Next.js", "Express", , "Socket.io", "Shadcn UI"],
   },
   {
     status: "Ready",
@@ -87,13 +120,12 @@ export const SAMPLE_PROJECTS = [
       "A dBooks.org clone built with Remix, DaisyUI, Tailwind CSS, and Axios. This online bookstore allows users to explore, search, and purchase books seamlessly. The project showcases the power of Remix for server-rendered React applications, the rich UI components from DaisyUI, and the styling capabilities of Tailwind CSS.",
     projectURL: "https://github.com/onesamket/zustand-todo",
     websiteURL: "https://zustand-todo.vercel.app",
-    language: ["React", "shadcm.ui", "Tailwind CSS", "zustand"],
+    language: ["React", "shadcn.ui", "Typescript", "zustand"],
   },
   {
     status: "Ready",
     title: "Terminal look portfolio",
-    description:
-      "A dBooks.org clone built with Remix, DaisyUI, Tailwind CSS, and Axios. This online bookstore allows users to explore, search, and purchase books seamlessly. The project showcases the power of Remix for server-rendered React applications, the rich UI components from DaisyUI, and the styling capabilities of Tailwind CSS.",
+    description: "",
     projectURL: "https://github.com/onesamket/terminal-look-portfolio",
     websiteURL: "https://sample-dbooks-clone.vercel.app",
     language: [

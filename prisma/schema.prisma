@@ -1,13 +1,20 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+// todo 
+
+model User {
+  id       String @id @default(cuid())
+  name     String
+  emial    String @unique
+  password String
+  role     Role   @default(VISITOR)
 }
 
 model Article {
@@ -18,4 +25,9 @@ model Article {
   inviteLink String
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
+}
+
+enum Role {
+  VISITOR
+  OWNER
 }

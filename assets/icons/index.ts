@@ -7,6 +7,7 @@ import authentication from "./icons8-authentication-48.png";
 import collaboration from "./icons8-collaboration-48.png";
 import deployment from "./icons8-deployment-64.png";
 import expo from "./icons8-expo-48.png";
+import hono from "./icons8-fire-48.png";
 import graphql from "./icons8-graphql-an-open-source-data-query-and-manipulation-language-for-api-48.png";
 import js from "./icons8-js-48.png";
 import mongodb from "./icons8-mongodb-48.png";
@@ -35,6 +36,7 @@ export {
   expo,
   github,
   graphql,
+  hono,
   js,
   mongodb,
   nestjs,

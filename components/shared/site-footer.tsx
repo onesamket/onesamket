@@ -2,29 +2,26 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const Footer = async () => {
+const SiteFooter = async () => {
   return (
     <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
       <nav className="flex flex-col md:flex-row">
-        <Link href="./" className="link link-hover">
+        <Link href="/" className="link link-hover">
           Home{" "}
         </Link>
-        <Link href="./tewodros/#experience" className="link link-hover">
+        <Link href=".#experience" className="link link-hover">
           Experience
         </Link>
-        <Link href="./tewodros/#showcase" className="link link-hover">
+        <Link href=".#showcase" className="link link-hover">
           Showcases
-        </Link>
-        <Link href="./resume" className="link link-hover">
-          Resume
         </Link>
         <Link href="/articles" className="link link-hover">
           Articles
         </Link>
-        <Link href="./tewodros/#about" className="link link-hover">
+        <Link href=".#about" className="link link-hover">
           About{" "}
         </Link>
-        <Link href="./tewodros/#contact" className="link link-hover">
+        <Link href=".#contact" className="link link-hover">
           Contact{" "}
         </Link>
       </nav>
@@ -65,4 +62,4 @@ const Footer = async () => {
   );
 };
 
-export default Footer;
+export default SiteFooter;

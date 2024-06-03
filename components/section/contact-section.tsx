@@ -1,5 +1,5 @@
 import React from "react";
-const Contact = () => {
+const ContactSection = () => {
     return (
         <main id="contact" className="pb-7 px-6 bg-base-300 mx-auto flex flex-col items-center justify-center gap-7">
 
@@ -13,4 +13,4 @@ const Contact = () => {
         </main>
     )
 }
-export default Contact;
+export default ContactSection;

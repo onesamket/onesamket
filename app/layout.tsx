@@ -1,8 +1,8 @@
-import Footer from "@/components/shared/Footer";
-import Header from "@/components/shared/Header";
-import Toggle from "@/components/shared/Toggle";
 import { Patrick_Hand } from "next/font/google";
 import "./globals.css";
+import SiteHeader from "@/components/shared/site-header";
+import SiteFooter from "@/components/shared/site-footer";
+import ThemeToggle from "@/components/shared/theme-toggle";
 
 const font = Patrick_Hand({
   subsets: ["vietnamese"],
@@ -71,10 +71,10 @@ export default function RootLayout({
         <link rel="icon" href="profile.jpg" type="image/png" />
       </head>
       <body className={font.className}>
-        <Header />
+        <SiteHeader />
         <main>{children}</main>
-        <Toggle />
-        <Footer />
+        <ThemeToggle />
+        <SiteFooter />
       </body>
     </html>
   );

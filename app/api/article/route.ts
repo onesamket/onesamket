@@ -8,7 +8,7 @@ export const POST = async (request: NextRequest) => {
       title: "Post one",
       content,
       inviteLink: "one.com",
-      cover: "image,jpg",
+      cover: "image.jpg",
     },
   });
   return NextResponse.json(article);

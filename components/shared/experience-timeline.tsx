@@ -28,6 +28,7 @@ import {
   graphql,
   astro,
   expo,
+  hono,
 } from "../../assets/icons";
 import Image from "next/image";
 
@@ -108,10 +109,10 @@ const TimeLine = () => {
         "JavaScript runtime environment that allows to execute JavaScript code on the server side",
     },
     {
-      label: "NestJs framework",
-      icon: nestjs,
+      label: "Hono,Hapi frameworks",
+      icon: hono,
       dataTip:
-        "NestJS is a framework for building server-side applications with Node.js",
+        "Hono  is a blazing fast framework for building  applications with node,bun,deno...",
     },
     {
       label: "SQL Databases",

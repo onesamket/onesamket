@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { profile } from "@/assets/profile";
-const About = () => {
+import { profile } from "@/assets";
+const AboutSection = () => {
   return (
     <div className="w-[70vw] md:w-[50vw]  flex flex-col mx-auto space-y-1 items-center  justify-center">
       <section id="about" className="px-5 py-20  space-y-1">
@@ -32,7 +32,7 @@ const About = () => {
               Fullstack JavaScript Developer. Through years of dedication and
               hard work, I have developed an exceptional skill set that allows
               me to craft elegant, user-friendly, and high-performance web
-              applications. I am passionate about coding and love to collaborate
+              applications using latest technologies. I am passionate about coding and love to collaborate
               with others on open-source projects. I am also a student at
               Haramaya University, constantly learning and adapting to the
               latest technologies. Let me put my expertise to work for you and
@@ -66,4 +66,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;

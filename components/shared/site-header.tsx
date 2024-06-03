@@ -1,16 +1,15 @@
 "use client";
-import { profile } from "@/assets/profile";
+import { profile } from "@/assets";
 import { Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Header() {
+export default function SiteHeader() {
   const [state, setState] = useState(false);
 
   const navigation = [
     { title: "Home", path: "/" },
-    { title: "Resume", path: "/resume" },
     { title: "Articles", path: "/articles" },
   ];
 
@@ -66,9 +65,8 @@ export default function Header() {
         </div>
 
         <div
-          className={`flex-1 justify-self-center ml-4  pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-            state ? "block" : "hidden"
-          }`}
+          className={`flex-1 justify-self-center ml-4  pb-3 mt-8 md:block md:pb-0 md:mt-0 ${state ? "block" : "hidden"
+            }`}
         >
           <ul className="justify-center items-center space-y-8 md:flex md:space-x-6 md:space-y-0">
             {navigation.map((item, idx) => {
@@ -86,16 +84,11 @@ export default function Header() {
           </ul>
         </div>
         <div className="hidden md:block">
-          <a
-            href="http://github.com/onesamket"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            <Github className="cursor-pointer text-gray-400" />
-          </a>
+          <Link href={'https://github.com/onesamket'}>
+            <Github className="w-6 h-6" />
+          </Link>
         </div>
       </div>
-    </nav>
+    </nav >
   );
 }

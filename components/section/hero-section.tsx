@@ -1,11 +1,11 @@
 "use client";
-import { profile } from "@/assets/profile";
+import { profile } from "@/assets";
 import { FileText } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 import Background from "../shared/background-animation";
-const Hero = () => {
+const HeroSection = () => {
   return (
     <main id="" className="hero min-h-screen">
       <Background />
@@ -50,9 +50,11 @@ const Hero = () => {
             repeat={Infinity}
           />
           <p className="py-6">
-           ET Based Full-stack Engineer.
+            ET Based Full-stack Engineer.
           </p>
-          <Link href={"/resume"} className="btn btn-primary">
+          <Link
+            download={true}
+            href={"https://szfvzxibeztcmqpyuuxd.supabase.co/storage/v1/object/public/Drive/Tewodros-resume-V2.pdf?t=2024-06-03T12%3A20%3A26.031Z"} className="btn btn-primary">
             <FileText /> View Resume
           </Link>
         </div>
@@ -61,4 +63,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;
