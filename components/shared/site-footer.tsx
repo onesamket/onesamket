@@ -1,30 +1,10 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 const SiteFooter = async () => {
   return (
     <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
-      <nav className="flex flex-col md:flex-row">
-        <Link href="/" className="link link-hover">
-          Home{" "}
-        </Link>
-        <Link href=".#experience" className="link link-hover">
-          Experience
-        </Link>
-        <Link href=".#showcase" className="link link-hover">
-          Showcases
-        </Link>
-        <Link href="/articles" className="link link-hover">
-          Articles
-        </Link>
-        <Link href=".#about" className="link link-hover">
-          About{" "}
-        </Link>
-        <Link href=".#contact" className="link link-hover">
-          Contact{" "}
-        </Link>
-      </nav>
+
       <nav className=" mx-auto">
         <div className="grid grid-flow-col gap-4">
           <div className="tooltip" data-tip="Github">
