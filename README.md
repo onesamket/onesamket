@@ -17,8 +17,8 @@
     <li>🧑‍💻 My name is Tewodros Birhanu.</li>
     <li>🖥️ Check out my portfolio at <a href="http://onesamket.vercel.app" target="_blank">onesamket.vercel.app</a>.</li>
     <li>🚀 Currently, I am working on various projects to enhance my skills.</li>
-    <li>🧠 I am learning Testing JavaScript, Design Pattern, Deno, Rust, & Go-lang to expand my knowledge and expertise.</li>
-    <li>❤️ My favorite technologies include React, Tanstack, Remix, Bun, Deno, TypeScript, ExpressJs, Hapi.js, Hono, NestJS, NextJS, TailwindCss, and Prisma. I also love listening to 🎼Music🎧 while drinking ☕.</li>
+    <li>🧠 I am learning Testing JavaScript, Design Pattern, Deno, and Rust to expand my knowledge and expertise.</li>
+    <li>❤️ My favorite technologies include React, Tanstack, Remix, Bun, Deno, TypeScript, ExpressJs, Hapi.js, Hono, NextJS, TailwindCss, and Prisma. I also love listening to 🎼Music🎧 while drinking ☕.</li>
     <li>🤝 I'm always open to collaborating on open-source projects.</li>
     <li>❔ In case you're interested, I am available for hire.</li>
   </ul>
