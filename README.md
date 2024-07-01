@@ -34,7 +34,7 @@
   <h2 >My Favorite Technologies</h2>
   <div align="center" style="margin: 20px 0;">
     <a href="https://skillicons.dev" target="_blank">
-      <img src="https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,md,react,nodejs,expressjs,rust,bun,go,graphql,nestjs,remix,prisma,apollo,postgres,mongodb,mysql,sqlite,nextjs,graphql,tailwind,vite,vitest&theme=light" alt="Skills" />
+      <img src="https://skillicons.dev/icons?i=html,css,sass,javascript,jquery,typescript,md,react,nodejs,expressjs,rust,bun,graphql,remix,prisma,apollo,postgres,mongodb,mysql,sqlite,nextjs,graphql,tailwind,vite,vitest&theme=light" alt="Skills" />
     </a>
   </div>
 
