@@ -113,7 +113,7 @@ export default function RootLayout({
                 <Link href="https://instagram.com/onesamket_ig">
                   <FaInstagram className="w-4 h-4" />
                 </Link>
-                <Link href="https://t.me.com/onesamket">
+                <Link href="https://t.me/onesamket">
                   <FaTelegram className="w-4 h-4" />
                 </Link>
               </div>
