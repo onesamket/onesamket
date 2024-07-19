@@ -47,7 +47,7 @@ export const PROJECT_LIST = [
     description: "Start developing application with my stacks",
     imageUrl: tw_stack,
     languages: ["NextJs", "shadcnui", "Typescript"],
-    previewUrl: "https://et-tw-stack.vercel.app",
+    previewUrl: "https://tw-stack.vercel.app",
     sourceCodeUrl: "https://github.com/onesamket/tw-stack",
   },
   {

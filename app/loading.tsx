@@ -1,4 +1,4 @@
-import { dark_polygon_star, with_glass } from "@/assets";
+import { polygon_star, with_glass } from "@/assets";
 import Image from "next/image";
 
 export default function Loading() {
@@ -6,7 +6,7 @@ export default function Loading() {
     <main className="flex h-screen items-center justify-center">
       <div className="relative flex items-center justify-center">
         <Image
-          src={dark_polygon_star}
+          src={polygon_star}
           alt="polygon"
           className="w-80 h-80 animate-slow-spin"
           layout="fixed"

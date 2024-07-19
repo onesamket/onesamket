@@ -93,8 +93,11 @@ export default function RootLayout({
 
             <footer className="w-full flex justify-between  items-center p-10">
               <div className=" flex space-x-1 items-center">
-                <p className="text-2xl"> &copy; </p>
-                <p className="hidden md:flex">All Right Is Reserved 2023</p>
+                <p className="flex space-x-1 items-center">
+                  <p className="text-2xl"> &copy;</p>
+                  <p className="md:hidden">2023</p>{" "}
+                </p>
+                <p className="hidden md:flex">All Right Is Reserved 2023 </p>
               </div>
               <div className="flex space-x-5">
                 <Link href="https://github.com/onesamket">

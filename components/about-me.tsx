@@ -35,7 +35,7 @@ export default function AboutMe() {
         />
       </div>
 
-      <div className="w-full px-12   flex flex-col mx-auto space-y-1 items-center  justify-center">
+      <div className="w-full    flex flex-col mx-auto space-y-1 items-center  justify-center">
         <section id="about" className="px-5   space-y-1">
           <h1 className="text-4xl  self-start font-bold flex items-center justify-center">
             About Me
@@ -56,7 +56,7 @@ export default function AboutMe() {
               />
             </svg>
 
-            <div className="relative z-10">
+            <div className=" w-full flex-1 relative z-10">
               <p>
                 Hello! My name is Tewodros Birhanu
                 <small className="text-sm">(ቴዲ)</small>, and I am a mid-level
@@ -83,8 +83,8 @@ export default function AboutMe() {
                     alt="onesamket"
                   />
                 </div>
-                <div className="ms-4">
-                  <div className="text-base font-semibold">
+                <div className="ms-4 w-full">
+                  <div className="sm:text-base w-full flex-1 font-medium sm:font-semibold">
                     Tewodros Birhanu
                   </div>
                   <Link
