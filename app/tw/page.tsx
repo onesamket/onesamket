@@ -1,5 +1,6 @@
 import AboutMe from "@/components/about-me";
 import { AvatarComponent } from "@/components/avatar-component";
+import SparklesText from "@/components/magicui/sparkles-text";
 import WordPullUp from "@/components/magicui/word-pullup";
 import ProjectCard from "@/components/project-card";
 import SkillsList from "@/components/skills-list";
@@ -12,9 +13,10 @@ export default function HomePage() {
     <main className="flex flex-col gap-5 text-center">
       <section className="flex flex-col gap-5">
         <AvatarComponent />
-        <h1 className="text-2xl md:text-4xl font-bold">
-          Hi, I&apos;m Tewodros Birhanu{" "}
-        </h1>
+        <SparklesText
+          className="text-2xl md:text-4xl"
+          text="Hi, I'm Tewodros Birhanu"
+        />
         <WordPullUp
           className=" font-normal md:text-xl tracking-tight md:font-bold text-black dark:text-white"
           words="ET based full-stack developer. I build websites & applications for the peoples"

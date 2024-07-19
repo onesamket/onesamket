@@ -39,7 +39,7 @@ export function AvatarComponent() {
           onClick={handleImageClick}
           src={theme === "dark" ? profile_black : profile_white}
           alt="profile"
-          className="w-32 h-32 rounded-full cursor-pointer"
+          className="w-32 h-32 rounded-full  cursor-pointer"
         />
         <BorderBeam />
       </div>

@@ -15,6 +15,9 @@ import research from "./Images/research-mgt.jpg";
 import et_exit from "./Images/et-exit.png";
 import polygon_star from "./Images/polygon-star.png";
 import dark_polygon_star from "./Images/dark-polygon-star.png";
+import dbooks_clone from "./Images/d-books-clone.png";
+import instagram_clone from "./Images/instagram.jpeg";
+import portfolio_design from "./Images/portfolio-ui.png";
 
 // My images
 import with_glass from "./Images/with-eye-glass.jpg";
@@ -31,6 +34,7 @@ import github from "./icons/GitHub.svg";
 import external_link from "./icons/External Link.svg";
 
 export {
+  instagram_clone,
   polygon_star,
   code_in_lab,
   with_computer,
@@ -42,6 +46,8 @@ export {
   upright,
   website,
   et_exit,
+  portfolio_design,
+  dbooks_clone,
   tw_stack,
   smart_phone,
   version_control,

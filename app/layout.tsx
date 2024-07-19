@@ -4,7 +4,8 @@ import { ThemeSwitcher } from "@/components/theme/theme-toggle";
 import { cn } from "@/lib/utils";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import { FaGithub, FaLink, FaLinkedin } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+import { FaGithub, FaInstagram, FaLinkedin, FaTelegram } from "react-icons/fa";
 import "./globals.css";
 const interFont = Inter({
   subsets: ["latin"],
@@ -91,7 +92,7 @@ export default function RootLayout({
               )}
             />
 
-            <footer className="w-full flex justify-between  items-center p-10">
+            <footer className="w-full flex justify-between  items-center p-5 md:p-10">
               <div className=" flex space-x-1 items-center">
                 <p className="flex space-x-1 items-center">
                   <p className="text-2xl"> &copy;</p>
@@ -101,13 +102,19 @@ export default function RootLayout({
               </div>
               <div className="flex space-x-5">
                 <Link href="https://github.com/onesamket">
-                  <FaGithub className="w-5 h-5" />
+                  <FaGithub className="w-4 h-4" />
+                </Link>
+                <Link href="https://x.com/onesamket_ig">
+                  <BsTwitterX className="w-4 h-4" />
                 </Link>
                 <Link href="https://www.linkedin.com/in/ln-onesamket">
-                  <FaLinkedin className="w-5 h-5" />
+                  <FaLinkedin className="w-4 h-4" />
                 </Link>
-                <Link href="https://onesamket.vercel.app">
-                  <FaLink className="w-5 h-5" />
+                <Link href="https://instagram.com/onesamket_ig">
+                  <FaInstagram className="w-4 h-4" />
+                </Link>
+                <Link href="https://t.me.com/onesamket">
+                  <FaTelegram className="w-4 h-4" />
                 </Link>
               </div>
               <ThemeSwitcher />

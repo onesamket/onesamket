@@ -40,7 +40,7 @@ export default function ProjectCard({
       <BoxReveal duration={0.2}>
         {/* badges  */}
         <div className="px-3 w-full flex-1 my-3 mb-3 flex flex-wrap gap-1">
-          {languages.slice(0, 3).map((lang, index) => (
+          {languages.slice(0, 4).map((lang, index) => (
             <Badge key={index}>{lang}</Badge>
           ))}
         </div>
