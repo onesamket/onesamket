@@ -55,6 +55,8 @@ export const BoxReveal = ({
         initial="hidden"
         animate={slideControls}
         transition={{ duration: duration ? duration : 0.5, ease: "easeIn" }}
+        // make  it skeleton with in the given bg color
+        // className="animate-pulse rounded-md bg-muted"
         style={{
           position: "absolute",
           top: 4,
