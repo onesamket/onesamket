@@ -59,16 +59,16 @@ export default function AboutMe() {
             <div className=" w-full flex-1 relative z-10">
               <p>
                 Hello! My name is Tewodros Birhanu
-                <small className="text-sm">(ቴዲ)</small>, and I am a mid-level
-                full-stack web and React Native application developer. Through
-                years of dedication and hard work, I have developed an
-                exceptional skill set that allows me to craft elegant,
-                user-friendly, and high-performance web applications using the
-                latest technologies. I am passionate about coding and love to
-                collaborate with others on open-source projects. I graduated
-                from Haramaya University and am constantly learning and adapting
-                to the latest technologies. Let me put my expertise to work for
-                you and bring your web development ideas to life!
+                <small className="text-sm">(ቴዲ)</small>, and I am full-stack web
+                and React Native application developer. Through years of
+                dedication and hard work, I have developed an exceptional skill
+                set that allows me to craft elegant, user-friendly, and
+                high-performance web applications using the latest technologies.
+                I am passionate about coding and love to collaborate with others
+                on open-source projects. I graduated from Haramaya University
+                and am constantly learning and adapting to the latest
+                technologies. Let me put my expertise to work for you and bring
+                your web development ideas to life!
               </p>
             </div>
 

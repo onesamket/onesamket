@@ -21,12 +21,7 @@ export default function HomePage() {
           className=" font-normal md:text-xl tracking-tight md:font-bold text-black dark:text-white"
           words="ET based full-stack developer. I build websites & applications for the peoples"
         />
-        <Link
-          target="_blank"
-          href={
-            "https://szfvzxibeztcmqpyuuxd.supabase.co/storage/v1/object/public/Drive/Tewodros-resume-V2.pdf?t=2024-06-03T12%3A20%3A26.031Z"
-          }
-        >
+        <Link target="_blank" href="https://flowcv.com/resume/vkc21asr0g">
           <Button className=" h-full">Download Resume</Button>
         </Link>
       </section>
