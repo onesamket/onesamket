@@ -8,6 +8,7 @@ import { BorderBeam } from "./magicui/border-beam";
 import OrbitingCircles from "./magicui/circular-orbit";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
+import { ToolTipWrapper } from "./tooltip-component";
 
 export function AvatarComponent() {
   const { theme, setTheme } = useTheme();
@@ -35,12 +36,14 @@ export function AvatarComponent() {
   return (
     <div className="relative flex h-[350px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
       <div className="relative w-32 rounded-full">
-        <Image
-          onClick={handleImageClick}
-          src={theme === "dark" ? profile_black : profile_white}
-          alt="profile"
-          className="w-32 h-32 rounded-full  cursor-pointer"
-        />
+        <ToolTipWrapper content="Click Avatar">
+          <Image
+            onClick={handleImageClick}
+            src={theme === "dark" ? profile_black : profile_white}
+            alt="profile"
+            className="w-32 h-32 rounded-full  cursor-pointer"
+          />
+        </ToolTipWrapper>
         <BorderBeam />
       </div>
 

@@ -95,8 +95,8 @@ export default function RootLayout({
             <footer className="w-full flex justify-between  items-center mt-10 p-5 md:p-10">
               <div className=" flex space-x-1 items-center">
                 <p className="flex space-x-1 items-center">
-                  <p className="text-2xl"> &copy;</p>
-                  <p className="md:hidden">{new Date().getFullYear()} </p>{" "}
+                  <span className="text-2xl"> &copy;</span>
+                  <p className="md:hidden">@onesamket</p>{" "}
                 </p>
                 <p className="hidden md:flex">
                   All Right Is Reserved {new Date().getFullYear()}{" "}

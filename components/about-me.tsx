@@ -66,7 +66,7 @@ export default function AboutMe() {
                 high-performance web applications using the latest technologies.
                 I am passionate about coding and love to collaborate with others
                 on open-source projects. I graduated from Haramaya University
-                and am constantly learning and adapting to the latest
+                and I&apos;m constantly learning and adapting to the latest
                 technologies. Let me put my expertise to work for you and bring
                 your web development ideas to life!
               </p>

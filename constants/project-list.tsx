@@ -3,12 +3,9 @@ import {
   et_exit,
   fashion_site,
   food_delivery,
-  instagram_clone,
   portfolio_design,
   research,
   tw_stack,
-  ui_ux,
-  with_computer,
 } from "@/assets";
 
 export const PROJECT_LIST = [
@@ -84,14 +81,14 @@ export const PROJECT_LIST = [
     previewUrl: "https://tw-researcher.netlify.app",
     sourceCodeUrl: "https://github.com/onesamket/researcher",
   },
-  {
-    title: "Mobile App UI/UX",
-    description: "Amazing mobile application UI/UX design",
-    imageUrl: ui_ux,
-    languages: ["Figma", "icon8"],
-    previewUrl: "#",
-    sourceCodeUrl: "#",
-  },
+  // {
+  //   title: "Mobile App UI/UX",
+  //   description: "Amazing mobile application UI/UX design",
+  //   imageUrl: ui_ux,
+  //   languages: ["Figma", "icon8"],
+  //   previewUrl: "#",
+  //   sourceCodeUrl: "#",
+  // },
   {
     title: "dBooks  Clone ",
     description: "Home of Free books to download and read website ",
@@ -101,19 +98,19 @@ export const PROJECT_LIST = [
     sourceCodeUrl: "https://github.com/onesamket/dBooks-clone",
   },
   {
-    title: "Developer porfolio  website ",
+    title: "Developer portfolio  website ",
     description: "Amazing developer portfolio website ",
     imageUrl: portfolio_design,
     languages: ["Nextjs", "typescript", "shadcnui", "framer motion", ""],
     previewUrl: "#",
     sourceCodeUrl: "https://github.com/onesamket/onesamket",
   },
-  {
-    title: "Instagram UI  clone ",
-    description: "Instagram clone using react native and nativewind ",
-    imageUrl: instagram_clone,
-    languages: ["expo", "nativewind", "zustand"],
-    previewUrl: "#",
-    sourceCodeUrl: "https://github.com/onesamket/instagram-ui-clone",
-  },
+  // {
+  //   title: "Instagram UI  clone ",
+  //   description: "Instagram clone using react native and nativewind ",
+  //   imageUrl: instagram_clone,
+  //   languages: ["expo", "nativewind", "zustand"],
+  //   previewUrl: "#",
+  //   sourceCodeUrl: "https://github.com/onesamket/instagram-ui-clone",
+  // },
 ];
