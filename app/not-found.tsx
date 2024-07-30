@@ -1,32 +1,57 @@
-"use client";
-import { dark_polygon_star, polygon_star, with_glass } from "@/assets";
+import AboutMe from "@/components/about-me";
+import { AvatarComponent } from "@/components/avatar-component";
 import SparklesText from "@/components/magicui/sparkles-text";
-import { useTheme } from "next-themes";
-import Image from "next/image";
+import WordPullUp from "@/components/magicui/word-pullup";
+import ProjectCard from "@/components/project-card";
+import SkillsList from "@/components/skills-list";
+import { Button } from "@/components/ui/button";
+import { PROJECT_LIST } from "@/constants/project-list";
+import Link from "next/link";
 
-export default function Loading() {
-  const { theme } = useTheme();
+export default function HomePage() {
   return (
-    <main className="flex flex-col h-screen items-center justify-center">
-      <div className="relative flex items-center justify-center">
-        <Image
-          src={theme == "light" ? polygon_star : dark_polygon_star}
-          alt="polygon"
-          className="w-80 h-80 animate-slow-spin"
-          layout="fixed"
-          width={400}
-          height={400}
+    <main className="flex flex-col gap-5 text-center">
+      <section className="flex flex-col gap-5">
+        <AvatarComponent />
+        <SparklesText
+          className="text-2xl md:text-4xl"
+          text="Hi, I'm Tewodros Birhanu"
         />
-        <Image
-          src={with_glass}
-          alt="classic"
-          className="absolute w-40 h-40 rounded-full"
+        <WordPullUp
+          className=" font-normal md:text-xl tracking-tight md:font-bold text-black dark:text-white"
+          words="ET based full-stack developer. I build websites & applications for the peoples"
         />
-      </div>
-      <SparklesText
-        className="text-2xl md:text-4xl"
-      text="You lost! Page Not found!"
-      />
+        <Link target="_blank" href="https://flowcv.com/resume/vkc21asr0g">
+          <Button className=" h-full">View Resume</Button>
+        </Link>
+      </section>
+
+      {/* skills sections  */}
+      <SkillsList />
+
+      {/* project section  */}
+      <section className=" my-12">
+        <h3 className=" text-3xl font-bold leading-normal py-5">
+          Showcase works
+        </h3>
+        <div className="grid sm:grid-cols-2  md:grid-cols-3 gap-3 ">
+          {PROJECT_LIST.map((project) => (
+            <div key={project.title}>
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                imageUrl={project.imageUrl}
+                languages={project.languages}
+                previewUrl={project.previewUrl}
+                sourceCodeUrl={project.sourceCodeUrl}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* about me section  */}
+      <AboutMe />
     </main>
   );
 }
