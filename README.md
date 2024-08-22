@@ -1,7 +1,7 @@
 <section id="wrapper" style="padding: 20px; max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif;">
   <div align="center">
     <h1>Welcome Developers 👋</h1>
-    <h2>I'm Tewodros Birhanu</h2>
+    <h2>I'm Tewodros Birhan</h2>
   </div>
 
   <div id="header" align="center" style="margin: 20px 0;">
@@ -14,7 +14,7 @@
 
   <ul style="list-style: none; padding: 0; line-height: 1.6;">
     <h1>About Me</h1>
-    <li>🧑‍💻 My name is Tewodros Birhanu.</li>
+    <li>🧑‍💻 My name is Tewodros Birhan.</li>
     <li>🖥️ Check out my portfolio at <a href="http://onesamket.vercel.app" target="_blank">onesamket.vercel.app</a>.</li>
     <li>🚀 Currently, I am working on various projects to enhance my skills.</li>
     <li>🧠 I am learning Testing JavaScript, Design Pattern, Deno, Rust to expand my knowledge and expertise.</li>
