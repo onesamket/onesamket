@@ -58,7 +58,7 @@ export default function AboutMe() {
 
             <div className=" w-full flex-1 relative z-10">
               <p>
-                Hello! My name is Tewodros Birhan
+                Hello! My name is Tewodros Birhanu
                 <small className="text-sm">(ቴዲ)</small>, and I am full-stack web
                 and React Native application developer. Through years of
                 dedication and hard work, I have developed an exceptional skill
@@ -85,7 +85,7 @@ export default function AboutMe() {
                 </div>
                 <div className="ms-4 w-full">
                   <div className="sm:text-base w-full flex-1 font-medium sm:font-semibold">
-                    Tewodros Birhan
+                    Tewodros Birhanu
                   </div>
                   <Link
                     href="https://x.com/onesamket"
