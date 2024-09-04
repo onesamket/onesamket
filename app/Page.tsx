@@ -15,7 +15,7 @@ export default function HomePage() {
         <AvatarComponent />
         <SparklesText
           className="text-2xl md:text-4xl"
-          text="Hi, I'm Tewodros Birhan"
+          text="Hi, I'm Tewodros Birhanu"
         />
         <WordPullUp
           className=" font-normal md:text-xl tracking-tight md:font-bold text-black dark:text-white"
