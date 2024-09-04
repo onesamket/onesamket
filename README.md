@@ -1,7 +1,7 @@
 <section id="wrapper" style="padding: 20px; max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif;">
   <div align="center">
     <h1>Welcome Developers 👋</h1>
-    <h2>I'm Tewodros Birhan</h2>
+    <h2>I'm Tewodros Birhanu</h2>
   </div>
 
   <div id="header" align="center" style="margin: 20px 0;">
