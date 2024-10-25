@@ -2,7 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/libs/utils";
 
 interface WordPullUpProps {
   words: string;

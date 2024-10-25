@@ -1,5 +1,5 @@
 import { Container } from "@/components/container";
-import { cn } from "@/lib/utils";
+import { cn } from "@/libs/utils";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
