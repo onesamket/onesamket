@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BsTwitterX } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { ThemeToggle } from "../theme-toggle";
 export default function FooterSection() {
     return (
         <footer className="w-full flex justify-between items-center mt-10 p-5 md:p-10">
@@ -24,6 +25,7 @@ export default function FooterSection() {
                     <FaLinkedin className="w-4 h-4" />
                 </Link>
             </nav>
+            <ThemeToggle />
         </footer>
     );
 }

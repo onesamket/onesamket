@@ -1,11 +1,9 @@
 import SparklesText from "@/components/anim/sparkles-text";
 import WordPullUp from "@/components/anim/word-pullup";
 import About from "@/components/sections/about-section";
-import FooterSection from "@/components/sections/footer-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import ProjectsSection from "@/components/sections/project-section";
 import SkillSection from "@/components/sections/skills-section";
-import TestimonialSection from "@/components/sections/testimonial-section";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
