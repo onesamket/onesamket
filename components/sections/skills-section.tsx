@@ -9,7 +9,7 @@ const BadgeItem = ({ children }: { children: React.ReactNode }) => (
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.95 }}
   >
-    <Badge className="min-w-max transition-all duration-300 ease-in-out hover:shadow-lg">
+    <Badge className="min-w-min w-full transition-all duration-300 ease-in-out hover:shadow-lg">
       {children}
     </Badge>
   </motion.div>
