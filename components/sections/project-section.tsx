@@ -6,6 +6,8 @@ import { projectsList, ProjectType } from '@/constants/project-list'
 import Link from 'next/link'
 import { ExternalLink, Github } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { LinkPreview } from '../link-preview'
+import { isValidUrl } from '@/libs/utils'
 
 export default function ProjectsSection() {
     return (
@@ -36,7 +38,13 @@ function ProjectCard({ project, index }: { project: ProjectType, index: number }
         >
             <Card className="h-full flex flex-col overflow-hidden transition-all duration-300  dark:bg-opacity-50  bg-white dark:bg-gray-800 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] shadow-[inset_1px_10px_20px_2px_#f1f1f9] dark:shadow-[inset_1px_5px_10px_2px_#2a4365] dark:bg-[radial-gradient(#000_1px,#030712_1px)] [background-size:16px_16px]">
                 <CardHeader>
-                    <CardTitle className="text-xl">{project.title}</CardTitle>
+                    {project.previewUrl && isValidUrl(project.previewUrl) ? (
+                        <LinkPreview url={project.previewUrl}>
+                            <CardTitle className="text-xl">{project.title}</CardTitle>
+                        </LinkPreview>
+                    ) : (
+                        <CardTitle className="text-xl">{project.title}</CardTitle>
+                    )}
                     <CardDescription className="text-sm line-clamp-2">{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="flex-grow">
