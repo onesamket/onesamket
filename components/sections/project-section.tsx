@@ -34,13 +34,12 @@ function ProjectCard({ project, index }: { project: ProjectType, index: number }
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
         >
-            <Card className="h-full flex flex-col overflow-hidden transition-all duration-300  bg-gradient-to-r from-slate-900 to-slate-700">
+            <Card className="h-full flex flex-col overflow-hidden transition-all duration-300  dark:bg-opacity-50  bg-white dark:bg-gray-800 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] shadow-[inset_1px_10px_20px_2px_#f1f1f9] dark:shadow-[inset_1px_5px_10px_2px_#2a4365] dark:bg-[radial-gradient(#000_1px,#030712_1px)] [background-size:16px_16px]">
                 <CardHeader>
                     <CardTitle className="text-xl">{project.title}</CardTitle>
                     <CardDescription className="text-sm line-clamp-2">{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="flex-grow">
-                    {/* Add any additional content here, such as technologies used */}
                 </CardContent>
                 <CardFooter className="flex justify-between items-center">
                     <Button variant="outline" size="sm" asChild>
