@@ -12,6 +12,9 @@ const nextConfig = {
         remotePatterns: [
             {
                 hostname: "github.com",
+            },
+            {
+                hostname: "api.microlink.io",
             }
         ],
     },
