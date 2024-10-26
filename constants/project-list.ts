@@ -8,7 +8,7 @@ export type ProjectType = {
 
 export const projectsList: ProjectType[] = [
   {
-    title: "Inclusive exit exam platform",
+    title: "MOE exit exam platform",
     description: "Visually impaired inclusive exam platform.",
     previewUrl: "https://et-exit.netlify.app",
     githubUrl: "https://github.com/onesamket/et-exit",
@@ -23,7 +23,7 @@ export const projectsList: ProjectType[] = [
     ],
   },
   {
-    title: " Food delivery web app",
+    title: " Food Delivery website",
     description: "Blazing fast online food delivery website.",
     previewUrl: "https://tw-delivery.netlify.app",
     githubUrl: "https://github.com/onesamket/delivery",
@@ -81,29 +81,36 @@ export const projectsList: ProjectType[] = [
     tags: ["Remix", "DaisyUI"],
   },
   {
-    title: "play store UI clone",
+    title: "Google Play store UI clone",
     description: "Clone of the Play Store interface.",
     previewUrl: "#",
     githubUrl: "https://github.com/onesamket/playstore",
     tags: ["expo", "TypeScript", "nativewind"],
   },
   {
-    title: "gmail UI clone",
+    title: "Google Gmail UI clone",
     description: "Clone of the Gmail user interface.",
     previewUrl: "#",
     githubUrl: "https://github.com/onesamket/playstore",
     tags: ["expo", "TypeScript", "nativewind"],
   },
   {
-    title: "e-commerce platform",
-    description: "A modern e-commerce platform.",
-    previewUrl: "#",
+    title: "E-commerce Website",
+    description: "A modern e-commerce website.",
+    previewUrl: "eat5foods.com",
     githubUrl: "https://github.com/onesamket",
     tags: ["nextjs", "TypeScript", "shadcnui", "prisma"],
   },
   {
-    title: "game hub dashboard",
-    description: "",
+    title: "Game hub dashboard",
+    description: "modern ui  to explore all games",
+    previewUrl: "https://challenge-lovat.vercel.app/",
+    githubUrl: "https://github.com/onesamket/challenge",
+    tags: ["nextjs", "TypeScript", "shadcnui"],
+  },
+  {
+    title: "Pinterest app UI clone (WIP)",
+    description: "amazing look pinterest mobile app clone ",
     previewUrl: "https://challenge-lovat.vercel.app/",
     githubUrl: "https://github.com/onesamket/challenge",
     tags: ["nextjs", "TypeScript", "shadcnui"],
@@ -117,7 +124,7 @@ export const projectsList: ProjectType[] = [
   },
   {
     title: "Building future...",
-    description: "Future",
+    description: "Building elegant  web and application ",
     previewUrl: "https://github.com/onesamket",
     githubUrl: "https://github.com/onesamket",
     tags: ["undefined"],
