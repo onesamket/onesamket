@@ -1,11 +1,11 @@
 import { Container } from "@/components/container";
+import FooterSection from "@/components/sections/footer-section";
 import { cn } from "@/libs/utils";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import FooterSection from "@/components/sections/footer-section";
 
 const interFont = Inter({
   subsets: ["latin"],
@@ -13,6 +13,7 @@ const interFont = Inter({
 });
 export const metadata: Metadata = {
   metadataBase: new URL('https://onesamket.vercel.app'),
+  manifest: '/manifest.json',
   title: "Welcome to the World of Tewodros Birhanu | Explore My Journey",
   description: "Embark on a journey through my personal website, where I showcase my experiences and passions. Join me as I share my story with the world.",
   openGraph: {

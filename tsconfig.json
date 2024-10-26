@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/sections/skills-section.tsx"
+    "components/sections/skills-section.tsx",
+    "public/service-worker.js"
   ],
   "exclude": ["node_modules"]
 }

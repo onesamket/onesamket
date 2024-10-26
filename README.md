@@ -9,7 +9,7 @@
     <h1>About Me</h1>
     <ul>
       <li>🧑‍💻 My name is Tewodros Birhanu.</li>
-      <li>🖥️ Check out my portfolio at <a href="http://onesamket.vercel.app" target="_blank">onesamket.vercel.app</a>.</li>
+      <li>🖥️ Check out my portfolio at <a href="http://onesamket.vercel.app" target="_blank">onesamket.com</a>.</li>
       <li>🚀 Currently, I am working on various projects to enhance my skills.</li>
       <li>🧠 Learning Testing JavaScript, Design Patterns, Deno, and Rust.</li>
       <li>❤️ Favorite technologies: React, Tanstack, Remix, Bun, Deno, TypeScript, ExpressJs, and more.</li>
