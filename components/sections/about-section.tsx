@@ -82,7 +82,7 @@ export default function About({ }: AboutProps) {
                     </LinkPreview>, I&apos;m constantly learning and exploring the latest in tech.
                 </p>
                 <p className={cn(arimaFont.className, "text-lg")}>
-                    When <span className="bg-blue-600 rounded-tl-md rounded-br-md">I&apos;m not writing code,</span> you can find me diving into my projects or enjoying some authentic Ethiopian
+                    When <span className="bg-emerald-600 text-white dark:bg-blue-600 rounded-tl-md rounded-br-md">I&apos;m not writing code,</span> you can find me diving into my projects or enjoying some authentic Ethiopian
                     <LinkPreview url="https://en.wikipedia.org/wiki/Coffee">
                         <span className="text-[#7d4533] mx-2 text-lg underline">coffee</span>
                     </LinkPreview> ☕. Let&apos;s team up and bring your wildest web and app ideas to life.

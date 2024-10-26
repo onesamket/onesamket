@@ -1,6 +1,6 @@
 'use client'
 
-import { skills } from "@/constants/skills"
+import { skillsList } from "@/constants/skills"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
 
@@ -37,9 +37,9 @@ export default function SkillSection() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="w-fit mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 mt-7"
       >
-        {skills.map((skill, index) => (
+        {skillsList.map((skill, index) => (
           <motion.div
-            key={skill}
+            key={skill.label}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -47,7 +47,7 @@ export default function SkillSection() {
               delay: 0.1 * index,
             }}
           >
-            <BadgeItem>{skill}</BadgeItem>
+            <BadgeItem>{skill.label}</BadgeItem>
           </motion.div>
         ))}
       </motion.div>
