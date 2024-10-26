@@ -1,9 +1,5 @@
-import Loader from "@/components/loader";
+import LoaderSection from "@/components/sections/loader-section";
 
 export default function Loading() {
-  return (
-    <main className="flex h-screen items-center justify-center">
-      <Loader />
-    </main>
-  );
+  return <LoaderSection />
 }

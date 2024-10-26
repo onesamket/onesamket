@@ -86,46 +86,47 @@
 }
 
 
-
-
-
-
+/* HTML: <div class="loader"></div> */
 .loader {
-  width: 80px;
+  width: 45px;
   aspect-ratio: 1;
-  border: 10px solid #1f2937;
-  box-sizing: border-box;
+  --loader-color: var(--loader-color, #000);
+  /* Default color for light mode */
+  color-scheme: light dark;
+  --c: no-repeat linear-gradient(var(--loader-color) 0 0);
   background:
-    radial-gradient(farthest-side, #fff 98%, #1f2937) top,
-    radial-gradient(farthest-side, #fff 98%, #1f2937) top,
-    radial-gradient(farthest-side, #fff 98%, #1f2937) left,
-    radial-gradient(farthest-side, #fff 98%, #1f2937) right,
-    radial-gradient(farthest-side, #fff 98%, #1f2937) bottom,
-    #1f2937;
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  filter: blur(4px) contrast(10);
-  animation: l19 2s infinite;
+    var(--c) 0% 50%,
+    var(--c) 50% 50%,
+    var(--c) 100% 50%;
+  background-size: 20% 100%;
+  animation: l1 1s infinite linear;
 }
 
-@keyframes l19 {
+@media (prefers-color-scheme: dark) {
+  .loader {
+    --loader-color: #fff;
+    /* Color for dark mode */
+  }
+}
+
+@keyframes l1 {
   0% {
-    background-position: top, top, left, right, bottom
+    background-size: 20% 100%, 20% 100%, 20% 100%;
   }
 
-  25% {
-    background-position: right, top, left, right, bottom
+  33% {
+    background-size: 20% 10%, 20% 100%, 20% 100%;
   }
 
   50% {
-    background-position: bottom, top, left, right, bottom
+    background-size: 20% 100%, 20% 10%, 20% 100%;
   }
 
-  75% {
-    background-position: left, top, left, right, bottom
+  66% {
+    background-size: 20% 100%, 20% 100%, 20% 10%;
   }
 
   100% {
-    background-position: top, top, left, right, bottom
+    background-size: 20% 100%, 20% 100%, 20% 100%;
   }
 }
