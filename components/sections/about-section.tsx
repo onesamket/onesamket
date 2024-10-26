@@ -3,7 +3,13 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BsTwitterX } from 'react-icons/bs';
+import { Lobster } from "next/font/google";
+import { cn } from '@/libs/utils';
 
+const arimaFont = Lobster({
+    subsets: ["latin"],
+    weight: '400'
+});
 export default function About() {
     return (
         <motion.section
@@ -46,14 +52,14 @@ export default function About() {
                     />
                 </svg>
 
-                <p className="text-lg z-10 mb-4">
-                    Hey there! I&apos;m Tewodros Birhanu (ቴዲ - Teddy). I&apos;m a full-stack web and react-native developer with type-safety, building elegant and user-friendly applications that perform with energy and finesse. Fueled by coffee (or as we say, bunna ☕), and equipped with a degree from Haramaya University, I&apos;m constantly learning and exploring the latest in tech.
+                <p className={cn(arimaFont.className, "text-lg z-10 mb-4")}>
+                    Hey there! I&apos;m <a href='https://gravatar.com/onesamket' target='_blank' className='text-emerald-600'>Tewodros Birhanu (ቴዲ - Teddy).</a> I&apos;m a <a href='https://tw-stack.vercel.app/' target='_blank' className='text-blue-600'>full-stack web </a>  and <a href='https://tw-stack.vercel.app/' target='_blank' className='text-blue-600'>react-native developer </a> with type-safety, building elegant and user-friendly applications that perform with energy and finesse. Fueled by <a href='https://en.wikipedia.org/wiki/Coffee' target='_blank' className='underline text-[#7d4533]'>coffee</a>  (or as we say,<a href='https://en.wikipedia.org/wiki/Coffee_ceremony_of_Ethiopia_and_Eritrea' target='_blank' className='text-[#7d4533] underline'>Bunna</a>  ☕), and equipped with a degree from <a href='https://www.haramaya.edu.et/' target='_blank' className='text-[#ab0802] underline underline-offset-4'>Haramaya University,</a>  I&apos;m constantly learning and exploring the latest in tech.
                 </p>
-                <p className="text-lg">
-                    When I&apos;m not writing code, you can find me diving into my projects or enjoying some authentic Ethiopian coffee ☕. Let&apos;s team up and bring your wildest web and app ideas to life.
+                <p className={cn(arimaFont.className, "text-lg")}>
+                    When <span className='bg-blue-600 rounded-tl-md rounded-br-md'> I&apos;m not writing code,</span> you can find me diving into my projects or enjoying some authentic Ethiopian <span className='text-[#7d4533]'>coffee</span>  ☕. Let&apos;s team up and bring your wildest web and app ideas to life.
                 </p>
-                <p className=" mt-5 text-start">
-                    Thanks you!!!   {"  "}  Grab your ☕  let&apos;s
+                <p className={cn(arimaFont.className, "text-2xl underline underline-offset-2 font-medium  mt-12 mb-4")}>
+                    Thank you!!!   {"  "}  Grab your ☕
                 </p>
 
                 <footer className="mt-6 flex items-center">
