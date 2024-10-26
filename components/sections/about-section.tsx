@@ -32,7 +32,7 @@ export default function About() {
                 className="relative max-w-2xl mx-auto text-center flex flex-col items-center"
             >
                 <svg
-                    className="absolute -top-6 -left-8 h-16 w-16 text-gray-300 dark:text-gray-700"
+                    className="absolute z-0 -top-12  -left-12 h-16 w-16 text-gray-300 dark:text-gray-700"
                     width="16"
                     height="16"
                     viewBox="0 0 16 16"
@@ -46,11 +46,14 @@ export default function About() {
                     />
                 </svg>
 
-                <p className="text-lg mb-4">
-                    Hey there! I&apos;m Tewodros Birhanu (ቴዲ - Teddy). I&apos;m a full-stack web and React Native developer, building elegant and user-friendly applications that perform with energy and finesse. Fueled by coffee (or as we say, bunna ☕), and equipped with a degree from Haramaya University, I&apos;m constantly learning and exploring the latest in tech.
+                <p className="text-lg z-10 mb-4">
+                    Hey there! I&apos;m Tewodros Birhanu (ቴዲ - Teddy). I&apos;m a full-stack web and react-native developer with type-safety, building elegant and user-friendly applications that perform with energy and finesse. Fueled by coffee (or as we say, bunna ☕), and equipped with a degree from Haramaya University, I&apos;m constantly learning and exploring the latest in tech.
                 </p>
                 <p className="text-lg">
-                    When I&apos;m not writing code, you can find me diving into my projects or enjoying some authentic Ethiopian coffee ☕. Let&apos;s team up and bring your wildest web ideas to life—no magic wand required!
+                    When I&apos;m not writing code, you can find me diving into my projects or enjoying some authentic Ethiopian coffee ☕. Let&apos;s team up and bring your wildest web and app ideas to life.
+                </p>
+                <p className=" mt-5 text-start">
+                    Thanks you!!!   {"  "}  Grab your ☕  let&apos;s
                 </p>
 
                 <footer className="mt-6 flex items-center">
