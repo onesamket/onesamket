@@ -1,12 +1,26 @@
 {
-  "LocaleLayout": {
-    "title": "Welcome to the World of Tewodros Birhanu | Explore My Journey",
-    "description": "Embark on a journey through my personal website, where I showcase my experiences and passions. Join me as I share my story with the world.",
-    "siteName": "Tewodros Birhanu's Personal Website"
-  },
+  "locale": "en",
   "Index": {
     "title": "Welcome to the World of Tewodros Birhanu",
     "subtitle": "Explore My Journey",
     "description": "Embark on a journey through my personal website, where I showcase my experiences and passions. Join me as I share my story with the world."
+  },
+  "intro": {
+    "greeting": "Hi, I'm Tewodros Birhanu",
+    "job": "Software Engineer",
+    "motto": "Building the future...",
+    "link": "View  Resume"
+  },
+  "about": {
+    "title": "About Me",
+    "intro": "Hey there! I'm Tewodros Birhanu (ቴዲ - Teddy). I'm a full-stack web and React Native developer with type-safety, building elegant and user-friendly applications that perform with energy and finesse. Fueled by coffee (or as we say, Bunna ☕), and equipped with a degree from Haramaya University, I'm constantly learning and exploring the latest in tech.",
+    "hobbies": "When I'm not writing code, you can find me diving into my projects or enjoying some authentic Ethiopian coffee ☕. Let's team up and bring your wildest web and app ideas to life.",
+    "signOff": "Thank you! Enjoy with your ☕",
+    "signature": "onesamket\nTewodros Birhanu\n@onesamket"
+  },
+  "Projects": {
+    "title": "Projects",
+    "preview": "Preview",
+    "github": "Github"
   }
 }

@@ -27,7 +27,7 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params: { locale }
 }: Omit<Props, 'children'>) {
-  const t = await getTranslations({ locale, namespace: 'LocaleLayout' });
+  const t = await getTranslations({ locale, namespace: 'Index' });
 
   return {
     title: t('title'),
@@ -64,7 +64,7 @@ export default async function LocaleLayout({
   const messages = (await import(`../../messages/${locale}.json`)).default;
 
   return (
-    <html lang={locale} dir={locale === 'gez' ? 'rtl' : 'ltr'} className={cn("min-h-screen bg-background font-sans antialiased", interFont.variable)}>
+    <html lang={locale} dir={'ltr'} className={cn("min-h-screen bg-background font-sans antialiased", interFont.variable)}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Container className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
