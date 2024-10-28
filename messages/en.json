@@ -23,5 +23,8 @@
     "title": "Projects",
     "preview": "Preview",
     "github": "Github"
+  },
+  "Tech": {
+    "title": "Tech Stacks"
   }
 }

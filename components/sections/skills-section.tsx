@@ -3,6 +3,7 @@
 import { skillsList } from "@/constants/skills"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
+import { useTranslations } from "next-intl"
 
 const BadgeItem = ({ children }: { children: React.ReactNode }) => (
   <motion.div
@@ -16,6 +17,7 @@ const BadgeItem = ({ children }: { children: React.ReactNode }) => (
 )
 
 export default function SkillSection() {
+  const t = useTranslations('Tech')
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -29,7 +31,7 @@ export default function SkillSection() {
         transition={{ duration: 0.5 }}
         className="font-inter text-3xl font-bold leading-normal"
       >
-        Tech Stacks
+        {t('title')}
       </motion.h3>
       <motion.div
         initial={{ opacity: 0 }}
