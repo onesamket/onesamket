@@ -1,0 +1,27 @@
+{
+  "locale": "om",
+  "Index": {
+    "title": "Tewodros Birhanu - Injineera Sofftweerii",
+    "siteName": "onesamket",
+    "subtitle": "Imala Koo Sakatta'i",
+    "description": "Guutummaa-guutuutti web fi aplikeeshinoota react-native miidhagina qabu fi fayyadamtootaaf mijataa ta'e ijaarsa."
+  },
+  "intro": {
+    "greeting": "Akkam, Ani Tewodros Birhanu dha",
+    "job": "Injineera Sofftweerii",
+    "motto": "Gara fuulduraa ijaarraa...",
+    "link": "Galmee Hojii Koo Ilaali"
+  },
+  "about": {
+    "title": "Waa'ee Koo",
+    "intro": "Akkam! Ani Tewodros Birhanu (ቴዲ - Teddy) dha. Ani guutummaa-guutuutti web fi aplikeeshinoota React Native kan nageenya-qabeeyyii ta'an, miidhagina qabu fi fayyadamtootaaf mijataa ta'e, humna fi ogummaa qabuun ijaaru dha. Bunaan kakaasee (ykn akka jennu, Buna ☕), fi Yuuniversiitii Haramayaa irraa digrii qabachuun, yeroo hundaa waa'ee teeknoloojii haaraa barachaa fi qorachaa jira.",
+    "hobbies": "Yeroo koodii hin barreessine, pirojeektoota koo keessa seenuun ykn buna Itoophiyaa dhugaadhaan gammaduu na argita ☕. Koottu waliin hojjennee yaada web fi aplikeeshinoota keessan akka dhugoomsu haa taasifnu.",
+    "signOff": "Galatoomi! Buna keessan waliin gammadaa ☕",
+    "signature": "onesamket\nTewodros Birhanu\n@onesamket"
+  },
+  "Projects": {
+    "title": "Pirojeektota",
+    "preview": "Dursa Ilaaluu",
+    "github": "Github"
+  }
+}

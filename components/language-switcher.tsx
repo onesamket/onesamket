@@ -1,10 +1,5 @@
 'use client'
 
-import { useLocale } from 'next-intl';
-import { useRouter } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Globe, Check } from 'lucide-react';
-import { routing } from '@/i18n/routing';
 import { Button } from "@/components/ui/button";
 import {
     DropdownMenu,
@@ -12,11 +7,17 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { routing } from '@/i18n/routing';
+import { AnimatePresence, motion } from 'framer-motion';
+import { Check, Languages } from 'lucide-react';
+import { useLocale } from 'next-intl';
+import { useRouter } from 'next/navigation';
 
 const languageNames: Record<string, string> = {
     en: 'English',
     am: 'አማርኛ',
-    geez: 'ግዕዝ'
+    geez: 'ግዕዝ',
+    or: 'Affan Oroomoo'
 };
 
 export default function LanguageSwitcher() {
@@ -41,7 +42,7 @@ export default function LanguageSwitcher() {
                             whileHover={{ rotate: 180 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <Globe className="h-5 w-5 text-black dark:text-white" />
+                            <Languages className="h-5 w-5 text-black dark:text-white" />
                         </motion.div>
                         <span className="sr-only">Toggle language menu</span>
                     </Button>

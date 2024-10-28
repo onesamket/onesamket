@@ -1,14 +1,15 @@
 {
   "locale": "en",
   "Index": {
-    "title": "Welcome to the World of Tewodros Birhanu",
+    "title": "Tewodros Birhanu - Software Engineer",
+    "siteName": "onesamket",
     "subtitle": "Explore My Journey",
-    "description": "Embark on a journey through my personal website, where I showcase my experiences and passions. Join me as I share my story with the world."
+    "description": "Full-stack web and react-native developer building elegant and user-friendly  applications.."
   },
   "intro": {
     "greeting": "Hi, I'm Tewodros Birhanu",
     "job": "Software Engineer",
-    "motto": "Building the future...",
+    "motto": "Building  future...",
     "link": "View  Resume"
   },
   "about": {

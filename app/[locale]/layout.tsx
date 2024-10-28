@@ -3,6 +3,7 @@ import LanguageSwitcher from "@/components/language-switcher";
 import FooterSection from "@/components/sections/footer-section";
 import { routing } from '@/i18n/routing';
 import { cn } from "@/libs/utils";
+import { ThemeProvider } from "@/providers/theme-provider";
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Inter } from "next/font/google";
@@ -66,15 +67,22 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={'ltr'} className={cn("min-h-screen bg-background font-sans antialiased", interFont.variable)}>
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Container className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
-            <LanguageSwitcher />
-            <main className="w-full p-5 md:p-12 lg:p-24 text-center">
-              {children}
-            </main>
-            <FooterSection />
-          </Container>
-        </NextIntlClientProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Container className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
+              <LanguageSwitcher />
+              <main className="w-full p-5 md:p-12 lg:p-24 text-center">
+                {children}
+              </main>
+              <FooterSection />
+            </Container>
+          </NextIntlClientProvider>
+        </ThemeProvider>
         <Script id="schema-script" type="application/ld+json">
           {`
             {
@@ -84,7 +92,7 @@ export default async function LocaleLayout({
               "url": "https://onesamket.vercel.app",
               "sameAs": [
                 "https://github.com/onesamket",
-                "https://x.com/onesamket_ig",
+                "https://x.com/onesamket",
                 "https://www.linkedin.com/in/ln-onesamket",
                 "https://instagram.com/onesamket_ig",
                 "https://t.me/onesamket"
