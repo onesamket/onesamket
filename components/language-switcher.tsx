@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { routing } from '@/i18n/routing';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Check, Languages } from 'lucide-react';
+import { Check, Globe } from 'lucide-react';
 import { useLocale } from 'next-intl';
 import { useRouter } from 'next/navigation';
 
@@ -42,7 +42,7 @@ export default function LanguageSwitcher() {
                             whileHover={{ rotate: 180 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <Languages className="h-5 w-5 text-black dark:text-white" />
+                            <Globe className="h-5 w-5 text-black dark:text-white" />
                         </motion.div>
                         <span className="sr-only">Toggle language menu</span>
                     </Button>
