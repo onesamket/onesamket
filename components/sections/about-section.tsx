@@ -118,7 +118,7 @@ export default function About({ }: AboutProps) {
                         alt="onesamket"
                     />
                     <div className="ml-4">
-                        <div className="text-base font-medium">{locale === 'en' ? 'Tewodros Birhanu' : 'ቴዎድሮስ ብርሃኑ'}</div>
+                        <div className="text-base font-medium">{locale === 'en' || locale === 'or' ? 'Tewodros Birhanu' : 'ቴዎድሮስ ብርሃኑ'}</div>
                         <Link href="https://x.com/onesamket" className="text-sm text-gray-500 hover:text-indigo-700 flex items-center">
                             <BsTwitterX className="w-4 h-4 mr-1" />
                             <p>@onesamket</p>
