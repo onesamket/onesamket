@@ -7,11 +7,11 @@ type Props = {
 };
 export default function RootLayout({ children }: Props) {
     return (
-        <html>,
+        <html>
             <body>
                 <ThemeProvider
                     attribute="class"
-                    defaultTheme="light"
+                    defaultTheme="dark"
                     enableSystem
                     disableTransitionOnChange
                 >
