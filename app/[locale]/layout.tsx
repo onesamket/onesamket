@@ -67,12 +67,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={'ltr'} className={cn("min-h-screen bg-background font-sans antialiased", interFont.variable)}>
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
+      
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Container className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
               <LanguageSwitcher />
@@ -82,7 +77,7 @@ export default async function LocaleLayout({
               <FooterSection />
             </Container>
           </NextIntlClientProvider>
-        </ThemeProvider>
+
         <Script id="schema-script" type="application/ld+json">
           {`
             {
