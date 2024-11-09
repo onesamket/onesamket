@@ -1,63 +1,47 @@
-<section id="wrapper">
-  <div class="center">
-    <h1>Welcome Developers 👋</h1>
-    <h2>I'm Tewodros Birhanu</h2>
-    <h2>☕ Full-Stack Software Engineer</h2>
-  </div>
+### Full-Stack Software Engineer / React and React Native Developer
 
-  <div>
-    <h1>About Me</h1>
-    <ul>
-      <li>🧑‍💻 My name is Tewodros Birhanu.</li>
-      <li>🖥️ Check out my portfolio at <a href="http://onesamket.com" target="_blank">onesamket.com</a>.</li>
-      <li>🚀 Currently, I am working on various projects to enhance my skills.</li>
-      <li>🧠 Learning Testing JavaScript, Design Patterns, Deno, Solodiry, and Rust.</li>
-      <li>❤️ Favorite technologies: TypeScript, Tailwindcss, React(PRO), Zustand, Tanstack,Next.js(PRO), React-native, Expo, Remix, Bun, Deno, ExpressJs, Hapijs, Hono, Prisma, MongoDB, PostgreSQL, GraphQL and more...</li>
-      <li>🤝 Open to collaborations on open-source projects.</li>
-      <li>❔ Available for hire.</li>
-    </ul>
-  </div>
+⤷ Exploring the world of full-stack development with a focus on React and React Native. Always looking to enhance my skills and take on new challenges. Check out my Github for a glimpse of my projects and ongoing learning journey.
 
-  <!-- Skills Section -->
-  <div class="center">
-    <h2>My Favorite Technologies</h2>
-    <div class="skills">
-      <a href="https://skillicons.dev" target="_blank">
-        <img src="https://skillicons.dev/icons?i=html,css,sass,javascript,typescript,md,react,nextjs,nodejs,expressjs,rust,bun,graphql,remix,prisma,apollo,postgres,mongodb,mysql,sqlite,graphql,tailwind,vite,vitest&theme=light" alt="Skills" />
-      </a>
-    </div>
-  </div>
+ <a aligh="left" href="http://onesamket.com" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/socials/globe.svg" alt="Website" width="22" height="22" /></a> <a aligh="left" href="mailto:onesamket@gmail.com" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/socials/at.svg" alt="Email" width="22" height="22" /></a> <a aligh="left" href="https://twitter.com/onesamket" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/socials/twitter.svg" alt="Twitter" width="22" height="22" /></a> <a aligh="left" href="https://www.linkedin.com/in/ln-onesamket/" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/socials/linkedin.svg" alt="LinkedIn" width="22" height="22" /></a> <a aligh="left" href="https://github.com/onesamket" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/socials/github.svg" alt="GitHub" width="22" height="22" /></a>
 
-  <!-- Tools and Apps Section -->
-  <div class="center">
-    <h2>Tools and Apps</h2>
-    <div class="tools">
-      <a href="https://skillicons.dev" target="_blank">
-        <img src="https://skillicons.dev/icons?i=chrome,gmail,notion,figma,vercel,npm,pnpm,yarn,bun,powershell,github,git,postman,vscode,devto,discord,firebase,supabase,linkedin&theme=dark" alt="Tools and Apps" />
-      </a>
-    </div>
-  </div>
+⚐ Based in Ethiopia
 
-  <!-- Socials Section -->
-  <div class="center socials">
-    <h2>Find Me On</h2>
-    <a href="https://github.com/onesamket" target="_blank">
-      <img src="https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white" alt="GitHub">
-    </a>
-    <a href="https://twitter.com/onesamket" target="_blank">
-      <img src="https://img.shields.io/badge/onesamket-Twitter-1da1f2?style=for-the-badge&logo=Twitter&logoColor=white" alt="Twitter">
-    </a>
-    <a href="https://medium.com/@onesamket" target="_blank">
-      <img src="https://img.shields.io/badge/onesamket-Medium-12100e?style=for-the-badge&logo=Medium&logoColor=white" alt="Medium">
-    </a>
-    <a href="https://www.linkedin.com/in/ln-onesamket/" target="_blank">
-      <img src="https://img.shields.io/badge/onesamket-LinkedIn-0077b5?style=for-the-badge&logo=LinkedIn&logoColor=white" alt="LinkedIn">
-    </a>
-  </div>
-    <h1>Thanks, Enjoy with your Coffee 🍵☕</h1>
-  <div class="center" style="margin-top: 20px;">
-    <img src="https://raw.githubusercontent.com/mayhemantt/mayhemantt/Update/svg/Bottom.svg" alt="Decorative bottom graphic" />
-  </div>
-</section>
+ϟ Currently working on various projects to enhance my skills
 
+## About Me
 
+- 🧑‍💻 Full-Stack Software Engineer with a passion for React and React Native development
+- 🚀 Open to collaborations on open-source projects
+- 🧠 Continuously learning and exploring new technologies
+- ❔ Available for hire and exciting opportunities
+
+## Skills
+
+<a href="https://www.javascript.com" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/core/javascript.svg" alt="JavaScript" width="25" height="25" /></a> <a href="https://www.typescriptlang.org" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/core/typescript.svg" alt="Typescript" width="25" height="25" /></a> <a href="https://reactjs.org" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/frontend/react.svg" alt="React" width="25" height="25" /></a> <a href="https://nodejs.org" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/backend/nodejs.svg" alt="NodeJS" width="25" height="25" /></a> <a href="https://www.rust-lang.org/" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/core/rust.svg" alt="Rust" width="25" height="25" /></a>
+
+## Favorite Technologies
+
+- Frontend: React, Next.js, React Native, Expo, Remix
+- Backend: Node.js, Express.js, Hapi.js, Hono
+- Database: MongoDB, PostgreSQL
+- State Management: Zustand, TanStack Query
+- Testing: Jest, Vitest
+- Others: GraphQL, Prisma, Tailwind CSS, Vite
+
+## Currently Learning
+
+- Testing JavaScript
+- Design Patterns
+- Deno
+- Solidity
+- Rust
+
+## Tools and Apps
+
+<a href="https://skillicons.dev" target="_blank" rel="noreferrer noopener"><img src="https://skillicons.dev/icons?i=vscode,git,github,vercel,figma,postman&theme=light" alt="Tools and Apps" /></a>
+
+## Let's Connect
+
+Feel free to reach out for collaborations or just a friendly chat about technology and development. I'm always open to new opportunities and connections in the tech world!
+
+## Thanks for visiting! Enjoy your coffee ☕
