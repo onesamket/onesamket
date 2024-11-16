@@ -70,27 +70,14 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 
 ### 💼 Featured Projects
 
-1. **E-commerce Website** (03/2024 - 05/2024)
-   - Blazing fast fashion e-commerce site for Ethiopian clothes
-   - Technologies: Next.js, shadcn/ui
-   - Features: Recommendation system, email notifications, payment integration
-
-2. **Exit Exam Platform for MOE** (01/2024 - 05/2024)
-   - Visually impaired inclusive exam platform
-   - Features: Automation, certificate generation with QR code validation, question management tool, advanced analytics, IP detection and blacklisting, theme customization
-
-3. **Research Granting Management System** (03/2024 - 2024)
-   - Developed for universities
-
-4. **Online Food Delivery** (05/2024)
-   - Feature-rich food delivery website for university students
-   - Technologies: Next.js, ShadCN UI
-   - Features: Map integration, secure authentication, email notifications
-
+1. **E-commerce Website** 
+2. **Exit Exam Platform for MOE** 
+3. **Research Granting Management System** 
+4. **Online Food Delivery**
 5. **Mobile App UI Clones**
-   - Google Play Store
-   - Gmail
-   - Pinterest
+6.**Google Play Store UI clone**
+7. **Gmail clone**
+8. **Pinterest clone**
 
 ---
 
@@ -98,7 +85,6 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 
 - **Pre-configured JavaScript Starter Projects**
   - Ongoing project to help developers kickstart their projects
-
 ---
 
 ### 🌐 Languages
