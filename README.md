@@ -128,7 +128,7 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 I'm always excited to connect with fellow developers, tech enthusiasts, and potential collaborators. Whether you have a project idea, a question, or want to chat about the latest in tech, feel free to reach out!
 
 ---
-  
+  <div align="center" >
   <h2 style="color: #4a3520; font-family: 'Georgia', serif; margin-top: 20px;">Thanks for visiting!</h2>
   
   <p style="color: #6d4c41; font-family: 'Arial', sans-serif; font-size: 18px; margin-bottom: 10px;">
