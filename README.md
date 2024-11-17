@@ -36,10 +36,10 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 #### Frontend
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![tanstack  Query](https://img.shields.io/badge/react_queryA?style=flat-square&logo=react&logoColor=61DAFB)
-![apollo client](https://img.shields.io/badge/react_queryA?style=flat-square&logo=react&logoColor=61DAFB)
-![Zustand](https://img.shields.io/badge/react_queryA?style=flat-square&logo=react&logoColor=61DAFB)
-![shadcn](https://img.shields.io/badge/shadcn?style=flat-square&logo=react&logoColor=61DAFB)
+![Tanstack Query](https://img.shields.io/badge/Tanstack_Query-FF4154?style=flat-square&logo=react-query&logoColor=white)
+![Apollo Client](https://img.shields.io/badge/Apollo_Client-311C87?style=flat-square&logo=apollo-graphql&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-443E38?style=flat-square&logo=react&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?style=flat-square&logo=shadcn&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
 ![Remix](https://img.shields.io/badge/Remix-000000?style=flat-square&logo=remix&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
@@ -60,7 +60,6 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=flat-square&logo=sqlite&logoColor=white)
 
-#### Tools & Others
 #### Tools & Others
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
@@ -130,12 +129,15 @@ I'm always excited to connect with fellow developers, tech enthusiasts, and pote
 
 ---
 
-<div align="center">
-
-
-
-**Thanks for visiting! Enjoy your Bunna (coffee) ☕ and happy coding! 🚀**
-
+<div align="center" style="background-color: #f5e5d5; padding: 20px; border-radius: 10px; margin-top: 40px;">
+  <img src="https://i.pinimg.com/originals/e9/40/c6/e940c6a8d9144d8d5e3f7a2f4b4b2d9a.jpg" alt="Habesha Coffee Ceremony" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  
+  <h2 style="color: #4a3520; font-family: 'Georgia', serif; margin-top: 20px;">Thanks for visiting!</h2>
+  
+  <p style="color: #6d4c41; font-family: 'Arial', sans-serif; font-size: 18px; margin-bottom: 10px;">
+    Enjoy your Bunna (coffee) ☕ and happy coding! 🚀
+  </p>
+  
 </div>
 
 
