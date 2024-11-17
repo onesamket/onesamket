@@ -28,11 +28,18 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 
 #### Languages
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 
+#### 📖Learning
+- Deno
+- Testing frameworks
+- From life 🤣
 #### Frontend
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![tanstack  Query](https://img.shields.io/badge/react_queryA?style=flat-square&logo=react&logoColor=61DAFB)
+![apollo client](https://img.shields.io/badge/react_queryA?style=flat-square&logo=react&logoColor=61DAFB)
+![Zustand](https://img.shields.io/badge/react_queryA?style=flat-square&logo=react&logoColor=61DAFB)
+![shadcn](https://img.shields.io/badge/shadcn?style=flat-square&logo=react&logoColor=61DAFB)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
 ![Remix](https://img.shields.io/badge/Remix-000000?style=flat-square&logo=remix&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
@@ -42,6 +49,10 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 ![Express.js](https://img.shields.io/badge/Express.js-404D59?style=flat-square)
 ![Hapi.js](https://img.shields.io/badge/Hapi.js-404D59?style=flat-square)
 ![Hono.js](https://img.shields.io/badge/Hono.js-FF3E00?style=flat-square)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white)
+![Apollo server](https://img.shields.io/badge/apollo-FF3E00?style=flat-square)
+![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat-square&logo=socket.io&logoColor=white)
 
 #### Databases
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)
@@ -54,10 +65,17 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 ![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
-![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
+![slack](https://img.shields.io/badge/slack-F24E1E?style=flat-square&logo=figma&logoColor=white)
+![notion](https://img.shields.io/badge/notion-F24E1E?style=flat-square&logo=figma&logoColor=white)
+![postman](https://img.shields.io/badge/postman-F24E1E?style=flat-square&logo=figma&logoColor=white)
+![supabase](https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white)
+![npm](https://img.shields.io/badge/npm-000020?style=flat-square&logo=expo&logoColor=white)
+![pnpm](https://img.shields.io/badge/pnpm-000020?style=flat-square&logo=expo&logoColor=white)
+![yarn](https://img.shields.io/badge/yarn-000020?style=flat-square&logo=expo&logoColor=white)
+![bun](https://img.shields.io/badge/bun-000020?style=flat-square&logo=expo&logoColor=white)
+![vercel](https://img.shields.io/badge/vercel-000020?style=flat-square&logo=expo&logoColor=white)
 ![Expo](https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white)
-![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat-square&logo=socket.io&logoColor=white)
+
 
 ---
 
@@ -101,7 +119,7 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 - Open-source contribution
 - Keeping up-to-date with the latest software development trends 
 - Writing and reading tech articles 📃
-- Enjoying coffee (Bunna) ☕
+- Enjoying and building  Bunna ☕
 
 ---
 
@@ -113,6 +131,10 @@ I'm always excited to connect with fellow developers, tech enthusiasts, and pote
 
 <div align="center">
 
-**Thanks for visiting! Enjoy your coffee (Bunna) ☕ and happy coding! 🚀**
+
+
+**Thanks for visiting! Enjoy your Bunna (coffee) ☕ and happy coding! 🚀**
 
 </div>
+
+
