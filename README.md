@@ -51,7 +51,7 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 ![Hono.js](https://img.shields.io/badge/Hono.js-FF3E00?style=flat-square)
 ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
 ![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white)
-![Apollo server](https://img.shields.io/badge/apollo-FF3E00?style=flat-square)
+![Apollo server](https://img.shields.io/badge/Apollo_Client-311C87?style=flat-square&logo=apollo-graphql&logoColor=white)
 ![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat-square&logo=socket.io&logoColor=white)
 
 #### Databases
@@ -128,9 +128,6 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 I'm always excited to connect with fellow developers, tech enthusiasts, and potential collaborators. Whether you have a project idea, a question, or want to chat about the latest in tech, feel free to reach out!
 
 ---
-
-<div align="center" style="background-color: #f5e5d5; padding: 20px; border-radius: 10px; margin-top: 40px;">
-  <img src="https://i.pinimg.com/originals/e9/40/c6/e940c6a8d9144d8d5e3f7a2f4b4b2d9a.jpg" alt="Habesha Coffee Ceremony" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
   
   <h2 style="color: #4a3520; font-family: 'Georgia', serif; margin-top: 20px;">Thanks for visiting!</h2>
   
