@@ -61,19 +61,20 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=flat-square&logo=sqlite&logoColor=white)
 
 #### Tools & Others
+#### Tools & Others
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
-![slack](https://img.shields.io/badge/slack-F24E1E?style=flat-square&logo=figma&logoColor=white)
-![notion](https://img.shields.io/badge/notion-F24E1E?style=flat-square&logo=figma&logoColor=white)
-![postman](https://img.shields.io/badge/postman-F24E1E?style=flat-square&logo=figma&logoColor=white)
-![supabase](https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white)
-![npm](https://img.shields.io/badge/npm-000020?style=flat-square&logo=expo&logoColor=white)
-![pnpm](https://img.shields.io/badge/pnpm-000020?style=flat-square&logo=expo&logoColor=white)
-![yarn](https://img.shields.io/badge/yarn-000020?style=flat-square&logo=expo&logoColor=white)
-![bun](https://img.shields.io/badge/bun-000020?style=flat-square&logo=expo&logoColor=white)
-![vercel](https://img.shields.io/badge/vercel-000020?style=flat-square&logo=expo&logoColor=white)
+![Slack](https://img.shields.io/badge/Slack-4A154B?style=flat-square&logo=slack&logoColor=white)
+![Notion](https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
+![npm](https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white)
+![pnpm](https://img.shields.io/badge/pnpm-F69220?style=flat-square&logo=pnpm&logoColor=white)
+![Yarn](https://img.shields.io/badge/Yarn-2C8EBB?style=flat-square&logo=yarn&logoColor=white)
+![Bun](https://img.shields.io/badge/Bun-000000?style=flat-square&logo=bun&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 ![Expo](https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white)
 
 
