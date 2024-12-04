@@ -32,7 +32,7 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 #### 📖Learning
 - Deno
 - Testing frameworks
-- From life 🤣
+
 #### Frontend
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
