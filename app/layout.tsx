@@ -9,14 +9,8 @@ export default function RootLayout({ children }: Props) {
     return (
         <html>
             <body>
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="dark"
-                    enableSystem
-                    disableTransitionOnChange
-                >
-                    {children}
-                </ThemeProvider>
+
+                {children}
             </body>
         </html>
     )

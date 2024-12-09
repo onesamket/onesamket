@@ -37,7 +37,7 @@ export async function generateMetadata({
       title: t('title'),
       description: t('description'),
       images: [{ url: "/profile.png", width: 1200, height: 630, alt: "Tewodros Birhanu" }],
-      url: "https://onesamket.vercel.app",
+      url: "https://onesamket.com",
       siteName: t('siteName'),
       locale: locale,
       type: "website",
@@ -67,7 +67,12 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={'ltr'} className={cn("min-h-screen bg-background font-sans antialiased", interFont.variable)}>
       <body>
-      
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Container className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
               <LanguageSwitcher />
@@ -77,6 +82,7 @@ export default async function LocaleLayout({
               <FooterSection />
             </Container>
           </NextIntlClientProvider>
+        </ThemeProvider>
 
         <Script id="schema-script" type="application/ld+json">
           {`
@@ -84,12 +90,12 @@ export default async function LocaleLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Tewodros Birhanu",
-              "url": "https://onesamket.vercel.app",
+              "url": "https://onesamket.com",
               "sameAs": [
                 "https://github.com/onesamket",
                 "https://x.com/onesamket",
                 "https://www.linkedin.com/in/ln-onesamket",
-                "https://instagram.com/onesamket_ig",
+                "https://instagram.com/onesamket_",
                 "https://t.me/onesamket"
               ]
             }

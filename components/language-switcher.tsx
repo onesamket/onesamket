@@ -16,8 +16,6 @@ import { useRouter } from 'next/navigation';
 const languageNames: Record<string, string> = {
     en: 'English',
     am: 'አማርኛ',
-    geez: 'ግዕዝ',
-    or: 'Affan Oroomoo'
 };
 
 export default function LanguageSwitcher() {
