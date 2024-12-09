@@ -46,12 +46,11 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 
 #### Backend
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white)
+![Bun](https://img.shields.io/badge/bun-43853D?style=flat-square&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-404D59?style=flat-square)
-![Hapi.js](https://img.shields.io/badge/Hapi.js-404D59?style=flat-square)
-![Hono.js](https://img.shields.io/badge/Hono.js-FF3E00?style=flat-square)
 ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
 ![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white)
-![Apollo server](https://img.shields.io/badge/Apollo_Client-311C87?style=flat-square&logo=apollo-graphql&logoColor=white)
+![Apollo server](https://img.shields.io/badge/Apollo_server-311C87?style=flat-square&logo=apollo-graphql&logoColor=white)
 ![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat-square&logo=socket.io&logoColor=white)
 
 #### Databases
