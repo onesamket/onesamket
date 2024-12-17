@@ -39,6 +39,7 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 ![Tanstack Query](https://img.shields.io/badge/Tanstack_Query-FF4154?style=flat-square&logo=react-query&logoColor=white)
 ![Apollo Client](https://img.shields.io/badge/Apollo_Client-311C87?style=flat-square&logo=apollo-graphql&logoColor=white)
 ![Zustand](https://img.shields.io/badge/Zustand-443E38?style=flat-square&logo=react&logoColor=white)
+![Jotai](https://img.shields.io/badge/jotai-443E38?style=flat-square&logo=jotai&logoColor=white)
 ![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?style=flat-square&logo=shadcn&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
 ![Remix](https://img.shields.io/badge/Remix-000000?style=flat-square&logo=remix&logoColor=white)
@@ -74,6 +75,7 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 ![Bun](https://img.shields.io/badge/Bun-000000?style=flat-square&logo=bun&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 ![Expo](https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-000020?style=flat-square&logo=docker&logoColor=white)
 
 
 ---
@@ -93,8 +95,7 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 4. **Online Food Delivery**
 5. **Mobile App UI Clones**
 6.**Google Play Store UI clone**
-7. **Gmail clone**
-8. **Pinterest clone**
+
 
 ---
 
@@ -124,7 +125,7 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 
 ### 🤝 Let's Connect
 
-I'm always excited to connect with fellow developers, tech enthusiasts, and potential collaborators. Whether you have a project idea, a question, or want to chat about the latest in tech, feel free to reach out!
+I'm always excited to connect with fellow developers, tech enthusiasts, and potential collaborators. Whether you have a project idea, a question, or want to chat about the latest tech, feel free to reach out!
 
 ---
   <div align="center" >
