@@ -130,22 +130,6 @@ export const localizedProjectsList: LocalizedProjectType[] = [
   },
   {
     title: {
-      en: "Google Gmail UI Clone",
-      am: "የጉግል ጂሜይል ዩአይ ኮፒ",
-      geez: "ናይ ጉግል ጂሜይል ዩአይ ቅዳሕ",
-      or: "Fakkaattuu UI Google Gmail",
-    },
-    description: {
-      en: "A clone of the Gmail user interface.",
-      am: "የጂሜይል ተጠቃሚ ኢንተርፌስ ኮፒ።",
-      geez: "ናይ ጂሜይል ተጠቃሚ ኢንተርፌስ ቅዳሕ።",
-      or: "Fakkaattuu bocaa fayyadamaa Gmail.",
-    },
-    previewUrl: "#",
-    githubUrl: "https://github.com/onesamket/gmail-clone",
-  },
-  {
-    title: {
       en: "E-commerce Website",
       am: "የኢ-ኮመርስ ድህረ ገጽ",
       geez: "ናይ ኢ-ኮመርስ መርበብ ሓበሬታ",
@@ -175,22 +159,6 @@ export const localizedProjectsList: LocalizedProjectType[] = [
     },
     previewUrl: "https://challenge-lovat.vercel.app/",
     githubUrl: "https://github.com/onesamket/challenge",
-  },
-  {
-    title: {
-      en: "Pinterest App UI Clone (WIP)",
-      am: "የፒንተረስት መተግበሪያ ዩአይ ኮፒ (በሂደት ላይ)",
-      geez: "ናይ ፒንተረስት መተግበሪያ ዩአይ ቅዳሕ (ኣብ ከይዲ)",
-      or: "Fakkaattuu UI Appii Pinterest (Hojii Jalqabaa)",
-    },
-    description: {
-      en: "A mobile UI clone of Pinterest.",
-      am: "የፒንተረስት ሞባይል ተጠቃሚ ኢንተርፌስ ኮፒ።",
-      geez: "ናይ ፒንተረስት ሞባይል ተጠቃሚ ኢንተርፌስ ቅዳሕ።",
-      or: "Fakkaattuu UI mobaayilaa Pinterest.",
-    },
-    previewUrl: "#",
-    githubUrl: "https://github.com/onesamket/pinterest-clone",
   },
   {
     title: {
