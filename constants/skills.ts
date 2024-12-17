@@ -33,6 +33,7 @@ export const skillsList = [
   { label: "GraphQL", link: "https://graphql.org/learn/" },
   { label: "Rest API", link: "https://restfulapi.net/" },
   { label: "Supabase", link: "https://supabase.com/docs" },
+  { label: "Docker", link: "https://docker.com/docs" },
   { label: "Git & Github", link: "https://docs.github.com/en" },
   {
     label: "More ++",
