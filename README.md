@@ -94,7 +94,7 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 3. **Research Granting Management System** 
 4. **Online Food Delivery**
 5. **Mobile App UI Clones**
-6.**Google Play Store UI clone**
+6. **Google Play Store UI clone**
 
 
 ---
