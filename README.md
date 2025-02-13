@@ -14,9 +14,9 @@
 
 ### 👨‍💻 About Me
 
-Passionate Fullstack Software Engineer with expertise in web and React Native application development. Through over 4 years of dedication and hard work, I have honed an exceptional skill set to craft elegant, user-friendly, high-performance web applications using the latest technologies. I am driven by my love for coding and enthusiasm for collaborating on open-source projects.
+Passionate Fullstack Developer with expertise in web and React Native application development. Through over 4 years of dedication and hard work, I have honed an exceptional skill set to craft elegant, user-friendly, high-performance web applications using the latest technologies. I am driven by my love for coding and enthusiasm for collaborating on open-source projects.
 
-- 🌍 Based in Adama, Ethiopia
+- 🌍 Based in Addis Ababa, Ethiopia
 - 🎓 Bachelor of Science in Information Technology from Haramaya University (2020-2024)
 - 🚀 Constantly learning and adapting to the latest technologies
 - 💼 Open to exciting opportunities and challenging projects
@@ -28,10 +28,6 @@ Passionate Fullstack Software Engineer with expertise in web and React Native ap
 
 #### Languages
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
-
-#### 📖Learning
-- Deno
-- Testing frameworks
 
 #### Frontend
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
@@ -132,7 +128,7 @@ I'm always excited to connect with fellow developers, tech enthusiasts, and pote
   <h2 style="color: #4a3520; font-family: 'Georgia', serif; margin-top: 20px;">Thanks for visiting!</h2>
   
   <p style="color: #6d4c41; font-family: 'Arial', sans-serif; font-size: 18px; margin-bottom: 10px;">
-    Enjoy your Bunna (coffee) ☕ and happy coding! 🚀
+    Enjoy with your Bunna (coffee) ☕ and happy coding! 🚀
   </p>
   
 </div>
