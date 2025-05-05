@@ -5,6 +5,8 @@ export type ProjectType = {
   githubUrl: string;
   technologies?: string[];
   featured?: boolean;
+  category?: string;
+  date?: string;
 };
 
 export const projectsList: ProjectType[] = [
@@ -14,7 +16,9 @@ export const projectsList: ProjectType[] = [
     previewUrl: "https://et-exit.netlify.app",
     githubUrl: "https://github.com/onesamket/et-exit",
     technologies: ["React", "TypeScript", "Accessibility APIs", "Node.js"],
-    featured: true
+    featured: true,
+    category: "Education",
+    date: "2024"
   },
   {
     title: "Food Delivery Website",
@@ -22,7 +26,9 @@ export const projectsList: ProjectType[] = [
     previewUrl: "https://tw-delivery.netlify.app",
     githubUrl: "https://github.com/onesamket/delivery",
     technologies: ["Next.js", "Tailwind CSS", "Stripe", "MongoDB"],
-    featured: true
+    featured: true,
+    category: "Education",
+    date: "2024"
   },
   {
     title: "Preconfigured TypeScript Starter",
@@ -30,7 +36,9 @@ export const projectsList: ProjectType[] = [
     previewUrl: "https://tw-stack.vercel.app",
     githubUrl: "https://github.com/onesamket/tw-stack",
     technologies: ["TypeScript", "ESLint", "Prettier", "Jest", "Webpack"],
-    featured: false
+    featured: false,
+    category: "Education",
+    date: "2024"
   },
   {
     title: "Ethiopian Fashion E-commerce",
@@ -38,7 +46,9 @@ export const projectsList: ProjectType[] = [
     previewUrl: "https://et-fashion.netlify.app",
     githubUrl: "https://github.com/onesamket/fashion",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
-    featured: true
+    featured: true,
+    category: "Education",
+    date: "2024"
   },
   {
     title: "Research Management System",
@@ -46,7 +56,9 @@ export const projectsList: ProjectType[] = [
     previewUrl: "https://tw-researcher.netlify.app",
     githubUrl: "https://github.com/onesamket/researcher",
     technologies: ["Angular", "TypeScript", "Firebase", "Chart.js", "Material UI"],
-    featured: true
+    featured: true,
+    category: "Education",
+    date: "2024"
   },
   {
     title: "dBooks Clone",
@@ -54,7 +66,9 @@ export const projectsList: ProjectType[] = [
     previewUrl: "https://d-books-clone.vercel.app",
     githubUrl: "https://github.com/onesamket/dBooks-clone",
     technologies: ["React", "Redux", "Styled Components", "PDF.js", "IndexedDB"],
-    featured: false
+    featured: false,
+    category: "Education",
+    date: "2024"
   },
   {
     title: "Google Play Store UI Clone",
@@ -62,7 +76,9 @@ export const projectsList: ProjectType[] = [
     previewUrl: "https://playstore-clone.vercel.app",
     githubUrl: "https://github.com/onesamket/playstore",
     technologies: ["React", "Material UI", "CSS Grid", "Flexbox", "Context API"],
-    featured: false
+    featured: false,
+    category: " UI Design",
+    date: "2024"
   },
   {
     title: "E-commerce Website",
@@ -70,7 +86,9 @@ export const projectsList: ProjectType[] = [
     previewUrl: "https://eat5foods.vercel.app",
     githubUrl: "https://github.com/onesamket/ecommerce",
     technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Stripe"],
-    featured: true
+    featured: true,
+    category: "E-commerce",
+    date: "2024"
   },
   {
     title: "Game Hub Dashboard",
@@ -78,7 +96,9 @@ export const projectsList: ProjectType[] = [
     previewUrl: "https://challenge-lovat.vercel.app/",
     githubUrl: "https://github.com/onesamket/challenge",
     technologies: ["React", "TypeScript", "Chakra UI", "Axios", "React Query"],
-    featured: false
+    featured: false,
+    category: "UI Design",
+    date: "2024"
   },
   {
     title: "Food Delivery Mobile App",
@@ -86,7 +106,9 @@ export const projectsList: ProjectType[] = [
     previewUrl: "https://github.com/onesamket/food-delivery-app",
     githubUrl: "https://github.com/onesamket/food-delivery-app",
     technologies: ["React Native", "Expo", "Firebase", "Redux", "Google Maps API"],
-    featured: true
+    featured: true,
+    category: "Mobile App",
+    date: "2024"
   },
   {
     title: "Portfolio Website",
@@ -94,6 +116,8 @@ export const projectsList: ProjectType[] = [
     previewUrl: "https://onesamket.dev",
     githubUrl: "https://github.com/onesamket/portfolio",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
-    featured: true
+    featured: true,
+    category: "Portfolio",
+    date: "2024"
   }
 ];

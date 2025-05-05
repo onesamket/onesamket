@@ -6,52 +6,60 @@ import ProjectStatsSection from "@/components/sections/project-stats";
 import ProjectTimelineSection from "@/components/sections/project-timeline";
 import SkillSection from "@/components/sections/skills-section";
 import { Separator } from "@/components/ui/separator";
+import { MobileTabbar } from "@/components/ui/mobile-tabbar";
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col pb-16 md:pb-0">
       {/* Hero Section */}
-      <section className="min-h-screen">
+      <section id="home-section" className="min-h-screen">
         <GreetingSection />
       </section>
       
       <Separator className="my-4" />
       
       {/* Skills Section */}
-      <section>
+      <section id="skills-section">
         <SkillSection />
       </section>
       
       <Separator className="my-4" />
       
       {/* Project Statistics */}
-      <section>
+      <section id="stats-section">
         <ProjectStatsSection />
       </section>
       
       <Separator className="my-4" />
       
       {/* Experience & Education */}
-      <section>
+      <section id="experience-section">
         <CombinedExperienceSection />
       </section>
       
       <Separator className="my-4" />
       
       {/* Project Timeline */}
-      <section>
+      <section id="projects-section">
         <ProjectTimelineSection />
       </section>
       
       <Separator className="my-4" />
       
       {/* About Section */}
-      <section>
+      <section id="about-section">
         <About />
       </section>
       
       <Separator className="my-4" />
-
+      
+      {/* Contact Section */}
+      <section id="contact-section">
+        <ContactSection />
+      </section>
+      
+      {/* Mobile Navigation */}
+      <MobileTabbar />
     </main>
   );
 }
