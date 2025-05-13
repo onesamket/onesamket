@@ -130,7 +130,6 @@ function ExperienceTimelineItem({ experience, index }: { experience: ExperienceT
         </div>
       </div>
       
-      {/* <p className="text-sm mb-3">{experience.description}</p> */}
       
       <div className="flex flex-wrap gap-1.5">
         {experience.skills.map((skill) => (
@@ -158,33 +157,29 @@ function ProjectTimelineItem({ project, index }: { project: personalProjectsType
       <div className="absolute -left-10 w-4 h-4 ml-[9px] rounded-full bg-purple-500 border-2 border-white dark:border-gray-900 mt-1.5"></div>
       
       <div className="mb-2">
-        <div className="flex items-baseline justify-between">
+        <div className="flex items-baseline justify-start">
           <h4 className="text-lg font-medium">{project.title}</h4>
           {project.lovedByDeveloper && (
             <Badge variant="lovedByDeveloper" className="ml-5 text-xs">Loved by Developer</Badge>
           )}
         </div>
         
-        <div className="flex items-center text-sm text-muted-foreground">
-          <p className="text-sm">{project.description}</p>
+        <div className="flex items-start text-sm text-muted-foreground">
+          <p className="text-sm justify-start hidden sm:flex">{project.description}</p>
         </div>
         
         <div className="flex items-center text-sm text-muted-foreground">
-          <Building2 className="w-3.5 h-3.5 mr-1" />
+          <ExternalLink className="w-3.5 h-3.5 mr-1" />
           {project.previewUrl ? (
             <LinkPreview url={project.previewUrl} className="hover:text-primary hover:underline flex items-center">
               <p>Hover to preview</p>
-              <ExternalLink className="w-3 h-3 ml-1" />
             </LinkPreview>
           ) : (
             project.previewUrl
           )}
         </div>
         
-        <div className="flex items-center text-sm text-muted-foreground">
-          <MapPin className="w-3.5 h-3.5 mr-1" />
-          <span>{project.previewUrl ? `Preview: ${project.previewUrl}` : ''}</span>
-        </div>
+      
         
         <div className="flex items-center text-sm text-muted-foreground">
           <Github className="w-3.5 h-3.5 mr-1" />
