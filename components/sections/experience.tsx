@@ -172,7 +172,7 @@ function ProjectTimelineItem({ project, index }: { project: personalProjectsType
           <ExternalLink className="w-3.5 h-3.5 mr-1" />
           {project.previewUrl ? (
             <LinkPreview url={project.previewUrl} className="hover:text-primary hover:underline flex items-center">
-              <p>Hover to preview</p>
+              <p>Preview</p>
             </LinkPreview>
           ) : (
             project.previewUrl
@@ -183,7 +183,7 @@ function ProjectTimelineItem({ project, index }: { project: personalProjectsType
         
         <div className="flex items-center text-sm text-muted-foreground">
           <Github className="w-3.5 h-3.5 mr-1" />
-          <span>{project.githubUrl ? `Github: ${project.githubUrl}` : ''}</span>
+          <span>{project.githubUrl ? `${project.githubUrl}` : ''}</span>
         </div>
       </div>      
       <div className="flex flex-wrap gap-1.5">
