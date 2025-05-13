@@ -37,15 +37,6 @@ const experiences: ExperienceType[] = [
     description: "Developed responsive web applications and implemented modern UI/UX designs. Collaborated with cross-functional teams to deliver high-quality products.",
     skills: ["React", "Next.js", "Tailwind CSS", "JavaScript", "REST APIs"],
     companyUrl: "https://example.com"
-  },
-  {
-    title: "Web Developer Intern",
-    company: "Haramaya University",
-    location: "Haramaya, Ethiopia",
-    period: "Jan 2020 - May 2021",
-    description: "Assisted in developing and maintaining university websites and internal applications. Gained hands-on experience with web technologies.",
-    skills: ["HTML/CSS", "JavaScript", "PHP", "WordPress", "MySQL"],
-    companyUrl: "https://www.haramaya.edu.et/"
   }
 ]
 
@@ -76,14 +67,14 @@ function ExperienceCard({ experience, index }: { experience: ExperienceType; ind
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
     >
-      <Card className="overflow-hidden transition-all duration-300 border-l-4 hover:border-l-8 border-l-blue-500 dark:border-l-blue-400">
+      <Card className="overflow-hidden transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:shadow-md dark:hover:shadow-gray-800/30">
         <CardHeader>
           <div className="flex justify-between items-start">
             <div>
               <CardTitle className="text-xl flex items-center gap-2">
                 {experience.title}
                 {experience.current && (
-                  <Badge variant="default" className="ml-2">Current</Badge>
+                  <Badge variant="secondary" className="ml-2">Current</Badge>
                 )}
               </CardTitle>
               <div className="flex items-center mt-1">
@@ -110,9 +101,9 @@ function ExperienceCard({ experience, index }: { experience: ExperienceType; ind
         </CardHeader>
         <CardContent>
           <p className="mb-4 text-sm">{experience.description}</p>
-          <div className="flex flex-wrap gap-2 mt-2">
+          <div className="flex flex-wrap gap-2 mt-4">
             {experience.skills.map((skill) => (
-              <Badge key={skill} variant="outline" className="text-xs">
+              <Badge key={skill} variant="outline" className="text-xs font-normal">
                 {skill}
               </Badge>
             ))}

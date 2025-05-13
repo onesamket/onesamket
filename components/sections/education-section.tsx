@@ -12,7 +12,6 @@ type EducationType = {
   location: string;
   period: string;
   description: string;
-  achievements?: string[];
   institutionUrl?: string;
 }
 
@@ -23,25 +22,7 @@ const educationList: EducationType[] = [
     location: "Haramaya, Ethiopia",
     period: "2017 - 2021",
     description: "Graduated with honors, specializing in software development and web technologies.",
-    achievements: [
-      "Dean's List for academic excellence",
-      "Capstone project: Developed an accessibility-focused exam platform",
-      "Participated in university coding competitions"
-    ],
     institutionUrl: "https://www.haramaya.edu.et/"
-  },
-  {
-    degree: "Web Development Certification",
-    institution: "Udacity",
-    location: "Online",
-    period: "2020",
-    description: "Completed intensive front-end web development nanodegree program.",
-    achievements: [
-      "Built responsive web applications using modern frameworks",
-      "Implemented accessibility best practices",
-      "Received recognition for project excellence"
-    ],
-    institutionUrl: "https://www.udacity.com/"
   },
   {
     degree: "Advanced TypeScript Certification",
@@ -49,11 +30,6 @@ const educationList: EducationType[] = [
     location: "Online",
     period: "2022",
     description: "Specialized training in advanced TypeScript concepts and patterns.",
-    achievements: [
-      "Mastered generics, conditional types, and type inference",
-      "Implemented enterprise-level type systems",
-      "Created type-safe libraries and utilities"
-    ],
     institutionUrl: "https://www.typescriptlang.org/"
   }
 ]
@@ -85,7 +61,7 @@ function EducationCard({ education, index }: { education: EducationType; index: 
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
     >
-      <Card className="overflow-hidden transition-all duration-300 border-l-4 hover:border-l-8 border-l-green-500 dark:border-l-green-400">
+      <Card className="overflow-hidden transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:shadow-md dark:hover:shadow-gray-800/30">
         <CardHeader>
           <div className="flex justify-between items-start">
             <div>
@@ -117,16 +93,7 @@ function EducationCard({ education, index }: { education: EducationType; index: 
         </CardHeader>
         <CardContent>
           <p className="mb-4 text-sm">{education.description}</p>
-          {education.achievements && (
-            <div className="mt-2">
-              <h4 className="text-sm font-medium mb-2">Key Achievements:</h4>
-              <ul className="list-disc pl-5 text-sm space-y-1">
-                {education.achievements.map((achievement, i) => (
-                  <li key={i}>{achievement}</li>
-                ))}
-              </ul>
-            </div>
-          )}
+
         </CardContent>
       </Card>
     </motion.div>
