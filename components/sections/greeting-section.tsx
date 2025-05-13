@@ -91,7 +91,7 @@ export default function GreetingSection() {
                     </Button>
                 </Link>
                 
-                <Link href="#contact">
+                <Link href="https://t.me/onesamket">
                     <Button variant="outline" size="lg" className="gap-2">
                         <Mail className="w-4 h-4" />
                         Contact Me
@@ -105,7 +105,7 @@ export default function GreetingSection() {
                 className="flex gap-4 justify-center"
             >
                 <SocialLink href="https://github.com/onesamket" icon={<Github className="w-5 h-5" />} />
-                <SocialLink href="https://linkedin.com/in/onesamket" icon={<Linkedin className="w-5 h-5" />} />
+                <SocialLink href="https://linkedin.com/in/ln-onesamket" icon={<Linkedin className="w-5 h-5" />} />
                 <SocialLink href="https://twitter.com/onesamket" icon={<Twitter className="w-5 h-5" />} />
                 <SocialLink href="mailto:onesamket@gmail.com" icon={<Mail className="w-5 h-5" />} />
             </motion.div>
