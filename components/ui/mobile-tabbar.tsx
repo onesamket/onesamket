@@ -1,17 +1,14 @@
 'use client'
 
-import * as React from 'react'
-import { motion } from 'framer-motion'
-import { usePathname, useRouter } from 'next/navigation'
-import { 
-  Home, 
-  Code, 
-  Briefcase, 
-  User, 
-  Mail,
-  BarChart
-} from 'lucide-react'
 import { cn } from '@/libs/utils'
+import { motion } from 'framer-motion'
+import {
+  Briefcase,
+  Code,
+  Home,
+  User
+} from 'lucide-react'
+import * as React from 'react'
 
 type TabItem = {
   name: string;
@@ -29,11 +26,6 @@ const tabs: TabItem[] = [
     name: 'Skills',
     icon: <Code className="h-5 w-5" />,
     targetId: 'skills-section'
-  },
-  {
-    name: 'Stats',
-    icon: <BarChart className="h-5 w-5" />,
-    targetId: 'stats-section'
   },
   {
     name: 'Experience',
