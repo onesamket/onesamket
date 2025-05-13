@@ -1,25 +1,22 @@
 import { MetadataRoute } from "next";
-import { host } from "@/config";
-import { Locale, getPathname, routing } from "@/i18n/routing";
+
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [getEntry("/"), getEntry("/")];
+  return [getEntry("/"), getEntry("/am"), getEntry("/en")];
 }
 
-type Href = Parameters<typeof getPathname>[0]["href"];
-
-function getEntry(href: Href) {
+function getEntry(href: string) { 
   return {
-    url: getUrl(href, routing.defaultLocale),
+    url: getUrl(href),
     alternates: {
       languages: Object.fromEntries(
-        routing.locales.map((locale) => [locale, getUrl(href, locale)])
+        ["en", "am"].map((locale) => [locale, getUrl(href)])
       ),
     },
   };
 }
 
-function getUrl(href: Href, locale: Locale) {
-  const pathname = getPathname({ locale, href });
-  return host + pathname;
+function getUrl(href: string) {
+  const pathname = href;
+  return "https://onesamket.com" + pathname;
 }

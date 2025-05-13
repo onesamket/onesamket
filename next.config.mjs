@@ -1,7 +1,5 @@
 import withPWA from 'next-pwa';
-import createNextIntlPlugin from 'next-intl/plugin';
 
-const withNextIntl = createNextIntlPlugin('./i18n/i18n.ts');
 
 const nextPWA = withPWA({
     dest: 'public',
@@ -26,6 +24,6 @@ const nextConfig = {
 };
 
 // Apply plugins in the correct order
-const configWithPlugins = withNextIntl(nextPWA(nextConfig));
+const configWithPlugins = nextPWA(nextConfig);
 
 export default configWithPlugins;

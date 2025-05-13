@@ -7,19 +7,13 @@ import { BsTwitterX } from 'react-icons/bs';
 import { Lobster } from "next/font/google";
 import { cn } from '@/libs/utils';
 import { LinkPreview } from '../link-preview';
-import { useTranslations } from 'next-intl';
-import { useLocale } from 'next-intl';
 
 const arimaFont = Lobster({
     subsets: ["latin"],
     weight: '400'
 });
 
-type AboutProps = {};
-
-export default function About({ }: AboutProps) {
-    const t = useTranslations('about');
-    const locale = useLocale();
+export default function About() {
 
     return (
         <motion.section
@@ -37,7 +31,7 @@ export default function About({ }: AboutProps) {
                 viewport={{ once: true }}
                 className="text-4xl font-bold text-center"
             >
-                {t('title')}
+                About Me
             </motion.h1>
 
             <motion.blockquote
@@ -63,50 +57,38 @@ export default function About({ }: AboutProps) {
                 </svg>
 
                 <p className={cn(arimaFont.className, "text-lg z-10 mb-4")}>
-                    {locale === 'en' ? (
-                        <>
-                            Hey there! I&apos;m
-                            <LinkPreview url="https://gravatar.com/onesamket">
-                                <span className="text-emerald-600  mx-2 text-lg">Tewodros Birhanu (ቴዲ - Teddy)</span>
-                            </LinkPreview>.
-                            I&apos;m a
-                            <LinkPreview url="https://tw-stack.vercel.app/">
-                                <span className="text-blue-600  mx-2 text-lg">full-stack web</span>
-                            </LinkPreview>
-                            and
-                            <LinkPreview url="https://tw-stack.vercel.app/">
-                                <span className="text-blue-600  mx-2 text-lg">react-native developer</span>
-                            </LinkPreview>
-                            with <LinkPreview url='https://www.typescriptlang.org/'><span className='text-blue-700 mx-2 text-lg '>type-safety</span> </LinkPreview> , building elegant and user-friendly applications that perform with energy and finesse. Fueled by
-                            <LinkPreview url="https://en.wikipedia.org/wiki/Coffee">
-                                <span className="text-[#7d4533]  mx-2 text-lg underline">coffee</span>
-                            </LinkPreview>
-                            (or as we say,
-                            <LinkPreview url="https://en.wikipedia.org/wiki/Coffee_ceremony_of_Ethiopia_and_Eritrea">
-                                <span className="text-[#7d4533]  mx-2 text-lg underline">Bunna</span>
-                            </LinkPreview> ☕), and equipped with a degree from
-                            <LinkPreview url="https://www.haramaya.edu.et/">
-                                <span className="text-[#ab0802] px-2 underline underline-offset-4">Haramaya University</span>
-                            </LinkPreview>, I&apos;m constantly learning and exploring the latest in tech.
-                        </>
-                    ) : (
-                        t('intro')
-                    )}
+                    Hey there! I&apos;m
+                    <LinkPreview url="https://gravatar.com/onesamket">
+                        <span className="text-emerald-600  mx-2 text-lg">Tewodros Birhanu (ቴዲ - Teddy)</span>
+                    </LinkPreview>.
+                    I&apos;m a
+                    <LinkPreview url="https://tw-stack.vercel.app/">
+                        <span className="text-blue-600  mx-2 text-lg">full-stack web</span>
+                    </LinkPreview>
+                    and
+                    <LinkPreview url="https://tw-stack.vercel.app/">
+                        <span className="text-blue-600  mx-2 text-lg">react-native developer</span>
+                    </LinkPreview>
+                    with <LinkPreview url='https://www.typescriptlang.org/'><span className='text-blue-700 mx-2 text-lg '>type-safety</span> </LinkPreview>, building elegant and user-friendly applications that perform with energy and finesse. Fueled by
+                    <LinkPreview url="https://en.wikipedia.org/wiki/Coffee">
+                        <span className="text-[#7d4533]  mx-2 text-lg underline">coffee</span>
+                    </LinkPreview>
+                    (or as we say,
+                    <LinkPreview url="https://en.wikipedia.org/wiki/Coffee_ceremony_of_Ethiopia_and_Eritrea">
+                        <span className="text-[#7d4533]  mx-2 text-lg underline">Bunna</span>
+                    </LinkPreview> ☕), and equipped with a degree from
+                    <LinkPreview url="https://www.haramaya.edu.et/">
+                        <span className="text-[#ab0802] px-2 underline underline-offset-4">Haramaya University</span>
+                    </LinkPreview>, I&apos;m constantly learning and exploring the latest in tech.
                 </p>
                 <p className={cn(arimaFont.className, "text-lg")}>
-                    {locale === 'en' ? (
-                        <>
-                            When <span className="bg-emerald-600 text-white dark:bg-blue-600 rounded-tl-md rounded-br-md">I&apos;m not writing code,</span> you can find me diving into my projects or enjoying some authentic Ethiopian
-                            <LinkPreview url="https://en.wikipedia.org/wiki/Coffee">
-                                <span className="text-[#7d4533] mx-2 text-lg underline">coffee</span>
-                            </LinkPreview> ☕. Let&apos;s team up and bring your wildest web and app ideas to life.
-                        </>
-                    ) : (
-                        t('hobbies')
-                    )}
+                    When <span className="bg-emerald-600 text-white dark:bg-blue-600 rounded-tl-md rounded-br-md">I&apos;m not writing code,</span> you can find me diving into my projects or enjoying some authentic Ethiopian
+                    <LinkPreview url="https://en.wikipedia.org/wiki/Coffee">
+                        <span className="text-[#7d4533] mx-2 text-lg underline">coffee</span>
+                    </LinkPreview> ☕. Let&apos;s team up and bring your wildest web and app ideas to life.
                 </p>
                 <p className={cn(arimaFont.className, "text-2xl underline underline-offset-2 font-medium mt-12 mb-4")}>
-                    {t('signOff')}
+                    Cheers,
                 </p>
 
                 <footer className="mt-6 flex items-center">
@@ -118,7 +100,7 @@ export default function About({ }: AboutProps) {
                         alt="onesamket"
                     />
                     <div className="ml-4">
-                        <div className="text-base font-medium">{locale === 'en' || locale === 'or' ? 'Tewodros Birhanu' : 'ቴዎድሮስ ብርሃኑ'}</div>
+                        <div className="text-base font-medium">Tewodros Birhanu</div>
                         <Link href="https://x.com/onesamket" className="text-sm text-gray-500 hover:text-indigo-700 flex items-center">
                             <BsTwitterX className="w-4 h-4 mr-1" />
                             <p>@onesamket</p>
