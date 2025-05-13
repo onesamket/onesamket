@@ -3,8 +3,9 @@ import FooterSection from "@/components/sections/footer-section";
 import { cn } from "@/libs/utils";
 import { ThemeProvider } from "@/providers/theme-provider";
 import Script from "next/script";
-import { ReactNode } from 'react';
-import './globals.css'
+import { ReactNode, Suspense } from 'react';
+import './globals.css';
+import Loading from "./loading";
 type Props = {
   children: ReactNode;
   params: { locale: string };
@@ -53,12 +54,14 @@ export default async function LocaleLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Suspense fallback={<Loading />}>
           <Container className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
               <main className="w-full p-5 md:p-12 lg:p-24 text-center">
                 {children}
               </main>
               <FooterSection />
             </Container>
+          </Suspense>
         </ThemeProvider>
 
         <Script id="schema-script" type="application/ld+json">
@@ -74,7 +77,7 @@ export default async function LocaleLayout({
                 "https://www.linkedin.com/in/ln-onesamket",
                 "https://instagram.com/onesamket_",
                 "https://t.me/onesamket"
-              ]
+              ] 
             }
           `}
         </Script>
