@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../ui/button';
+import {toGeez} from '@onesamket/geez-number'
 import { ArrowDownToLine, Github, Linkedin, Mail, Twitter } from 'lucide-react';
 export default function GreetingSection() {
     
@@ -76,7 +77,7 @@ export default function GreetingSection() {
                 variants={itemVariants}
                 className="text-xl md:text-2xl text-center max-w-3xl mb-8 text-gray-700 dark:text-gray-300"
             >
-                <TypewriterEffect text={`Software Engineer`} />
+                <TypewriterEffect text={`Software Engineer ${toGeez(7)}`} />
             </motion.div>
             
             {/* Call to action buttons */}
