@@ -112,8 +112,8 @@ export const workExperiences: ExperienceType[] = [
       githubUrl: "https://github.com/onesamket/pintests",
     },
     {
-      title: "Developed  Restaurant Mnagement app  and other 3 apps for Company",
-      description: "Developed a Restaurant Mnagement app Expo.",
+      title: "Restaurant Management app + 3 other apps for Company ",
+      description: "Developed a Restaurant Management app Expo.",
       skills: ["React", "Expo", "Tailwind CSS", "Mock", "TypeScript","Moti","Zustand"],
       companyUrl: "https://restaurant-management-onesamket.vercel.app/",
       previewUrl: "https://restaurant-management-onesamket.vercel.app/",
@@ -141,7 +141,7 @@ export const workExperiences: ExperienceType[] = [
       description: "Developed a Game Hub UI Using Next.js.",
       skills: ["Next.js", "Tailwind CSS", "TypeScript","Zustand","Framer Motion"],
       companyUrl: "https://github.com/onesamket/game-hub",
-      previewUrl: "https://challenge-lovat.vercel.app",
+      previewUrl: "https://game-hub-onesamket.vercel.app",
       githubUrl: "https://github.com/onesamket/game-hub",
 
     },
@@ -152,6 +152,15 @@ export const workExperiences: ExperienceType[] = [
       companyUrl: "https://github.com/onesamket/geez-number",
       previewUrl: "https://github.com/onesamket/geez-number",
       githubUrl: "https://github.com/onesamket/geez-number",
+      lovedByDeveloper: true,
+    },
+    {
+      title: "Shadcn  toast component",
+      description: "A TypeScript component for creating toast notifications with social feed and other amazing toast features.",
+      skills: ["TypeScript", "Shadcn", "Tailwind CSS"],
+      companyUrl: "https://github.com/onesamket/shadcn-toast",
+      previewUrl: "https://toast-onesamket.vercel.app",
+      githubUrl: "https://github.com/onesamket/shadcn-toast",
       lovedByDeveloper: true,
     },
   

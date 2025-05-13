@@ -8,6 +8,9 @@ export const skillsList = [
   { label: "Shadcn", link: "https://ui.shadcn.dev/" },
   { label: "Nativewind", link: "https://www.nativewind.dev" },
   { label: "React", link: "https://react.dev/" },
+  { label: "Framer Motion", link: "https://framer.com/motion" },
+  { label: "Next.js", link: "https://nextjs.org/" },
+  { label: "Tanstack Query", link: "https://tanstack.com/query/latest/docs/react/overview" },
   {
     label: "React Native",
     link: "https://reactnative.dev",
@@ -27,6 +30,8 @@ export const skillsList = [
     link: "https://expressjs.com/en/starter/installing.html",
   },
   { label: "Bun", link: "https://bun.sh/docs" },
+  { label: "Socket.io", link: "https://socket.io/" },
+  { label: "PeerJs", link: "https://peerjs.com/" },
   { label: "Prisma", link: "https://www.prisma.io/docs" },
   { label: "MySQL", link: "https://dev.mysql.com/doc/" },
   { label: "MongoDB", link: "https://www.mongodb.com/docs/" },
