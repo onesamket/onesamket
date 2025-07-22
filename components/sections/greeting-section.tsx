@@ -77,7 +77,8 @@ export default function GreetingSection() {
                 variants={itemVariants}
                 className="text-xl md:text-2xl text-center max-w-3xl mb-8 text-gray-700 dark:text-gray-300"
             >
-                <TypewriterEffect text={`Software Engineer ${toGeez(7)}`} />
+                <TypewriterEffect text={`Full-stack Software Developer | Web & React Native Developer.
+ ${toGeez(7)}`} />
             </motion.div>
             
             {/* Call to action buttons */}
