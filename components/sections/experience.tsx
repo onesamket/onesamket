@@ -34,12 +34,12 @@ export default function CombinedExperienceSection() {
         {/* Professional Experience Column */}
         <div>
           <div className="mb-4 flex items-center">
-            <Briefcase className="mr-2 h-5 w-5 text-blue-500" />
+            <Briefcase className="mr-2 h-5 w-5 text-black dark:text-white" />
             <h3 className="text-xl font-bold sm:text-2xl">Professional Experience</h3>
           </div>
           <div className="relative space-y-8">
             {/* Timeline line */}
-            <div className="absolute left-4 top-6 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800/30"></div>
+            <div className="absolute left-4 top-6 bottom-0 w-0.5 bg-black/60 dark:bg-white/60"></div>
 
             {workExperiences
               .filter(exp => exp.type === 'client')
@@ -53,12 +53,12 @@ export default function CombinedExperienceSection() {
           </div>
 
           <div className="mb-4 mt-12 flex items-center sm:mb-6">
-            <Building2 className="mr-2 h-5 w-5 text-purple-500" />
+            <Building2 className="mr-2 h-5 w-5 text-black dark:text-white" />
             <h3 className="text-xl font-bold sm:text-2xl">Personal Projects</h3>
           </div>
           <div className="relative space-y-8">
             {/* Timeline line */}
-            <div className="absolute left-4 top-6 bottom-0 w-0.5 bg-purple-200 dark:bg-purple-800/30"></div>
+            <div className="absolute left-4 top-6 bottom-0 w-0.5 bg-black/60 dark:bg-white/60"></div>
 
             {personalProjects.map((project, index) => (
               <ProjectTimelineItem
@@ -73,12 +73,12 @@ export default function CombinedExperienceSection() {
         {/* Education Column */}
         <div>
           <div className="mb-4 flex items-center sm:mb-6">
-            <GraduationCap className="mr-2 h-5 w-5 text-green-500" />
+            <GraduationCap className="mr-2 h-5 w-5 text-black dark:text-white" />
             <h3 className="text-xl font-bold sm:text-2xl">Education</h3>
           </div>
           <div className="relative space-y-8">
             {/* Timeline line */}
-            <div className="absolute left-4 top-6 bottom-0 w-0.5 bg-green-200 dark:bg-green-800/30"></div>
+            <div className="absolute left-4 top-6 bottom-0 w-0.5 bg-black/60 dark:bg-white/60"></div>
 
             {educationList.map((education, index) => (
               <EducationTimelineItem
@@ -104,7 +104,7 @@ function ExperienceTimelineItem({
   return (
     <div className="relative pl-12">
       {/* Timeline dot */}
-      <div className="absolute left-3 top-2 h-4 w-4 rounded-full border-2 border-white bg-blue-500 dark:border-gray-900"></div>
+      <div className="absolute left-3 top-2 h-4 w-4 rounded-full border-2 border-white bg-black dark:border-black"></div>
 
       <div className="mb-2">
         <div className="flex flex-col items-start justify-between gap-1 sm:flex-row sm:items-baseline">
@@ -156,7 +156,7 @@ function ProjectTimelineItem({
   return (
     <div className="relative pl-12">
       {/* Timeline dot */}
-      <div className="absolute left-3 top-2 h-4 w-4 rounded-full border-2 border-white bg-purple-500 dark:border-gray-900"></div>
+      <div className="absolute left-3 top-2 h-4 w-4 rounded-full border-2 border-white bg-black dark:border-black"></div>
 
       <div className="mb-2">
         <div className="flex flex-col items-start justify-start gap-1 sm:flex-row sm:items-baseline">
@@ -214,7 +214,7 @@ function EducationTimelineItem({
   return (
     <div className="relative pl-12">
       {/* Timeline dot */}
-      <div className="absolute left-3 top-2 h-4 w-4 rounded-full border-2 border-white bg-green-500 dark:border-gray-900"></div>
+      <div className="absolute left-3 top-2 h-4 w-4 rounded-full border-2 border-white bg-black dark:border-black"></div>
 
       <div className="mb-2">
         <div className="flex flex-col items-start justify-between gap-1 sm:flex-row sm:items-baseline">
@@ -245,6 +245,6 @@ function EducationTimelineItem({
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
