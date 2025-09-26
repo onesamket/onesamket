@@ -2,7 +2,7 @@
 
 import { cn } from '@/libs/utils';
 import { motion } from 'framer-motion';
-import { Briefcase, Code, Home, User } from 'lucide-react';
+import { Briefcase, Lightbulb, Home, User } from 'lucide-react';
 import * as React from 'react';
 
 type TabItem = {
@@ -19,7 +19,7 @@ const tabs: TabItem[] = [
   },
   {
     name: 'Skills',
-    icon: <Code className="h-5 w-5" />,
+    icon: <Lightbulb className="h-5 w-5" />,
     targetId: 'skills-section',
   },
   {
