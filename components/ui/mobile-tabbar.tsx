@@ -86,15 +86,21 @@ export function MobileTabbar() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-      <div className="flex items-center justify-around border-t border-border bg-background/80 px-2 py-1 backdrop-blur-lg">
-        {tabs.map(tab => (
-          <TabButton
-            key={tab.name}
-            tab={tab}
-            isActive={activeTab === tab.name}
-            onClick={() => handleTabClick(tab)}
-          />
-        ))}
+      {/* Safe area padding for devices with home indicator */}
+      <div className="pb-safe">
+        {/* Main tabbar container with rounded top corners */}
+        <div className="mx-4 mb-4 rounded-2xl border border-border/50 bg-background/95 backdrop-blur-xl shadow-2xl">
+          <div className="flex items-center justify-around px-2 py-2">
+            {tabs.map(tab => (
+              <TabButton
+                key={tab.name}
+                tab={tab}
+                isActive={activeTab === tab.name}
+                onClick={() => handleTabClick(tab)}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -113,26 +119,58 @@ function TabButton({
     <button
       onClick={onClick}
       className={cn(
-        'relative flex h-14 w-16 flex-col items-center justify-center rounded-lg transition-colors',
-        isActive ? 'text-primary' : 'text-muted-foreground'
+        'relative flex h-12 w-12 flex-col items-center justify-center rounded-xl transition-all duration-300 ease-out',
+        'active:scale-95 active:bg-primary/5',
+        isActive
+          ? 'text-primary'
+          : 'text-muted-foreground hover:text-foreground'
       )}
     >
-      <div className="relative">
-        {isActive && (
-          <motion.div
-            layoutId="tab-indicator"
-            className="absolute -inset-1 rounded-full bg-primary/10"
-            transition={{ type: 'spring', duration: 0.5 }}
-          />
-        )}
-        <div className="relative z-10">{tab.icon}</div>
+      {/* Active background with smooth animation */}
+      {isActive && (
+        <motion.div
+          layoutId="tab-background"
+          className="absolute inset-0 rounded-xl bg-primary/10"
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 30,
+            mass: 0.8
+          }}
+        />
+      )}
+
+      {/* Icon container */}
+      <div className="relative z-10 flex items-center justify-center">
+        <motion.div
+          animate={{
+            scale: isActive ? 1.1 : 1,
+            rotate: isActive ? [0, -5, 5, 0] : 0,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 400,
+            damping: 25,
+            duration: 0.3
+          }}
+        >
+          {tab.icon}
+        </motion.div>
       </div>
-      <span className="mt-1 text-xs font-medium">{tab.name}</span>
+
+
+
+      {/* Active indicator dot */}
       {isActive && (
         <motion.div
           layoutId="tab-dot"
-          className="absolute bottom-1 h-1 w-1 rounded-full bg-primary"
-          transition={{ type: 'spring', duration: 0.5 }}
+          className="absolute -bottom-1 h-1 w-1 rounded-full bg-primary"
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 30,
+            mass: 0.5
+          }}
         />
       )}
     </button>
