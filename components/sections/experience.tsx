@@ -119,24 +119,27 @@ function ExperienceTimelineItem({
           <span className="text-sm text-muted-foreground">{experience.period}</span>
         </div>
 
-        <div className="mt-1 flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
-          <Building2 className="h-3.5 w-3.5" />
-          {experience.companyUrl ? (
-            <Link
-              href={experience.companyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center hover:text-primary hover:underline"
-            >
-              {experience.company}
-              <ExternalLink className="ml-1 h-3 w-3" />
-            </Link>
-          ) : (
-            <span>{experience.company}</span>
-          )}
-          <span className="hidden sm:inline">•</span>
-          <MapPin className="h-3.5 w-3.5" />
-          <span className="break-words">{experience.location}</span>
+        <div className="mt-1 flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-2 text-sm text-muted-foreground">
+          <div className="flex items-center gap-1">
+            <Building2 className="h-3.5 w-3.5" />
+            {experience.companyUrl ? (
+              <Link
+                href={experience.companyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center hover:text-primary hover:underline"
+              >
+                {experience.company}
+                <ExternalLink className="ml-1 h-3 w-3" />
+              </Link>
+            ) : (
+              <span>{experience.company}</span>
+            )}
+          </div>
+          <div className="flex items-center gap-1">
+            <MapPin className="h-3.5 w-3.5" />
+            <span className="break-words">{experience.location}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -163,35 +166,38 @@ function ProjectTimelineItem({
         <div className="mt-1 text-sm text-muted-foreground text-start">
           <p className="text-xs sm:flex">{project.description}</p>
         </div>
+        <div className=' flex lg:flex-col lg:items-start items-center gap-3 '>
+          <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+            <ExternalLink className="h-3.5 w-3.5" />
+            {project.previewUrl ? (
+              <LinkPreview
+                url={project.previewUrl}
+                className="inline-flex items-center hover:text-primary hover:underline"
+              >
+                <p className="sm:hidden">Preview</p>
+                <p className="hidden sm:block break-all">{project.previewUrl}</p>
+              </LinkPreview>
+            ) : (
+              <span className="break-all">{project.previewUrl}</span>
+            )}
+          </div>
 
-        <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-          <ExternalLink className="h-3.5 w-3.5" />
-          {project.previewUrl ? (
-            <LinkPreview
-              url={project.previewUrl}
-              className="inline-flex items-center hover:text-primary hover:underline"
-            >
-              <p>Preview</p>
-            </LinkPreview>
-          ) : (
-            <span className="break-all">{project.previewUrl}</span>
-          )}
-        </div>
-
-        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-          <Github className="h-3.5 w-3.5" />
-          {project.githubUrl ? (
-            <Link
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="break-all hover:text-primary hover:underline"
-            >
-              {project.githubUrl}
-            </Link>
-          ) : (
-            <span />
-          )}
+          <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+            <Github className="h-3.5 w-3.5" />
+            {project.githubUrl ? (
+              <Link
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="break-all hover:text-primary hover:underline"
+              >
+                <span className="sm:hidden">GitHub</span>
+                <span className="hidden sm:inline">{project.githubUrl}</span>
+              </Link>
+            ) : (
+              <span />
+            )}
+          </div>
         </div>
       </div>
     </div>
@@ -216,24 +222,27 @@ function EducationTimelineItem({
           <span className="text-sm text-muted-foreground">{education.period}</span>
         </div>
 
-        <div className="mt-1 flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
-          <GraduationCap className="h-3.5 w-3.5" />
-          {education.institutionUrl ? (
-            <Link
-              href={education.institutionUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center hover:text-primary hover:underline"
-            >
-              {education.institution}
-              <ExternalLink className="ml-1 h-3 w-3" />
-            </Link>
-          ) : (
-            <span>{education.institution}</span>
-          )}
-          <span className="hidden sm:inline">•</span>
-          <MapPin className="h-3.5 w-3.5" />
-          <span className="break-words">{education.location}</span>
+        <div className="mt-1 flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-2 text-sm text-muted-foreground">
+          <div className="flex items-center gap-1">
+            <GraduationCap className="h-3.5 w-3.5" />
+            {education.institutionUrl ? (
+              <Link
+                href={education.institutionUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center hover:text-primary hover:underline"
+              >
+                {education.institution}
+                <ExternalLink className="ml-1 h-3 w-3" />
+              </Link>
+            ) : (
+              <span>{education.institution}</span>
+            )}
+          </div>
+          <div className="flex items-center gap-1">
+            <MapPin className="h-3.5 w-3.5" />
+            <span className="break-words">{education.location}</span>
+          </div>
         </div>
       </div>
     </div>
