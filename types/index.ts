@@ -7,13 +7,13 @@ export type ExperienceType = {
   companyUrl?: string;
   current?: boolean;
   type:
-    | "client"
-    | "personal"
-    | "freelance"
-    | "internship"
-    | "contract"
-    | "volunteer"
-    | "other";
+    | 'client'
+    | 'personal'
+    | 'freelance'
+    | 'internship'
+    | 'contract'
+    | 'volunteer'
+    | 'other';
 };
 
 export type EducationType = {
