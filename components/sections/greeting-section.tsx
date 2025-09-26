@@ -31,7 +31,7 @@ export default function GreetingSection() {
             {/* Subtitle with typing animation */}
             <div className="mb-8 max-w-3xl text-center text-xl text-gray-700 dark:text-gray-300 md:text-2xl">
                 <h1 className="font-light">
-                    Full-stack Software Developer | Web & React Native Developer.
+                    Full-stack Software Developer <br /> Website, Desktop & React Native Developer.
                     {toGeez(7)}{' '}
                 </h1>
             </div>

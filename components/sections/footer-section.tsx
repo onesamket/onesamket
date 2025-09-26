@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { ThemeToggle } from '../theme-toggle';
 export default function FooterSection() {
     return (
-        <footer className="mt-10 flex w-full items-center justify-between p-5 md:p-10 xl:px-56 pb-32 lg:pb-0">
+        <footer className="mt-10 flex w-full items-center justify-between p-5 md:p-10 xl:px-56 pb-32 lg:pb-10">
             <div className="flex items-center space-x-1">
                 <p className="flex items-center space-x-1">
                     <span className="text-2xl">&copy;</span>

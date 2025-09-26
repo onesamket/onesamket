@@ -47,7 +47,7 @@ export default function About() {
           </LinkPreview>
           . I&apos;m a
           <LinkPreview url="https://tw-stack.vercel.app/">
-            <span className="mx-2 text-lg text-black dark:text-white underline">full-stack web</span>
+            <span className="mx-2 text-lg text-black dark:text-white underline">full-stack website, desktop</span>
           </LinkPreview>
           and
           <LinkPreview url="https://tw-stack.vercel.app/">
