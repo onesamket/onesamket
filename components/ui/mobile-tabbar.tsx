@@ -92,19 +92,25 @@ export function MobileTabbar() {
   };
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden" aria-label="Main navigation">
+    <nav
+      className="fixed bottom-0 left-0 right-0 z-50 md:hidden"
+      aria-label="Main navigation"
+    >
       {/* Safe area padding for devices with home indicator */}
       <div className="pb-safe">
         {/* Main tabbar container with rounded top corners */}
-        <div className="mx-4 mb-4 rounded-2xl border border-border/50 bg-background/95 backdrop-blur-xl shadow-2xl">
-          <div className="flex items-center justify-around px-2 py-2" role="tablist">
+        <div className="mx-4 mb-4 rounded-2xl border border-border/50 bg-background/95 shadow-2xl backdrop-blur-xl">
+          <div
+            className="flex items-center justify-around px-2 py-2"
+            role="tablist"
+          >
             {tabs.map(tab => (
               <TabButton
                 key={tab.name}
                 tab={tab}
                 isActive={activeTab === tab.name}
                 onClick={() => handleTabClick(tab)}
-                onKeyDown={(e) => handleKeyDown(e, tab)}
+                onKeyDown={e => handleKeyDown(e, tab)}
               />
             ))}
           </div>
@@ -150,7 +156,7 @@ function TabButton({
             type: 'spring',
             stiffness: 500,
             damping: 30,
-            mass: 0.8
+            mass: 0.8,
           }}
         />
       )}
@@ -166,7 +172,7 @@ function TabButton({
             type: 'spring',
             stiffness: 400,
             damping: 25,
-            duration: 0.3
+            duration: 0.3,
           }}
         >
           {tab.icon}
@@ -182,7 +188,7 @@ function TabButton({
             type: 'spring',
             stiffness: 500,
             damping: 30,
-            mass: 0.5
+            mass: 0.5,
           }}
         />
       )}

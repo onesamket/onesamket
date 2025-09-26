@@ -64,8 +64,6 @@ export const educationList: EducationType[] = [
 ];
 
 export const personalProjects: ProjectType[] = [
-
-
   {
     title: '3+ Recipe apps for Company ',
     description: 'Developed  more than 3 recipe apps',
@@ -96,8 +94,7 @@ export const personalProjects: ProjectType[] = [
   },
   {
     title: 'Geez Number Converter',
-    description:
-      'Library for converting between Arabic-Geez',
+    description: 'Library for converting between Arabic-Geez',
     companyUrl: 'https://github.com/onesamket/geez-number',
     previewUrl: 'https://github.com/onesamket/geez-number',
     githubUrl: 'https://github.com/onesamket/geez-number',

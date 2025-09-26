@@ -1,52 +1,58 @@
-import { Container } from "@/components/container";
-import FooterSection from "@/components/sections/footer-section";
-import { cn } from "@/libs/utils";
-import { ThemeProvider } from "@/providers/theme-provider";
-import Script from "next/script";
+import { Container } from '@/components/container';
+import FooterSection from '@/components/sections/footer-section';
+import { cn } from '@/libs/utils';
+import { ThemeProvider } from '@/providers/theme-provider';
+import Script from 'next/script';
 import { ReactNode, Suspense } from 'react';
 import './globals.css';
-import Loading from "./loading";
+import Loading from './loading';
 type Props = {
   children: ReactNode;
   params: { locale: string };
 };
 
-
-
 export async function generateMetadata({
-  params: { locale }
+  params: { locale },
 }: Omit<Props, 'children'>) {
-
   return {
-    title: "Tewodros Birhanu",
+    title: 'Tewodros Birhanu',
     description: "Tewodros Birhanu's personal website.",
     openGraph: {
-      title: "Tewodros Birhanu",
+      title: 'Tewodros Birhanu',
       description: "Tewodros Birhanu's personal website.",
-      images: [{ url: "/profile.png", width: 1200, height: 630, alt: "Tewodros Birhanu" }],
-      url: "https://onesamket.com",
-      siteName: "Tewodros Birhanu",
+      images: [
+        {
+          url: '/profile.png',
+          width: 1200,
+          height: 630,
+          alt: 'Tewodros Birhanu',
+        },
+      ],
+      url: 'https://onesamket.com',
+      siteName: 'Tewodros Birhanu',
       locale: locale,
-      type: "website",
+      type: 'website',
     },
     twitter: {
-      card: "summary_large_image",
-      site: "@onesamket",
-      title: "Tewodros Birhanu",
+      card: 'summary_large_image',
+      site: '@onesamket',
+      title: 'Tewodros Birhanu',
       description: "Tewodros Birhanu's personal website.",
-      images: ["/profile.png"],
+      images: ['/profile.png'],
     },
   };
 }
 
 export default async function LocaleLayout({
   children,
-  params: { locale }
+  params: { locale },
 }: Props) {
-
-
   return (
-    <html lang={locale} dir={'ltr'} className={cn("min-h-screen bg-background font-sans antialiased")}>
+    <html
+      lang={locale}
+      dir={'ltr'}
+      className={cn('min-h-screen bg-background font-sans antialiased')}
+    >
       <body>
         <ThemeProvider
           attribute="class"
@@ -56,7 +62,7 @@ export default async function LocaleLayout({
         >
           <Suspense fallback={<Loading />}>
             <Container className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
-              <main className="w-full p-5 md:p-12 lg:p-24 text-center">
+              <main className="w-full p-5 text-center md:p-12 lg:p-24">
                 {children}
               </main>
               <FooterSection />
