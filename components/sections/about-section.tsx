@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BsTwitterX } from 'react-icons/bs';
@@ -15,33 +14,17 @@ const arimaFont = Lobster({
 
 export default function About() {
   return (
-    <motion.section
+    <section
       id="about"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
       className="flex flex-col items-center space-y-8 px-5 py-20"
     >
-      <motion.h1
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="text-center text-4xl font-bold"
-      >
+      <h1 className="text-center text-4xl font-bold text-black dark:text-white">
         About Me
-      </motion.h1>
+      </h1>
 
-      <motion.blockquote
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="relative mx-auto flex max-w-2xl flex-col items-center text-center"
-      >
+      <blockquote className="relative mx-auto flex max-w-2xl flex-col items-center text-center">
         <svg
-          className="absolute -left-12 -top-12 z-0 h-16 w-16 text-gray-300 dark:text-gray-700"
+          className="absolute -left-12 -top-12 z-0 h-16 w-16 text-gray-400 dark:text-gray-600"
           width="16"
           height="16"
           viewBox="0 0 16 16"
@@ -55,55 +38,55 @@ export default function About() {
           />
         </svg>
 
-        <p className={cn(arimaFont.className, 'z-10 mb-4 text-lg')}>
+        <p className={cn(arimaFont.className, 'z-10 mb-4 text-lg text-black dark:text-white')}>
           Hey there! I&apos;m
           <LinkPreview url="https://gravatar.com/onesamket">
-            <span className="mx-2 text-lg text-emerald-600">
+            <span className="mx-2 text-lg text-black dark:text-white underline">
               Tewodros Birhanu (ቴዲ - Teddy)
             </span>
           </LinkPreview>
           . I&apos;m a
           <LinkPreview url="https://tw-stack.vercel.app/">
-            <span className="mx-2 text-lg text-blue-600">full-stack web</span>
+            <span className="mx-2 text-lg text-black dark:text-white underline">full-stack web</span>
           </LinkPreview>
           and
           <LinkPreview url="https://tw-stack.vercel.app/">
-            <span className="mx-2 text-lg text-blue-600">
+            <span className="mx-2 text-lg text-black dark:text-white underline">
               react-native developer
             </span>
           </LinkPreview>
           with{' '}
           <LinkPreview url="https://www.typescriptlang.org/">
-            <span className="mx-2 text-lg text-blue-700">type-safety</span>{' '}
+            <span className="mx-2 text-lg text-black dark:text-white underline">type-safety</span>{' '}
           </LinkPreview>
           , building elegant and user-friendly applications that perform with
           energy and finesse. Fueled by
           <LinkPreview url="https://en.wikipedia.org/wiki/Coffee">
-            <span className="mx-2 text-lg text-[#7d4533] underline">
+            <span className="mx-2 text-lg text-black dark:text-white underline">
               coffee
             </span>
           </LinkPreview>
           (or as we say,
           <LinkPreview url="https://en.wikipedia.org/wiki/Coffee_ceremony_of_Ethiopia_and_Eritrea">
-            <span className="mx-2 text-lg text-[#7d4533] underline">Bunna</span>
+            <span className="mx-2 text-lg text-black dark:text-white underline">Bunna</span>
           </LinkPreview>{' '}
           ☕), and equipped with a degree from
           <LinkPreview url="https://www.haramaya.edu.et/">
-            <span className="px-2 text-[#ab0802] underline underline-offset-4">
+            <span className="px-2 text-black dark:text-white underline underline-offset-4">
               Haramaya University
             </span>
           </LinkPreview>
           , I&apos;m constantly learning and exploring the latest in tech.
         </p>
-        <p className={cn(arimaFont.className, 'text-lg')}>
+        <p className={cn(arimaFont.className, 'text-lg text-black dark:text-white')}>
           When{' '}
-          <span className="rounded-br-md rounded-tl-md bg-emerald-600 text-white dark:bg-blue-600">
+          <span className="rounded-br-md rounded-tl-md bg-black text-white dark:bg-white dark:text-black">
             I&apos;m not writing code,
           </span>{' '}
           you can find me diving into my projects or enjoying some authentic
           Ethiopian
           <LinkPreview url="https://en.wikipedia.org/wiki/Coffee">
-            <span className="mx-2 text-lg text-[#7d4533] underline">
+            <span className="mx-2 text-lg text-black dark:text-white underline">
               coffee
             </span>
           </LinkPreview>{' '}
@@ -113,7 +96,7 @@ export default function About() {
         <p
           className={cn(
             arimaFont.className,
-            'mb-4 mt-12 text-2xl font-medium underline underline-offset-2'
+            'mb-4 mt-12 text-2xl font-medium underline underline-offset-2 text-black dark:text-white'
           )}
         >
           Cheers,
@@ -128,17 +111,17 @@ export default function About() {
             alt="onesamket"
           />
           <div className="ml-4">
-            <div className="text-base font-medium">Tewodros Birhanu</div>
+            <div className="text-base font-medium text-black dark:text-white">Tewodros Birhanu</div>
             <Link
               href="https://x.com/onesamket"
-              className="flex items-center text-sm text-gray-500 hover:text-indigo-700"
+              className="flex items-center text-sm text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
             >
               <BsTwitterX className="mr-1 h-4 w-4" />
               <p>@onesamket</p>
             </Link>
           </div>
         </footer>
-      </motion.blockquote>
-    </motion.section>
+      </blockquote>
+    </section>
   );
 }
