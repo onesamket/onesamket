@@ -5,7 +5,18 @@ import { Button } from '../ui/button';
 import { toGeez } from '@onesamket/geez-number';
 import { ArrowDownToLine, Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import { SocialLink } from './social-link';
+
 export default function GreetingSection() {
+    const scrollToNextSection = () => {
+        const nextSection = document.getElementById('skills-section');
+        if (nextSection) {
+            nextSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
         <section className="relative flex h-full lg:min-h-[90vh] flex-col items-center justify-center px-4 py-20">
             {/* Background gradient */}
@@ -67,8 +78,12 @@ export default function GreetingSection() {
             </div>
 
             {/* Scroll indicator */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 transform hidden lg:block">
-                <div className="flex h-10 w-6 justify-center rounded-full border-2 border-gray-400 pt-2 dark:border-gray-600">
+            <div
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 transform hidden lg:block cursor-pointer hover:scale-110 transition-transform duration-200"
+                onClick={scrollToNextSection}
+                title="Scroll to next section"
+            >
+                <div className="flex h-10 w-6 justify-center rounded-full border-2 border-gray-400 pt-2 dark:border-gray-600 hover:border-gray-600 dark:hover:border-gray-400 transition-colors duration-200">
                     <div className="h-1.5 w-1.5 rounded-full bg-gray-400 dark:bg-gray-600" />
                 </div>
             </div>
