@@ -104,7 +104,7 @@ function ExperienceTimelineItem({
   return (
     <div className="relative pl-12">
       {/* Timeline dot */}
-      <div className="absolute left-3 top-2 h-4 w-4 rounded-full border-2 border-white bg-black dark:border-black"></div>
+      <div className="absolute left-3 top-2 h-4 w-4 rounded-full border-2  border-black   bg-white  dark:bg-black  dark:border-white"></div>
 
       <div className="mb-2">
         <div className="flex flex-col items-start justify-between gap-1 sm:flex-row sm:items-baseline">
@@ -156,7 +156,7 @@ function ProjectTimelineItem({
   return (
     <div className="relative pl-12">
       {/* Timeline dot */}
-      <div className="absolute left-3 top-2 h-4 w-4 rounded-full border-2 border-white bg-black dark:border-black"></div>
+      <div className="absolute left-3 top-2 h-4 w-4 rounded-full border-2  border-black   bg-white  dark:bg-black  dark:border-white"></div>
 
       <div className="mb-2">
         <div className="flex flex-col items-start justify-start gap-1 sm:flex-row sm:items-baseline">
@@ -214,7 +214,7 @@ function EducationTimelineItem({
   return (
     <div className="relative pl-12">
       {/* Timeline dot */}
-      <div className="absolute left-3 top-2 h-4 w-4 rounded-full border-2 border-white bg-black dark:border-black"></div>
+      <div className="absolute left-3 top-2 h-4 w-4 rounded-full border-2 border-black   bg-white  dark:bg-black  dark:border-white"></div>
 
       <div className="mb-2">
         <div className="flex flex-col items-start justify-between gap-1 sm:flex-row sm:items-baseline">
