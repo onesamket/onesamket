@@ -1,4 +1,4 @@
-import { EducationType, ExperienceType, ProjectsType } from '@/types';
+import { EducationType, ExperienceType, ProjectType } from '@/types';
 
 export const workExperiences: ExperienceType[] = [
   {
@@ -63,81 +63,33 @@ export const educationList: EducationType[] = [
   },
 ];
 
-export const personalProjects: ProjectsType[] = [
+export const personalProjects: ProjectType[] = [
+
+
   {
-    title: 'MOE Exit exam - Final year Project',
-    description:
-      'Developed a MOE Exit exam - Final year Project to help visually impaired students to take their exams.',
-    skills: [
-      'React',
-      'Next.js',
-      'Tailwind CSS',
-      'REST APIs',
-      'TypeScript',
-      'Web socket',
-      'Tanstack Query',
-      'Zustand',
-      'Prisma',
-      'PostgreSQL',
-      'Supabase',
-    ],
-    companyUrl: 'https://et-exit.netlify.app',
-    previewUrl: 'https://et-exit.netlify.app',
-    githubUrl: 'https://github.com/onesamket/et-exit-exam',
+    title: '3+ Recipe apps for Company ',
+    description: 'Developed  more than 3 recipe apps',
+    companyUrl: 'https://restaurant-management-onesamket.vercel.app/',
+    previewUrl: 'https://restaurant-management-onesamket.vercel.app/',
+    githubUrl: 'https://github.com/onesamket',
+  },
+  {
+    title: 'Meeting Platform ',
+    description: 'Meeting Platform Using videoSDK',
+    companyUrl: 'https://meeting-onesamket.vercel.app/',
+    previewUrl: 'https://meeting-onesamket.vercel.app/',
+    githubUrl: 'https://github.com/onesamket/meeting',
   },
   {
     title: 'Youtube Clone',
     description: 'Developed a youtube clone using Next.js and Tailwind CSS.',
-    skills: [
-      'React',
-      'Next.js',
-      'Tailwind CSS',
-      'TypeScript',
-      'Tanstack Query',
-      'Zustand',
-    ],
     companyUrl: 'https://youtube-clone-onesamket.vercel.app/',
     previewUrl: 'https://youtube-clone-onesamket.vercel.app/',
     githubUrl: 'https://github.com/onesamket/youtube-clone',
-    lovedByDeveloper: true,
   },
-
-  {
-    title: '3+ Recipe apps for Company ',
-    description: 'Developed a Restaurant Management app Expo.',
-    skills: [
-      'React',
-      'Expo',
-      'Tailwind CSS',
-      'Clerk',
-      'Supabase',
-      'TypeScript',
-      'Moti',
-      'Zustand',
-    ],
-    companyUrl: 'https://restaurant-management-onesamket.vercel.app/',
-    previewUrl: 'https://restaurant-management-onesamket.vercel.app/',
-    githubUrl: 'https://github.com/onesamket/restaurant-management',
-  },
-  {
-    title: 'Meeting Platform ',
-    description: 'Developed a Meeting Platform Using videoSDK react',
-    skills: ['vite', 'Tailwind CSS', 'videoSDK', 'TypeScript', 'Zustand'],
-    companyUrl: 'https://meeting-onesamket.vercel.app/',
-    previewUrl: 'https://meeting-onesamket.vercel.app/',
-    githubUrl: 'https://github.com/onesamket/meeting-platform',
-  },
-
   {
     title: 'Game Hub UI',
     description: 'Developed a Game Hub UI Using Next.js.',
-    skills: [
-      'Next.js',
-      'Tailwind CSS',
-      'TypeScript',
-      'Zustand',
-      'Framer Motion',
-    ],
     companyUrl: 'https://github.com/onesamket/game-hub',
     previewUrl: 'https://game-hub-onesamket.vercel.app',
     githubUrl: 'https://github.com/onesamket/game-hub',
@@ -145,17 +97,14 @@ export const personalProjects: ProjectsType[] = [
   {
     title: 'Geez Number Converter',
     description:
-      'A TypeScript library for converting between Arabic numerals and Geez (Ethiopic) numerals. Fully typed, thoroughly tested, and zero dependencies.',
-    skills: ['TypeScript', 'Jest', 'Github Packages'],
+      'Library for converting between Arabic-Geez',
     companyUrl: 'https://github.com/onesamket/geez-number',
     previewUrl: 'https://github.com/onesamket/geez-number',
     githubUrl: 'https://github.com/onesamket/geez-number',
-    lovedByDeveloper: true,
   },
   {
     title: 'React Native Toast library',
     description: 'A React Native library for creating toast notifications.',
-    skills: ['React Native', 'Expo', 'Tailwind CSS', 'TypeScript', 'Zustand'],
     companyUrl: 'https://react-native-toast.vercel.app/',
     previewUrl: 'https://rn-toast.vercel.app/',
     githubUrl: 'https://github.com/onesamket/rn-toast',

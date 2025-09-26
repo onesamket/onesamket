@@ -29,7 +29,6 @@ export type EducationType = {
 export type ProjectType = {
   title: string;
   description: string;
-  skills: string[];
   companyUrl?: string;
   previewUrl?: string;
   githubUrl?: string;

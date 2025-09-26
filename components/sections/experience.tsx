@@ -160,8 +160,8 @@ function ProjectTimelineItem({
           <h4 className="text-base font-semibold sm:text-lg">{project.title}</h4>
         </div>
 
-        <div className="mt-1 text-sm text-muted-foreground">
-          <p className="text-sm sm:flex">{project.description}</p>
+        <div className="mt-1 text-sm text-muted-foreground text-start">
+          <p className="text-xs sm:flex">{project.description}</p>
         </div>
 
         <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
