@@ -128,7 +128,6 @@ export default function CombinedExperienceSection() {
 
 function ExperienceTimelineItem({
   experience,
-  index,
 }: {
   experience: ExperienceType;
   index: number;
@@ -188,7 +187,6 @@ function ExperienceTimelineItem({
 
 function ProjectTimelineItem({
   project,
-  index,
 }: {
   project: ProjectType;
   index: number;
@@ -253,7 +251,6 @@ function ProjectTimelineItem({
 
 function EducationTimelineItem({
   education,
-  index,
 }: {
   education: EducationType;
   index: number;

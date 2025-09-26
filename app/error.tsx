@@ -105,10 +105,6 @@ export default function ErrorPage({ error, reset }: ErrorPageProps) {
     }
   };
 
-  const handleGoHome = () => {
-    window.location.href = '/';
-  };
-
   const IconComponent = currentMessage.icon;
 
   return (
