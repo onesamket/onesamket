@@ -2,52 +2,28 @@
 
 import { skillsList } from '@/constants/skills';
 import { Badge } from '@/components/ui/badge';
-import { motion } from 'framer-motion';
 
 const BadgeItem = ({ children }: { children: React.ReactNode }) => (
-  <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-    <Badge className="w-full min-w-min transition-all duration-300 ease-in-out hover:shadow-lg">
+  <div className="transition-transform duration-200 ease-out hover:scale-105 active:scale-95">
+    <Badge className="w-full min-w-min transition-shadow duration-200 hover:shadow-lg">
       {children}
     </Badge>
-  </motion.div>
+  </div>
 );
 
 export default function SkillSection() {
   return (
-    <motion.main
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="mx-auto mt-12 h-screen w-full p-10 text-center"
-    >
-      <motion.h3
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="font-inter text-3xl font-bold leading-normal"
-      >
+    <main className="mx-auto mt-12 w-full max-w-5xl px-4 py-12 text-center sm:px-6 md:px-10">
+      <h3 className="font-inter text-2xl font-bold leading-normal sm:text-3xl">
         Skills & Technologies
-      </motion.h3>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="mx-auto mt-7 grid w-fit grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5"
-      >
-        {skillsList.map((skill, index) => (
-          <motion.div
-            key={skill.label}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.5,
-              delay: 0.1 * index,
-            }}
-          >
+      </h3>
+      <div className="mx-auto mt-7 grid w-full grid-cols-2 gap-3 sm:w-fit sm:grid-cols-3 md:grid-cols-5">
+        {skillsList.map((skill) => (
+          <div key={skill.label}>
             <BadgeItem>{skill.label}</BadgeItem>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
-    </motion.main>
+      </div>
+    </main>
   );
 }
