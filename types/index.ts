@@ -26,12 +26,11 @@ export type EducationType = {
   institutionUrl?: string;
 };
 
-export type ProjectsType = {
+export type ProjectType = {
   title: string;
   description: string;
   skills: string[];
   companyUrl?: string;
   previewUrl?: string;
   githubUrl?: string;
-  lovedByDeveloper?: boolean;
 };

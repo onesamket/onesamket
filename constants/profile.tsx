@@ -103,7 +103,7 @@ export const personalProjects: ProjectsType[] = [
   },
 
   {
-    title: 'Restaurant Management app + 3 other apps for Company ',
+    title: '3+ Recipe apps for Company ',
     description: 'Developed a Restaurant Management app Expo.',
     skills: [
       'React',
