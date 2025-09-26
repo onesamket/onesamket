@@ -2,6 +2,11 @@
   "name": "onesamket",
   "version": "3.0.0",
   "private": true,
+  "author": {
+    "name": "Tewodros Birhanu",
+    "email": "onesamket@gmail.com",
+    "url": "https://onesamket.com"
+  },
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
@@ -23,14 +28,12 @@
     "embla-carousel-autoplay": "^8.3.0",
     "embla-carousel-react": "^8.3.0",
     "framer-motion": "^11.2.13",
-    "i": "^0.3.7",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.407.0",
     "next": "14.2.4",
     "next-intl": "^3.23.5",
     "next-pwa": "^5.6.0",
     "next-themes": "^0.3.0",
-    "npm": "^10.9.0",
     "qss": "^3.0.0",
     "react": "^18",
     "react-dom": "^18",
