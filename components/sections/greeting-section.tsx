@@ -24,7 +24,7 @@ export default function GreetingSection() {
             </div>
 
             {/* Main heading with gradient text */}
-            <h1 className="mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-center text-4xl font-bold text-transparent dark:from-blue-400 dark:to-purple-400 md:text-6xl">
+            <h1 className="mb-4  text-center text-4xl font-bold text-transparent text-white dark:text-white  md:text-6xl">
                 Tewodros Birhanu
             </h1>
 

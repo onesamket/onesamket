@@ -1,18 +1,18 @@
 export function SocialLink({
-  href,
-  icon,
+    href,
+    icon,
 }: {
-  href: string;
-  icon: React.ReactNode;
+    href: string;
+    icon: React.ReactNode;
 }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="rounded-full bg-gray-100 p-3 transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
-    >
-      {icon}
-    </a>
-  );
+    return (
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-gray-100 p-3 transition-colors hover:bg-gray-200 dark:bg-black dark:hover:bg-black/80"
+        >
+            {icon}
+        </a>
+    );
 }
