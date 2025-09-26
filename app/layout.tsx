@@ -243,7 +243,7 @@ export default async function LocaleLayout({
                 
                 @media (max-width: 640px) {
                   #pwa-install-button {
-                    bottom: 20px;
+                    bottom: 100px;
                     right: 20px;
                     width: 52px;
                     height: 52px;
@@ -255,7 +255,7 @@ export default async function LocaleLayout({
                   }
                   
                   #pwa-install-tooltip {
-                    bottom: 82px;
+                    bottom: 162px; 
                     right: 20px;
                     font-size: 13px;
                     padding: 10px 14px;
