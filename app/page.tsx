@@ -7,35 +7,58 @@ import { Separator } from '@/components/ui/separator';
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col pb-16 md:pb-0">
-      {/* Hero Section */}
-      <section id="home-section" className="min-h-screen">
-        <GreetingSection />
-      </section>
+    <>
+      {/* Skip to main content link for keyboard users */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+      >
+        Skip to main content
+      </a>
 
-      <Separator className="my-4" />
+      <main id="main-content" className="flex flex-col pb-16 md:pb-0" role="main">
+        {/* Hero Section */}
+        <section
+          id="home-section"
+          className="min-h-screen"
+          aria-label="Introduction and contact information"
+        >
+          <GreetingSection />
+        </section>
 
-      {/* Skills Section */}
-      <section id="skills-section">
-        <SkillSection />
-      </section>
+        <Separator className="my-4" />
 
-      <Separator className="my-4" />
+        {/* Skills Section */}
+        <section
+          id="skills-section"
+          aria-label="Skills and technologies"
+        >
+          <SkillSection />
+        </section>
 
-      {/* Experience & Education */}
-      <section id="experience-section">
-        <CombinedExperienceSection />
-      </section>
+        <Separator className="my-4" />
 
-      <Separator className="my-4" />
+        {/* Experience & Education */}
+        <section
+          id="experience-section"
+          aria-label="Professional experience and education"
+        >
+          <CombinedExperienceSection />
+        </section>
 
-      {/* About Section */}
-      <section id="about-section">
-        <About />
-      </section>
+        <Separator className="my-4" />
 
-      {/* Mobile Navigation */}
-      <MobileTabbar />
-    </main>
+        {/* About Section */}
+        <section
+          id="about-section"
+          aria-label="About me and personal information"
+        >
+          <About />
+        </section>
+
+        {/* Mobile Navigation */}
+        <MobileTabbar />
+      </main>
+    </>
   );
 }

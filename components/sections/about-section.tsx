@@ -41,38 +41,38 @@ export default function About() {
         <p className={cn(arimaFont.className, 'z-10 mb-4 text-lg text-black dark:text-white')}>
           Hey there! I&apos;m
           <LinkPreview url="https://gravatar.com/onesamket">
-            <span className="mx-2 text-lg text-black dark:text-white underline">
+            <span className="mx-2 text-lg text-black dark:text-white underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
               Tewodros Birhanu (ቴዲ - Teddy)
             </span>
           </LinkPreview>
           . I&apos;m a
           <LinkPreview url="https://tw-stack.vercel.app/">
-            <span className="mx-2 text-lg text-black dark:text-white underline">full-stack website, desktop</span>
+            <span className="mx-2 text-lg text-black dark:text-white underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">full-stack website, desktop</span>
           </LinkPreview>
           and
           <LinkPreview url="https://tw-stack.vercel.app/">
-            <span className="mx-2 text-lg text-black dark:text-white underline">
+            <span className="mx-2 text-lg text-black dark:text-white underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
               react-native developer
             </span>
           </LinkPreview>
           with{' '}
           <LinkPreview url="https://www.typescriptlang.org/">
-            <span className="mx-2 text-lg text-black dark:text-white underline">type-safety</span>{' '}
+            <span className="mx-2 text-lg text-black dark:text-white underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">type-safety</span>{' '}
           </LinkPreview>
           , building elegant and user-friendly applications that perform with
           energy and finesse. Fueled by
           <LinkPreview url="https://en.wikipedia.org/wiki/Coffee">
-            <span className="mx-2 text-lg text-black dark:text-white underline">
+            <span className="mx-2 text-lg text-black dark:text-white underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
               coffee
             </span>
           </LinkPreview>
           (or as we say,
           <LinkPreview url="https://en.wikipedia.org/wiki/Coffee_ceremony_of_Ethiopia_and_Eritrea">
-            <span className="mx-2 text-lg text-black dark:text-white underline">Bunna</span>
+            <span className="mx-2 text-lg text-black dark:text-white underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">Bunna</span>
           </LinkPreview>{' '}
           ☕), and equipped with a degree from
           <LinkPreview url="https://www.haramaya.edu.et/">
-            <span className="px-2 text-black dark:text-white underline underline-offset-4">
+            <span className="px-2 text-black dark:text-white underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
               Haramaya University
             </span>
           </LinkPreview>
@@ -86,7 +86,7 @@ export default function About() {
           you can find me diving into my projects or enjoying some authentic
           Ethiopian
           <LinkPreview url="https://en.wikipedia.org/wiki/Coffee">
-            <span className="mx-2 text-lg text-black dark:text-white underline">
+            <span className="mx-2 text-lg text-black dark:text-white underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
               coffee
             </span>
           </LinkPreview>{' '}
@@ -108,15 +108,15 @@ export default function About() {
             src={'https://github.com/onesamket.png'}
             width={100}
             height={100}
-            alt="onesamket"
+            alt="Tewodros Birhanu profile picture"
           />
           <div className="ml-4">
             <div className="text-base font-medium text-black dark:text-white">Tewodros Birhanu</div>
             <Link
               href="https://x.com/onesamket"
-              className="flex items-center text-sm text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
+              className="flex items-center text-sm text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white focus:text-black dark:focus:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             >
-              <BsTwitterX className="mr-1 h-4 w-4" />
+              <BsTwitterX className="mr-1 h-4 w-4" aria-hidden="true" />
               <p>@onesamket</p>
             </Link>
           </div>

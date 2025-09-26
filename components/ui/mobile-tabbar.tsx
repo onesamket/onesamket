@@ -84,25 +84,33 @@ export function MobileTabbar() {
     }
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent, tab: TabItem) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleTabClick(tab);
+    }
+  };
+
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden" aria-label="Main navigation">
       {/* Safe area padding for devices with home indicator */}
       <div className="pb-safe">
         {/* Main tabbar container with rounded top corners */}
         <div className="mx-4 mb-4 rounded-2xl border border-border/50 bg-background/95 backdrop-blur-xl shadow-2xl">
-          <div className="flex items-center justify-around px-2 py-2">
+          <div className="flex items-center justify-around px-2 py-2" role="tablist">
             {tabs.map(tab => (
               <TabButton
                 key={tab.name}
                 tab={tab}
                 isActive={activeTab === tab.name}
                 onClick={() => handleTabClick(tab)}
+                onKeyDown={(e) => handleKeyDown(e, tab)}
               />
             ))}
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 
@@ -110,17 +118,24 @@ function TabButton({
   tab,
   isActive,
   onClick,
+  onKeyDown,
 }: {
   tab: TabItem;
   isActive: boolean;
   onClick: () => void;
+  onKeyDown: (e: React.KeyboardEvent) => void;
 }) {
   return (
     <button
       onClick={onClick}
+      onKeyDown={onKeyDown}
+      role="tab"
+      aria-selected={isActive}
+      aria-controls={tab.targetId}
       className={cn(
         'relative flex h-12 w-12 flex-col items-center justify-center rounded-xl transition-all duration-300 ease-out',
         'active:scale-95 active:bg-primary/5',
+        'focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2',
         isActive
           ? 'text-primary'
           : 'text-muted-foreground hover:text-foreground'
@@ -157,8 +172,6 @@ function TabButton({
           {tab.icon}
         </motion.div>
       </div>
-
-
 
       {/* Active indicator dot */}
       {isActive && (
