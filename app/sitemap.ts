@@ -1,16 +1,15 @@
-import { MetadataRoute } from "next";
-
+import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [getEntry("/"), getEntry("/am"), getEntry("/en")];
+  return [getEntry('/'), getEntry('/am'), getEntry('/en')];
 }
 
-function getEntry(href: string) { 
+function getEntry(href: string) {
   return {
     url: getUrl(href),
     alternates: {
       languages: Object.fromEntries(
-        ["en", "am"].map((locale) => [locale, getUrl(href)])
+        ['en', 'am'].map(locale => [locale, getUrl(href)])
       ),
     },
   };
@@ -18,5 +17,5 @@ function getEntry(href: string) {
 
 function getUrl(href: string) {
   const pathname = href;
-  return "https://onesamket.com" + pathname;
+  return 'https://onesamket.com' + pathname;
 }
