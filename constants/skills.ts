@@ -10,7 +10,10 @@ export const skillsList = [
   { label: "React", link: "https://react.dev/" },
   { label: "Framer Motion", link: "https://framer.com/motion" },
   { label: "Next.js", link: "https://nextjs.org/" },
-  { label: "Tanstack Query", link: "https://tanstack.com/query/latest/docs/react/overview" },
+  {
+    label: "Tanstack Query",
+    link: "https://tanstack.com/query/latest/docs/react/overview",
+  },
   {
     label: "React Native",
     link: "https://reactnative.dev",
@@ -31,6 +34,8 @@ export const skillsList = [
   },
   { label: "Bun", link: "https://bun.sh/docs" },
   { label: "Socket.io", link: "https://socket.io/" },
+  { label: "VideoSDK", link: "https://videosdk.live/" },
+  { label: "Jitsi", link: "https://jitsi.org/" },
   { label: "PeerJs", link: "https://peerjs.com/" },
   { label: "Prisma", link: "https://www.prisma.io/docs" },
   { label: "MySQL", link: "https://dev.mysql.com/doc/" },
