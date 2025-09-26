@@ -14,12 +14,12 @@ const nextPWA = withPWA({
         cacheName: 'google-fonts-cache',
         expiration: {
           maxEntries: 10,
-          maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
+          maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
         },
         cacheableResponse: {
-          statuses: [0, 200]
-        }
-      }
+          statuses: [0, 200],
+        },
+      },
     },
     {
       urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
@@ -28,12 +28,12 @@ const nextPWA = withPWA({
         cacheName: 'gstatic-fonts-cache',
         expiration: {
           maxEntries: 10,
-          maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
+          maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
         },
         cacheableResponse: {
-          statuses: [0, 200]
-        }
-      }
+          statuses: [0, 200],
+        },
+      },
     },
     {
       urlPattern: /\.(?:eot|otf|ttc|ttf|woff|woff2|font.css)$/i,
@@ -42,9 +42,9 @@ const nextPWA = withPWA({
         cacheName: 'static-font-assets',
         expiration: {
           maxEntries: 4,
-          maxAgeSeconds: 60 * 60 * 24 * 7 // 1 week
-        }
-      }
+          maxAgeSeconds: 60 * 60 * 24 * 7, // 1 week
+        },
+      },
     },
     {
       urlPattern: /\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,
@@ -53,9 +53,9 @@ const nextPWA = withPWA({
         cacheName: 'static-image-assets',
         expiration: {
           maxEntries: 64,
-          maxAgeSeconds: 60 * 60 * 24 // 1 day
-        }
-      }
+          maxAgeSeconds: 60 * 60 * 24, // 1 day
+        },
+      },
     },
     {
       urlPattern: /\/_next\/image\?url=.+$/i,
@@ -64,9 +64,9 @@ const nextPWA = withPWA({
         cacheName: 'next-image',
         expiration: {
           maxEntries: 64,
-          maxAgeSeconds: 60 * 60 * 24 // 1 day
-        }
-      }
+          maxAgeSeconds: 60 * 60 * 24, // 1 day
+        },
+      },
     },
     {
       urlPattern: /\.(?:mp3|wav|ogg)$/i,
@@ -76,9 +76,9 @@ const nextPWA = withPWA({
         cacheName: 'static-audio-assets',
         expiration: {
           maxEntries: 32,
-          maxAgeSeconds: 60 * 60 * 24 // 1 day
-        }
-      }
+          maxAgeSeconds: 60 * 60 * 24, // 1 day
+        },
+      },
     },
     {
       urlPattern: /\.(?:mp4)$/i,
@@ -88,9 +88,9 @@ const nextPWA = withPWA({
         cacheName: 'static-video-assets',
         expiration: {
           maxEntries: 32,
-          maxAgeSeconds: 60 * 60 * 24 // 1 day
-        }
-      }
+          maxAgeSeconds: 60 * 60 * 24, // 1 day
+        },
+      },
     },
     {
       urlPattern: /\.(?:js)$/i,
@@ -99,9 +99,9 @@ const nextPWA = withPWA({
         cacheName: 'static-js-assets',
         expiration: {
           maxEntries: 32,
-          maxAgeSeconds: 60 * 60 * 24 // 1 day
-        }
-      }
+          maxAgeSeconds: 60 * 60 * 24, // 1 day
+        },
+      },
     },
     {
       urlPattern: /\.(?:css|less)$/i,
@@ -110,9 +110,9 @@ const nextPWA = withPWA({
         cacheName: 'static-style-assets',
         expiration: {
           maxEntries: 32,
-          maxAgeSeconds: 60 * 60 * 24 // 1 day
-        }
-      }
+          maxAgeSeconds: 60 * 60 * 24, // 1 day
+        },
+      },
     },
     {
       urlPattern: /\/_next\/data\/.+\/.+\.json$/i,
@@ -121,9 +121,9 @@ const nextPWA = withPWA({
         cacheName: 'next-data',
         expiration: {
           maxEntries: 32,
-          maxAgeSeconds: 60 * 60 * 24 // 1 day
-        }
-      }
+          maxAgeSeconds: 60 * 60 * 24, // 1 day
+        },
+      },
     },
     {
       urlPattern: /\.(?:json|xml|csv)$/i,
@@ -132,9 +132,9 @@ const nextPWA = withPWA({
         cacheName: 'static-data-assets',
         expiration: {
           maxEntries: 32,
-          maxAgeSeconds: 60 * 60 * 24 // 1 day
-        }
-      }
+          maxAgeSeconds: 60 * 60 * 24, // 1 day
+        },
+      },
     },
     {
       urlPattern: ({ url }) => {
@@ -149,9 +149,9 @@ const nextPWA = withPWA({
         networkTimeoutSeconds: 10,
         expiration: {
           maxEntries: 16,
-          maxAgeSeconds: 60 * 60 * 24 // 1 day
-        }
-      }
+          maxAgeSeconds: 60 * 60 * 24, // 1 day
+        },
+      },
     },
     {
       urlPattern: ({ url }) => {
@@ -165,9 +165,9 @@ const nextPWA = withPWA({
         networkTimeoutSeconds: 10,
         expiration: {
           maxEntries: 32,
-          maxAgeSeconds: 60 * 60 * 24 // 1 day
-        }
-      }
+          maxAgeSeconds: 60 * 60 * 24, // 1 day
+        },
+      },
     },
     {
       urlPattern: ({ url }) => {
@@ -179,11 +179,11 @@ const nextPWA = withPWA({
         networkTimeoutSeconds: 10,
         expiration: {
           maxEntries: 32,
-          maxAgeSeconds: 60 * 60 // 1 hour
-        }
-      }
-    }
-  ]
+          maxAgeSeconds: 60 * 60, // 1 hour
+        },
+      },
+    },
+  ],
 });
 
 /** @type {import('next').NextConfig} */

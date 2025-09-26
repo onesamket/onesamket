@@ -17,21 +17,21 @@ export default function Loader() {
         <motion.div
           className="absolute inset-0 rounded-full border-4 border-primary/20"
           animate={{ rotate: 360 }}
-          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
         />
 
         {/* Middle Ring */}
         <motion.div
           className="absolute inset-2 rounded-full border-4 border-primary/40"
           animate={{ rotate: -360 }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
         />
 
         {/* Inner Ring */}
         <motion.div
           className="absolute inset-4 rounded-full border-4 border-primary/60"
           animate={{ rotate: 360 }}
-          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
         />
 
         {/* Center Icon */}
@@ -39,12 +39,12 @@ export default function Loader() {
           className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 backdrop-blur-sm"
           animate={{
             scale: [1, 1.1, 1],
-            rotate: [0, 5, -5, 0]
+            rotate: [0, 5, -5, 0],
           }}
           transition={{
             duration: 2,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: 'easeInOut',
           }}
         >
           <Coffee className="h-8 w-8 text-primary" />
@@ -52,15 +52,15 @@ export default function Loader() {
 
         {/* Floating Icons */}
         <motion.div
-          className="absolute -top-2 -right-2"
+          className="absolute -right-2 -top-2"
           animate={{
             y: [0, -10, 0],
-            rotate: [0, 360]
+            rotate: [0, 360],
           }}
           transition={{
             duration: 3,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: 'easeInOut',
           }}
         >
           <Code className="h-4 w-4 text-primary/60" />
@@ -70,27 +70,27 @@ export default function Loader() {
           className="absolute -bottom-2 -left-2"
           animate={{
             y: [0, 10, 0],
-            rotate: [0, -360]
+            rotate: [0, -360],
           }}
           transition={{
             duration: 2.5,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: 'easeInOut',
           }}
         >
           <Zap className="h-4 w-4 text-primary/60" />
         </motion.div>
 
         <motion.div
-          className="absolute -top-2 -left-2"
+          className="absolute -left-2 -top-2"
           animate={{
             x: [0, 10, 0],
-            rotate: [0, 180, 360]
+            rotate: [0, 180, 360],
           }}
           transition={{
             duration: 2.2,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: 'easeInOut',
           }}
         >
           <Sparkles className="h-3 w-3 text-primary/40" />
@@ -102,12 +102,12 @@ export default function Loader() {
         className="absolute inset-0 rounded-full bg-primary/5"
         animate={{
           scale: [1, 1.5, 1],
-          opacity: [0.3, 0, 0.3]
+          opacity: [0.3, 0, 0.3],
         }}
         transition={{
           duration: 2,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: 'easeInOut',
         }}
       />
     </div>
