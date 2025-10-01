@@ -1,6 +1,6 @@
 import { EducationType, ExperienceType, ProjectType } from '@/types';
 
-export const workExperiences: ExperienceType[] = [
+export const WORK_EXPERIENCES: ExperienceType[] = [
   {
     title: 'Senior Frontend Developer',
     company: 'Robotech  Technology',
@@ -32,14 +32,14 @@ export const workExperiences: ExperienceType[] = [
     location: 'India - Remote',
     period: 'Aug 2024 - Jun 2025',
     description:
-      'Assisted in developing and maintaining university websites and internal applications. Gained hands-on experience with web technologies.',
+      'Developed and maintained cross-platform mobile applications using React Native. Collaborated with the development team to deliver high-quality mobile solutions and internal tools, enhancing user experience across iOS and Android platforms.',
 
     companyUrl: 'https://prophecius.com/',
     type: 'client',
   },
 ];
 
-export const educationList: EducationType[] = [
+export const EDUCATION_LIST: EducationType[] = [
   {
     degree: 'BSc in Information Technology',
     institution: 'Haramaya University',
@@ -63,7 +63,7 @@ export const educationList: EducationType[] = [
   },
 ];
 
-export const personalProjects: ProjectType[] = [
+export const PROJECTS_LIST: ProjectType[] = [
   {
     title: '3+ Recipe apps for Company ',
     description: 'Developed  more than 3 recipe apps',

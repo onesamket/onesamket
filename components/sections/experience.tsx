@@ -2,9 +2,9 @@
 
 import { Badge } from '@/components/ui/badge';
 import {
-  educationList,
-  personalProjects,
-  workExperiences,
+  EDUCATION_LIST,
+  PROJECTS_LIST,
+  WORK_EXPERIENCES,
 } from '@/constants/profile';
 import { EducationType, ExperienceType, ProjectType } from '@/types';
 import {
@@ -53,15 +53,15 @@ export default function CombinedExperienceSection() {
               aria-hidden="true"
             ></div>
 
-            {workExperiences
-              .filter(exp => exp.type === 'client')
-              .map((experience, index) => (
+            {WORK_EXPERIENCES.filter(exp => exp.type === 'client').map(
+              (experience, index) => (
                 <ExperienceTimelineItem
                   key={`${experience.company}-${index}`}
                   experience={experience}
                   index={index}
                 />
-              ))}
+              )
+            )}
           </div>
 
           <div className="mb-4 mt-12 flex items-center sm:mb-6">
@@ -69,12 +69,12 @@ export default function CombinedExperienceSection() {
               className="mr-2 h-5 w-5 text-black dark:text-white"
               aria-hidden="true"
             />
-            <h3 className="text-xl font-bold sm:text-2xl">Personal Projects</h3>
+            <h3 className="text-xl font-bold sm:text-2xl"> Projects</h3>
           </div>
           <div
             className="relative space-y-8"
             role="list"
-            aria-label="Personal projects timeline"
+            aria-label="Projects timeline"
           >
             {/* Timeline line */}
             <div
@@ -82,7 +82,7 @@ export default function CombinedExperienceSection() {
               aria-hidden="true"
             ></div>
 
-            {personalProjects.map((project, index) => (
+            {PROJECTS_LIST.map((project, index) => (
               <ProjectTimelineItem
                 key={`${project.title}-${index}`}
                 project={project}
@@ -112,7 +112,7 @@ export default function CombinedExperienceSection() {
               aria-hidden="true"
             ></div>
 
-            {educationList.map((education, index) => (
+            {EDUCATION_LIST.map((education, index) => (
               <EducationTimelineItem
                 key={`${education.institution}-${index}`}
                 education={education}
