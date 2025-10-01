@@ -10,8 +10,14 @@ export const skillsList = [
   { label: 'React', link: 'https://react.dev/' },
   { label: 'Framer Motion', link: 'https://framer.com/motion' },
   { label: 'Next.js', link: 'https://nextjs.org/' },
-  { label: 'React router', link: 'https://reactrouter.com/en/main/start/overview' },
-  { label: 'Tanstack router', link: 'https://tanstack.com/router/latest/docs/react/overview' },
+  {
+    label: 'React router',
+    link: 'https://reactrouter.com/en/main/start/overview',
+  },
+  {
+    label: 'Tanstack router',
+    link: 'https://tanstack.com/router/latest/docs/react/overview',
+  },
   {
     label: 'Tanstack Query',
     link: 'https://tanstack.com/query/latest/docs/react/overview',
