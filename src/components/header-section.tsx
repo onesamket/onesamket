@@ -45,10 +45,10 @@ const Header: React.FC = () => {
         </div>
         <div>
 
-          <a href="mailto:hey@onesamket.com" className="text-sm font-medium text-brand-black dark:text-white hover:text-brand-orange dark:hover:text-brand-orange transition-colors hidden sm:block">
+          <a href="mailto:onesamket@gmail.com" className="text-sm font-medium text-brand-black dark:text-white hover:text-brand-orange dark:hover:text-brand-orange transition-colors hidden sm:block">
             onesamket@gmail.com
           </a>
-          <p className=' text-xs'>
+          <p className=' text-xs hidden sm:block'>
             +251 918 039 771
           </p>
         </div>
