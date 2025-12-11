@@ -38,14 +38,20 @@ const Header: React.FC = () => {
         {/* Logo / Profile Image */}
         <div className="w-10 h-10 relative">
           <img
-            src="https://github.com/onesamket.png"
+            src="/profile.png"
             alt="Profile"
             className="w-full h-full rounded-full border border-gray-200 dark:border-white/10 object-cover"
           />
         </div>
-        <a href="mailto:hey@onesamket.com" className="text-sm font-medium text-brand-black dark:text-white hover:text-brand-orange dark:hover:text-brand-orange transition-colors hidden sm:block">
-          onesamket@gmail.com
-        </a>
+        <div>
+
+          <a href="mailto:hey@onesamket.com" className="text-sm font-medium text-brand-black dark:text-white hover:text-brand-orange dark:hover:text-brand-orange transition-colors hidden sm:block">
+            onesamket@gmail.com
+          </a>
+          <p className=' text-xs'>
+            +251 918 039 771
+          </p>
+        </div>
       </div>
 
       <div className="flex items-center gap-3 relative" ref={menuRef}>

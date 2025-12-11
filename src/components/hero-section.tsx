@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
             Hi, I’m
             <span className="inline-block align-middle mx-2 md:mx-4 w-12 h-12 md:w-16 md:h-16 relative -mt-2">
               <img
-                src="https://github.com/onesamket.png"
+                src="/images/avatar.jpg"
                 alt="Tewodros Birhanu"
                 className="w-full h-full rounded-2xl object-cover border-4 border-white dark:border-brand-darkCard shadow-lg rotate-3 transition-colors duration-300"
               />
