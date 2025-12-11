@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowUpRight, Copy, Mail } from 'lucide-react';
+import ContactModal from './contact-modal';
 
 const ContactCard: React.FC = () => {
-  const [copied, setCopied] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
+  const [phoneCopied, setPhoneCopied] = useState(false);
   const [time, setTime] = useState<string>('');
-  const email = "hey@onesamket.com";
+  const phoneNumber = '+251918039771';
+  const email = 'onesamket@gmail.com';
 
   useEffect(() => {
     const updateTime = () => {
@@ -23,10 +27,20 @@ const ContactCard: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const handleCopyEmail = async () => {
+    await navigator.clipboard.writeText(email);
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 2000);
+  };
+
+  const handleCopyPhone = async () => {
+    await navigator.clipboard.writeText(phoneNumber);
+    setPhoneCopied(true);
+    setTimeout(() => setPhoneCopied(false), 2000);
+  };
+
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
   };
 
   return (
@@ -44,31 +58,46 @@ const ContactCard: React.FC = () => {
           Let’s create something <span className="text-gray-500">meaningful</span> together.
         </h2>
         <div className="flex flex-col sm:flex-row gap-4">
-             <button onClick={handleCopy} className="flex items-center justify-between gap-4 px-6 py-4 bg-white/10 hover:bg-white/15 border border-white/10 rounded-2xl text-white transition-all group/btn w-full sm:w-auto min-w-[240px]">
-                <div className="flex items-center gap-3">
-                    <div className="p-2 bg-white/10 rounded-full">
-                        <Mail className="w-4 h-4" />
-                    </div>
-                    <span className="font-medium text-lg">{email}</span>
-                </div>
-                {copied ? (
-                    <span className="text-xs font-bold text-green-400">COPIED</span>
-                ) : (
-                    <Copy className="w-4 h-4 text-gray-400 group-hover/btn:text-white transition-colors" />
-                )}
-             </button>
-             
-             <button className="flex items-center justify-center gap-2 px-6 py-4 bg-white text-brand-black rounded-2xl font-bold text-lg hover:bg-gray-100 transition-colors w-full sm:w-auto">
-                Book a call
-                <ArrowUpRight className="w-5 h-5" />
-             </button>
+          <button onClick={handleCopyEmail} className="flex items-center justify-between gap-4 px-6 py-4 bg-white/10 hover:bg-white/15 border border-white/10 rounded-2xl text-white transition-all group/btn w-full sm:w-auto min-w-[240px]">
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-white/10 rounded-full">
+                <Mail className="w-4 h-4" />
+              </div>
+              <span className="font-medium text-lg">{email}</span>
+            </div>
+            {emailCopied ? (
+              <span className="text-xs font-bold text-green-400">COPIED</span>
+            ) : (
+              <Copy className="w-4 h-4 text-gray-400 group-hover/btn:text-white transition-colors" />
+            )}
+          </button>
+
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="flex items-center justify-center gap-2 px-6 py-4 bg-white text-brand-black rounded-2xl font-bold text-lg hover:bg-gray-100 transition-colors w-full sm:w-auto"
+          >
+            Book a call
+            <ArrowUpRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
 
       <div className="relative z-10 flex flex-col items-end text-right">
-          <p className="text-gray-400 text-sm mb-1">Local time</p>
-          <p className="text-white text-xl font-mono">{time || '--:--'} <span className="text-brand-orange">EAT</span></p>
+        <p className="text-gray-400 text-sm mb-1">Local time</p>
+        <p className="text-white text-xl font-mono">{time || '--:--'} <span className="text-brand-orange">EAT</span></p>
       </div>
+
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        phoneNumber={phoneNumber}
+        email={email}
+        phoneCopied={phoneCopied}
+        emailCopied={emailCopied}
+        onCopyPhone={handleCopyPhone}
+        onCopyEmail={handleCopyEmail}
+        onCall={handleCall}
+      />
     </div>
   );
 };

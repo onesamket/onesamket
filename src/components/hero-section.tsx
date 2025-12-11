@@ -1,6 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ContactModal from './contact-modal';
 
 const Hero: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [phoneCopied, setPhoneCopied] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const phoneNumber = '+251918039771';
+  const email = 'onesamket@gmail.com';
+
+  const handleCopyPhone = async () => {
+    await navigator.clipboard.writeText(phoneNumber);
+    setPhoneCopied(true);
+    setTimeout(() => setPhoneCopied(false), 2000);
+  };
+
+  const handleCopyEmail = async () => {
+    await navigator.clipboard.writeText(email);
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 2000);
+  };
+
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
   return (
     <div className="flex flex-col justify-center py-12 md:py-16">
       <div className="max-w-3xl">
@@ -36,7 +60,10 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
-          <button className="bg-brand-black dark:bg-white text-white dark:text-brand-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="bg-brand-black dark:bg-white text-white dark:text-brand-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0"
+          >
             Book a call
           </button>
 
@@ -44,6 +71,18 @@ const Hero: React.FC = () => {
             Feel free to explore my portfolio and reach out —I'd love to connect!
           </p>
         </div>
+
+        <ContactModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          phoneNumber={phoneNumber}
+          email={email}
+          phoneCopied={phoneCopied}
+          emailCopied={emailCopied}
+          onCopyPhone={handleCopyPhone}
+          onCopyEmail={handleCopyEmail}
+          onCall={handleCall}
+        />
       </div>
     </div>
   );
