@@ -1,10 +1,10 @@
 import {
-  Utensils,
-  Video,
-  Youtube,
+  Bell,
   Gamepad2,
   Languages,
-  Bell,
+  Music,
+  Utensils,
+  Youtube,
 } from 'lucide-react'
 
 export const projects = [
@@ -18,12 +18,12 @@ export const projects = [
     color: 'bg-orange-500',
   },
   {
-    title: 'Meeting Platform',
+    title: 'Mezmur and Podcast Platform',
     description:
-      'Real-time video conferencing platform built using VideoSDK and Socket.io.',
-    icon: Video,
-    demo: 'https://meeting-onesamket.vercel.app/',
-    github: 'https://github.com/onesamket/meeting',
+      'Developing a mezmur and podcast streaming platform with community features for the church. Fullstack role (voluntary).',
+    icon: Music,
+    demo: 'https://https://mezmur-and-podcast.vercel.app',
+    github: 'https://github.com/onesamket/',
     color: 'bg-blue-500',
   },
   {
