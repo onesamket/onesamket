@@ -22,7 +22,7 @@ export const projects = [
     description:
       'Developing a mezmur and podcast streaming platform with community features for the church. Fullstack role (voluntary).',
     icon: Music,
-    demo: 'https://https://mezmur-and-podcast.vercel.app',
+    demo: 'https://mezmur-and-podcast.vercel.app/',
     github: 'https://github.com/onesamket/',
     color: 'bg-blue-500',
   },
