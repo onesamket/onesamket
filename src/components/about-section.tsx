@@ -1,5 +1,5 @@
+import { Code } from 'lucide-react';
 import React from 'react';
-import { Sparkles } from 'lucide-react';
 
 const AboutSection: React.FC = () => {
    return (
@@ -14,7 +14,7 @@ const AboutSection: React.FC = () => {
                />
                <div className="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-black/80 backdrop-blur-sm p-3 rounded-xl border border-white/20 dark:border-white/10 shadow-sm transition-colors">
                   <div className="flex items-center gap-2 text-brand-black dark:text-white font-semibold text-sm">
-                     <Sparkles className="w-4 h-4 text-brand-orange" />
+                     <Code className="w-4 h-4 text-brand-orange" />
                      <span>Fullstack Developer</span>
                   </div>
                </div>
