@@ -56,16 +56,16 @@ const HowIWorkCard: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="mt-2 z-10 flex-1 flex flex-col justify-center">
-        <div className="flex items-center gap-3 mb-2">
+      <div className="my- z-10 flex-1 flex flex-col justify-center">
+        <div className="flex items-center gap-3 mb-4">
           <div className="p-2 rounded-lg bg-brand-orange/10 dark:bg-brand-orange/20 text-brand-orange">
             <CurrentIcon className="w-5 h-5" />
           </div>
-          <p className="text-lg font-bold text-brand-black dark:text-white leading-tight transition-colors">
+          <p className="text-lg font-bold text-brand-black dark:text-white leading-tight transition-colors mb-2">
             {steps[currentStep].title}
           </p>
         </div>
-        <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed h-8 line-clamp-2">
+        <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed h-12 line-clamp-2 mb-4 ">
           {steps[currentStep].description}
         </p>
       </div>
