@@ -16,8 +16,26 @@ const BookCard: React.FC = () => {
         </div>
 
         <div className="flex-1 flex justify-center items-end relative perspective-1000 min-h-[200px]">
-          {/* React Book - Back */}
-          <div className="absolute bottom-0 translate-x-12 -translate-y-6 rotate-[8deg] w-20 h-28 rounded-sm shadow-lg border-l-2 border-gray-400 dark:border-gray-600 overflow-hidden transition-all duration-500 group-hover:translate-x-14 group-hover:-translate-y-8 group-hover:rotate-[10deg] bg-gray-800 opacity-70">
+          {/* System Design Interview - Far Back */}
+          <div className="absolute bottom-0 translate-x-16 -translate-y-8 rotate-[10deg] w-18 h-26 rounded-sm shadow-lg border-l-2 border-gray-400 dark:border-gray-600 overflow-hidden transition-all duration-500 group-hover:translate-x-18 group-hover:-translate-y-10 group-hover:rotate-[12deg] bg-gray-800 opacity-60 z-0">
+            <img
+              src="/images/system-design.png"
+              alt="System Design Interview"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Clean Code - Back */}
+          <div className="absolute bottom-0 translate-x-12 -translate-y-6 rotate-[8deg] w-20 h-28 rounded-sm shadow-lg border-l-2 border-gray-400 dark:border-gray-600 overflow-hidden transition-all duration-500 group-hover:translate-x-14 group-hover:-translate-y-8 group-hover:rotate-[10deg] bg-gray-800 opacity-70 z-5">
+            <img
+              src="/images/design-pattern.jpeg"
+              alt="Dive into Design Patterns"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* React Book - Middle Back */}
+          <div className="absolute bottom-0 translate-x-8 -translate-y-4 rotate-[5deg] w-21 h-30 rounded-sm shadow-xl border-l-2 border-gray-400 dark:border-gray-600 overflow-hidden transition-all duration-500 group-hover:translate-x-10 group-hover:-translate-y-6 group-hover:rotate-[7deg] bg-gray-800 opacity-80 z-10">
             <img
               src="/images/react.png"
               alt="React"
@@ -25,8 +43,8 @@ const BookCard: React.FC = () => {
             />
           </div>
 
-          {/* TypeScript Book - Middle Back */}
-          <div className="absolute bottom-0 translate-x-6 -translate-y-3 rotate-[4deg] w-22 h-32 rounded-sm shadow-xl border-l-2 border-gray-400 dark:border-gray-600 overflow-hidden transition-all duration-500 group-hover:translate-x-8 group-hover:-translate-y-5 group-hover:rotate-[6deg] bg-gray-800 opacity-85">
+          {/* TypeScript Book - Middle */}
+          <div className="absolute bottom-0 translate-x-4 -translate-y-2 rotate-[3deg] w-22 h-34 rounded-sm shadow-xl border-l-2 border-gray-400 dark:border-gray-600 overflow-hidden transition-all duration-500 group-hover:translate-x-6 group-hover:-translate-y-4 group-hover:rotate-[4deg] bg-gray-800 opacity-85 z-15">
             <img
               src="/images/typescript.jpeg"
               alt="TypeScript in 50 Lessons"
@@ -35,7 +53,7 @@ const BookCard: React.FC = () => {
           </div>
 
           {/* Node.js Book - Middle Front */}
-          <div className="absolute bottom-0 translate-x-0 -translate-y-1 rotate-[2deg] w-24 h-36 rounded-sm shadow-xl border-l-2 border-gray-400 dark:border-gray-600 overflow-hidden transition-all duration-500 group-hover:translate-x-2 group-hover:-translate-y-3 group-hover:rotate-[3deg] bg-gray-900 z-10">
+          <div className="absolute bottom-0 translate-x-0 -translate-y-1 rotate-[2deg] w-24 h-36 rounded-sm shadow-xl border-l-2 border-gray-400 dark:border-gray-600 overflow-hidden transition-all duration-500 group-hover:translate-x-2 group-hover:-translate-y-3 group-hover:rotate-[3deg] bg-gray-900 z-18">
             <img
               src="/images/nodejs.jpeg"
               alt="Node.js"
