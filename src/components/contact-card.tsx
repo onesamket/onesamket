@@ -63,7 +63,7 @@ const ContactCard: React.FC = () => {
               <div className="p-2 bg-white/10 rounded-full">
                 <Mail className="w-4 h-4" />
               </div>
-              <span className="font-medium text-lg">{email}</span>
+              <span className="font-medium text-sm  md:text-lg">{email}</span>
             </div>
             {emailCopied ? (
               <span className="text-xs font-bold text-green-400">COPIED</span>

@@ -78,7 +78,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
         </button>
 
         {/* Content */}
-        <div className="p-8">
+        <div className="p-4 md:p-8">
           {/* Header */}
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-brand-black dark:text-white mb-2">
@@ -101,7 +101,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
                     <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1 uppercase tracking-wider">
                       Phone
                     </p>
-                    <p className="font-bold text-lg text-brand-black dark:text-white">
+                    <p className="font-bold text-sm md:text-lg text-brand-black dark:text-white">
                       {phoneNumber}
                     </p>
                   </div>
@@ -124,7 +124,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
                 className="w-full flex items-center justify-center gap-3 bg-brand-black dark:bg-white text-white dark:text-brand-black px-6 py-4 rounded-2xl font-bold text-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-lg"
               >
                 <Phone className="w-5 h-5" />
-                Call Now
+                <span className="text-sm md:text-lg">Call Now</span>
                 <ArrowUpRight className="w-5 h-5" />
               </button>
             </div>
@@ -139,7 +139,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
                   <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1 uppercase tracking-wider">
                     Email
                   </p>
-                  <p className="font-bold text-lg text-brand-black dark:text-white">
+                  <p className="font-bold text-sm md:text-lg text-brand-black dark:text-white">
                     {email}
                   </p>
                 </div>
