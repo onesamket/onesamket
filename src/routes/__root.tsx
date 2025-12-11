@@ -4,9 +4,7 @@ import { LoadingState } from '@/components/states/loading-state'
 import { NotFoundState } from '@/components/states/not-found-state'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import type { QueryClient } from '@tanstack/react-query'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { Outlet, createRootRouteWithContext } from '@tanstack/react-router'
-import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 interface MyRouterContext {
   queryClient: QueryClient
 }
@@ -19,16 +17,6 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
         config={{
           position: 'bottom-right',
         }}
-        plugins={[
-          {
-            name: 'Tanstack Router',
-            render: <TanStackRouterDevtoolsPanel />,
-          },
-          {
-            name: 'Tanstack Query',
-            render: <ReactQueryDevtools position='right' />
-          },
-        ]}
       />
     </>
   ),
