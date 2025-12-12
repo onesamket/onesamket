@@ -25,6 +25,7 @@ const BookCard: React.FC = () => {
     { x: 72, y: -24, rotate: 8, w: 80, h: 112, opacity: 0.7, z: 5 },
     { x: 48, y: -16, rotate: 5, w: 84, h: 120, opacity: 0.8, z: 10 },
     { x: 24, y: -8, rotate: 3, w: 88, h: 136, opacity: 0.85, z: 15 },
+    { x: 0, y: -4, rotate: 2, w: 96, h: 144, opacity: 0.9, z: 18 },
     { x: 0, y: -4, rotate: 2, w: 96, h: 144, opacity: 0.9, z: 18 }
   ];
 

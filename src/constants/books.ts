@@ -41,4 +41,11 @@ export const books = [
     image: '/images/system-design.png',
     alt: 'System Design Interview',
   },
+  {
+    id: 6,
+    title: 'Professional React Native',
+    author: 'Alexander Benedikt Kuttig',
+    image: '/images/rn-native.jpeg',
+    alt: 'Alexander Benedikt Kuttig',
+  },
 ]
