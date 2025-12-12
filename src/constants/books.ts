@@ -1,0 +1,44 @@
+export const books = [
+  {
+    id: 0,
+    title: 'The Pragmatic Programmer',
+    author: 'Andrew Hunt & David Thomas',
+    image: '/images/pragmatic-programmer.jpeg',
+    alt: 'The Pragmatic Programmer',
+  },
+  {
+    id: 1,
+    title: 'Node.js',
+    author: 'Node.js Documentation',
+    image: '/images/nodejs.jpeg',
+    alt: 'Node.js',
+  },
+  {
+    id: 2,
+    title: 'TypeScript in 50 Lessons',
+    author: 'Stefan Baumgartner',
+    image: '/images/typescript.jpeg',
+    alt: 'TypeScript in 50 Lessons',
+  },
+  {
+    id: 3,
+    title: 'React',
+    author: 'React Team',
+    image: '/images/react.png',
+    alt: 'React',
+  },
+  {
+    id: 4,
+    title: 'Dive into Design Patterns',
+    author: 'Alexander Shvets',
+    image: '/images/design-pattern.jpeg',
+    alt: 'Dive into Design Patterns',
+  },
+  {
+    id: 5,
+    title: 'System Design Interview',
+    author: 'Alex Xu',
+    image: '/images/system-design.png',
+    alt: 'System Design Interview',
+  },
+]

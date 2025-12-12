@@ -1,73 +1,109 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { books } from '../constants/books';
 
 const BookCard: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % books.length);
+    }, 3000); // Switch every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const getBookAtIndex = (offset: number) => {
+    const index = (currentIndex + offset + books.length) % books.length;
+    return books[index];
+  };
+
+  const currentBook = getBookAtIndex(0);
+
+
+  const stackConfigs = [
+    { x: 96, y: -32, rotate: 10, w: 72, h: 104, opacity: 0.6, z: 0 },
+    { x: 72, y: -24, rotate: 8, w: 80, h: 112, opacity: 0.7, z: 5 },
+    { x: 48, y: -16, rotate: 5, w: 84, h: 120, opacity: 0.8, z: 10 },
+    { x: 24, y: -8, rotate: 3, w: 88, h: 136, opacity: 0.85, z: 15 },
+    { x: 0, y: -4, rotate: 2, w: 96, h: 144, opacity: 0.9, z: 18 }
+  ];
+
   return (
-    <div className="bg-white dark:bg-brand-darkCard rounded-[32px] p-6 shadow-sm border border-gray-100 dark:border-white/5 h-full relative overflow-hidden transition-colors duration-300 group">
+    <div className="bg-white dark:bg-brand-darkCard rounded-[32px] p-6 shadow-sm border border-gray-100 dark:border-white/5 h-full relative overflow-hidden transition-all duration-300 group hover:shadow-md">
       <div className="flex justify-between items-start mb-4 relative z-10">
         <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">Reading List</h3>
+        <div className="flex gap-1">
+          {books.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentIndex(idx)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-6 bg-brand-black dark:bg-white' : 'w-1.5 bg-gray-200 dark:bg-white/10 hover:bg-gray-300 dark:hover:bg-white/20'}`}
+              aria-label={`Go to ${books[idx].title}`}
+            />
+          ))}
+        </div>
       </div>
 
       <div className="flex flex-col h-full relative z-10">
-        <div className="mb-4">
-          <h4 className="font-bold text-brand-black dark:text-white text-lg leading-tight transition-colors mb-1">
-            The Pragmatic Programmer
-          </h4>
-          <p className="text-xs text-brand-textGray">Andrew Hunt & David Thomas</p>
+        <div className="mb-4 relative">
+          <div
+            key={`text-${currentBook.id}`}
+            style={{
+              animation: 'fadeIn 500ms ease-in-out',
+            }}
+          >
+            <h4 className="font-bold text-brand-black dark:text-white text-lg leading-tight mb-1">
+              {currentBook.title}
+            </h4>
+            <p className="text-xs text-brand-textGray">
+              {currentBook.author}
+            </p>
+          </div>
         </div>
 
         <div className="flex-1 flex justify-center items-end relative perspective-1000 min-h-[200px]">
-          {/* System Design Interview - Far Back */}
-          <div className="absolute bottom-0 translate-x-16 -translate-y-8 rotate-[10deg] w-18 h-26 rounded-sm shadow-lg border-l-2 border-gray-400 dark:border-gray-600 overflow-hidden transition-all duration-500 group-hover:translate-x-18 group-hover:-translate-y-10 group-hover:rotate-[12deg] bg-gray-800 opacity-60 z-0">
-            <img
-              src="/images/system-design.png"
-              alt="System Design Interview"
-              className="w-full h-full object-cover"
-            />
-          </div>
+          {/* Books in the stack (behind the main book) */}
+          {stackConfigs.map((config, idx) => {
+            const book = getBookAtIndex(-(idx + 1));
+            return (
+              <div
+                key={`${book.id}-${currentIndex}-${idx}`}
+                className="absolute bottom-0 rounded-sm shadow-lg border-l-2 border-gray-400 dark:border-gray-600 overflow-hidden bg-gray-800"
+                style={{
+                  transform: `translateX(${config.x}px) translateY(${config.y}px) rotate(${config.rotate}deg)`,
+                  width: `${config.w}px`,
+                  height: `${config.h}px`,
+                  opacity: config.opacity,
+                  zIndex: config.z,
+                  transition: 'transform 700ms cubic-bezier(0.4, 0, 0.2, 1), opacity 700ms ease-in-out',
+                }}
+              >
+                <img
+                  src={book.image}
+                  alt={book.alt}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            );
+          })}
 
-          {/* Clean Code - Back */}
-          <div className="absolute bottom-0 translate-x-12 -translate-y-6 rotate-[8deg] w-20 h-28 rounded-sm shadow-lg border-l-2 border-gray-400 dark:border-gray-600 overflow-hidden transition-all duration-500 group-hover:translate-x-14 group-hover:-translate-y-8 group-hover:rotate-[10deg] bg-gray-800 opacity-70 z-5">
-            <img
-              src="/images/design-pattern.jpeg"
-              alt="Dive into Design Patterns"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* React Book - Middle Back */}
-          <div className="absolute bottom-0 translate-x-8 -translate-y-4 rotate-[5deg] w-21 h-30 rounded-sm shadow-xl border-l-2 border-gray-400 dark:border-gray-600 overflow-hidden transition-all duration-500 group-hover:translate-x-10 group-hover:-translate-y-6 group-hover:rotate-[7deg] bg-gray-800 opacity-80 z-10">
-            <img
-              src="/images/react.png"
-              alt="React"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* TypeScript Book - Middle */}
-          <div className="absolute bottom-0 translate-x-4 -translate-y-2 rotate-[3deg] w-22 h-34 rounded-sm shadow-xl border-l-2 border-gray-400 dark:border-gray-600 overflow-hidden transition-all duration-500 group-hover:translate-x-6 group-hover:-translate-y-4 group-hover:rotate-[4deg] bg-gray-800 opacity-85 z-15">
-            <img
-              src="/images/typescript.jpeg"
-              alt="TypeScript in 50 Lessons"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Node.js Book - Middle Front */}
-          <div className="absolute bottom-0 translate-x-0 -translate-y-1 rotate-[2deg] w-24 h-36 rounded-sm shadow-xl border-l-2 border-gray-400 dark:border-gray-600 overflow-hidden transition-all duration-500 group-hover:translate-x-2 group-hover:-translate-y-3 group-hover:rotate-[3deg] bg-gray-900 z-18">
-            <img
-              src="/images/nodejs.jpeg"
-              alt="Node.js"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Pragmatic Programmer - Front (Main) */}
-          <div className="relative w-28 h-40 shadow-2xl rounded-r-md rounded-l-sm overflow-hidden border-l-4 border-l-gray-300 dark:border-l-gray-600 transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-3xl z-20 bg-black">
+          {/* Main book (Front) */}
+          <div
+            className="relative w-28 h-40 shadow-2xl rounded-r-md rounded-l-sm overflow-hidden border-l-4 border-l-gray-300 dark:border-l-gray-600 transform group-hover:scale-105 z-20 bg-black"
+            key={currentBook.id}
+            style={{
+              transition: 'transform 700ms cubic-bezier(0.4, 0, 0.2, 1)',
+            }}
+          >
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-r from-gray-200 dark:from-gray-600 to-transparent z-20"></div>
             <img
-              src="/images/pragmatic-programmer.jpeg"
-              alt="The Pragmatic Programmer"
+              key={`main-img-${currentBook.id}`}
+              src={currentBook.image}
+              alt={currentBook.alt}
               className="w-full h-full object-cover"
+              style={{
+                animation: 'fadeIn 500ms ease-in-out',
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-white/10 pointer-events-none"></div>
           </div>
