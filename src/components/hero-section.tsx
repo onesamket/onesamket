@@ -25,6 +25,16 @@ const Hero: React.FC = () => {
     window.location.href = `tel:${phoneNumber}`;
   };
 
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/docs/tewodros-resume.pdf';
+    link.download = 'tewodros-resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+
   return (
     <div className="flex flex-col justify-center py-12 md:py-16">
       <div className="max-w-3xl">
@@ -50,13 +60,22 @@ const Hero: React.FC = () => {
 
         <div className="mt-8 flex flex-col md:flex-row items-start md:items-center gap-6">
           {/* Open to work badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full shadow-sm transition-colors">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
-            </span>
-            <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Open to work</span>
+          <div>
+
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full shadow-sm transition-colors">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+              </span>
+              <div>
+
+                <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Open to work</span>
+              </div>
+            </div>
           </div>
+          <p className="text-gray-500 dark:text-gray-400 max-w-xs text-xs leading-relaxed transition-colors">
+            Feel free to explore my portfolio and reach out —I'd love to connect!
+          </p>
         </div>
 
         <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
@@ -67,9 +86,12 @@ const Hero: React.FC = () => {
             Book a call
           </button>
 
-          <p className="text-gray-500 dark:text-gray-400 max-w-xs text-sm leading-relaxed transition-colors">
-            Feel free to explore my portfolio and reach out —I'd love to connect!
-          </p>
+          <button
+            onClick={handleDownloadResume}
+            className="bg-white dark:bg-brand-darkCard text-brand-black dark:text-white border-2 border-gray-200 dark:border-white/10 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0"
+          >
+            Download Resume
+          </button>
         </div>
 
         <ContactModal

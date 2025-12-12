@@ -18,7 +18,7 @@
     "check": "prettier --write . && eslint --fix"
   },
   "dependencies": {
-
+    "@netlify/vite-plugin": "^2.7.16",
     "@tailwindcss/vite": "^4.0.6",
     "@tanstack/match-sorter-utils": "^8.19.4",
     "@tanstack/react-devtools": "^0.7.0",

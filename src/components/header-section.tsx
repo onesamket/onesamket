@@ -48,7 +48,7 @@ const Header: React.FC = () => {
           <a href="mailto:onesamket@gmail.com" className="text-sm font-medium text-brand-black dark:text-white hover:text-brand-orange dark:hover:text-brand-orange transition-colors hidden sm:block">
             onesamket@gmail.com
           </a>
-          <p className=' text-xs hidden sm:block'>
+          <p className=' text-xs text-gray-500 dark:text-gray-400 hidden sm:block'>
             +251 918 039 771
           </p>
         </div>

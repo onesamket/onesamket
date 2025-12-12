@@ -22,8 +22,8 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 function RootErrorComponent({ error }: { error: Error }) {
   return (
     <ErrorState
-      title="Application Error"
-      message={error.message || 'An unexpected error occurred. Please try again later.'}
+      title="Oops! Something went wrong"
+      message={error.message || 'We encountered an unexpected issue. Don\'t worry, it happens to the best of us.'}
       className="min-h-screen"
     />
   )
@@ -39,8 +39,6 @@ function RootNotFoundComponent() {
       className="min-h-screen"
       title="Page Not Found"
       message="The page you're looking for doesn't exist or has been moved."
-      showHomeButton={true}
-      showBackButton={true}
     />
   )
 }

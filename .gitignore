@@ -42,3 +42,6 @@ count.txt
 .nitro
 .wrangler
 *.tsbuildinfo
+
+# Local Netlify folder
+.netlify
