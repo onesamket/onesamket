@@ -1,65 +1,54 @@
-import {
-  Bell,
-  Gamepad2,
-  Languages,
-  Music,
-  Utensils,
-  Youtube,
-} from 'lucide-react'
-
-export const projects = [
+export const primaryProjects = [
   {
     title: 'Recipe Apps Suite',
     description:
       'Developed 3+ comprehensive recipe applications with advanced filtering and management.',
-    icon: Utensils,
-    demo: 'https://restaurant-management-onesamket.vercel.app/',
-    github: 'https://github.com/onesamket',
-    color: 'bg-orange-500',
+    link: '#',
   },
   {
-    title: 'Mezmur and Podcast Platform',
+    title: 'Geez Input',
     description:
-      'Developing a mezmur and podcast streaming platform with community features for the church. Fullstack role (voluntary).',
-    icon: Music,
-    demo: 'https://mezmur-and-podcast.vercel.app/',
-    github: 'https://github.com/onesamket/',
-    color: 'bg-blue-500',
+      'The input component for Ethiopic web interfaces. Type Latin, get Geez instantly with zero configuration. Seamless integration for modern web apps.',
+    link: 'https://geez-input.vercel.app/',
+  },
+  {
+    title: 'Bunna Podcast Desktop App',
+    description:
+      'A desktop application for listening to podcasts. Built with Electron and React.',
+    link: 'https://bunna.org/',
+  },
+
+  {
+    title: 'Mezmur & Podcast Platform',
+    description:
+      'Developing a streaming platform with community features for the church. Fullstack voluntary role.',
+    link: '#',
   },
   {
     title: 'Youtube Clone',
     description:
       'A pixel-perfect Youtube clone featuring video playback and search functionality.',
-    icon: Youtube,
-    demo: 'https://youtube-clone-onesamket.vercel.app/',
-    github: 'https://github.com/onesamket/youtube-clone',
-    color: 'bg-red-500',
+    link: '#',
   },
+]
+
+export const technicalProjects = [
   {
     title: 'Game Hub UI',
     description:
       'Modern gaming dashboard interface developed with Next.js and Tailwind.',
-    icon: Gamepad2,
-    demo: 'https://game-hub-onesamket.vercel.app',
-    github: 'https://github.com/onesamket/game-hub',
-    color: 'bg-purple-500',
+    link: '#',
   },
   {
     title: 'Geez Number Converter',
     description:
       'Open source library for converting between Arabic and Ethiopian Geez numerals.',
-    icon: Languages,
-    demo: 'https://github.com/onesamket/geez-number',
-    github: 'https://github.com/onesamket/geez-number',
-    color: 'bg-yellow-500',
+    link: '#',
   },
   {
     title: 'RN Toast Library',
     description:
       'Lightweight, customizable toast notification library for React Native applications.',
-    icon: Bell,
-    demo: 'https://rn-toast.vercel.app/',
-    github: 'https://github.com/onesamket/rn-toast',
-    color: 'bg-green-500',
+    link: '#',
   },
 ]
