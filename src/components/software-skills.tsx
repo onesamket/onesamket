@@ -1,15 +1,12 @@
 
 import React from 'react';
 
-interface SoftwareBarProps {
-  name: string;
-  level: number;
-}
+
 
 const SoftwareSkills: React.FC = () => {
   const coreTech = [
     { name: 'TypeScript / Javascript', level: 9.5 },
-    { name: 'Node.js NestJS', level: 9 },
+    { name: 'Node.js, Express, NestJS', level: 9 },
     { name: 'Electron', level: 8.5 },
     { name: 'React / Next.js', level: 9 },
     { name: 'React Native', level: 8.5 },

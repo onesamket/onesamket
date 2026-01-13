@@ -61,23 +61,11 @@ const Header: React.FC = () => {
           </p>
         </div>
       </div>
-
-
-      {/* Background soft glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#4D807B]/5 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
     </section>
   );
 };
 
-const SocialIcon: React.FC<{ icon: React.ReactNode; href: string }> = ({ icon, href }) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-black transition-colors"
-  >
-    {icon}
-  </a>
-);
+
 
 export default Header;
