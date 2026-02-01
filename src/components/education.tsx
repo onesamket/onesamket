@@ -6,7 +6,6 @@ const Education: React.FC = () => {
     {
       institution: "Haramaya University",
       date: "2020 - 2024",
-      degree: "BSc Degree in Computer Science",
       location: "Ethiopia",
       highlight: true
     }
@@ -26,9 +25,6 @@ const Education: React.FC = () => {
               <span>•</span>
               <span>{item.location}</span>
             </div>
-            <p className={`text-base font-light ${item.highlight ? 'text-gray-800' : 'text-gray-500'}`}>
-              {item.degree}
-            </p>
           </div>
         ))}
       </div>
