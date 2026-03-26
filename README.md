@@ -16,7 +16,7 @@
 
 Passionate Fullstack Developer with expertise in Web, Desktop, and React Native application development. Through over 4 years of dedication and hard work, I have honed an exceptional skill set to craft elegant, user-friendly, high-performance web applications using the latest technologies. I am driven by my love for coding and enthusiasm for collaborating on open-source projects.
 
-- 🌍 Based in Addis Ababa, Ethiopia
+- 🌍 Based in Brazil Aao Paulo
 - 🎓 Bachelor of Science in Information Technology from Haramaya University (2020-2024)
 - 🚀 Constantly learning and adapting to the latest technologies
 - 💼 Open to exciting opportunities and challenging projects
