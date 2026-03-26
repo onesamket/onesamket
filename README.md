@@ -1,6 +1,6 @@
 # Tewodros Birhanu
 
-## 🚀 Fullstack Software Developer | Web, Desktop & React Native Developer
+## 🚀 Senior Fullstack Software Developer | Web, Desktop & React Native Developer
 
 [![Website](https://img.shields.io/badge/Website-onesamket.com-blue?style=flat-square)](http://onesamket.com)
 [![Email](https://img.shields.io/badge/Email-onesamket@gmail.com-red?style=flat-square)](mailto:onesamket@gmail.com)
