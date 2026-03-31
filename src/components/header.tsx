@@ -1,67 +1,69 @@
 
-import { Download } from 'lucide-react';
+import { Download, ArrowDown } from 'lucide-react';
 import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <section className="relative min-h-[85vh] flex flex-col lg:flex-row items-center justify-center pt-24 pb-12 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
+      {/* Background accent */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#4D807B]/10 rounded-full blur-[100px] -z-10" />
 
-      {/* Main Content Area */}
-      <div className="max-w-4xl px-6 lg:ml-24 flex flex-col items-start text-left space-y-12 relative">
-        {/* Handwritten Accent */}
-        <div className="absolute -top-12 -left-4 md:-left-12 opacity-80">
-          <p className="script-font text-3xl md:text-4xl text-[#4D807B] -rotate-12">
-            Hello, I am
+      {/* Main Content */}
+      <div className="max-w-5xl w-full flex flex-col items-center text-center space-y-8">
+        {/* Handwritten greeting */}
+        <p className="script-font text-2xl md:text-3xl text-[#4D807B]">
+          Hello, I am
+        </p>
+
+        {/* Name */}
+        <h1 className="text-5xl md:text-7xl lg:text-8xl serif-font leading-[0.95] tracking-tight text-gray-900">
+          Tewodros Birhanu
+        </h1>
+
+        {/* Title with underline */}
+        <div className="relative">
+          <p className="text-lg md:text-xl lg:text-2xl font-light text-gray-600 tracking-wide uppercase">
+            Fullstack Web & Mobile Developer
           </p>
+          <svg className="absolute -bottom-2 left-0 w-full h-2 text-[#4D807B]/50" viewBox="0 0 100 10" preserveAspectRatio="none">
+            <path d="M0 5 Q 25 0, 50 5 T 100 5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          </svg>
         </div>
 
-        <div className="space-y-6">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl serif-font leading-[0.9] tracking-tighter text-gray-900">
-            Tewodros <br /> Birhanu
-          </h1>
+        {/* Description */}
+        <p className="text-base md:text-lg text-gray-500 font-light leading-relaxed max-w-2xl">
+          Crafting high-performance web applications and seamless mobile experiences with a focus on clean architecture and artistic precision.
+        </p>
 
-          <div className="relative inline-block">
-            <p className="text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide uppercase italic">
-              Fullstack  Web <br className="md:hidden" />
-              <span className="relative">
-                & Mobile Application Developer
-                {/* Hand-drawn underline effect */}
-                <svg className="absolute -bottom-2 left-0 w-full h-2 text-[#4D807B]/40" viewBox="0 0 100 10" preserveAspectRatio="none">
-                  <path d="M0 5 Q 25 0, 50 5 T 100 5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                </svg>
-              </span>
-            </p>
-          </div>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
+          <a href="/docs/tewodros-resume.pdf" download>
+            <button className="group flex items-center gap-2 bg-gray-900 text-white px-8 py-4 rounded-full font-medium text-sm uppercase tracking-wider hover:bg-[#4D807B] transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Download size={18} />
+              Download CV
+            </button>
+          </a>
+
+          <a href="#contact" className="flex items-center gap-2 text-gray-600 hover:text-[#4D807B] transition-colors px-6 py-4 font-medium text-sm">
+            Get in Touch
+            <ArrowDown size={16} className="animate-bounce" />
+          </a>
         </div>
 
-        <div className="max-w-xl space-y-10">
-          <p className="text-lg md:text-xl text-gray-500 font-light leading-relaxed">
-            Crafting high-performance web applications and seamless mobile experiences with a focus on clean architecture and artistic precision.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            <a href="/docs/tewodros-resume.pdf" download>
-              <button className="group flex items-center gap-3 bg-black text-white px-10 py-5 rounded-full font-bold text-sm uppercase tracking-[0.2em] hover:bg-[#4D807B] transition-all shadow-xl hover:shadow-[#4D807B]/20 transform hover:-translate-y-1">
-                <Download size={20} className="group-hover:animate-bounce" />
-                Download CV
-              </button>
-            </a>
-
-            <div className="flex flex-col items-start">
-              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">Based in</p>
-              <p className="text-sm font-medium italic border-b border-gray-300">Nairobi, Kenya</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Extra Handwritten Note */}
-        <div className="pt-12 hidden md:block">
-          <p className="script-font text-2xl text-gray-400 rotate-3">
-            Available for remote collaboration worldwide...
+        {/* Location */}
+        <div className="pt-8">
+          <p className="text-xs font-medium uppercase tracking-widest text-gray-400">
+            Based in Nairobi, Kenya
           </p>
         </div>
       </div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#C8102E]/5 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex items-start justify-center p-2">
+          <div className="w-1 h-2 bg-gray-400 rounded-full animate-bounce" />
+        </div>
+      </div>
     </section>
   );
 };

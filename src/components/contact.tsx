@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
                 <MapPin size={20} />
               </div>
               <div className="text-sm">
-                <p className="font-bold text-gray-900 leading-tight">Addis Ababa, Ethiopia</p>
+                <p className="font-bold text-gray-900 leading-tight">Nairobi, Kenya</p>
                 <p className="text-xs text-gray-500 font-medium uppercase tracking-widest mt-0.5"> Available  for work worldwide</p>
               </div>
             </div>
