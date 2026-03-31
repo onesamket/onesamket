@@ -49,7 +49,7 @@ const Header: React.FC = () => {
 
             <div className="flex flex-col items-start">
               <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">Based in</p>
-              <p className="text-sm font-medium italic border-b border-gray-300">Addis Ababa, Ethiopia</p>
+              <p className="text-sm font-medium italic border-b border-gray-300">Nairobi, Kenya</p>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@ const Header: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#4D807B]/5 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#C8102E]/5 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
     </section>
   );
 };
