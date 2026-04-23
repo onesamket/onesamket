@@ -53,7 +53,7 @@ const Header: React.FC = () => {
         {/* Location */}
         <div className="pt-8">
           <p className="text-xs font-medium uppercase tracking-widest text-gray-400">
-            Based in Nairobi, Kenya
+            Based in Addis Ababa, Ethiopia
           </p>
         </div>
       </div>
