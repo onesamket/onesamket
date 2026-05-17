@@ -3,14 +3,14 @@ export const experiences = [
     role: 'Frontend Developer',
     company: 'Joveo',
     period: 'Feb 2026 - Present',
-    location: 'Remote · Internship',
+    location: 'Remote · Full-time',
     description:
-      'Building modern web interfaces and implementing responsive designs in a remote internship setting.',
+      'Building modern web interfaces and implementing responsive designs in a remote full-time setting.',
   },
   {
     role: 'AI Trainer',
     company: 'Revelo',
-    period: 'Feb 2026 - Present',
+    period: 'Feb 2026 - Apr 2026',
     location: 'Remote · Contract',
     description:
       'Training and fine-tuning AI models, providing feedback on model outputs to improve performance.',

@@ -1,34 +1,60 @@
 import React from 'react'
 
-const SoftwareSkills: React.FC = () => {
-  const coreTech = [
-    { name: 'TypeScript / JavaScript', level: 9.5 },
-    { name: 'Node.js, Express, NestJS', level: 9 },
-    { name: 'Electron', level: 8.5 },
-    { name: 'React / Next.js', level: 9 },
-    { name: 'React Native', level: 8.5 },
-    { name: 'Tailwind CSS', level: 9 },
-  ]
+const technicalSkills = [
+  {
+    group: 'Languages & Core',
+    skills: 'JavaScript (ES2022+), TypeScript, HTML5, CSS3, SQL',
+  },
+  {
+    group: 'Frontend & Mobile',
+    skills:
+      'React, Next.js, React Native, Expo, Remix, TanStack Router, TanStack Query, TanStack Table, TanStack Form, Tailwind CSS, shadcn/ui, Apollo Client',
+  },
+  {
+    group: 'Backend & APIs',
+    skills:
+      'Node.js, Express.js, NestJS, Encore.ts, REST, GraphQL, Apollo Server, WebRTC, Socket.io',
+  },
+  {
+    group: 'Databases & ORM',
+    skills: 'PostgreSQL, MongoDB, Prisma ORM, Supabase',
+  },
+  {
+    group: 'Cloud & Deployment',
+    skills: 'AWS, Supabase, Vercel, Railway, Render, Docker',
+  },
+  {
+    group: 'AI & Vibe Coding',
+    skills:
+      'Cursor, GitHub Copilot, v0 by Vercel, Bolt, Lovable, Claude, ChatGPT. Proficient in AI-assisted development workflows.',
+  },
+  {
+    group: 'Tools & Version Control',
+    skills: 'Git, GitHub, GitHub Actions (CI/CD), Linux, Nginx',
+  },
+]
 
+const SoftwareSkills: React.FC = () => {
   return (
     <section>
       <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#0759bd]">
-        Focus
+        Technical Skills
       </p>
       <h2 className="mt-2 mb-8 text-4xl font-black leading-none text-[#0759bd]">
-        Core Expertise
+        Engineering Stack
       </h2>
-      <div className="grid gap-3 sm:grid-cols-2">
-        {coreTech.map((skill, idx) => (
+
+      <div className="divide-y divide-[#0759bd]/25 rounded-md border border-[#0759bd]/30 bg-[#f8f5ef]">
+        {technicalSkills.map((item) => (
           <article
-            key={idx}
-            className="rounded-md border border-[#0759bd]/30 bg-[#f8f5ef] px-4 py-3"
+            key={item.group}
+            className="grid gap-2 p-4 sm:grid-cols-[180px_1fr]"
           >
-            <p className="text-sm font-extrabold text-[#073f8f]">
-              {skill.name}
-            </p>
-            <p className="mt-1 text-xs font-bold uppercase tracking-[0.18em] text-[#527db4]">
-              Level {skill.level}/10
+            <h3 className="text-sm font-black leading-6 text-[#0759bd]">
+              {item.group}
+            </h3>
+            <p className="text-sm font-medium leading-6 text-[#244f8f]">
+              {item.skills}
             </p>
           </article>
         ))}
