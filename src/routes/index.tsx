@@ -21,7 +21,7 @@ function HomePage() {
 
           <Experience />
 
-          <div className="grid grid-cols-1 gap-10 border-t-2 border-[#0759bd] pt-12 lg:grid-cols-2 lg:gap-16">
+          <div className="grid grid-cols-1 gap-10 border-t-2 border-[#0759bd] pt-12 lg:grid-cols-[360px_minmax(0,1fr)] lg:gap-12">
             <Education />
             <SoftwareSkills />
           </div>
