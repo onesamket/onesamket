@@ -16,41 +16,34 @@ export const Route = createFileRoute('/')({
 function HomePage() {
   return (
 
-    <div className="min-h-screen">
-      <main className="max-w-5xl mx-auto px-6 pt-16 pb-12 md:pb-20 lg:pb-24">
-        <div className="space-y-24 animate-in fade-in duration-700">
-          {/* Introduction & Header Section */}
+    <div className="min-h-screen bg-[#f4f0e8] text-[#073f8f]">
+      <main className="mx-auto max-w-6xl px-5 py-8 sm:px-8 md:py-12 lg:px-10">
+        <div className="space-y-16 md:space-y-20">
           <Header />
 
-          {/* Professional Journey */}
           <Experience />
 
-          {/* Education & Tech Stack Summary */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+          <div className="grid grid-cols-1 gap-10 border-t-2 border-[#0759bd] pt-12 lg:grid-cols-2 lg:gap-16">
             <Education />
             <SoftwareSkills />
           </div>
 
-          {/* Skills & Technologies Grid */}
           <SkillLists />
 
-          {/* Featured Projects */}
           <Projects />
 
-          {/* Final Contact Section */}
           <Contact />
         </div>
-        <div className="mt-24">
+        <div className="mt-16 md:mt-20">
           <AuthorSection name="Tewodros Birhanu" avatar="https://github.com/onesamket.png" />
         </div>
-        {/* Footer */}
-        <footer className="mt-24 pt-12 border-t border-gray-300 text-sm text-gray-500 text-center">
-          <div className="flex justify-center gap-8 mb-4">
-            <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-black transition-colors uppercase tracking-widest text-[10px] font-bold">Back to Top</button>
-            <a href="https://github.com/onesamket" target="_blank" className="hover:text-black transition-colors uppercase tracking-widest text-[10px] font-bold">GitHub</a>
-            <a href="https://www.linkedin.com/in/ln-onesamket/" target="_blank" className="hover:text-black transition-colors uppercase tracking-widest text-[10px] font-bold">LinkedIn</a>
+        <footer className="mt-16 border-t-2 border-[#0759bd] pt-8 text-center text-sm text-[#073f8f] md:mt-20">
+          <div className="mb-4 flex flex-wrap justify-center gap-x-8 gap-y-3">
+            <button onClick={() => window.scrollTo({ top: 0 })} className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#0759bd] hover:underline">Back to Top</button>
+            <a href="https://github.com/onesamket" target="_blank" rel="noreferrer" className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#0759bd] hover:underline">GitHub</a>
+            <a href="https://www.linkedin.com/in/ln-onesamket/" target="_blank" rel="noreferrer" className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#0759bd] hover:underline">LinkedIn</a>
           </div>
-          <p>&copy; {new Date().getFullYear()} Tewodros Birhanu.</p>
+          <p className="text-[#335f99]">&copy; {new Date().getFullYear()} Tewodros Birhanu.</p>
         </footer>
       </main>
     </div>

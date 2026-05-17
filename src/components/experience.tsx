@@ -1,31 +1,32 @@
-
 import { experiences } from '@/constants/experience';
 import React from 'react';
 
 const Experience: React.FC = () => {
-
-
   return (
-    <section>
-      <h2 className="text-4xl serif-font mb-10">Experience</h2>
-      <div className="space-y-12">
+    <section className="border-t-2 border-[#0759bd] pt-12">
+      <div className="mb-9">
+        <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#0759bd]">Professional Journey</p>
+        <h2 className="mt-2 text-4xl font-black leading-none text-[#0759bd] md:text-5xl">Experience</h2>
+      </div>
+
+      <div className="border-t border-[#0759bd]/35">
         {experiences.map((exp, idx) => (
-          <div key={idx} className="group relative pl-8 border-l border-gray-300">
-            <div className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-gray-400 group-hover:bg-[#4D807B] transition-colors" />
-            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 leading-tight">{exp.role}</h3>
-                <p className="text-[#4D807B] font-medium">{exp.company}</p>
-              </div>
-              <div className="text-right mt-1 md:mt-0">
-                <span className="text-sm font-medium text-gray-500 block">{exp.period}</span>
-                <span className="text-xs text-gray-400 uppercase tracking-wider">{exp.location}</span>
-              </div>
+          <article key={idx} className="grid gap-4 border-b border-[#0759bd]/25 py-6 md:grid-cols-[minmax(0,1fr)_220px] md:gap-10">
+            <div>
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-[#527db4]">
+                {String(idx + 1).padStart(2, '0')}
+              </p>
+              <h3 className="text-xl font-extrabold leading-tight text-[#073f8f]">{exp.role}</h3>
+              <p className="mt-1 text-base font-bold text-[#0759bd]">{exp.company}</p>
+              <p className="mt-4 max-w-2xl text-sm leading-6 text-[#244f8f]">
+                {exp.description}
+              </p>
             </div>
-            <p className="text-sm text-gray-600 font-light max-w-2xl leading-relaxed">
-              {exp.description}
-            </p>
-          </div>
+            <div className="text-left md:text-right">
+              <span className="block text-sm font-bold text-[#073f8f]">{exp.period}</span>
+              <span className="mt-1 block text-xs font-bold uppercase tracking-[0.18em] text-[#527db4]">{exp.location}</span>
+            </div>
+          </article>
         ))}
       </div>
     </section>
