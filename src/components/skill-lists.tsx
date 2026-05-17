@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   Cloud,
   Code2,
@@ -11,12 +11,12 @@ import {
   Smartphone,
   Target,
   Users,
-} from 'lucide-react';
+} from 'lucide-react'
 
 interface SkillCategory {
-  icon: React.ReactNode;
-  title: string;
-  skills: string[];
+  icon: React.ReactNode
+  title: string
+  skills: string[]
 }
 
 const SkillLists: React.FC = () => {
@@ -56,29 +56,38 @@ const SkillLists: React.FC = () => {
       title: 'DevOps',
       skills: ['Docker', 'Git', 'CI/CD', 'Deployment'],
     },
-  ];
+  ]
 
   const softSkills = [
     { icon: <Heart className="h-4 w-4" />, label: 'Responsible & Dedicated' },
     { icon: <Target className="h-4 w-4" />, label: 'Well-organized Workflow' },
     { icon: <Users className="h-4 w-4" />, label: 'Team Collaboration' },
     { icon: <Lightbulb className="h-4 w-4" />, label: 'Problem Solving' },
-  ];
+  ]
 
   return (
     <section className="border-t-2 border-[#0759bd] pt-12">
       <div className="mb-9">
-        <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#0759bd]">What I Do</p>
-        <h2 className="mt-2 text-4xl font-black leading-none text-[#0759bd] md:text-5xl">Core Skills</h2>
+        <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#0759bd]">
+          What I Do
+        </p>
+        <h2 className="mt-2 text-4xl font-black leading-none text-[#0759bd] md:text-5xl">
+          Core Skills
+        </h2>
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {coreCategories.map((category, idx) => (
-          <article key={idx} className="rounded-md border border-[#0759bd]/30 bg-[#f8f5ef] p-5">
+          <article
+            key={idx}
+            className="rounded-md border border-[#0759bd]/30 bg-[#f8f5ef] p-5"
+          >
             <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-md border border-[#0759bd]/35 text-[#0759bd]">
               {category.icon}
             </div>
-            <h3 className="text-lg font-extrabold text-[#073f8f]">{category.title}</h3>
+            <h3 className="text-lg font-extrabold text-[#073f8f]">
+              {category.title}
+            </h3>
             <div className="mt-4 flex flex-wrap gap-2">
               {category.skills.map((skill, skillIdx) => (
                 <span
@@ -95,26 +104,36 @@ const SkillLists: React.FC = () => {
 
       <div className="mt-12 grid gap-8 border-t border-[#0759bd]/35 pt-10 lg:grid-cols-[320px_minmax(0,1fr)]">
         <div>
-          <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#0759bd]">How I Work</p>
-          <h2 className="mt-2 text-4xl font-black leading-none text-[#0759bd]">Soft Skills</h2>
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#0759bd]">
+            How I Work
+          </p>
+          <h2 className="mt-2 text-4xl font-black leading-none text-[#0759bd]">
+            Soft Skills
+          </h2>
           <p className="mt-4 max-w-sm text-sm font-medium leading-6 text-[#244f8f]">
-            Clear communication, steady delivery, and practical problem solving across product teams.
+            Clear communication, steady delivery, and practical problem solving
+            across product teams.
           </p>
         </div>
 
         <div className="grid gap-3 sm:grid-cols-2">
           {softSkills.map((skill, idx) => (
-            <article key={idx} className="flex items-center gap-3 rounded-md border border-[#0759bd]/25 bg-[#f8f5ef] p-4">
+            <article
+              key={idx}
+              className="flex items-center gap-3 rounded-md border border-[#0759bd]/25 bg-[#f8f5ef] p-4"
+            >
               <div className="flex h-9 w-9 items-center justify-center rounded-md bg-[#0759bd] text-[#f4f0e8]">
                 {skill.icon}
               </div>
-              <span className="text-sm font-extrabold text-[#073f8f]">{skill.label}</span>
+              <span className="text-sm font-extrabold text-[#073f8f]">
+                {skill.label}
+              </span>
             </article>
           ))}
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SkillLists;
+export default SkillLists
