@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
 
+# LLM discovery
+LLMs: https://onesamket.com/llms.txt
+
 # Sitemaps
 Sitemap: https://onesamket.com/sitemap.xml

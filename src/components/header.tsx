@@ -3,7 +3,7 @@ import React from 'react'
 
 const Header: React.FC = () => {
   return (
-    <section className="pt-6 md:pt-10">
+    <section id="about" className="pt-6 md:pt-10">
       <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
         <div className="max-w-3xl">
           <div

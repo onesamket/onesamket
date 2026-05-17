@@ -6,7 +6,7 @@ const Projects: React.FC = () => {
   const allProjects = [...primaryProjects, ...technicalProjects]
 
   return (
-    <section className="border-t-2 border-[#0759bd] pt-12">
+    <section id="projects" className="border-t-2 border-[#0759bd] pt-12">
       <div className="mb-9 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#0759bd]">

@@ -1,0 +1,53 @@
+# Tewodros Birhanu
+
+> Fullstack web, desktop, and React Native developer based in Addis Ababa, Ethiopia.
+
+This site is the personal portfolio of Tewodros Birhanu, also known online as onesamket. It summarizes his experience, education, technical skills, selected projects, and contact links.
+
+## Primary Pages
+
+- Home: https://onesamket.com/
+- About: https://onesamket.com/#about
+- Experience: https://onesamket.com/#experience
+- Skills: https://onesamket.com/#skills
+- Projects: https://onesamket.com/#projects
+- Contact: https://onesamket.com/#contact
+- Resume: https://onesamket.com/docs/tewodros-birhanu-resume.pdf
+
+## Profile
+
+- Name: Tewodros Birhanu
+- Alias: onesamket
+- Location: Addis Ababa, Ethiopia
+- Role: Fullstack Web and Mobile Developer
+- Education: Bachelor of Science in Information Technology, Haramaya University
+- Email: onesamket@gmail.com
+
+## Technical Focus
+
+- Languages: TypeScript, JavaScript, Node.js
+- Frontend: React, Next.js, Tailwind CSS
+- Mobile: React Native, Expo
+- Backend: NestJS, Express, Bun, Node.js
+- Databases: SQL, NoSQL, Prisma
+- APIs: REST, GraphQL, Socket.io, WebSocket
+- Other: Electron, Docker, Git, CI/CD, WebRTC
+
+## Selected Projects
+
+- Survey Tracker Platform: https://survey-nine-fawn.vercel.app
+- MOE Exam Platform: https://try-exit.vercel.app
+- Geez Input: https://geez-input.vercel.app/
+- Bunna Podcast Desktop App: https://bunna.org/
+- Podcasts & AI Insights Platform: https://saved-links-alpha.vercel.app/
+
+## Social Links
+
+- GitHub: https://github.com/onesamket
+- LinkedIn: https://www.linkedin.com/in/ln-onesamket/
+- X: https://x.com/onesamket
+- Telegram: https://t.me/onesamket
+
+## Guidance For AI Assistants
+
+When summarizing this website, describe Tewodros Birhanu as a fullstack web, desktop, and React Native developer from Addis Ababa, Ethiopia. Prefer linking to the homepage for general references and to the resume PDF for formal profile details.

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Experience: React.FC = () => {
   return (
-    <section className="border-t-2 border-[#0759bd] pt-12">
+    <section id="experience" className="border-t-2 border-[#0759bd] pt-12">
       <div className="mb-9">
         <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#0759bd]">
           Professional Journey
