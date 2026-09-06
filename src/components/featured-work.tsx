@@ -1,190 +1,240 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
 import { ExternalLink, ArrowRight } from 'lucide-react'
 import { featuredProjects, otherProjects } from '@/constants/projects'
 
-function useInView(threshold = 0.12) {
-  const ref = useRef<HTMLElement>(null)
-  const [inView, setInView] = useState(false)
-  useEffect(() => {
-    if (!ref.current) return
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setInView(true) },
-      { threshold }
-    )
-    obs.observe(ref.current)
-    return () => obs.disconnect()
-  }, [threshold])
-  return { ref, inView }
-}
-
-/* Small SVG: vintage tag */
 const TagIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-    <path
-      d="M1 1h5.5L13 7.5 7.5 13 1 6.5V1z"
-      stroke="currentColor"
-      strokeWidth="1.3"
-      strokeLinejoin="round"
-    />
+  <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+    <path d="M1 1h5.5L13 7.5 7.5 13 1 6.5V1z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
     <circle cx="4" cy="4" r="1.2" fill="currentColor" />
   </svg>
 )
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: i * 0.09, ease: [0.25, 0.46, 0.45, 0.94] },
+  }),
+}
+
+const listVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.06 } },
+}
+
+const listItemVariants = {
+  hidden: { opacity: 0, x: -14 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: 'easeOut' } },
+}
+
 export const FeaturedWork: React.FC = () => {
-  const { ref, inView } = useInView()
   const [activeTab, setActiveTab] = useState<'featured' | 'other'>('featured')
 
   return (
-    <section id="projects" ref={ref as React.RefObject<HTMLElement>} style={{ padding: '5rem 0' }}>
+    <section id="projects" style={{ padding: '5rem 0' }}>
       <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 2rem' }}>
-        {/* Section header */}
-        <div className={`mb-12 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between ${inView ? 'animate-fade-in-up' : 'opacity-0'}`}>
+
+        {/* ── Section header ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.55, ease: 'easeOut' }}
+          style={{ marginBottom: 48, display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: 16 }}
+        >
           <div>
-            <p className="mb-2 text-xs font-black uppercase tracking-[0.28em] text-[#8b7d60]">
+            <p style={{
+              fontSize: 10.5, fontWeight: 900, letterSpacing: '0.28em',
+              textTransform: 'uppercase', color: '#8b7d60', marginBottom: 8,
+              fontFamily: "'Lato', sans-serif",
+            }}>
               Portfolio
             </p>
-            <h2
-              style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, fontSize: 'clamp(30px, 4vw, 44px)', color: '#1a1208', lineHeight: 1.1 }}
-            >
+            <h2 style={{
+              fontFamily: "'Playfair Display', serif", fontWeight: 900,
+              fontSize: 'clamp(30px, 4vw, 44px)', color: '#1a1208', lineHeight: 1.1,
+            }}>
               Selected Work
             </h2>
           </div>
 
           {/* Tab switcher */}
-          <div className="flex rounded-sm border border-[rgba(26,18,8,0.14)] overflow-hidden">
+          <div style={{ display: 'flex', borderRadius: 2, border: '1.5px solid rgba(26,18,8,0.14)', overflow: 'hidden' }}>
             {(['featured', 'other'] as const).map((tab) => (
-              <button
+              <motion.button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-4 py-2 text-xs font-black uppercase tracking-[0.12em] transition-colors ${
-                  activeTab === tab
-                    ? 'bg-[#1a1208] text-[#f5f0e0]'
-                    : 'bg-transparent text-[#8b7d60] hover:text-[#1a1208]'
-                }`}
+                whileTap={{ scale: 0.97 }}
+                style={{
+                  padding: '8px 18px',
+                  fontSize: 11,
+                  fontWeight: 900,
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  cursor: 'pointer',
+                  border: 'none',
+                  background: activeTab === tab ? '#1a1208' : 'transparent',
+                  color: activeTab === tab ? '#f5f0e0' : '#8b7d60',
+                  transition: 'background 0.22s, color 0.22s',
+                  fontFamily: "'Lato', sans-serif",
+                }}
               >
                 {tab === 'featured' ? 'Featured' : 'More Projects'}
-              </button>
+              </motion.button>
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        {/* Featured projects grid */}
-        {activeTab === 'featured' && (
-          <div className="grid gap-6 sm:grid-cols-2">
-            {featuredProjects.map((project, i) => (
-              <article
-                key={project.title}
-                className="card-vintage group flex flex-col justify-between overflow-hidden p-7 transition-shadow duration-200 hover:shadow-md"
-                style={{ animationDelay: `${i * 0.08}s` }}
+        {/* ── Featured grid ── */}
+        <AnimatePresence mode="wait">
+          {activeTab === 'featured' && (
+            <motion.div
+              key="featured"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.3 }}
+              style={{ display: 'grid', gap: 24 }}
+              className="sm:grid-cols-2"
+            >
+              {featuredProjects.map((project, i) => (
+                <motion.article
+                  key={project.title}
+                  custom={i}
+                  variants={cardVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.15 }}
+                  whileHover={{ y: -4, boxShadow: '0 8px 32px rgba(26,18,8,0.1)' }}
+                  transition={{ hover: { duration: 0.2 } }}
+                  className="card-vintage"
+                  style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+                >
+                  <div>
+                    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, marginBottom: 14 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 7, color: '#8b7d60' }}>
+                        <TagIcon />
+                        <span style={{ fontSize: 10.5, fontWeight: 900, letterSpacing: '0.2em', textTransform: 'uppercase', fontFamily: "'Lato', sans-serif" }}>
+                          {project.category}
+                        </span>
+                      </div>
+                      <motion.a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.12 }}
+                        whileTap={{ scale: 0.95 }}
+                        aria-label={`Visit ${project.title}`}
+                        style={{
+                          display: 'flex', alignItems: 'center', justifyContent: 'center',
+                          width: 28, height: 28, borderRadius: 2,
+                          border: '1px solid rgba(26,18,8,0.14)',
+                          color: '#8b7d60', textDecoration: 'none',
+                        }}
+                      >
+                        <ExternalLink size={12} />
+                      </motion.a>
+                    </div>
+
+                    <h3 style={{
+                      fontFamily: "'Playfair Display', serif", fontWeight: 800,
+                      fontSize: 19, color: '#1a1208', lineHeight: 1.25, marginBottom: 7,
+                    }}>
+                      {project.title}
+                    </h3>
+
+                    <p style={{ fontSize: 10.5, fontWeight: 900, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#c9873e', marginBottom: 14, fontFamily: "'Lato', sans-serif" }}>
+                      {project.metric}
+                    </p>
+
+                    <p style={{ fontSize: 13.5, lineHeight: 1.7, color: '#4a3f28', fontFamily: "'Lato', sans-serif" }}>
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <div style={{ marginTop: 20, display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                    {project.technologies.map((tech) => (
+                      <span key={tech} className="skill-pill" style={{ fontSize: 10 }}>{tech}</span>
+                    ))}
+                  </div>
+                </motion.article>
+              ))}
+            </motion.div>
+          )}
+
+          {/* ── Other projects list ── */}
+          {activeTab === 'other' && (
+            <motion.div
+              key="other"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.div
+                variants={listVariants}
+                initial="hidden"
+                animate="visible"
+                style={{ borderTop: '1px solid rgba(26,18,8,0.08)' }}
               >
-                {/* Top bar */}
-                <div>
-                  <div className="mb-4 flex items-start justify-between gap-3">
-                    <div className="flex items-center gap-2 text-[#8b7d60]">
-                      <TagIcon />
-                      <span className="text-[10.5px] font-black uppercase tracking-[0.2em]">
+                {otherProjects.map((project) => (
+                  <motion.div
+                    key={project.title}
+                    variants={listItemVariants}
+                    style={{
+                      display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
+                      gap: 16, padding: '1.25rem 0',
+                      borderBottom: '1px solid rgba(26,18,8,0.08)',
+                    }}
+                  >
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <span style={{ fontSize: 10, fontWeight: 900, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#8b7d60', fontFamily: "'Lato', sans-serif" }}>
                         {project.category}
                       </span>
+                      <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 17, color: '#1a1208', marginTop: 2 }}>
+                        {project.title}
+                      </h3>
+                      <p style={{ fontSize: 13, color: '#4a3f28', lineHeight: 1.7, marginTop: 4, fontFamily: "'Lato', sans-serif" }}>
+                        {project.description}
+                      </p>
+                      {project.technologies && (
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 8 }}>
+                          {project.technologies.map((t) => (
+                            <span key={t} className="skill-pill" style={{ fontSize: 10 }}>{t}</span>
+                          ))}
+                        </div>
+                      )}
                     </div>
-                    <a
+                    <motion.a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex h-7 w-7 items-center justify-center rounded-sm border border-[rgba(26,18,8,0.15)] text-[#8b7d60] transition-colors hover:border-[#1a1208] hover:text-[#1a1208]"
-                      aria-label={`Visit ${project.title}`}
+                      whileHover={{ x: 3 }}
+                      style={{
+                        marginTop: 4, display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0,
+                        fontSize: 11.5, fontWeight: 900, letterSpacing: '0.12em',
+                        textTransform: 'uppercase', color: '#8b7d60', textDecoration: 'none',
+                      }}
                     >
-                      <ExternalLink size={12} />
-                    </a>
-                  </div>
+                      View <ArrowRight size={11} />
+                    </motion.a>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-                  <h3
-                    style={{
-                      fontFamily: "'Playfair Display', serif",
-                      fontWeight: 800,
-                      fontSize: 20,
-                      color: '#1a1208',
-                      lineHeight: 1.25,
-                      marginBottom: 8,
-                    }}
-                  >
-                    {project.title}
-                  </h3>
-
-                  {/* Metric badge */}
-                  <p className="mb-4 text-[10.5px] font-black uppercase tracking-[0.12em] text-[#c9873e]">
-                    {project.metric}
-                  </p>
-
-                  <p className="text-[13.5px] font-normal leading-relaxed text-[#4a3f28]">
-                    {project.description}
-                  </p>
-                </div>
-
-                {/* Tech stack pills */}
-                <div className="mt-6 flex flex-wrap gap-1.5">
-                  {project.technologies.map((tech) => (
-                    <span key={tech} className="skill-pill text-[10px]">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        )}
-
-        {/* Other projects list */}
-        {activeTab === 'other' && (
-          <div className="divide-y divide-[rgba(26,18,8,0.08)]">
-            {otherProjects.map((project, i) => (
-              <div
-                key={project.title}
-                className="flex items-start justify-between gap-4 py-5 animate-fade-in-up"
-                style={{ animationDelay: `${i * 0.06}s` }}
-              >
-                <div className="flex-1">
-                  <div className="mb-1 flex items-center gap-2">
-                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#8b7d60]">
-                      {project.category}
-                    </span>
-                  </div>
-                  <h3
-                    style={{
-                      fontFamily: "'Playfair Display', serif",
-                      fontWeight: 700,
-                      fontSize: 17,
-                      color: '#1a1208',
-                    }}
-                  >
-                    {project.title}
-                  </h3>
-                  <p className="mt-1 text-[13px] text-[#4a3f28] leading-relaxed max-w-lg">
-                    {project.description}
-                  </p>
-                  {project.technologies && (
-                    <div className="mt-2.5 flex flex-wrap gap-1.5">
-                      {project.technologies.map((t) => (
-                        <span key={t} className="skill-pill text-[10px]">
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-1 flex shrink-0 items-center gap-1 text-[11.5px] font-black uppercase tracking-[0.12em] text-[#8b7d60] no-underline transition-colors hover:text-[#1a1208]"
-                >
-                  View <ArrowRight size={11} />
-                </a>
-              </div>
-            ))}
-          </div>
-        )}
-
-        <hr className="divider-dotted mt-16 sm:mt-20" />
+        <motion.hr
+          className="divider-dotted"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+          style={{ marginTop: '4rem', transformOrigin: 'left' }}
+        />
       </div>
     </section>
   )
