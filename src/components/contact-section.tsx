@@ -1,82 +1,110 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Mail, Github, Linkedin, Send, Check } from 'lucide-react'
 
-/* Vintage SVG: envelope + decorative pen */
-const EnvelopeIllustration: React.FC = () => (
+// ─── Intersection Observer hook ───
+function useInView(threshold = 0.15) {
+  const ref = useRef<HTMLElement>(null)
+  const [inView, setInView] = useState(false)
+  useEffect(() => {
+    if (!ref.current) return
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setInView(true) },
+      { threshold }
+    )
+    obs.observe(ref.current)
+    return () => obs.disconnect()
+  }, [threshold])
+  return { ref, inView }
+}
+
+// ─── Clean envelope SVG, fully contained ───
+const EnvelopeSVG: React.FC = () => (
   <svg
-    viewBox="0 0 260 160"
+    viewBox="0 0 300 200"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
-    className="animate-float w-full max-w-[240px] opacity-80"
+    className="animate-float"
+    style={{ width: '100%', maxWidth: 280, display: 'block' }}
   >
     {/* Envelope body */}
-    <rect
-      x="10"
-      y="30"
-      width="240"
-      height="120"
-      rx="4"
-      stroke="#1a1208"
-      strokeWidth="2"
-      fill="rgba(245,240,224,0.8)"
-    />
-    {/* Envelope flap */}
-    <path
-      d="M10 34 L130 98 L250 34"
-      stroke="#1a1208"
-      strokeWidth="2"
-      fill="none"
-      strokeLinejoin="round"
-    />
-    {/* Lower V crease */}
-    <path
-      d="M10 150 L100 90 M250 150 L160 90"
-      stroke="#1a1208"
-      strokeWidth="1.5"
-      opacity="0.35"
-    />
+    <rect x="20" y="40" width="260" height="145" rx="5"
+      stroke="#1a1208" strokeWidth="2" fill="rgba(245,240,224,0.9)" />
+
+    {/* Flap fold */}
+    <path d="M20 45 L150 118 L280 45"
+      stroke="#1a1208" strokeWidth="2" fill="none" strokeLinejoin="round" />
+
+    {/* Bottom fold lines */}
+    <path d="M20 185 L108 112 M280 185 L192 112"
+      stroke="#1a1208" strokeWidth="1.5" opacity="0.25" />
+
     {/* Wax seal */}
-    <circle cx="130" cy="110" r="14" fill="#c9873e" opacity="0.85" />
-    <text x="130" y="115" textAnchor="middle" fill="#f5f0e0" fontSize="11" fontWeight="900" fontFamily="'Playfair Display', serif">
+    <circle cx="150" cy="132" r="18" fill="#c9873e" opacity="0.9" />
+    <circle cx="150" cy="132" r="14" fill="#c9873e" />
+    <text x="150" y="137" textAnchor="middle"
+      fill="#f5f0e0" fontSize="12" fontWeight="900"
+      fontFamily="'Playfair Display', serif">
       TB
     </text>
-    {/* Decorative stamp */}
-    <rect x="192" y="42" width="40" height="30" rx="2" stroke="#1a1208" strokeWidth="1.3" fill="rgba(201,135,62,0.08)" />
-    <text x="212" y="54" textAnchor="middle" fill="#1a1208" fontSize="8" fontWeight="700" fontFamily="'Lato', sans-serif" letterSpacing="1">
+    {/* Seal ring */}
+    <circle cx="150" cy="132" r="16" stroke="#a36830" strokeWidth="1" fill="none" opacity="0.6" />
+
+    {/* Postage stamp */}
+    <rect x="224" y="52" width="44" height="34" rx="2.5"
+      stroke="#1a1208" strokeWidth="1.5" strokeDasharray="2 2"
+      fill="rgba(201,135,62,0.1)" />
+    <text x="246" y="66" textAnchor="middle"
+      fill="#1a1208" fontSize="8" fontWeight="700"
+      fontFamily="'Lato', sans-serif" letterSpacing="0.08em">
       ETH
     </text>
-    <line x1="196" y1="58" x2="228" y2="58" stroke="#1a1208" strokeWidth="0.8" opacity="0.4" />
-    <text x="212" y="68" textAnchor="middle" fill="#1a1208" fontSize="8" fontFamily="'Lato', sans-serif">
+    <line x1="228" y1="71" x2="264" y2="71" stroke="#1a1208" strokeWidth="0.8" opacity="0.4" />
+    <text x="246" y="81" textAnchor="middle"
+      fill="#8b7d60" fontSize="8"
+      fontFamily="'Lato', sans-serif">
       2026
     </text>
-    {/* Corner curl */}
-    <path d="M220 42 Q228 34 236 42" stroke="#1a1208" strokeWidth="1" fill="none" opacity="0.3" />
+
+    {/* Postmark circle */}
+    <circle cx="216" cy="68" r="18" stroke="#1a1208" strokeWidth="1"
+      fill="none" opacity="0.2" />
+    <text x="216" y="65" textAnchor="middle"
+      fill="#1a1208" fontSize="6"
+      fontFamily="'Lato', sans-serif" letterSpacing="0.12em">
+      ADDIS
+    </text>
+    <text x="216" y="73" textAnchor="middle"
+      fill="#1a1208" fontSize="6"
+      fontFamily="'Lato', sans-serif">
+      ABABA
+    </text>
   </svg>
 )
 
 const socialLinks = [
   {
     label: 'GitHub',
-    icon: Github,
+    Icon: Github,
     href: 'https://github.com/onesamket',
     handle: '@onesamket',
   },
   {
     label: 'LinkedIn',
-    icon: Linkedin,
+    Icon: Linkedin,
     href: 'https://linkedin.com/in/ln-onesamket',
     handle: '/in/ln-onesamket',
   },
   {
     label: 'Email',
-    icon: Mail,
+    Icon: Mail,
     href: 'mailto:onesamket@gmail.com',
     handle: 'onesamket@gmail.com',
   },
 ]
 
 export const ContactSection: React.FC = () => {
+  const { ref, inView } = useInView(0.12)
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -85,7 +113,7 @@ export const ContactSection: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (!name || !email || !message) return
-    const subject = encodeURIComponent(`Portfolio message from ${name}`)
+    const subject = encodeURIComponent(`Message from ${name}`)
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)
     window.open(`mailto:onesamket@gmail.com?subject=${subject}&body=${body}`)
     setSent(true)
@@ -93,65 +121,85 @@ export const ContactSection: React.FC = () => {
   }
 
   return (
-    <section id="contact" className="py-20 sm:py-28">
-      <div className="mx-auto max-w-5xl px-5 sm:px-8">
+    <section
+      id="contact"
+      ref={ref as React.RefObject<HTMLElement>}
+      style={{ padding: '5rem 0' }}
+    >
+      <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 2rem' }}>
         {/* Header */}
-        <div className="mb-12 flex flex-col gap-2">
-          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#8b7d60]">
+        <div className={inView ? 'animate-fade-in-up' : 'opacity-0'} style={{ marginBottom: 48 }}>
+          <p style={{
+            fontSize: 10.5, fontWeight: 900, letterSpacing: '0.28em',
+            textTransform: 'uppercase', color: '#8b7d60', marginBottom: 8,
+            fontFamily: "'Lato', sans-serif",
+          }}>
             Contact
           </p>
-          <h2
-            style={{
-              fontFamily: "'Playfair Display', serif",
-              fontWeight: 900,
-              fontSize: 'clamp(30px, 4vw, 44px)',
-              color: '#1a1208',
-              lineHeight: 1.1,
-            }}
-          >
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 900,
+            fontSize: 'clamp(30px, 4vw, 44px)', color: '#1a1208', lineHeight: 1.1,
+          }}>
             Let's build together.
           </h2>
-          <p className="max-w-md text-[14px] leading-relaxed text-[#4a3f28]">
+          <p style={{
+            marginTop: 12, fontSize: 14, lineHeight: 1.75, color: '#4a3f28',
+            maxWidth: 420, fontFamily: "'Lato', sans-serif",
+          }}>
             Open to freelance contracts, full-time roles, and interesting
-            collaborations. Drop a line — I usually respond within 24 hours.
+            collaborations. I usually reply within 24 hours.
           </p>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
-          {/* Contact form */}
-          <form onSubmit={handleSubmit} className="card-vintage p-7">
-            <div className="mb-5 grid gap-4 sm:grid-cols-2">
-              <div className="flex flex-col gap-1.5">
-                <label className="text-[10.5px] font-black uppercase tracking-[0.2em] text-[#8b7d60]">
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Abebe Girma"
-                  className="w-full rounded-sm border border-[rgba(26,18,8,0.15)] bg-transparent px-3 py-2.5 text-sm text-[#1a1208] placeholder-[#8b7d60]/60 outline-none transition-colors focus:border-[#1a1208]"
-                  style={{ fontFamily: "'Lato', sans-serif" }}
-                />
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <label className="text-[10.5px] font-black uppercase tracking-[0.2em] text-[#8b7d60]">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@company.com"
-                  className="w-full rounded-sm border border-[rgba(26,18,8,0.15)] bg-transparent px-3 py-2.5 text-sm text-[#1a1208] placeholder-[#8b7d60]/60 outline-none transition-colors focus:border-[#1a1208]"
-                  style={{ fontFamily: "'Lato', sans-serif" }}
-                />
-              </div>
+        <div style={{ display: 'grid', gap: 40 }}
+          className="lg:grid-cols-[1fr_300px]">
+          {/* Form */}
+          <form
+            onSubmit={handleSubmit}
+            className={`card-vintage ${inView ? 'animate-fade-in-up animate-delay-100' : 'opacity-0'}`}
+            style={{ padding: '2rem' }}
+          >
+            <div style={{ display: 'grid', gap: 16, marginBottom: 16 }}
+              className="sm:grid-cols-2">
+              {[
+                { label: 'Your Name', type: 'text', value: name, onChange: setName, placeholder: 'Abebe Girma' },
+                { label: 'Email', type: 'email', value: email, onChange: setEmail, placeholder: 'you@company.com' },
+              ].map(({ label, type, value, onChange, placeholder }) => (
+                <div key={label} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                  <label style={{
+                    fontSize: 10.5, fontWeight: 900, letterSpacing: '0.2em',
+                    textTransform: 'uppercase', color: '#8b7d60',
+                    fontFamily: "'Lato', sans-serif",
+                  }}>
+                    {label}
+                  </label>
+                  <input
+                    type={type}
+                    required
+                    value={value}
+                    onChange={(e) => onChange(e.target.value)}
+                    placeholder={placeholder}
+                    style={{
+                      background: 'transparent',
+                      border: '1.5px solid rgba(26,18,8,0.14)',
+                      borderRadius: 2,
+                      padding: '10px 12px',
+                      fontSize: 13.5,
+                      color: '#1a1208',
+                      fontFamily: "'Lato', sans-serif",
+                      outline: 'none',
+                    }}
+                  />
+                </div>
+              ))}
             </div>
-            <div className="mb-6 flex flex-col gap-1.5">
-              <label className="text-[10.5px] font-black uppercase tracking-[0.2em] text-[#8b7d60]">
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 24 }}>
+              <label style={{
+                fontSize: 10.5, fontWeight: 900, letterSpacing: '0.2em',
+                textTransform: 'uppercase', color: '#8b7d60',
+                fontFamily: "'Lato', sans-serif",
+              }}>
                 Message
               </label>
               <textarea
@@ -160,51 +208,58 @@ export const ContactSection: React.FC = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Tell me about your project or idea..."
-                className="w-full resize-none rounded-sm border border-[rgba(26,18,8,0.15)] bg-transparent px-3 py-2.5 text-sm text-[#1a1208] placeholder-[#8b7d60]/60 outline-none transition-colors focus:border-[#1a1208]"
-                style={{ fontFamily: "'Lato', sans-serif" }}
+                style={{
+                  resize: 'none',
+                  background: 'transparent',
+                  border: '1.5px solid rgba(26,18,8,0.14)',
+                  borderRadius: 2,
+                  padding: '10px 12px',
+                  fontSize: 13.5,
+                  color: '#1a1208',
+                  fontFamily: "'Lato', sans-serif",
+                  outline: 'none',
+                }}
               />
             </div>
-            <button type="submit" className="btn-ink w-full justify-center sm:w-auto">
-              {sent ? (
-                <>
-                  <Check size={14} /> Email Client Opened!
-                </>
-              ) : (
-                <>
-                  <Send size={14} /> Send Message
-                </>
-              )}
+
+            <button type="submit" className="btn-ink" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+              {sent ? <Check size={14} /> : <Send size={14} />}
+              {sent ? 'Email Client Opened!' : 'Send Message'}
             </button>
           </form>
 
-          {/* Right column: illustration + social */}
-          <div className="flex flex-col gap-6">
-            <div className="flex items-center justify-center">
-              <EnvelopeIllustration />
+          {/* Right panel */}
+          <div
+            className={inView ? 'animate-fade-in-up animate-delay-200' : 'opacity-0'}
+            style={{ display: 'flex', flexDirection: 'column', gap: 24 }}
+          >
+            {/* Envelope */}
+            <div style={{ display: 'flex', justifyContent: 'center', padding: '1rem 0' }}>
+              <EnvelopeSVG />
             </div>
 
-            <div className="card-vintage p-5">
-              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.28em] text-[#8b7d60]">
+            {/* Social links */}
+            <div className="card-vintage" style={{ padding: '1.25rem 1.5rem' }}>
+              <p style={{
+                fontSize: 10, fontWeight: 900, letterSpacing: '0.28em',
+                textTransform: 'uppercase', color: '#8b7d60', marginBottom: 16,
+                fontFamily: "'Lato', sans-serif",
+              }}>
                 Also find me on
               </p>
-              <div className="flex flex-col gap-3">
-                {socialLinks.map(({ label, icon: Icon, href, handle }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-[#1a1208] no-underline transition-opacity hover:opacity-70"
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                {socialLinks.map(({ label, Icon, href, handle }) => (
+                  <a key={label} href={href}
+                    target="_blank" rel="noopener noreferrer"
+                    style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', color: '#1a1208' }}
+                    className="group"
                   >
-                    <Icon size={16} strokeWidth={2} />
+                    <Icon size={15} strokeWidth={2} style={{ color: '#8b7d60', flexShrink: 0 }} />
                     <div>
-                      <p className="text-[10.5px] font-black uppercase tracking-[0.18em] text-[#8b7d60]">
+                      <p style={{ fontSize: 10.5, fontWeight: 900, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#8b7d60', fontFamily: "'Lato', sans-serif", margin: 0 }}>
                         {label}
                       </p>
-                      <p
-                        className="text-[13px] font-bold text-[#1a1208]"
-                        style={{ fontFamily: "'Lato', sans-serif" }}
-                      >
+                      <p style={{ fontSize: 13, fontWeight: 700, color: '#1a1208', fontFamily: "'Lato', sans-serif", margin: 0 }}>
                         {handle}
                       </p>
                     </div>

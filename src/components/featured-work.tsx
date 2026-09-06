@@ -1,6 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { ExternalLink, ArrowRight } from 'lucide-react'
 import { featuredProjects, otherProjects } from '@/constants/projects'
+
+function useInView(threshold = 0.12) {
+  const ref = useRef<HTMLElement>(null)
+  const [inView, setInView] = useState(false)
+  useEffect(() => {
+    if (!ref.current) return
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setInView(true) },
+      { threshold }
+    )
+    obs.observe(ref.current)
+    return () => obs.disconnect()
+  }, [threshold])
+  return { ref, inView }
+}
 
 /* Small SVG: vintage tag */
 const TagIcon = () => (
@@ -16,13 +31,14 @@ const TagIcon = () => (
 )
 
 export const FeaturedWork: React.FC = () => {
+  const { ref, inView } = useInView()
   const [activeTab, setActiveTab] = useState<'featured' | 'other'>('featured')
 
   return (
-    <section id="projects" className="py-20 sm:py-28">
-      <div className="mx-auto max-w-5xl px-5 sm:px-8">
+    <section id="projects" ref={ref as React.RefObject<HTMLElement>} style={{ padding: '5rem 0' }}>
+      <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 2rem' }}>
         {/* Section header */}
-        <div className="mb-12 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div className={`mb-12 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between ${inView ? 'animate-fade-in-up' : 'opacity-0'}`}>
           <div>
             <p className="mb-2 text-xs font-black uppercase tracking-[0.28em] text-[#8b7d60]">
               Portfolio

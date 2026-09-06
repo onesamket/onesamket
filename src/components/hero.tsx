@@ -1,230 +1,251 @@
-import React, { useState } from 'react'
-import { Check, Copy, ArrowRight } from 'lucide-react'
+import React, { useEffect, useRef, useState } from 'react'
 
-/* ─── Vintage SVG: person tossing a paper plane ─── */
+// ─── Intersection Observer hook for scroll animations ───
+function useInView(threshold = 0.18) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [inView, setInView] = useState(false)
+  useEffect(() => {
+    if (!ref.current) return
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setInView(true) },
+      { threshold }
+    )
+    obs.observe(ref.current)
+    return () => obs.disconnect()
+  }, [threshold])
+  return { ref, inView }
+}
+
+// ─── Clean paper-plane SVG illustration (centred, no clipping) ───
 const HeroIllustration: React.FC = () => (
   <svg
-    viewBox="0 0 320 260"
+    viewBox="0 0 360 320"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
-    className="animate-fade-in animate-delay-400 w-full max-w-xs sm:max-w-sm"
+    style={{ width: '100%', maxWidth: 360, display: 'block' }}
   >
-    {/* Ground shadow */}
-    <ellipse cx="120" cy="240" rx="72" ry="8" fill="rgba(26,18,8,0.07)" />
+    {/* ── Ground shadow ── */}
+    <ellipse cx="150" cy="298" rx="80" ry="9" fill="rgba(26,18,8,0.07)" />
 
-    {/* Paper plane trajectory (dashed scribble) */}
+    {/* ── Dashed flight path ── */}
     <path
-      d="M 155 120 Q 200 80 260 45 Q 290 28 310 18"
+      d="M 175 128 C 210 95 255 68 310 40"
       stroke="#1a1208"
       strokeWidth="1.5"
-      strokeDasharray="5 5"
-      opacity="0.35"
+      strokeDasharray="5 6"
+      opacity="0.3"
     />
 
-    {/* Paper plane */}
-    <g className="animate-float" style={{ transformOrigin: '270px 60px' }}>
-      <path
-        d="M260 62 L295 48 L278 72 Z"
-        stroke="#1a1208"
-        strokeWidth="1.5"
-        fill="rgba(201,135,62,0.15)"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M278 72 L265 68 L260 62 Z"
-        stroke="#1a1208"
-        strokeWidth="1.2"
-        fill="rgba(201,135,62,0.08)"
-      />
-      <line x1="270" y1="60" x2="278" y2="72" stroke="#1a1208" strokeWidth="0.8" opacity="0.5" />
+    {/* ── Paper plane (floating) ── */}
+    <g className="animate-float" style={{ transformOrigin: '305px 46px' }}>
+      <path d="M288 55 L330 36 L310 64 Z" stroke="#1a1208" strokeWidth="1.8"
+        fill="rgba(201,135,62,0.18)" strokeLinejoin="round" />
+      <path d="M310 64 L294 58 L288 55 Z" stroke="#1a1208" strokeWidth="1.4"
+        fill="rgba(201,135,62,0.1)" />
+      <line x1="300" y1="50" x2="310" y2="64" stroke="#1a1208" strokeWidth="0.9" opacity="0.4" />
     </g>
 
-    {/* Vintage character — body */}
-    <g className="animate-walk" style={{ transformOrigin: '120px 180px' }}>
-      {/* Feet */}
-      <ellipse cx="100" cy="232" rx="12" ry="5" fill="#1a1208" opacity="0.9" />
-      <ellipse cx="136" cy="234" rx="10" ry="4" fill="#1a1208" opacity="0.9" />
+    {/* ── Person ── */}
+    {/* Shadow feet */}
+    <ellipse cx="130" cy="291" rx="14" ry="5" fill="#1a1208" opacity="0.85" />
+    <ellipse cx="170" cy="293" rx="11" ry="4.5" fill="#1a1208" opacity="0.85" />
 
-      {/* Legs */}
-      <path d="M108 220 Q102 228 100 232" stroke="#1a1208" strokeWidth="7" strokeLinecap="round" />
-      <path d="M120 218 Q130 227 136 234" stroke="#1a1208" strokeWidth="7" strokeLinecap="round" />
+    {/* Legs */}
+    <path d="M138 272 Q132 282 130 291" stroke="#1a1208" strokeWidth="8" strokeLinecap="round" />
+    <path d="M152 270 Q162 280 170 293" stroke="#1a1208" strokeWidth="8" strokeLinecap="round" />
 
-      {/* Trousers */}
-      <rect x="97" y="190" width="36" height="34" rx="4" fill="#1a1208" opacity="0.88" />
+    {/* Trousers */}
+    <rect x="126" y="240" width="40" height="36" rx="5" fill="#1a1208" opacity="0.88" />
 
-      {/* Body / jacket */}
-      <rect x="92" y="148" width="46" height="48" rx="6" fill="#4a3f28" />
-      <path d="M115 148 L115 196" stroke="#f5f0e0" strokeWidth="1" opacity="0.3" />
+    {/* Jacket body */}
+    <rect x="118" y="192" width="52" height="54" rx="7" fill="#3d3426" />
+    {/* Jacket centre seam */}
+    <line x1="144" y1="193" x2="144" y2="244" stroke="#f5f0e0" strokeWidth="1" opacity="0.25" />
 
-      {/* Collar + tie */}
-      <path d="M110 148 L115 162 L120 148" fill="#c9873e" opacity="0.9" />
+    {/* Collar / tie */}
+    <path d="M137 193 L144 210 L151 193" fill="#c9873e" />
 
-      {/* Left arm (raised – throwing) */}
-      <path
-        d="M92 158 Q74 138 62 120"
-        stroke="#4a3f28"
-        strokeWidth="14"
-        strokeLinecap="round"
-      />
-      <path
-        d="M62 120 Q58 116 56 112"
-        stroke="#c9a075"
-        strokeWidth="10"
-        strokeLinecap="round"
-      />
+    {/* Left arm — raised, throwing */}
+    <path d="M118 202 Q96 174 78 152" stroke="#3d3426" strokeWidth="16" strokeLinecap="round" />
+    {/* Forearm skin */}
+    <path d="M78 152 Q72 145 66 138" stroke="#c9a075" strokeWidth="12" strokeLinecap="round" />
 
-      {/* Right arm (down) */}
-      <path
-        d="M138 162 Q148 174 150 186"
-        stroke="#4a3f28"
-        strokeWidth="13"
-        strokeLinecap="round"
-      />
+    {/* Right arm — relaxed down */}
+    <path d="M170 208 Q182 224 184 238" stroke="#3d3426" strokeWidth="14" strokeLinecap="round" />
 
-      {/* Hand at tip of throwing arm */}
-      <circle cx="56" cy="110" r="7" fill="#c9a075" />
+    {/* Throwing hand */}
+    <circle cx="63" cy="135" r="9" fill="#c9a075" />
 
-      {/* Neck */}
-      <rect x="109" y="134" width="12" height="16" rx="4" fill="#c9a075" />
+    {/* Neck */}
+    <rect x="137" y="178" width="14" height="18" rx="5" fill="#c9a075" />
 
-      {/* Head */}
-      <ellipse cx="115" cy="122" rx="22" ry="24" fill="#c9a075" />
+    {/* Head */}
+    <ellipse cx="144" cy="162" rx="26" ry="28" fill="#c9a075" />
 
-      {/* Hair (hatched top) */}
-      <path d="M95 110 Q115 92 135 110" stroke="#1a1208" strokeWidth="2.5" fill="none" />
-      <path d="M97 106 Q115 90 133 106" stroke="#1a1208" strokeWidth="1.5" fill="none" opacity="0.5" />
+    {/* Hair */}
+    <path d="M120 148 Q144 126 168 148" stroke="#1a1208" strokeWidth="3" fill="rgba(26,18,8,0.9)" />
+    <path d="M118 144 Q144 122 170 144" stroke="#1a1208" strokeWidth="1.5" fill="none" opacity="0.4" />
 
-      {/* Eyes */}
-      <ellipse cx="108" cy="122" rx="3.5" ry="4" fill="#1a1208" />
-      <ellipse cx="122" cy="122" rx="3.5" ry="4" fill="#1a1208" />
-      {/* Eye shine */}
-      <circle cx="107" cy="120" r="1" fill="white" />
-      <circle cx="121" cy="120" r="1" fill="white" />
+    {/* Eyes */}
+    <ellipse cx="136" cy="162" rx="4" ry="4.5" fill="#1a1208" />
+    <ellipse cx="152" cy="162" rx="4" ry="4.5" fill="#1a1208" />
+    <circle cx="135" cy="160" r="1.2" fill="white" />
+    <circle cx="151" cy="160" r="1.2" fill="white" />
 
-      {/* Nose */}
-      <path d="M115 124 Q117 130 115 132" stroke="#a36830" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+    {/* Nose */}
+    <path d="M144 165 Q147 172 144 174" stroke="#a36830" strokeWidth="1.5"
+      fill="none" strokeLinecap="round" />
 
-      {/* Smile */}
-      <path d="M107 134 Q115 139 123 134" stroke="#1a1208" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+    {/* Smile */}
+    <path d="M136 177 Q144 183 152 177" stroke="#1a1208" strokeWidth="1.8"
+      fill="none" strokeLinecap="round" />
 
-      {/* Moustache */}
-      <path d="M107 128 Q111 131 115 129 Q119 131 123 128" stroke="#1a1208" strokeWidth="1.8" fill="none" strokeLinecap="round" />
+    {/* Moustache */}
+    <path d="M136 170 Q140 173 144 171 Q148 173 152 170"
+      stroke="#1a1208" strokeWidth="2" fill="none" strokeLinecap="round" />
 
-      {/* Hat */}
-      <rect x="95" y="102" width="40" height="6" rx="2" fill="#1a1208" />
-      <rect x="100" y="84" width="30" height="20" rx="3" fill="#1a1208" />
+    {/* Hat brim */}
+    <rect x="118" y="136" width="52" height="7" rx="2.5" fill="#1a1208" />
+    {/* Hat crown */}
+    <rect x="124" y="112" width="40" height="26" rx="4" fill="#1a1208" />
+    {/* Hat band */}
+    <rect x="124" y="130" width="40" height="6" rx="1" fill="#c9873e" opacity="0.6" />
 
-      {/* Books / laptop on ground */}
-      <rect x="56" y="224" width="44" height="8" rx="1.5" fill="#4a3f28" />
-      <rect x="58" y="216" width="40" height="10" rx="1.5" fill="#c9873e" opacity="0.8" />
-      <rect x="60" y="208" width="36" height="10" rx="1.5" fill="#8b7d60" opacity="0.7" />
-    </g>
+    {/* Books on ground */}
+    <rect x="72" y="282" width="50" height="9" rx="2" fill="#3d3426" />
+    <rect x="74" y="273" width="46" height="11" rx="2" fill="#c9873e" opacity="0.75" />
+    <rect x="76" y="264" width="42" height="11" rx="2" fill="#8b7d60" opacity="0.65" />
+    {/* Book details */}
+    <line x1="74" y1="278" x2="74" y2="291" stroke="#f5f0e0" strokeWidth="1" opacity="0.3" />
+    <line x1="76" y1="268" x2="76" y2="283" stroke="#f5f0e0" strokeWidth="1" opacity="0.3" />
   </svg>
 )
 
 export const Hero: React.FC = () => {
-  const [copied, setCopied] = useState(false)
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText('onesamket@gmail.com')
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2200)
-  }
+  const { ref, inView } = useInView(0.1)
 
   return (
     <section
       id="about"
-      className="pt-28 sm:pt-36 pb-20 sm:pb-28"
+      ref={ref}
+      style={{ paddingTop: '7rem', paddingBottom: '5rem' }}
     >
-      <div className="mx-auto max-w-5xl px-5 sm:px-8">
-        {/* Two-column layout: text left, illustration right */}
-        <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:justify-between">
-          {/* TEXT */}
-          <div className="flex-1 lg:max-w-xl">
+      <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 2rem' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '3rem',
+          }}
+          className="lg:flex-row lg:items-start lg:justify-between"
+        >
+          {/* ── TEXT COLUMN ── */}
+          <div style={{ flex: 1, maxWidth: 560 }}>
             {/* Eyebrow */}
             <p
-              className="animate-fade-in-up mb-4 text-xs font-black uppercase tracking-[0.28em] text-[#8b7d60]"
+              className={inView ? 'animate-fade-in-up' : 'opacity-0'}
+              style={{
+                fontSize: 10.5,
+                fontWeight: 900,
+                letterSpacing: '0.26em',
+                textTransform: 'uppercase',
+                color: '#8b7d60',
+                marginBottom: 16,
+                fontFamily: "'Lato', sans-serif",
+              }}
             >
               Full-Stack Developer · MERN · PostgreSQL · Prisma · React Native
             </p>
 
-            {/* Main headline — Playfair Display editorial */}
+            {/* Headline */}
             <h1
-              className="animate-fade-in-up animate-delay-100"
+              className={inView ? 'animate-fade-in-up animate-delay-100' : 'opacity-0'}
               style={{
                 fontFamily: "'Playfair Display', serif",
-                fontSize: 'clamp(44px, 7vw, 80px)',
+                fontSize: 'clamp(46px, 7vw, 82px)',
                 fontWeight: 900,
-                lineHeight: 1.05,
+                lineHeight: 1.04,
                 letterSpacing: '-0.015em',
                 color: '#1a1208',
+                margin: 0,
               }}
             >
               Build fast.
               <br />
-              <span style={{ color: '#c9873e' }}>Ship clean.</span>
+              <em style={{ color: '#c9873e', fontStyle: 'italic' }}>Ship clean.</em>
             </h1>
 
-            {/* Sub-headline */}
+            {/* Body */}
             <p
-              className="animate-fade-in-up animate-delay-200 mt-6 max-w-lg text-base font-normal leading-relaxed text-[#4a3f28]"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              className={inView ? 'animate-fade-in-up animate-delay-200' : 'opacity-0'}
+              style={{
+                marginTop: 24,
+                fontSize: 15,
+                lineHeight: 1.75,
+                color: '#4a3f28',
+                fontFamily: "'Lato', sans-serif",
+                maxWidth: 480,
+              }}
             >
               Co-Founder of{' '}
-              <strong className="font-black text-[#1a1208]">MeadMenus</strong> and
-              Founder & Product Engineer at{' '}
-              <strong className="font-black text-[#1a1208]">Siket</strong>. I
-              engineer high-performance web applications, AI-powered workspaces,
-              and fluid mobile apps for teams and startups.
+              <strong style={{ color: '#1a1208', fontWeight: 900 }}>MeadMenus</strong> and
+              Founder at{' '}
+              <strong style={{ color: '#1a1208', fontWeight: 900 }}>Siket</strong>.
+              I engineer high-performance web apps, AI-powered workspaces, and
+              smooth mobile experiences for startups.
             </p>
 
-            {/* Quick context badges */}
-            <div className="animate-fade-in-up animate-delay-300 mt-8 flex flex-wrap gap-2">
+            {/* Badges */}
+            <div
+              className={inView ? 'animate-fade-in-up animate-delay-300' : 'opacity-0'}
+              style={{ marginTop: 28, display: 'flex', flexWrap: 'wrap', gap: 8 }}
+            >
               {[
-                '⚡ Co-Founder @ MeadMenus',
-                '🚀 Founder @ Siket',
-                '🎓 B.Sc. IT · Haramaya Univ.',
-                '📍 Addis Ababa & Remote',
+                'Co-Founder @ MeadMenus',
+                'Founder @ Siket',
+                'B.Sc. IT · Haramaya Univ.',
+                'Addis Ababa & Remote',
               ].map((badge) => (
-                <span
-                  key={badge}
-                  className="skill-pill"
-                  style={{ fontFamily: "'Lato', sans-serif" }}
-                >
+                <span key={badge} className="skill-pill" style={{ fontFamily: "'Lato', sans-serif" }}>
                   {badge}
                 </span>
               ))}
             </div>
 
             {/* CTAs */}
-            <div className="animate-fade-in-up animate-delay-400 mt-8 flex flex-wrap items-center gap-3">
+            <div
+              className={inView ? 'animate-fade-in-up animate-delay-400' : 'opacity-0'}
+              style={{ marginTop: 36, display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center' }}
+            >
               <a href="#projects" className="btn-ink">
                 View My Work
-                <ArrowRight size={14} />
               </a>
               <a href="#contact" className="btn-outline">
                 Get In Touch
               </a>
-              <button
-                onClick={handleCopyEmail}
-                className="btn-outline"
-                style={{ gap: '6px', paddingLeft: 16, paddingRight: 16 }}
-              >
-                {copied ? <Check size={13} /> : <Copy size={13} />}
-                {copied ? 'Copied!' : 'Copy Email'}
-              </button>
             </div>
           </div>
 
-          {/* ILLUSTRATION */}
-          <div className="flex items-center justify-center lg:w-80">
+          {/* ── ILLUSTRATION COLUMN ── */}
+          <div
+            className={inView ? 'animate-fade-in animate-delay-300' : 'opacity-0'}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '100%',
+              maxWidth: 340,
+              flexShrink: 0,
+            }}
+          >
             <HeroIllustration />
           </div>
         </div>
 
-        {/* Dotted divider */}
-        <hr className="divider-dotted mt-16 sm:mt-20" />
+        {/* Divider */}
+        <hr className="divider-dotted" style={{ marginTop: '4rem' }} />
       </div>
     </section>
   )

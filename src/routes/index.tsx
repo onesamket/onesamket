@@ -12,82 +12,118 @@ export const Route = createFileRoute('/')({
 
 function HomePage() {
   return (
-    <div
-      className="min-h-screen"
-      style={{ background: '#f5f0e0', color: '#1a1208' }}
-    >
-      {/* ── Global Navigation ── */}
+    <div style={{ minHeight: '100vh', background: '#f5f0e0', color: '#1a1208' }}>
+      {/* Navigation */}
       <Navbar />
 
-      {/* ── One-Flow Sections ── */}
+      {/* One-flow content */}
       <main>
-        {/* 1. Hero */}
         <Hero />
-
-        {/* 2. Projects / Featured Work */}
         <FeaturedWork />
-
-        {/* 3. Work Experience */}
         <ExperienceTimeline />
-
-        {/* 4. Skills */}
         <SkillsMatrix />
-
-        {/* 5. Contact */}
         <ContactSection />
 
-        {/* ── Footer ── */}
+        {/* Footer */}
         <footer
-          className="border-t py-10 text-center"
           style={{
-            borderColor: 'rgba(26,18,8,0.12)',
+            borderTop: '1px solid rgba(26,18,8,0.1)',
             background: '#ede8d4',
+            padding: '3rem 0 2rem',
           }}
         >
-          <div className="mx-auto max-w-5xl px-5 sm:px-8">
-            {/* Wordmark */}
-            <p
-              className="mb-5"
+          <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 2rem' }}>
+            {/* Top row: wordmark + links */}
+            <div
               style={{
-                fontFamily: "'Playfair Display', serif",
-                fontSize: 20,
-                fontWeight: 900,
-                color: '#1a1208',
+                display: 'flex',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '1.5rem',
+                marginBottom: '2rem',
+                paddingBottom: '2rem',
+                borderBottom: '1px dashed rgba(26,18,8,0.12)',
               }}
             >
-              TB.
-            </p>
+              {/* Wordmark */}
+              <button
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: 26,
+                  fontWeight: 900,
+                  color: '#1a1208',
+                  letterSpacing: '-0.02em',
+                  padding: 0,
+                }}
+              >
+                TB.
+              </button>
 
-            {/* Links */}
-            <div className="mb-5 flex flex-wrap justify-center gap-x-7 gap-y-2">
-              {[
-                { label: 'Back to Top', href: '#about', onClick: () => window.scrollTo({ top: 0, behavior: 'smooth' }) },
-                { label: 'GitHub', href: 'https://github.com/onesamket' },
-                { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ln-onesamket/' },
-                { label: 'Email', href: 'mailto:onesamket@gmail.com' },
-              ].map(({ label, href, onClick }) => (
-                <a
-                  key={label}
-                  href={href}
-                  onClick={onClick}
-                  target={href.startsWith('http') ? '_blank' : undefined}
-                  rel={href.startsWith('http') ? 'noreferrer' : undefined}
-                  className="nav-link"
-                  style={{ fontSize: 11 }}
-                >
-                  {label}
-                </a>
-              ))}
+              {/* Nav links */}
+              <nav style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem 2rem' }}>
+                {[
+                  { label: 'GitHub', href: 'https://github.com/onesamket' },
+                  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ln-onesamket/' },
+                  { label: 'Email', href: 'mailto:onesamket@gmail.com' },
+                  { label: 'Back to Top', href: '#', onClick: () => window.scrollTo({ top: 0, behavior: 'smooth' }) },
+                ].map(({ label, href, onClick }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    onClick={onClick}
+                    target={href.startsWith('http') ? '_blank' : undefined}
+                    rel={href.startsWith('http') ? 'noreferrer' : undefined}
+                    style={{
+                      fontSize: 11,
+                      fontWeight: 800,
+                      letterSpacing: '0.1em',
+                      textTransform: 'uppercase',
+                      textDecoration: 'none',
+                      color: '#4a3f28',
+                      transition: 'color 0.18s',
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#1a1208')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#4a3f28')}
+                  >
+                    {label}
+                  </a>
+                ))}
+              </nav>
             </div>
 
-            {/* Copyright */}
-            <p
-              className="text-[11.5px]"
-              style={{ color: '#8b7d60', fontFamily: "'Lato', sans-serif" }}
+            {/* Bottom row: copy + stack note */}
+            <div
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '0.75rem',
+              }}
             >
-              © {new Date().getFullYear()} Tewodros Birhanu · Full-Stack &
-              Product Engineer · Built with React, TypeScript & TanStack
-            </p>
+              <p style={{
+                fontSize: 11.5,
+                color: '#8b7d60',
+                fontFamily: "'Lato', sans-serif",
+                margin: 0,
+              }}>
+                &copy; {new Date().getFullYear()} Tewodros Birhanu · Full-Stack & Product Engineer
+              </p>
+              <p style={{
+                fontSize: 11,
+                color: '#8b7d60',
+                fontFamily: "'Lato', sans-serif",
+                margin: 0,
+                letterSpacing: '0.04em',
+              }}>
+                Built with React · TypeScript · TanStack
+              </p>
+            </div>
           </div>
         </footer>
       </main>

@@ -1,5 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { experiences } from '@/constants/experience'
+
+function useInView(threshold = 0.1) {
+  const ref = useRef<HTMLElement>(null)
+  const [inView, setInView] = useState(false)
+  useEffect(() => {
+    if (!ref.current) return
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setInView(true) },
+      { threshold }
+    )
+    obs.observe(ref.current)
+    return () => obs.disconnect()
+  }, [threshold])
+  return { ref, inView }
+}
 
 /* Vintage briefcase SVG */
 const BriefcaseIcon = () => (
@@ -11,13 +26,18 @@ const BriefcaseIcon = () => (
 )
 
 export const ExperienceTimeline: React.FC = () => {
+  const { ref, inView } = useInView()
   const [expanded, setExpanded] = useState<number | null>(0)
 
   return (
-    <section id="experience" className="py-20 sm:py-28">
-      <div className="mx-auto max-w-5xl px-5 sm:px-8">
+    <section
+      id="experience"
+      ref={ref as React.RefObject<HTMLElement>}
+      style={{ padding: '5rem 0' }}
+    >
+      <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 2rem' }}>
         {/* Section header */}
-        <div className="mb-12">
+        <div className={`mb-12 ${inView ? 'animate-fade-in-up' : 'opacity-0'}`}>
           <p className="mb-2 text-xs font-black uppercase tracking-[0.28em] text-[#8b7d60]">
             Career
           </p>
