@@ -8,31 +8,45 @@ interface ErrorStateProps {
 }
 
 export function ErrorState({
-  title = 'Oops! Something went wrong',
-  message = "We encountered an unexpected issue. Don't worry, it happens to the best of us.",
+  title = 'Something went wrong',
+  message = "We hit an unexpected snag. Don't worry — refresh or try again.",
   className = '',
   onRetry,
 }: ErrorStateProps) {
   return (
     <div
-      className={`flex min-h-[320px] flex-col items-center justify-center border border-[#0759bd]/35 bg-[#f4f0e8] p-10 text-center text-[#073f8f] ${className}`}
+      className={`flex min-h-[320px] flex-col items-center justify-center bg-[#f5f0e0] p-10 text-center ${className}`}
+      style={{ borderTop: '3px solid rgba(201,135,62,0.4)' }}
     >
-      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-md border border-[#0759bd]/35 text-[#0759bd]">
-        <AlertTriangle size={28} strokeWidth={2} />
+      <div
+        className="mb-5 flex h-14 w-14 items-center justify-center rounded-sm"
+        style={{ border: '1.5px dashed rgba(26,18,8,0.25)', color: '#c9873e' }}
+      >
+        <AlertTriangle size={26} strokeWidth={1.8} />
       </div>
 
-      <h3 className="text-2xl font-black text-[#0759bd]">{title}</h3>
+      <p
+        style={{
+          fontFamily: "'Playfair Display', serif",
+          fontSize: 24,
+          fontWeight: 800,
+          color: '#1a1208',
+          marginBottom: 10,
+        }}
+      >
+        {title}
+      </p>
 
-      <p className="mt-3 max-w-sm text-sm font-medium leading-6 text-[#244f8f]">
+      <p
+        className="max-w-sm text-sm leading-6"
+        style={{ color: '#4a3f28', fontFamily: "'Lato', sans-serif" }}
+      >
         {message}
       </p>
 
       {onRetry && (
-        <button
-          onClick={onRetry}
-          className="mt-7 inline-flex items-center gap-2 rounded-md bg-[#0759bd] px-5 py-3 text-sm font-extrabold uppercase tracking-[0.18em] text-[#f4f0e8] hover:bg-[#073f8f]"
-        >
-          <RefreshCcw size={16} />
+        <button onClick={onRetry} className="btn-ink mt-7">
+          <RefreshCcw size={14} />
           Try Again
         </button>
       )}

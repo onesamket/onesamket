@@ -1,4 +1,4 @@
-import { Check, MapPin } from 'lucide-react'
+import { Check, ExternalLink, MapPin } from 'lucide-react'
 import React, { useState } from 'react'
 import { experiences } from '@/constants/experience'
 
@@ -8,23 +8,23 @@ const hardSkills = [
   'TypeScript',
   'Next.js',
   'Node.js',
-  'NestJS',
-  'Tailwind CSS',
-  'PostgreSQL',
-  'GraphQL',
+  'MEAN Stack',
+  'TanStack Router',
   'WebRTC',
-  'Docker',
-  'Git',
-  'TanStack Query',
+  'Prisma ORM',
+  'Supabase',
+  'Tailwind CSS',
+  'Docker & CI/CD',
+  'REST & GraphQL',
 ]
 
 const softSkills = [
+  'Start-up Leadership',
+  'Product Strategy',
   'Clean Architecture',
   'Core Web Vitals',
   'Problem Solving',
-  'Team Collaboration',
-  'Time Management',
-  'Fast Learner',
+  'UX Engineering',
 ]
 
 export const EditorialCV: React.FC = () => {
@@ -168,13 +168,17 @@ export const EditorialCV: React.FC = () => {
                   I aspire to roles as{' '}
                   <strong className="font-black text-[#1a3be8]">
                     Full-Stack Developer
-                  </strong>{' '}
-                  or{' '}
+                  </strong>
+                  ,{' '}
+                  <strong className="font-black text-[#1a3be8]">
+                    Product Engineer
+                  </strong>
+                  , or{' '}
                   <strong className="font-black text-[#1a3be8]">
                     Frontend Engineer
                   </strong>
-                  , focusing on high-performance web products, typed systems,
-                  and modern design architectures.
+                  , focusing on high-performance web applications, AI-enabled
+                  features, and modern UI systems.
                 </p>
                 <p>
                   I also appreciate roles as{' '}
@@ -200,7 +204,7 @@ export const EditorialCV: React.FC = () => {
                   d="M 100, 100 m -74, 0 a 74,74 0 1,1 148,0 a 74,74 0 1,1 -148,0"
                   fill="none"
                 />
-                <text className="fill-[#1a3be8] text-[10.5px] font-black uppercase tracking-[0.26em]">
+                <text className="fill-[#1a3be8] text-[10px] font-black uppercase tracking-[0.26em]">
                   <textPath href="#stampCircle" startOffset="0%">
                     · FULL-STACK · REACT NATIVE · TYPESCRIPT · ETHIOPIA ·
                   </textPath>
@@ -242,7 +246,7 @@ export const EditorialCV: React.FC = () => {
                 <p className="mt-2.5 text-xs font-medium leading-relaxed text-[#57648f]">
                   Rigorous focus on software engineering fundamentals,
                   relational and distributed databases, computer networks, and
-                  scalable web application architecture.
+                  scalable web and mobile application architecture.
                 </p>
               </div>
             </div>
@@ -265,9 +269,22 @@ export const EditorialCV: React.FC = () => {
                   {/* Experience Content */}
                   <div>
                     <div className="flex flex-wrap items-baseline justify-between gap-2">
-                      <h3 className="text-lg font-black text-[#141a33]">
-                        {exp.company}
-                      </h3>
+                      <div className="flex items-center gap-2">
+                        <h3 className="text-lg font-black text-[#141a33]">
+                          {exp.company}
+                        </h3>
+                        {exp.link && (
+                          <a
+                            href={exp.link}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-[#1a3be8] hover:underline"
+                            aria-label={`Open ${exp.company} website`}
+                          >
+                            <ExternalLink size={13} />
+                          </a>
+                        )}
+                      </div>
                       <span className="text-xs font-black text-[#1a3be8]">
                         {exp.period}
                       </span>
@@ -415,17 +432,19 @@ export const EditorialCV: React.FC = () => {
             {/* Outcome-oriented Bio with Highlight Banner (Directly from reference image) */}
             <div className="mt-6 space-y-3 text-sm font-medium leading-relaxed text-[#232d52]">
               <p>
+                Co-Founder of MeadMenus and Founder & Product Engineer at Siket.
                 I am a developer with{' '}
                 <span className="rounded bg-[#1a3be8] px-2 py-0.5 font-bold text-white">
                   solid experience
                 </span>{' '}
-                in full-stack web and cross-platform mobile engineering.
-                Throughout my career, I have refined my skills in TypeScript,
-                React, React Native, and robust backend API integration.
+                in full-stack web, mobile, and AI products. Throughout my
+                career, I have refined my skills in TypeScript, React, React
+                Native, and scalable backend architecture.
               </p>
               <p className="font-bold text-[#141a33]">
-                My goal is to build reliable, high-impact products and transform
-                client and user needs into seamless, high-performance software.
+                My goal is to build reliable, high-impact software and transform
+                client ideas and user needs into engaging, high-performance
+                digital products.
               </p>
             </div>
           </div>

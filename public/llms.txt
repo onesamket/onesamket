@@ -38,7 +38,7 @@ This site is the personal portfolio of Tewodros Birhanu, also known online as on
 - Survey Tracker Platform: https://survey-nine-fawn.vercel.app
 - MOE Exam Platform: https://try-exit.vercel.app
 - Geez Input: https://geez-input.vercel.app/
-- Podcasts & AI Insights Platform: https://saved-links-alpha.vercel.app/
+- AI-Powered Bookmark Manager: https://saved-links-alpha.vercel.app/
 
 ## Social Links
 

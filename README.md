@@ -17,7 +17,7 @@
 Full-Stack Developer building fast, resilient web applications and cross-platform mobile products.
 
 - **Stack Focus:** TypeScript, React, Next.js, React Native, Node.js, NestJS, and SQL.
-- **Proven Work:** Creator of Geez Input (Ethiopic developer tooling), developer of the MOE Exam Platform (accessible higher-education software), and desktop streaming apps.
+- **Proven Work:** Co-Founder of MeadMenus, Founder & Product Engineer at Siket, creator of Geez Input (Ethiopic developer tooling), developer of the MOE Exam Platform (accessible higher-education software), and AI-Powered Bookmark Manager.
 - **Location:** Addis Ababa, Ethiopia (available for remote work worldwide)
 - **Education:** B.Sc. in Information Technology – Haramaya University (2020–2024)
 - **Status:** Open to full-stack, frontend, and React Native engineering opportunities.

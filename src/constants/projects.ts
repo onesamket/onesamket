@@ -17,6 +17,22 @@ export interface OtherProject {
 
 export const featuredProjects: Array<FeaturedProject> = [
   {
+    title: 'AI-Powered Bookmark Manager',
+    category: 'Full-Stack AI Application',
+    metric: 'Smart AI search · Universal browser import · Real-time notes',
+    description:
+      'Save smarter. Find faster. Stay organized. Organize, search, and manage your bookmarks with AI. Import from any browser, add notes, and never lose track of important links again.',
+    technologies: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'AI Search',
+      'OpenAI',
+    ],
+    link: 'https://saved-links-alpha.vercel.app/',
+  },
+  {
     title: 'MOE Exam Platform',
     category: 'National Platform · Accessibility',
     metric:
@@ -50,25 +66,32 @@ export const featuredProjects: Array<FeaturedProject> = [
     ],
     link: 'https://survey-nine-fawn.vercel.app',
   },
-  {
-    title: 'Podcasts & AI Insights Platform',
-    category: 'Full-Stack Web & AI App',
-    metric:
-      'Full iTunes catalog access with smart AI summaries & offline caching',
-    description:
-      'Access iTunes podcasts, read curated technical articles, and generate instant AI summaries and insights with client-side caching for offline playback.',
-    technologies: [
-      'React',
-      'TypeScript',
-      'OpenAI API',
-      'Tailwind CSS',
-      'Web Audio',
-    ],
-    link: 'https://saved-links-alpha.vercel.app/',
-  },
 ]
 
 export const otherProjects: Array<OtherProject> = [
+  {
+    title: 'Siket Workspace',
+    category: 'Browser Workspace & Extension',
+    description:
+      'Calm, unified workspace for teams and power users. Import projects from Linear, Jira, Asana, and Shortcut, then manage boards, tasks, notes, calendar, and Siket AI without tool fatigue.',
+    technologies: ['React', 'TypeScript', 'Browser Extension', 'Node.js'],
+    link: 'https://github.com/onesamket',
+  },
+  {
+    title: 'MeadMenus Platform',
+    category: 'Hospitality Tech B2B/B2C SaaS',
+    description:
+      'AI-powered digital menus, QR ordering experiences, venue profiles, and business analytics for restaurants, hotels, and cafés.',
+    technologies: [
+      'React',
+      'Node.js',
+      'PostgreSQL',
+      'Prisma ORM',
+      'AI Digital Menus',
+      'QR Ordering',
+    ],
+    link: 'https://meadmenus.com',
+  },
   {
     title: 'Zema Music & Podcast Player',
     category: 'Desktop App',

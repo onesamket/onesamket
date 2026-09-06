@@ -1,1 +1,254 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-cream: #f5f0e0;
+  --color-cream-dark: #ede8d4;
+  --color-ink: #1a1208;
+  --color-ink-muted: #4a3f28;
+  --color-ink-faint: #8b7d60;
+  --color-amber: #c9873e;
+  --color-amber-dark: #a36830;
+  --font-sans: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Lato', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Global Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', 'Inter', system-ui, sans-serif;
+  background-color: #f5f0e0;
+  color: #1a1208;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection */
+::selection {
+  background: #1a1208;
+  color: #f5f0e0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #ede8d4; }
+::-webkit-scrollbar-thumb { background: #c9873e; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a36830; }
+
+/* Navigation animation utilities */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scribble {
+  0%   { stroke-dashoffset: 800; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes walk {
+  0%   { transform: translateX(-4px); }
+  50%  { transform: translateX(4px); }
+  100% { transform: translateX(-4px); }
+}
+@keyframes dotPulse {
+  0%, 80%, 100% { transform: scale(0.8); opacity: 0.5; }
+  40% { transform: scale(1); opacity: 1; }
+}
+@keyframes stamp-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.animate-fade-in-down { animation: fadeInDown 0.6s ease both; }
+.animate-fade-in-up { animation: fadeInUp 0.7s ease both; }
+.animate-fade-in { animation: fadeIn 0.5s ease both; }
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-walk { animation: walk 3s ease-in-out infinite; }
+.animate-stamp { animation: stamp-spin 25s linear infinite; }
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-500 { animation-delay: 0.5s; }
+
+/* Dotted border utility (Wunderbucket style) */
+.border-dotted-ink {
+  border: 2px dashed rgba(26, 18, 8, 0.2);
+}
+
+/* Ink underline link */
+.link-ink {
+  position: relative;
+  text-decoration: none;
+}
+.link-ink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #1a1208;
+  transition: width 0.25s ease;
+}
+.link-ink:hover::after { width: 100%; }
+
+/* Vintage card */
+.card-vintage {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1.5px solid rgba(26, 18, 8, 0.12);
+  border-radius: 2px;
+  box-shadow:
+    0 1px 3px rgba(26, 18, 8, 0.06),
+    0 4px 16px rgba(26, 18, 8, 0.04),
+    inset 0 0 0 1px rgba(255,255,255,0.6);
+}
+
+/* Scribble path */
+.scribble-path {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: scribble 1.8s ease forwards;
+}
+
+/* Dot loader */
+.dot-loader span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1a1208;
+  margin: 0 3px;
+  animation: dotPulse 1.2s ease-in-out infinite;
+}
+.dot-loader span:nth-child(2) { animation-delay: 0.2s; }
+.dot-loader span:nth-child(3) { animation-delay: 0.4s; }
+
+/* Timeline connector */
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 20px;
+  bottom: 0;
+  width: 1.5px;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(26,18,8,0.3) 0px,
+    rgba(26,18,8,0.3) 4px,
+    transparent 4px,
+    transparent 10px
+  );
+}
+
+/* Skill pill */
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(26, 18, 8, 0.06);
+  border: 1px solid rgba(26, 18, 8, 0.14);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #1a1208;
+  transition: background 0.18s, transform 0.18s;
+}
+.skill-pill:hover {
+  background: rgba(26, 18, 8, 0.12);
+  transform: translateY(-1px);
+}
+
+/* Nav link hover underline */
+.nav-link {
+  position: relative;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1a1208;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #c9873e;
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+
+/* Section divider */
+.divider-dotted {
+  border: none;
+  border-top: 2px dashed rgba(26, 18, 8, 0.15);
+  margin: 0;
+}
+
+/* Vintage btn */
+.btn-ink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #1a1208;
+  color: #f5f0e0;
+  border: 1.5px solid #1a1208;
+  border-radius: 2px;
+  padding: 12px 24px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s, transform 0.15s;
+}
+.btn-ink:hover {
+  background: #4a3f28;
+  transform: translateY(-1px);
+}
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #1a1208;
+  border: 1.5px solid #1a1208;
+  border-radius: 2px;
+  padding: 11px 24px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s, transform 0.15s;
+}
+.btn-outline:hover {
+  background: rgba(26, 18, 8, 0.07);
+  transform: translateY(-1px);
+}

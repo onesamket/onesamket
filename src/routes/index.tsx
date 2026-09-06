@@ -1,7 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Download, Github, Linkedin, Mail } from 'lucide-react'
-import { EditorialCV } from '@/components/editorial-cv'
-import Projects from '@/components/projects'
+import { ContactSection } from '@/components/contact-section'
+import { ExperienceTimeline } from '@/components/experience-timeline'
+import { FeaturedWork } from '@/components/featured-work'
+import { Hero } from '@/components/hero'
+import { Navbar } from '@/components/navbar'
+import { SkillsMatrix } from '@/components/skills-matrix'
 
 export const Route = createFileRoute('/')({
   component: HomePage,
@@ -9,105 +12,83 @@ export const Route = createFileRoute('/')({
 
 function HomePage() {
   return (
-    <div className="min-h-screen bg-[#edf2fc] text-[#141a33] selection:bg-[#1a3be8] selection:text-white">
-      {/* Editorial Top Utility Bar */}
-      <header className="border-b border-[#1a3be8]/15 bg-white/70 backdrop-blur-md sticky top-0 z-40">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 sm:px-8">
-          <div className="flex items-center gap-3">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
-            </span>
-            <span className="text-xs font-black uppercase tracking-wider text-[#1a3be8]">
-              Available for Full-Stack & Mobile Roles
-            </span>
+    <div
+      className="min-h-screen"
+      style={{ background: '#f5f0e0', color: '#1a1208' }}
+    >
+      {/* ── Global Navigation ── */}
+      <Navbar />
+
+      {/* ── One-Flow Sections ── */}
+      <main>
+        {/* 1. Hero */}
+        <Hero />
+
+        {/* 2. Projects / Featured Work */}
+        <FeaturedWork />
+
+        {/* 3. Work Experience */}
+        <ExperienceTimeline />
+
+        {/* 4. Skills */}
+        <SkillsMatrix />
+
+        {/* 5. Contact */}
+        <ContactSection />
+
+        {/* ── Footer ── */}
+        <footer
+          className="border-t py-10 text-center"
+          style={{
+            borderColor: 'rgba(26,18,8,0.12)',
+            background: '#ede8d4',
+          }}
+        >
+          <div className="mx-auto max-w-5xl px-5 sm:px-8">
+            {/* Wordmark */}
+            <p
+              className="mb-5"
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                fontSize: 20,
+                fontWeight: 900,
+                color: '#1a1208',
+              }}
+            >
+              TB.
+            </p>
+
+            {/* Links */}
+            <div className="mb-5 flex flex-wrap justify-center gap-x-7 gap-y-2">
+              {[
+                { label: 'Back to Top', href: '#about', onClick: () => window.scrollTo({ top: 0, behavior: 'smooth' }) },
+                { label: 'GitHub', href: 'https://github.com/onesamket' },
+                { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ln-onesamket/' },
+                { label: 'Email', href: 'mailto:onesamket@gmail.com' },
+              ].map(({ label, href, onClick }) => (
+                <a
+                  key={label}
+                  href={href}
+                  onClick={onClick}
+                  target={href.startsWith('http') ? '_blank' : undefined}
+                  rel={href.startsWith('http') ? 'noreferrer' : undefined}
+                  className="nav-link"
+                  style={{ fontSize: 11 }}
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
+
+            {/* Copyright */}
+            <p
+              className="text-[11.5px]"
+              style={{ color: '#8b7d60', fontFamily: "'Lato', sans-serif" }}
+            >
+              © {new Date().getFullYear()} Tewodros Birhanu · Full-Stack &
+              Product Engineer · Built with React, TypeScript & TanStack
+            </p>
           </div>
-
-          <div className="flex items-center gap-2 sm:gap-4">
-            <a
-              href="/docs/tewodros-birhanu-resume.pdf"
-              download
-              className="inline-flex items-center gap-1.5 rounded-full bg-[#1a3be8] px-3.5 py-1.5 text-xs font-black uppercase tracking-wider text-white transition-all hover:bg-[#132db8]"
-            >
-              <Download size={13} />
-              <span className="hidden sm:inline">Download</span> CV
-            </a>
-
-            <a
-              href="https://github.com/onesamket"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#1a3be8]/25 text-[#1a3be8] transition-colors hover:bg-[#dbe4fc]"
-            >
-              <Github size={15} />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/ln-onesamket/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#1a3be8]/25 text-[#1a3be8] transition-colors hover:bg-[#dbe4fc]"
-            >
-              <Linkedin size={15} />
-            </a>
-
-            <a
-              href="mailto:onesamket@gmail.com"
-              aria-label="Email"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#1a3be8]/25 text-[#1a3be8] transition-colors hover:bg-[#dbe4fc]"
-            >
-              <Mail size={15} />
-            </a>
-          </div>
-        </div>
-      </header>
-
-      {/* Main Content Area */}
-      <main className="mx-auto max-w-6xl px-4 py-8 sm:px-8 sm:py-12">
-        {/* Main Graphic Editorial CV Poster */}
-        <EditorialCV />
-
-        {/* Selected Work & Proof of Code Section */}
-        <Projects />
-
-        {/* Editorial Footer */}
-        <footer className="mt-16 border-t border-[#1a3be8]/20 pt-8 pb-12 text-center text-xs text-[#57648f] sm:mt-24">
-          <div className="mb-4 flex flex-wrap justify-center gap-x-6 gap-y-2">
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="font-black uppercase tracking-[0.2em] text-[#1a3be8] hover:underline"
-            >
-              Back to Top
-            </button>
-            <a
-              href="https://github.com/onesamket"
-              target="_blank"
-              rel="noreferrer"
-              className="font-black uppercase tracking-[0.2em] text-[#1a3be8] hover:underline"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://www.linkedin.com/in/ln-onesamket/"
-              target="_blank"
-              rel="noreferrer"
-              className="font-black uppercase tracking-[0.2em] text-[#1a3be8] hover:underline"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="mailto:onesamket@gmail.com"
-              className="font-black uppercase tracking-[0.2em] text-[#1a3be8] hover:underline"
-            >
-              onesamket@gmail.com
-            </a>
-          </div>
-          <p className="font-medium">
-            &copy; {new Date().getFullYear()} Tewodros Birhanu · Full-Stack
-            Developer
-          </p>
         </footer>
       </main>
     </div>
