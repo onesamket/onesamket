@@ -20,8 +20,9 @@ const AuthorSection: React.FC<AuthorSectionProps> = ({ name, avatar }) => {
             {name}
           </h3>
           <p className="mt-4 max-w-2xl text-sm font-medium leading-6 text-[#244f8f]">
-            Fullstack web and mobile application developer focused on clean
-            interfaces, reliable code, and practical product delivery.
+            Full-Stack Developer specializing in React, React Native, and
+            TypeScript. Building high-performance web applications, mobile
+            products, and Ethiopic developer tooling with measurable impact.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
             <SocialIcon

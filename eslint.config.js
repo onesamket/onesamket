@@ -4,9 +4,9 @@ export default [
   ...tanstackConfig,
   {
     rules: {
-      "import-x/order": "off",
-      "sort-imports": "off",
-      "order": "off"
+      'import-x/order': 'off',
+      'sort-imports': 'off',
+      order: 'off',
     },
   },
 ]

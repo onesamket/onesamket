@@ -1,90 +1,120 @@
-export const primaryProjects = [
+export interface FeaturedProject {
+  title: string
+  category: string
+  metric: string
+  description: string
+  technologies: Array<string>
+  link: string
+}
+
+export interface OtherProject {
+  title: string
+  category: string
+  description: string
+  technologies?: Array<string>
+  link: string
+}
+
+export const featuredProjects: Array<FeaturedProject> = [
   {
-    title: 'Survey Tracker Platform',
+    title: 'MOE Exam Platform',
+    category: 'National Platform · Accessibility',
+    metric:
+      'Built for Ethiopia Higher Education (MOE) with WCAG screen-reader inclusion',
     description:
-      'Create surveys, collect responses, and analyze results. Build forms with validation, share public links, and review submissions in one workspace.',
-    link: 'https://survey-nine-fawn.vercel.app',
-  },
-  {
-    title: 'MOE Exam Platform - Final Year Project',
-    description:
-      'Accessible, visually impaired inclusive web-based online exam platform for Ethiopia Higher Education (MOE). Designed with accessibility standards to ensure equal opportunity for all students.',
+      'Accessible, visually impaired inclusive web-based online exam platform for Ethiopian Higher Education. Designed with high-contrast accessibility standards and audio-friendly navigation to ensure equal opportunity for all students.',
+    technologies: ['React', 'TypeScript', 'WCAG Accessibility', 'Tailwind CSS'],
     link: 'https://try-exit.vercel.app',
   },
   {
-    title: 'Recipe Apps Suite',
-    description:
-      'Developed 3+ comprehensive recipe applications with advanced filtering and management.',
-    link: 'recipe-apps-suite.vercel.app',
-  },
-  {
     title: 'Geez Input',
+    category: 'Open-Source Developer Tooling',
+    metric: 'Zero runtime dependencies · Instant Latin-to-Geez phonetic engine',
     description:
-      'The input component for Ethiopic web interfaces. Type Latin, get Geez instantly with zero configuration. Seamless integration for modern web apps.',
+      'The open-source input component for Ethiopic web interfaces. Type Latin phonetically, get Geez instantly with zero configuration. Seamless integration for modern web and mobile apps.',
+    technologies: ['TypeScript', 'React', 'Web Components', 'npm package'],
     link: 'https://geez-input.vercel.app/',
   },
   {
-    title: 'Bunna Podcast Desktop App',
+    title: 'Survey Tracker Platform',
+    category: 'Full-Stack Web Application',
+    metric: 'Dynamic form schema engine with real-time response analytics',
     description:
-      'A desktop application for listening to podcasts. Built with Electron and React.',
-    link: 'https://bunna.org/',
-  },
-
-  {
-    title: 'Mezmur & Podcast Platform',
-    description:
-      'Developing a streaming platform with community features for the church. Fullstack voluntary role.',
-    link: 'mezmur-and-podcast.vercel.app',
-  },
-  {
-    title: 'Verses',
-    description:
-      'Hundreds of inspiring Bible verses to download, share on social media, use as wallpapers, and post to stories. Stay encouraged every day and spread God\'s Word.',
-    link: 'https://t.me/onesamket_7/73',
-  },
-  {
-    title: 'Zema',
-    description:
-      'A minimal music and podcast player. Clean, fast Electron app for discovering, organizing, and playing music and podcasts. Features infinite scroll search, YouTube API integration, audio/video playback, playlist management, smart shuffle, and podcast support.',
-    link: 'https://t.me/onesamket_7/74',
+      'Create surveys, collect responses, and analyze results in one workspace. Build forms with robust client-server validation, share secure public links, and inspect submissions with live analytics.',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'PostgreSQL',
+      'Prisma',
+    ],
+    link: 'https://survey-nine-fawn.vercel.app',
   },
   {
     title: 'Podcasts & AI Insights Platform',
+    category: 'Full-Stack Web & AI App',
+    metric:
+      'Full iTunes catalog access with smart AI summaries & offline caching',
     description:
-      'Access all iTunes podcasts, read developer posts and AI-written articles. Get smart AI insights, summaries, and offline cache for anytime access. Listen, read, learn, and share.',
+      'Access iTunes podcasts, read curated technical articles, and generate instant AI summaries and insights with client-side caching for offline playback.',
+    technologies: [
+      'React',
+      'TypeScript',
+      'OpenAI API',
+      'Tailwind CSS',
+      'Web Audio',
+    ],
     link: 'https://saved-links-alpha.vercel.app/',
-  },
-  {
-    title: 'Wudasie Bible App',
-    description:
-      'A multi-theme, localized, and offline-first Bible application.',
-    link: 'https://t.me/onesamket_7/87',
-  },
-  {
-    title: 'Youtube Clone',
-    description:
-      'A pixel-perfect Youtube clone featuring video playback and search functionality.',
-    link: 'youtube-six-plum.vercel.app',
   },
 ]
 
-export const technicalProjects = [
+export const otherProjects: Array<OtherProject> = [
   {
-    title: 'Game Hub UI',
+    title: 'Zema Music & Podcast Player',
+    category: 'Desktop App',
     description:
-      'Modern gaming dashboard interface developed with Next.js and Tailwind.',
-    link: '#',
+      'Minimal Electron app for discovering, organizing, and playing music and podcasts. Features infinite scroll search, audio/video playback, and smart playlists.',
+    technologies: ['Electron', 'React', 'YouTube API'],
+    link: 'https://t.me/onesamket_7/74',
   },
   {
     title: 'Geez Number Converter',
+    category: 'Open Source Library',
     description:
-      'Open source library for converting between Arabic and Ethiopian Geez numerals.',
-    link: '#',
+      'Open-source utility library for high-accuracy bidirectional conversion between Arabic and Ethiopian Geez numerals.',
+    technologies: ['TypeScript', 'npm'],
+    link: 'https://github.com/onesamket',
   },
   {
-    title: 'RN Toast Library',
+    title: 'React Native Toast Notification Library',
+    category: 'Mobile Library',
     description:
-      'Lightweight, customizable toast notification library for React Native applications.',
-    link: '#',
+      'Lightweight, highly customizable toast notification library for React Native and Expo applications with fluid animations.',
+    technologies: ['React Native', 'Expo', 'TypeScript'],
+    link: 'https://github.com/onesamket',
+  },
+  {
+    title: 'Wudasie Bible App',
+    category: 'Mobile App',
+    description:
+      'Multi-theme, localized, and offline-first mobile Bible application built for smooth daily reading.',
+    technologies: ['React Native', 'Expo', 'SQLite'],
+    link: 'https://t.me/onesamket_7/87',
+  },
+  {
+    title: 'Verses',
+    category: 'Web & Mobile',
+    description:
+      'Inspiring Scripture tool with formatted image export for social sharing, stories, and wallpapers.',
+    technologies: ['React', 'Canvas API', 'Tailwind CSS'],
+    link: 'https://t.me/onesamket_7/73',
+  },
+  {
+    title: 'Recipe Apps Suite',
+    category: 'Web App Suite',
+    description:
+      'Collection of recipe management and meal preparation applications featuring advanced search and ingredient filtering.',
+    technologies: ['React', 'Next.js', 'Tailwind CSS'],
+    link: 'https://recipe-apps-suite.vercel.app',
   },
 ]

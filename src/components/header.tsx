@@ -12,17 +12,38 @@ const Header: React.FC = () => {
           >
             <Asterisk size={44} strokeWidth={3} />
           </div>
-          <p className="mb-3 text-sm font-extrabold uppercase tracking-[0.24em] text-[#0759bd]">
-            Fullstack Web & Mobile Developer
+          <p className="mb-3 text-sm font-extrabold uppercase tracking-[0.22em] text-[#0759bd]">
+            Full-Stack Developer | React, React Native, TypeScript
           </p>
           <h1 className="max-w-4xl text-5xl font-black leading-[0.9] tracking-normal text-[#0759bd] sm:text-6xl md:text-7xl lg:text-8xl">
             Tewodros Birhanu
           </h1>
-          <p className="mt-6 max-w-2xl text-base font-medium leading-7 text-[#244f8f] md:text-lg">
-            I build clean, reliable web, desktop, and React Native products with
-            practical architecture, strong UI execution, and attention to
-            performance.
+          <p className="mt-4 text-base font-bold text-[#0759bd] md:text-lg">
+            Building fast, reliable web & mobile products with clean
+            architecture
           </p>
+
+          {/* Clean, outcome-oriented About section */}
+          <div className="mt-6 max-w-2xl space-y-3 text-base font-medium leading-7 text-[#244f8f]">
+            <p>
+              I am a Full-Stack Developer building high-performance web
+              applications and cross-platform mobile products.
+            </p>
+            <p>
+              My primary focus spans TypeScript, React, Next.js, and React
+              Native on the frontend, with Node.js, NestJS, and SQL on the
+              backend.
+            </p>
+            <p>
+              Notable work includes Ethiopic developer tooling (Geez Input),
+              accessible national higher education examination systems (MOE Exam
+              Platform), and desktop audio applications.
+            </p>
+            <p className="font-semibold text-[#073f8f]">
+              Open to full-stack, frontend, and React Native roles where clean
+              code and rapid delivery drive user impact.
+            </p>
+          </div>
         </div>
 
         <div className="w-full space-y-4 text-left md:w-80 md:pt-20">

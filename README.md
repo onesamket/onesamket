@@ -1,5 +1,6 @@
 # Tewodros Birhanu
-## 🚀 Senior Fullstack Software Developer | Web, Desktop & React Native Engineer
+
+## 🚀 Full-Stack Developer | React, React Native, TypeScript
 
 [![Website](https://img.shields.io/badge/Website-onesamket.com-blue?style=flat-square)](http://onesamket.com)
 [![Email](https://img.shields.io/badge/Email-onesamket@gmail.com-red?style=flat-square)](mailto:onesamket@gmail.com)
@@ -13,22 +14,25 @@
 
 ### 👨‍💻 About Me
 
-Passionate **Senior Fullstack Developer** with over 4 years of experience building scalable, high-performance web, desktop, and mobile applications. I love creating elegant user experiences and robust backend systems using modern technologies and best practices.
+Full-Stack Developer building fast, resilient web applications and cross-platform mobile products.
 
-- 🌍 Based in **Addis Ababa, Ethiopia**
-- 🎓 Bachelor of Science in Information Technology – Haramaya University (2020-2024)
-- 🚀 Always learning and exploring new technologies
-- 💼 Open to exciting opportunities and challenging projects
+- **Stack Focus:** TypeScript, React, Next.js, React Native, Node.js, NestJS, and SQL.
+- **Proven Work:** Creator of Geez Input (Ethiopic developer tooling), developer of the MOE Exam Platform (accessible higher-education software), and desktop streaming apps.
+- **Location:** Addis Ababa, Ethiopia (available for remote work worldwide)
+- **Education:** B.Sc. in Information Technology – Haramaya University (2020–2024)
+- **Status:** Open to full-stack, frontend, and React Native engineering opportunities.
 
 ---
 
 ### 🛠 Tech Stack
 
 #### Languages
+
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 
 #### Frontend
+
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
@@ -38,6 +42,7 @@ Passionate **Senior Fullstack Developer** with over 4 years of experience buildi
 ![Tanstack Query](https://img.shields.io/badge/Tanstack_Query-FF4154?style=flat-square&logo=react-query&logoColor=white)
 
 #### Backend
+
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white)
 ![Bun](https://img.shields.io/badge/Bun-000000?style=flat-square&logo=bun&logoColor=white)
 ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
@@ -47,6 +52,7 @@ Passionate **Senior Fullstack Developer** with over 4 years of experience buildi
 ![tRPC](https://img.shields.io/badge/tRPC-2596BE?style=flat-square&logo=trpc&logoColor=white)
 
 #### Authentication & Authorization
+
 ![Better Auth](https://img.shields.io/badge/Better_Auth-000000?style=flat-square&logo=next.js&logoColor=white)
 ![Auth.js](https://img.shields.io/badge/Auth.js-000000?style=flat-square&logo=next.js&logoColor=white)
 ![Clerk](https://img.shields.io/badge/Clerk-6C47FF?style=flat-square&logo=clerk&logoColor=white)
@@ -54,16 +60,19 @@ Passionate **Senior Fullstack Developer** with over 4 years of experience buildi
 ![OAuth](https://img.shields.io/badge/OAuth-000000?style=flat-square&logo=oauth&logoColor=white)
 
 #### Job Queues & Background Jobs
+
 ![BullMQ](https://img.shields.io/badge/BullMQ-000000?style=flat-square&logo=redis&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
 
 #### Databases
+
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
 
 #### Cloud & DevOps
+
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
@@ -73,11 +82,13 @@ Passionate **Senior Fullstack Developer** with over 4 years of experience buildi
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 
 #### WebRTC & Real-time
+
 ![WebRTC](https://img.shields.io/badge/WebRTC-333333?style=flat-square&logo=webrtc&logoColor=white)
 ![Jitsi Meet](https://img.shields.io/badge/Jitsi_Meet-000000?style=flat-square&logo=jitsi&logoColor=white)
 ![VideoSDK](https://img.shields.io/badge/VideoSDK.live-000000?style=flat-square&logo=videosdk&logoColor=white)
 
 #### Tools & Others
+
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
@@ -87,18 +98,21 @@ Passionate **Senior Fullstack Developer** with over 4 years of experience buildi
 ---
 
 ### 🎓 Education
+
 - **Bachelor of Science in Information Technology**  
   Haramaya University (2020 - 2024)
 
 ---
 
 ### 🌐 Languages
+
 - Amharic (Native)
 - English (Professional)
 
 ---
 
 ### 🎯 Interests
+
 - Music 🎵
 - Tech Podcasts & Writing 📝
 - WebRTC & Real-time Systems
@@ -109,6 +123,7 @@ Passionate **Senior Fullstack Developer** with over 4 years of experience buildi
 ---
 
 ### 🤝 Let's Connect
+
 I'm always open to collaboration, new opportunities, or just having a chat about tech. Feel free to reach out!
 
 ---

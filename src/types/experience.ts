@@ -2,6 +2,7 @@ export interface ExperienceItem {
   role: string
   company: string
   period: string
-  type: string
-  isCurrent: boolean
+  location: string
+  technologies?: Array<string>
+  highlights: Array<string>
 }

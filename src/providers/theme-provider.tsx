@@ -20,7 +20,7 @@ interface ThemeProviderProps {
 export function ThemeProvider({
   children,
   defaultTheme = 'system',
-  storageKey = 'theme'
+  storageKey = 'theme',
 }: ThemeProviderProps) {
   const [theme, setThemeState] = useState<Theme>(defaultTheme)
   const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('light')
@@ -34,7 +34,11 @@ export function ThemeProvider({
     setThemeState(currentTheme)
     setMounted(true)
 
-    if (currentTheme === 'dark' || (currentTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (
+      currentTheme === 'dark' ||
+      (currentTheme === 'system' &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
       document.documentElement.classList.add('dark')
       setResolvedTheme('dark')
     } else {
@@ -66,7 +70,11 @@ export function ThemeProvider({
     setThemeState(newTheme)
     localStorage.setItem(storageKey, newTheme)
 
-    if (newTheme === 'dark' || (newTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (
+      newTheme === 'dark' ||
+      (newTheme === 'system' &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
       document.documentElement.classList.add('dark')
       setResolvedTheme('dark')
     } else {

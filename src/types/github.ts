@@ -8,5 +8,5 @@ export interface ApiGithubContributionsResponse {
   total: {
     [year: string]: number
   }
-  contributions: ContributionDay[]
+  contributions: Array<ContributionDay>
 }

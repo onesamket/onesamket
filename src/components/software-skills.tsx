@@ -60,16 +60,14 @@ const technicalSkills = [
   },
   {
     icon: <Brain size={18} />,
-    group: 'AI & Vibe Coding',
+    group: 'AI-Assisted Development',
     skills: [
       'Cursor',
       'GitHub Copilot',
-      'v0 by Vercel',
-      'Bolt',
-      'Lovable',
       'Claude',
       'ChatGPT',
-      'AI-assisted development workflows',
+      'Automated Testing Workflows',
+      'Prompt Engineering & Code Auditing',
     ],
   },
   {

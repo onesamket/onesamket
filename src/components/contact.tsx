@@ -16,9 +16,9 @@ const Contact: React.FC = () => {
             Let&apos;s Build Something Clean
           </h2>
           <p className="mt-5 max-w-2xl text-base font-medium leading-7 text-[#244f8f]">
-            I am open to frontend, fullstack, desktop, and React Native work.
-            Send a short note with the project goal, timeline, and where you
-            need help.
+            I am open to full-stack, frontend, and React Native opportunities.
+            Send a short note with your team goals, project timeline, and where
+            you need dedicated engineering help.
           </p>
           <a
             href="mailto:onesamket@gmail.com?subject=Project%20Inquiry"

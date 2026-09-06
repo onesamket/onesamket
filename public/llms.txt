@@ -1,6 +1,6 @@
 # Tewodros Birhanu
 
-> Fullstack web, desktop, and React Native developer based in Addis Ababa, Ethiopia.
+> Full-Stack Developer specializing in React, React Native, and TypeScript based in Addis Ababa, Ethiopia.
 
 This site is the personal portfolio of Tewodros Birhanu, also known online as onesamket. It summarizes his experience, education, technical skills, selected projects, and contact links.
 
@@ -19,7 +19,7 @@ This site is the personal portfolio of Tewodros Birhanu, also known online as on
 - Name: Tewodros Birhanu
 - Alias: onesamket
 - Location: Addis Ababa, Ethiopia
-- Role: Fullstack Web and Mobile Developer
+- Role: Full-Stack Developer (Web & React Native)
 - Education: Bachelor of Science in Information Technology, Haramaya University
 - Email: onesamket@gmail.com
 
@@ -38,7 +38,6 @@ This site is the personal portfolio of Tewodros Birhanu, also known online as on
 - Survey Tracker Platform: https://survey-nine-fawn.vercel.app
 - MOE Exam Platform: https://try-exit.vercel.app
 - Geez Input: https://geez-input.vercel.app/
-- Bunna Podcast Desktop App: https://bunna.org/
 - Podcasts & AI Insights Platform: https://saved-links-alpha.vercel.app/
 
 ## Social Links
