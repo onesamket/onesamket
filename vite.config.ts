@@ -18,5 +18,14 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
+    dedupe: ['react', 'react-dom'],
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-dom/client', 'motion/react'],
+  },
+  server: {
+    headers: {
+      'Cache-Control': 'no-store',
+    },
   },
 })

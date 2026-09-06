@@ -9,6 +9,23 @@ import { routeTree } from './routeTree.gen'
 import reportWebVitals from './reportWebVitals.ts'
 import './styles.css'
 
+// Drop leftover Workbox registrations from the previous Next.js PWA.
+// Those workers intercept Vite ESM and mix React copies (invalid hook call).
+if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
+  void navigator.serviceWorker.getRegistrations().then((registrations) => {
+    for (const registration of registrations) {
+      void registration.unregister()
+    }
+  })
+}
+if (typeof caches !== 'undefined') {
+  void caches.keys().then((keys) => {
+    for (const key of keys) {
+      void caches.delete(key)
+    }
+  })
+}
+
 const queryClient = new QueryClient()
 
 const router = createRouter({
