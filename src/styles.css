@@ -18,6 +18,13 @@ html.dark {
   --badge-border: rgba(183, 212, 255, 0.22);
   --timeline-line: repeating-linear-gradient(to bottom, rgba(255,255,255,0.18) 0px, rgba(255,255,255,0.18) 4px, transparent 4px, transparent 10px);
   --divider: rgba(255, 255, 255, 0.06);
+  --pill-bg: rgba(6, 10, 22, 0.55);
+  --pill-text: rgba(226, 232, 240, 0.88);
+  --pill-line: rgba(255, 255, 255, 0.38);
+  --pill-diamond: rgba(255, 255, 255, 0.42);
+  --selection-bg: rgba(183, 212, 255, 0.28);
+  --scrollbar: rgba(183, 212, 255, 0.28);
+  --focus-ring: #b7d4ff;
   --btn: #ffffff;
   --btn-text: #0a1020;
   --btn-hover: #e8eef8;
@@ -54,6 +61,13 @@ html.light {
   --badge-border: rgba(61, 111, 214, 0.18);
   --timeline-line: repeating-linear-gradient(to bottom, rgba(15,28,55,0.12) 0px, rgba(15,28,55,0.12) 4px, transparent 4px, transparent 10px);
   --divider: rgba(15, 28, 55, 0.08);
+  --pill-bg: rgba(255, 255, 255, 0.65);
+  --pill-text: rgba(20, 36, 64, 0.82);
+  --pill-line: rgba(15, 28, 55, 0.2);
+  --pill-diamond: rgba(15, 28, 55, 0.25);
+  --selection-bg: rgba(61, 111, 214, 0.18);
+  --scrollbar: rgba(61, 111, 214, 0.2);
+  --focus-ring: #3d6fd6;
   --btn: #0b1220;
   --btn-text: #f4f7fb;
   --btn-hover: #1a2744;
@@ -79,6 +93,43 @@ html.light {
   color-scheme: light;
 }
 
+html.light .aurora-a {
+  background:
+    radial-gradient(
+      ellipse 82% 26% at 50% 48%,
+      rgba(61, 111, 214, 0.12) 0%,
+      rgba(61, 111, 214, 0.06) 14%,
+      rgba(61, 111, 214, 0.03) 32%,
+      transparent 50%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 95% 50% at 50% 62%,
+      rgba(61, 111, 214, 0.06) 0%,
+      transparent 68%
+    );
+  filter: blur(14px);
+}
+
+html.light .aurora-b {
+  background: radial-gradient(
+    ellipse 70% 36% at 50% 50%,
+    rgba(61, 111, 214, 0.08) 0%,
+    rgba(61, 111, 214, 0.03) 24%,
+    transparent 70%
+  );
+  opacity: 0.6;
+}
+
+html.light .aurora-c {
+  background: radial-gradient(
+    ellipse 65% 42% at 50% 50%,
+    rgba(61, 111, 214, 0.05) 0%,
+    transparent 70%
+  );
+  opacity: 0.3;
+}
+
 body {
   font-family: var(--font);
   background-color: var(--bg);
@@ -88,7 +139,7 @@ body {
 }
 
 ::selection {
-  background: rgba(183, 212, 255, 0.28);
+  background: var(--selection-bg);
   color: #fff;
 }
 
@@ -99,7 +150,7 @@ body {
   background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(183, 212, 255, 0.28);
+  background: var(--scrollbar);
   border-radius: 99px;
 }
 
@@ -285,8 +336,8 @@ body {
   border-radius: 99px;
   display: grid;
   place-items: center;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: var(--input-bg);
+  border: 1px solid var(--line-strong);
   color: var(--text);
   flex-shrink: 0;
 }
@@ -365,7 +416,7 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 99px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--input-bg);
   border: 1px solid var(--line);
   color: var(--text);
   cursor: pointer;
@@ -378,7 +429,7 @@ body {
   position: fixed;
   inset: 0;
   z-index: 98;
-  background: rgba(2, 4, 12, 0.62);
+  background: var(--header-scrolled);
 }
 .nav-drawer {
   display: flex;
@@ -473,7 +524,7 @@ body {
   margin-top: 18px;
   font-size: 16px;
   line-height: 1.7;
-  color: rgba(196, 210, 230, 0.72);
+  color: var(--text-muted);
   max-width: 520px;
 }
 
@@ -548,14 +599,14 @@ body {
 .about-role {
   font-size: 12px;
   font-weight: 500;
-  color: rgba(160, 178, 204, 0.7);
+  color: var(--text-faint);
   margin: 0 0 10px;
 }
 
 .about-lead {
   font-size: 15px;
   line-height: 1.7;
-  color: rgba(196, 210, 230, 0.78);
+  color: var(--text-muted);
   margin: 0 0 12px;
 }
 
@@ -568,7 +619,7 @@ body {
 .about-fact dt {
   font-size: 12px;
   font-weight: 500;
-  color: rgba(160, 178, 204, 0.55);
+  color: var(--text-faint);
   margin-bottom: 2px;
 }
 
@@ -576,7 +627,7 @@ body {
   margin: 0;
   font-size: 14px;
   font-weight: 600;
-  color: #f4f7fb;
+  color: var(--text);
 }
 
 @media (min-width: 720px) {
