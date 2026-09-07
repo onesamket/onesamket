@@ -15,23 +15,22 @@ export function ErrorState({
 }: ErrorStateProps) {
   return (
     <div
-      className={`flex min-h-[320px] flex-col items-center justify-center bg-[#f5f0e0] p-10 text-center ${className}`}
-      style={{ borderTop: '3px solid rgba(201,135,62,0.4)' }}
+      className={`flex min-h-[320px] flex-col items-center justify-center bg-[#050814] p-10 text-center ${className}`}
     >
       <div
-        className="mb-5 flex h-14 w-14 items-center justify-center rounded-sm"
-        style={{ border: '1.5px dashed rgba(26,18,8,0.25)', color: '#c9873e' }}
+        className="mb-5 flex h-14 w-14 items-center justify-center rounded-full"
+        style={{ border: '1px solid rgba(255,255,255,0.12)', color: '#b7d4ff' }}
       >
         <AlertTriangle size={26} strokeWidth={1.8} />
       </div>
 
       <p
         style={{
-          fontFamily: "'Playfair Display', serif",
           fontSize: 24,
-          fontWeight: 800,
-          color: '#1a1208',
+          fontWeight: 600,
+          color: '#f4f7fb',
           marginBottom: 10,
+          letterSpacing: '-0.02em',
         }}
       >
         {title}
@@ -39,7 +38,7 @@ export function ErrorState({
 
       <p
         className="max-w-sm text-sm leading-6"
-        style={{ color: '#4a3f28', fontFamily: "'Lato', sans-serif" }}
+        style={{ color: 'rgba(196,210,230,0.7)' }}
       >
         {message}
       </p>
@@ -47,7 +46,7 @@ export function ErrorState({
       {onRetry && (
         <button onClick={onRetry} className="btn-ink mt-7">
           <RefreshCcw size={14} />
-          Try Again
+          Try again
         </button>
       )}
     </div>
