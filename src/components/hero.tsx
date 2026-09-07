@@ -20,7 +20,7 @@ export const Hero: React.FC = () => {
   }
 
   return (
-    <section id="about" className="section section-hero" aria-label="Introduction">
+    <section id="top" className="section section-hero" aria-label="Introduction">
       <div className="aurora aurora-a" aria-hidden="true" />
       <div className="site-wrap" style={{ width: '100%', position: 'relative', zIndex: 1 }}>
         <div
@@ -36,36 +36,17 @@ export const Hero: React.FC = () => {
           </motion.div>
 
           <motion.h1
-            {...fadeUp(0.1)}
-            style={{
-              fontFamily: 'inherit',
-              fontSize: 'clamp(32px, 8.5vw, 68px)',
-              fontWeight: 500,
-              lineHeight: 1.08,
-              letterSpacing: '-0.035em',
-              color: '#f4f7fb',
-              margin: '28px 0 0',
-              maxWidth: 720,
-            }}
+            {...fadeUp(0.08)}
+            className="hero-heading"
           >
-            <span className="sr-only">
-              Tewodros Birhanu, full-stack and product engineer.{' '}
-            </span>
-            Build fast. Ship clean.
+            <span className="hero-name">Tewodros Birhanu</span>
+            <span className="hero-title">Build fast. Ship clean.</span>
           </motion.h1>
 
           <motion.p
-            {...fadeUp(0.18)}
-            style={{
-              marginTop: 18,
-              fontSize: 16,
-              lineHeight: 1.7,
-              color: 'rgba(196, 210, 230, 0.72)',
-              maxWidth: 520,
-            }}
+            {...fadeUp(0.2)}
+            className="hero-lead"
           >
-            Co-Founder of <strong style={{ color: '#f4f7fb', fontWeight: 600 }}>MeadMenus</strong>{' '}
-            and Founder at <strong style={{ color: '#f4f7fb', fontWeight: 600 }}>Siket</strong>.
             I engineer high-performance web apps, AI-powered workspaces, and
             smooth mobile experiences for startups.
           </motion.p>

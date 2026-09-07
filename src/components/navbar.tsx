@@ -3,10 +3,11 @@ import { motion, AnimatePresence } from 'motion/react'
 import { Download, X, Menu } from 'lucide-react'
 
 const NAV_LINKS = [
-  { label: 'About', href: '#about' },
+  { label: 'Home', href: '#top' },
   { label: 'Work', href: '#projects' },
   { label: 'Experience', href: '#experience' },
   { label: 'Skills', href: '#skills' },
+  { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -23,7 +24,7 @@ const LogoMark = () => (
 export const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const [active, setActive] = useState('about')
+  const [active, setActive] = useState('top')
 
   useEffect(() => {
     const onScroll = () => {
@@ -50,7 +51,7 @@ export const Navbar: React.FC = () => {
   }, [menuOpen])
 
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 900px)')
+    const mq = window.matchMedia('(min-width: 980px)')
     const closeOnDesktop = () => {
       if (mq.matches) setMenuOpen(false)
     }
@@ -73,7 +74,11 @@ export const Navbar: React.FC = () => {
           <button
             type="button"
             className="wordmark"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => {
+              const el = document.getElementById('top')
+              if (el) el.scrollIntoView({ behavior: 'smooth' })
+              else window.scrollTo({ top: 0, behavior: 'smooth' })
+            }}
             aria-label="Tewodros Birhanu — back to top"
           >
             <LogoMark />

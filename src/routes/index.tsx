@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { motion } from 'motion/react'
+import { AboutSection } from '@/components/about-section'
 import { ContactSection } from '@/components/contact-section'
 import { ExperienceTimeline } from '@/components/experience-timeline'
 import { FeaturedWork } from '@/components/featured-work'
@@ -12,10 +13,11 @@ export const Route = createFileRoute('/')({
 })
 
 const FOOTER_NAV = [
-  { label: 'About', href: '#about' },
+  { label: 'Home', href: '#top' },
   { label: 'Work', href: '#projects' },
   { label: 'Experience', href: '#experience' },
   { label: 'Skills', href: '#skills' },
+  { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -37,6 +39,7 @@ function HomePage() {
         <FeaturedWork />
         <ExperienceTimeline />
         <SkillsMatrix />
+        <AboutSection />
         <ContactSection />
 
         <footer style={{ position: 'relative', zIndex: 1 }}>

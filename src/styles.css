@@ -350,7 +350,7 @@ body {
   backdrop-filter: blur(18px);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 980px) {
   :root {
     --site-pad: 2rem;
   }
@@ -387,12 +387,174 @@ body {
   text-align: center;
   overflow: hidden;
 }
+.section-about,
 .section-work,
 .section-experience,
 .section-skills,
 .section-contact {
   background: transparent;
 }
+
+.hero-heading {
+  margin: 22px 0 0;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-name {
+  display: block;
+  margin: 0 0 10px;
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(226, 232, 240, 0.88);
+}
+
+.hero-title {
+  display: block;
+  font-family: inherit;
+  font-size: clamp(32px, 8.5vw, 68px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #f4f7fb;
+}
+
+.hero-lead {
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(196, 210, 230, 0.72);
+  max-width: 520px;
+}
+
+.about-intro {
+  display: grid;
+  gap: 1.75rem;
+  padding: 1rem;
+  background: rgba(10, 16, 32, 0.62);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(18px);
+  margin-bottom: 18px;
+}
+
+.about-photo-wrap {
+  position: relative;
+  isolation: isolate;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 240px;
+  background:
+    radial-gradient(ellipse 80% 70% at 50% 30%, rgba(126, 182, 255, 0.28), transparent 60%),
+    #0a1428;
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  object-fit: cover;
+  object-position: center 12%;
+  display: block;
+  filter: saturate(0.62) contrast(1.12) brightness(0.84) grayscale(0.18);
+  transform: scale(1.03);
+}
+
+.about-photo-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: #1c4a9a;
+  mix-blend-mode: color;
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.about-photo-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(12, 24, 52, 0.08) 0%,
+      rgba(8, 16, 36, 0.22) 55%,
+      rgba(5, 8, 20, 0.48) 100%
+    ),
+    radial-gradient(ellipse 90% 60% at 50% 0%, rgba(140, 190, 255, 0.16), transparent 58%);
+  pointer-events: none;
+}
+
+.about-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.35rem 0.4rem 0.5rem;
+  min-width: 0;
+}
+
+.about-role {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(160, 178, 204, 0.7);
+  margin: 0 0 10px;
+}
+
+.about-lead {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(196, 210, 230, 0.78);
+  margin: 0 0 12px;
+}
+
+.about-facts {
+  display: grid;
+  gap: 12px;
+  margin: 10px 0 0;
+}
+
+.about-fact dt {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(160, 178, 204, 0.55);
+  margin-bottom: 2px;
+}
+
+.about-fact dd {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f4f7fb;
+}
+
+@media (min-width: 720px) {
+  .about-intro {
+    grid-template-columns: 240px 1fr;
+    gap: 1.75rem;
+    padding: 1.1rem 1.25rem 1.1rem 1.1rem;
+    align-items: stretch;
+  }
+
+  .about-photo,
+  .about-photo-wrap {
+    min-height: 100%;
+    height: 100%;
+  }
+
+  .about-facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+}
+
+
 
 .section-head {
   display: flex;
@@ -787,7 +949,7 @@ body {
   }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 979px) {
   .nav-desktop a {
     padding: 0 10px;
     font-size: 13px;
@@ -862,6 +1024,14 @@ body {
 
   .form-card {
     padding: 1.2rem;
+  }
+
+  .about-intro {
+    padding: 0.85rem;
+  }
+
+  .hero-name {
+    letter-spacing: 0.1em;
   }
 
   .pill-badge-label {

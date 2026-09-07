@@ -129,57 +129,6 @@ export const SkillsMatrix: React.FC = () => (
           </motion.div>
         ))}
       </div>
-
-      <motion.div
-        className="card-surface"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.5, delay: 0.15 }}
-        style={{ marginTop: 12, padding: '1.5rem 1.75rem' }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '2rem 4rem',
-            alignItems: 'flex-start',
-          }}
-        >
-          <div>
-            <p className="section-kicker" style={{ marginBottom: 10 }}>
-              Languages
-            </p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-              <span className="skill-pill">Amharic — Native</span>
-              <span className="skill-pill">English — Professional</span>
-            </div>
-          </div>
-          <div>
-            <p className="section-kicker" style={{ marginBottom: 10 }}>
-              Education
-            </p>
-            <p
-              style={{
-                fontSize: 15,
-                fontWeight: 600,
-                color: '#f4f7fb',
-              }}
-            >
-              B.Sc. Information Technology
-            </p>
-            <p
-              style={{
-                fontSize: 13,
-                color: 'rgba(196,210,230,0.7)',
-                marginTop: 2,
-              }}
-            >
-              Haramaya University · 2020 – 2024
-            </p>
-          </div>
-        </div>
-      </motion.div>
     </div>
   </section>
 )
