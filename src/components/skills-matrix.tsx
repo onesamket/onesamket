@@ -101,7 +101,7 @@ export const SkillsMatrix: React.FC = () => (
                 style={{
                   fontWeight: 600,
                   fontSize: 18,
-                  color: '#f4f7fb',
+                  color: 'var(--text)',
                   margin: 0,
                   letterSpacing: '-0.02em',
                 }}
@@ -113,7 +113,7 @@ export const SkillsMatrix: React.FC = () => (
                   marginTop: 4,
                   fontSize: 13,
                   lineHeight: 1.5,
-                  color: 'rgba(160,178,204,0.62)',
+                  color: 'var(--text-faint)',
                 }}
               >
                 {group.blurb}

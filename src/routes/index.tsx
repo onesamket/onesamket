@@ -103,7 +103,7 @@ function HomePage() {
                     lineHeight: 1.6,
                   }}
                 >
-                  Full-Stack & Product Engineer. Building from Addis Ababa, shipping worldwide.
+                  Engineering elegant solutions from concept to production.
                 </p>
               </div>
 

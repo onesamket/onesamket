@@ -12,6 +12,12 @@ html.dark {
   --text-muted: rgba(196, 210, 230, 0.72);
   --text-faint: rgba(160, 178, 204, 0.52);
   --glow: #b7d4ff;
+  --glow-bg: rgba(183, 212, 255, 0.08);
+  --glow-border: rgba(183, 212, 255, 0.22);
+  --badge-bg: rgba(183, 212, 255, 0.08);
+  --badge-border: rgba(183, 212, 255, 0.22);
+  --timeline-line: repeating-linear-gradient(to bottom, rgba(255,255,255,0.18) 0px, rgba(255,255,255,0.18) 4px, transparent 4px, transparent 10px);
+  --divider: rgba(255, 255, 255, 0.06);
   --btn: #ffffff;
   --btn-text: #0a1020;
   --btn-hover: #e8eef8;
@@ -42,6 +48,12 @@ html.light {
   --text-muted: rgba(20, 36, 64, 0.68);
   --text-faint: rgba(20, 36, 64, 0.48);
   --glow: #3d6fd6;
+  --glow-bg: rgba(61, 111, 214, 0.06);
+  --glow-border: rgba(61, 111, 214, 0.18);
+  --badge-bg: rgba(61, 111, 214, 0.06);
+  --badge-border: rgba(61, 111, 214, 0.18);
+  --timeline-line: repeating-linear-gradient(to bottom, rgba(15,28,55,0.12) 0px, rgba(15,28,55,0.12) 4px, transparent 4px, transparent 10px);
+  --divider: rgba(15, 28, 55, 0.08);
   --btn: #0b1220;
   --btn-text: #f4f7fb;
   --btn-hover: #1a2744;

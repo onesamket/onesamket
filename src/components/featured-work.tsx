@@ -166,7 +166,7 @@ export const FeaturedWork: React.FC = () => {
                       style={{
                         fontSize: 12,
                         fontWeight: 500,
-                        color: 'rgba(160,178,204,0.7)',
+                        color: 'var(--text-faint)',
                         marginBottom: 8,
                       }}
                     >
@@ -177,7 +177,7 @@ export const FeaturedWork: React.FC = () => {
                         fontFamily: 'inherit',
                         fontWeight: 600,
                         fontSize: 20,
-                        color: '#f4f7fb',
+                        color: 'var(--text)',
                         lineHeight: 1.3,
                         marginBottom: 8,
                         letterSpacing: '-0.02em',
@@ -189,7 +189,7 @@ export const FeaturedWork: React.FC = () => {
                       style={{
                         fontSize: 14.5,
                         lineHeight: 1.65,
-                        color: 'rgba(196,210,230,0.7)',
+                        color: 'var(--text-muted)',
                         maxWidth: 480,
                       }}
                     >
@@ -241,7 +241,7 @@ export const FeaturedWork: React.FC = () => {
                 initial="hidden"
                 animate="visible"
                 style={{
-                  borderTop: '1px solid rgba(255,255,255,0.08)',
+                  borderTop: '1px solid var(--line)',
                 }}
               >
                 {otherProjects.map((project) => (
@@ -255,7 +255,7 @@ export const FeaturedWork: React.FC = () => {
                         style={{
                           fontSize: 12,
                           fontWeight: 500,
-                          color: 'rgba(160,178,204,0.62)',
+                          color: 'var(--text-faint)',
                         }}
                       >
                         {project.category}
@@ -265,7 +265,7 @@ export const FeaturedWork: React.FC = () => {
                           fontFamily: 'inherit',
                           fontWeight: 600,
                           fontSize: 17,
-                          color: '#f4f7fb',
+                          color: 'var(--text)',
                           marginTop: 4,
                           letterSpacing: '-0.02em',
                         }}
@@ -275,7 +275,7 @@ export const FeaturedWork: React.FC = () => {
                       <p
                         style={{
                           fontSize: 14,
-                          color: 'rgba(196,210,230,0.7)',
+                          color: 'var(--text-muted)',
                           lineHeight: 1.65,
                           marginTop: 6,
                         }}
@@ -313,7 +313,7 @@ export const FeaturedWork: React.FC = () => {
                         flexShrink: 0,
                         fontSize: 13,
                         fontWeight: 600,
-                        color: 'rgba(196,210,230,0.72)',
+                        color: 'var(--text-muted)',
                         textDecoration: 'none',
                         minHeight: 44,
                       }}

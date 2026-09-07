@@ -70,7 +70,7 @@ export const ContactSection: React.FC = () => {
                     style={{
                       fontSize: 12,
                       fontWeight: 500,
-                      color: 'rgba(160,178,204,0.72)',
+                      color: 'var(--text-faint)',
                     }}
                   >
                     {label}
@@ -96,7 +96,7 @@ export const ContactSection: React.FC = () => {
                 style={{
                   fontSize: 12,
                   fontWeight: 500,
-                  color: 'rgba(160,178,204,0.72)',
+                  color: 'var(--text-faint)',
                 }}
               >
                 Message
@@ -139,7 +139,7 @@ export const ContactSection: React.FC = () => {
               style={{
                 fontSize: 12,
                 fontWeight: 500,
-                color: 'rgba(160,178,204,0.62)',
+                color: 'var(--text-faint)',
                 marginBottom: 16,
               }}
             >
@@ -159,7 +159,7 @@ export const ContactSection: React.FC = () => {
                     alignItems: 'center',
                     gap: 12,
                     textDecoration: 'none',
-                    color: '#f4f7fb',
+                    color: 'var(--text)',
                   }}
                 >
                   <span
@@ -167,11 +167,11 @@ export const ContactSection: React.FC = () => {
                       width: 36,
                       height: 36,
                       borderRadius: 99,
-                      border: '1px solid rgba(255,255,255,0.1)',
-                      background: 'rgba(255,255,255,0.04)',
+                      border: '1px solid var(--line)',
+                      background: 'var(--input-bg)',
                       display: 'grid',
                       placeItems: 'center',
-                      color: 'rgba(196,210,230,0.78)',
+                      color: 'var(--text-muted)',
                       flexShrink: 0,
                     }}
                   >
@@ -182,7 +182,7 @@ export const ContactSection: React.FC = () => {
                       style={{
                         fontSize: 12,
                         fontWeight: 500,
-                        color: 'rgba(160,178,204,0.62)',
+                        color: 'var(--text-faint)',
                         margin: 0,
                       }}
                     >
@@ -192,7 +192,7 @@ export const ContactSection: React.FC = () => {
                       style={{
                         fontSize: 14,
                         fontWeight: 600,
-                        color: '#f4f7fb',
+                        color: 'var(--text)',
                         margin: 0,
                       }}
                     >

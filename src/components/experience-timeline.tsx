@@ -19,15 +19,15 @@ const InitialBadge: React.FC<{ company: string }> = ({ company }) => (
       width: 36,
       height: 36,
       borderRadius: 12,
-      background: 'rgba(183,212,255,0.08)',
-      border: '1px solid rgba(183,212,255,0.22)',
+      background: 'var(--badge-bg)',
+      border: '1px solid var(--badge-border)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       flexShrink: 0,
       fontWeight: 700,
       fontSize: 14,
-      color: '#b7d4ff',
+      color: 'var(--glow)',
     }}
   >
     {company.charAt(0)}
@@ -43,16 +43,16 @@ const CompanyFavicon: React.FC<{ company: string }> = ({ company }) => {
       src={`https://www.google.com/s2/favicons?domain=${domain}&sz=64`}
       alt={`${company} logo`}
       onError={() => setFailed(true)}
-      style={{
-        width: 36,
-        height: 36,
-        borderRadius: 12,
-        objectFit: 'contain',
-        border: '1px solid rgba(255,255,255,0.12)',
-        background: 'rgba(255,255,255,0.92)',
-        padding: 4,
-        flexShrink: 0,
-      }}
+        style={{
+          width: 36,
+          height: 36,
+          borderRadius: 12,
+          objectFit: 'contain',
+          border: '1px solid var(--line)',
+          background: 'var(--surface-solid)',
+          padding: 4,
+          flexShrink: 0,
+        }}
     />
   )
 }
@@ -123,8 +123,7 @@ export const ExperienceTimeline: React.FC = () => {
                         flex: 1,
                         width: 1,
                         marginTop: 8,
-                        background:
-                          'repeating-linear-gradient(to bottom, rgba(255,255,255,0.18) 0px, rgba(255,255,255,0.18) 4px, transparent 4px, transparent 10px)',
+                        background: 'var(--timeline-line)',
                         minHeight: 24,
                       }}
                     />
@@ -163,7 +162,7 @@ export const ExperienceTimeline: React.FC = () => {
                           style={{
                             fontSize: 12,
                             fontWeight: 500,
-                            color: 'rgba(160,178,204,0.62)',
+                            color: 'var(--text-faint)',
                             marginBottom: 4,
                           }}
                         >
@@ -173,7 +172,7 @@ export const ExperienceTimeline: React.FC = () => {
                           style={{
                             fontWeight: 600,
                             fontSize: 18,
-                            color: '#f4f7fb',
+                            color: 'var(--text)',
                             lineHeight: 1.25,
                             margin: 0,
                             letterSpacing: '-0.02em',
@@ -186,7 +185,7 @@ export const ExperienceTimeline: React.FC = () => {
                             marginTop: 3,
                             fontSize: 14,
                             fontWeight: 500,
-                            color: 'rgba(196,210,230,0.78)',
+                            color: 'var(--text-muted)',
                           }}
                         >
                           {exp.company}
@@ -205,7 +204,7 @@ export const ExperienceTimeline: React.FC = () => {
                           style={{
                             fontSize: 12,
                             fontWeight: 500,
-                            color: 'rgba(160,178,204,0.62)',
+                            color: 'var(--text-faint)',
                           }}
                         >
                           {exp.period}
@@ -215,7 +214,7 @@ export const ExperienceTimeline: React.FC = () => {
                           transition={{ duration: 0.22, ease: 'easeInOut' }}
                           style={{
                             fontSize: 20,
-                            color: isOpen ? '#b7d4ff' : 'rgba(160,178,204,0.62)',
+                            color: isOpen ? 'var(--glow)' : 'var(--text-faint)',
                             fontWeight: 300,
                             lineHeight: 1,
                             display: 'inline-block',
@@ -280,7 +279,7 @@ export const ExperienceTimeline: React.FC = () => {
                                   gap: 10,
                                   fontSize: 14,
                                   lineHeight: 1.7,
-                                  color: 'rgba(196,210,230,0.78)',
+                                  color: 'var(--text-muted)',
                                 }}
                               >
                                 <span
@@ -290,7 +289,7 @@ export const ExperienceTimeline: React.FC = () => {
                                     width: 5,
                                     height: 5,
                                     borderRadius: '50%',
-                                    background: '#b7d4ff',
+                                    background: 'var(--glow)',
                                   }}
                                   aria-hidden="true"
                                 />
@@ -313,7 +312,7 @@ export const ExperienceTimeline: React.FC = () => {
                                 gap: 4,
                                 fontSize: 13,
                                 fontWeight: 600,
-                                color: '#b7d4ff',
+                                color: 'var(--glow)',
                                 textDecoration: 'none',
                               }}
                             >
@@ -326,7 +325,7 @@ export const ExperienceTimeline: React.FC = () => {
                   </AnimatePresence>
 
                   {i < experiences.length - 1 && (
-                    <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }} />
+                    <div style={{ borderTop: '1px solid var(--divider)' }} />
                   )}
                 </div>
               </motion.div>
