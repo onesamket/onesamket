@@ -163,12 +163,12 @@ export const Navbar: React.FC = () => {
                     textDecoration: 'none',
                     background:
                       active === href.slice(1)
-                        ? 'rgba(255,255,255,0.06)'
+                        ? 'var(--surface)'
                         : 'transparent',
                     fontFamily: 'inherit',
                     fontSize: 18,
                     fontWeight: 600,
-                    color: '#f4f7fb',
+                    color: 'var(--text)',
                   }}
                 >
                   {label}
@@ -176,7 +176,7 @@ export const Navbar: React.FC = () => {
                     style={{
                       fontSize: 11,
                       fontWeight: 500,
-                      color: 'rgba(160,178,204,0.52)',
+                      color: 'var(--text-faint)',
                     }}
                   >
                     0{i + 1}

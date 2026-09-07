@@ -7,6 +7,7 @@ import { FeaturedWork } from '@/components/featured-work'
 import { Hero } from '@/components/hero'
 import { Navbar } from '@/components/navbar'
 import { SkillsMatrix } from '@/components/skills-matrix'
+import { ThemeToggle } from '@/components/theme-toggle'
 
 export const Route = createFileRoute('/')({
   component: HomePage,
@@ -24,6 +25,8 @@ const FOOTER_NAV = [
 const FOOTER_SOCIAL = [
   { label: 'GitHub', href: 'https://github.com/onesamket' },
   { label: 'LinkedIn', href: 'https://linkedin.com/in/ln-onesamket' },
+  { label: 'Twitter', href: 'https://twitter.com/onesamket' },
+  { label: 'Telegram', href: 'https://t.me/onesamket' },
   { label: 'Email', href: 'mailto:onesamket@gmail.com' },
 ]
 
@@ -48,7 +51,7 @@ function HomePage() {
             style={{
               paddingTop: '2.5rem',
               paddingBottom: '2.75rem',
-              borderTop: '1px solid rgba(255,255,255,0.08)',
+              borderTop: '1px solid var(--line)',
             }}
           >
             <motion.div
@@ -70,7 +73,7 @@ function HomePage() {
                   style={{
                     fontSize: 16,
                     fontWeight: 600,
-                    color: '#f4f7fb',
+                    color: 'var(--text)',
                     letterSpacing: '-0.02em',
                     lineHeight: 1,
                     marginBottom: 10,
@@ -95,7 +98,7 @@ function HomePage() {
                 <p
                   style={{
                     fontSize: 13.5,
-                    color: 'rgba(196,210,230,0.62)',
+                    color: 'var(--text-muted)',
                     maxWidth: 280,
                     lineHeight: 1.6,
                   }}
@@ -110,7 +113,7 @@ function HomePage() {
                     style={{
                       fontSize: 12,
                       fontWeight: 500,
-                      color: 'rgba(160,178,204,0.52)',
+                      color: 'var(--text-faint)',
                       marginBottom: 14,
                     }}
                   >
@@ -131,7 +134,7 @@ function HomePage() {
                     style={{
                       fontSize: 12,
                       fontWeight: 500,
-                      color: 'rgba(160,178,204,0.52)',
+                      color: 'var(--text-faint)',
                       marginBottom: 14,
                     }}
                   >
@@ -155,14 +158,27 @@ function HomePage() {
               </div>
             </motion.div>
 
-            <p
+            <div
               style={{
-                fontSize: 12.5,
-                color: 'rgba(160,178,204,0.42)',
+                display: 'flex',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '1rem',
               }}
             >
-              &copy; {new Date().getFullYear()} Tewodros Birhanu. All rights reserved.
-            </p>
+              <p
+                style={{
+                  fontSize: 12.5,
+                  color: 'var(--text-faint)',
+                }}
+              >
+                &copy; {new Date().getFullYear()} Tewodros Birhanu. All rights reserved.
+              </p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                <ThemeToggle />
+              </div>
+            </div>
           </div>
         </footer>
       </main>
