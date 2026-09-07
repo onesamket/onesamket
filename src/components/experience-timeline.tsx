@@ -64,13 +64,13 @@ const containerVariants = {
 
 const rowVariants = {
   hidden: { opacity: 0, x: -20 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] } },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const } },
 }
 
 const expandVariants = {
   hidden: { height: 0, opacity: 0 },
-  visible: { height: 'auto', opacity: 1, transition: { duration: 0.38, ease: [0.25, 0.46, 0.45, 0.94] } },
-  exit: { height: 0, opacity: 0, transition: { duration: 0.28, ease: [0.55, 0, 1, 0.45] } },
+  visible: { height: 'auto', opacity: 1, transition: { duration: 0.38, ease: [0.25, 0.46, 0.45, 0.94] as const } },
+  exit: { height: 0, opacity: 0, transition: { duration: 0.28, ease: [0.55, 0, 1, 0.45] as const } },
 }
 
 export const ExperienceTimeline: React.FC = () => {

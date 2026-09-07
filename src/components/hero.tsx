@@ -1,7 +1,7 @@
 import { PillBadge } from '@/components/pill-badge'
 import { ArrowRight } from 'lucide-react'
 import { motion } from 'motion/react'
-import React, { useState } from 'react'
+import React from 'react'
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 28 },
@@ -11,13 +11,6 @@ const fadeUp = (delay = 0) => ({
 })
 
 export const Hero: React.FC = () => {
-  const [copied, setCopied] = useState(false)
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText('onesamket@gmail.com')
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2200)
-  }
 
   return (
     <section id="top" className="section section-hero" aria-label="Introduction">

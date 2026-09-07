@@ -9,7 +9,7 @@ const cardVariants = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: i * 0.09, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.5, delay: i * 0.09, ease: [0.25, 0.46, 0.45, 0.94] as const },
   }),
 }
 
@@ -20,7 +20,7 @@ const listVariants = {
 
 const listItemVariants = {
   hidden: { opacity: 0, x: -14 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: 'easeOut' } },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: 'easeOut' as const } },
 }
 
 const THUMBS = [
@@ -157,7 +157,7 @@ export const FeaturedWork: React.FC = () => {
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.15 }}
                   whileHover={{ y: -3 }}
-                  transition={{ hover: { duration: 0.2 } }}
+                  transition={{ duration: 0.2 }}
                   className="article-card"
                 >
                   <ProjectThumb index={i} title={project.title} />
