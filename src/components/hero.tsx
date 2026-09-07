@@ -20,8 +20,9 @@ export const Hero: React.FC = () => {
   }
 
   return (
-    <section id="about" className="section section-hero">
-      <div className="site-wrap" style={{ width: '100%' }}>
+    <section id="about" className="section section-hero" aria-label="Introduction">
+      <div className="aurora aurora-a" aria-hidden="true" />
+      <div className="site-wrap" style={{ width: '100%', position: 'relative', zIndex: 1 }}>
         <div
           style={{
             display: 'flex',
@@ -38,7 +39,7 @@ export const Hero: React.FC = () => {
             {...fadeUp(0.1)}
             style={{
               fontFamily: 'inherit',
-              fontSize: 'clamp(40px, 6.2vw, 68px)',
+              fontSize: 'clamp(32px, 8.5vw, 68px)',
               fontWeight: 500,
               lineHeight: 1.08,
               letterSpacing: '-0.035em',
@@ -47,6 +48,9 @@ export const Hero: React.FC = () => {
               maxWidth: 720,
             }}
           >
+            <span className="sr-only">
+              Tewodros Birhanu, full-stack and product engineer.{' '}
+            </span>
             Build fast. Ship clean.
           </motion.h1>
 
@@ -66,17 +70,7 @@ export const Hero: React.FC = () => {
             smooth mobile experiences for startups.
           </motion.p>
 
-          <motion.div
-            {...fadeUp(0.3)}
-            style={{
-              marginTop: 32,
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: 10,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
+          <motion.div {...fadeUp(0.3)} className="hero-actions">
             <motion.a
               href="#projects"
               className="btn-ink"
@@ -96,12 +90,14 @@ export const Hero: React.FC = () => {
               Get in touch
             </motion.a>
             <motion.button
+              type="button"
               onClick={handleCopyEmail}
               className="btn-outline"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.97 }}
               transition={{ duration: 0.15 }}
               style={{ gap: 6 }}
+              aria-label="Copy email address"
             >
               {copied ? <Check size={13} /> : <Copy size={13} />}
               {copied ? 'Copied!' : 'Copy email'}

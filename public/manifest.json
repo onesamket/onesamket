@@ -1,7 +1,7 @@
 {
-  "name": "Tewodros Birhanu - Personal Website",
-  "short_name": "Tewodros",
-  "description": "Portfolio of Tewodros Birhanu, a fullstack web, desktop, and React Native developer based in Addis Ababa, Ethiopia.",
+  "name": "Tewodros Birhanu",
+  "short_name": "onesamket",
+  "description": "Portfolio of Tewodros Birhanu, a full-stack and product engineer based in Addis Ababa, Ethiopia.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#050814",

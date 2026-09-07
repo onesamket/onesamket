@@ -103,8 +103,9 @@ export const FeaturedWork: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'featured' | 'other'>('featured')
 
   return (
-    <section id="projects" className="section section-work">
-      <div className="site-wrap">
+    <section id="projects" className="section section-work" aria-labelledby="work-heading">
+      <div className="aurora aurora-b" aria-hidden="true" />
+      <div className="site-wrap" style={{ position: 'relative', zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -113,13 +114,18 @@ export const FeaturedWork: React.FC = () => {
           className="section-head"
         >
           <PillBadge>Work</PillBadge>
-          <h2 className="section-title" style={{ marginTop: 22 }}>
+          <h2 id="work-heading" className="section-title" style={{ marginTop: 22 }}>
             Selected work
           </h2>
-          <div className="tab-switch" style={{ marginTop: 22 }}>
+          <div className="tab-switch" style={{ marginTop: 22 }} role="tablist" aria-label="Project lists">
             {(['featured', 'other'] as const).map((tab) => (
               <button
                 key={tab}
+                type="button"
+                role="tab"
+                id={`tab-${tab}`}
+                aria-selected={activeTab === tab}
+                aria-controls={`panel-${tab}`}
                 onClick={() => setActiveTab(tab)}
                 className={activeTab === tab ? 'is-active' : undefined}
               >
@@ -133,6 +139,9 @@ export const FeaturedWork: React.FC = () => {
           {activeTab === 'featured' && (
             <motion.div
               key="featured"
+              id="panel-featured"
+              role="tabpanel"
+              aria-labelledby="tab-featured"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
@@ -206,6 +215,7 @@ export const FeaturedWork: React.FC = () => {
                       rel="noopener noreferrer"
                       className="btn-ink"
                       style={{ marginTop: 22, padding: '9px 16px', fontSize: 13 }}
+                      aria-label={`View project: ${project.title}`}
                     >
                       View project
                     </a>
@@ -218,6 +228,9 @@ export const FeaturedWork: React.FC = () => {
           {activeTab === 'other' && (
             <motion.div
               key="other"
+              id="panel-other"
+              role="tabpanel"
+              aria-labelledby="tab-other"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
@@ -235,14 +248,7 @@ export const FeaturedWork: React.FC = () => {
                   <motion.div
                     key={project.title}
                     variants={listItemVariants}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      justifyContent: 'space-between',
-                      gap: 16,
-                      padding: '1.35rem 0',
-                      borderBottom: '1px solid rgba(255,255,255,0.08)',
-                    }}
+                    className="other-row"
                   >
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <span
@@ -298,6 +304,7 @@ export const FeaturedWork: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ x: 3 }}
+                      aria-label={`View ${project.title}`}
                       style={{
                         marginTop: 4,
                         display: 'flex',
@@ -308,6 +315,7 @@ export const FeaturedWork: React.FC = () => {
                         fontWeight: 600,
                         color: 'rgba(196,210,230,0.72)',
                         textDecoration: 'none',
+                        minHeight: 44,
                       }}
                     >
                       View <ArrowRight size={11} />

@@ -1,6 +1,6 @@
 # Tewodros Birhanu
 
-> Full-Stack Developer specializing in React, React Native, and TypeScript based in Addis Ababa, Ethiopia.
+> Full-stack and product engineer specializing in React, React Native, and TypeScript. Based in Addis Ababa, Ethiopia.
 
 This site is the personal portfolio of Tewodros Birhanu, also known online as onesamket. It summarizes his experience, education, technical skills, selected projects, and contact links.
 
@@ -8,9 +8,9 @@ This site is the personal portfolio of Tewodros Birhanu, also known online as on
 
 - Home: https://onesamket.com/
 - About: https://onesamket.com/#about
+- Work: https://onesamket.com/#projects
 - Experience: https://onesamket.com/#experience
 - Skills: https://onesamket.com/#skills
-- Projects: https://onesamket.com/#projects
 - Contact: https://onesamket.com/#contact
 - Resume: https://onesamket.com/docs/tewodros-birhanu-resume.pdf
 
@@ -19,26 +19,28 @@ This site is the personal portfolio of Tewodros Birhanu, also known online as on
 - Name: Tewodros Birhanu
 - Alias: onesamket
 - Location: Addis Ababa, Ethiopia
-- Role: Full-Stack Developer (Web & React Native)
-- Education: Bachelor of Science in Information Technology, Haramaya University
+- Role: Full-Stack & Product Engineer
+- Companies: Co-Founder of MeadMenus; Founder of Siket
+- Education: Bachelor of Science in Information Technology, Haramaya University (2020–2024)
 - Email: onesamket@gmail.com
+- Availability: Open to freelance contracts, full-time roles, and collaborations
 
 ## Technical Focus
 
 - Languages: TypeScript, JavaScript, Node.js
-- Frontend: React, Next.js, Tailwind CSS
+- Frontend: React, Next.js, Tailwind CSS, TanStack Router, TanStack Query, Vite
 - Mobile: React Native, Expo
-- Backend: NestJS, Express, Bun, Node.js
-- Databases: SQL, NoSQL, Prisma
-- APIs: REST, GraphQL, Socket.io, WebSocket
-- Other: Electron, Docker, Git, CI/CD, WebRTC
+- Backend: Express, Node.js, PostgreSQL, Prisma, REST APIs, Supabase
+- AI: OpenAI API, RAG pipelines, LLM evaluation
+- Other: Figma, WCAG, SEO & Core Web Vitals, GitHub Actions, Vercel, Railway
 
 ## Selected Projects
 
-- Survey Tracker Platform: https://survey-nine-fawn.vercel.app
+- AI-Powered Bookmark Manager: https://saved-links-alpha.vercel.app/
 - MOE Exam Platform: https://try-exit.vercel.app
 - Geez Input: https://geez-input.vercel.app/
-- AI-Powered Bookmark Manager: https://saved-links-alpha.vercel.app/
+- Survey Tracker Platform: https://survey-nine-fawn.vercel.app
+- MeadMenus: https://meadmenus.com
 
 ## Social Links
 

@@ -67,7 +67,7 @@ const skillGroups: SkillCategory[] = [
 ]
 
 export const SkillsMatrix: React.FC = () => (
-  <section id="skills" className="section section-skills">
+  <section id="skills" className="section section-skills" aria-labelledby="skills-heading">
     <div className="site-wrap">
       <motion.div
         initial={{ opacity: 0, y: 28 }}
@@ -77,7 +77,7 @@ export const SkillsMatrix: React.FC = () => (
         className="section-head"
       >
         <PillBadge>Expertise</PillBadge>
-        <h2 className="section-title" style={{ marginTop: 22 }}>
+        <h2 id="skills-heading" className="section-title" style={{ marginTop: 22 }}>
           Skills & craft
         </h2>
       </motion.div>

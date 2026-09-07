@@ -28,16 +28,11 @@ const FOOTER_SOCIAL = [
 function HomePage() {
   return (
     <div className="page">
-      <div className="page-aurora" aria-hidden="true">
-        <div className="aurora aurora-a" />
-        <div className="aurora aurora-b" />
-        <div className="aurora aurora-c" />
-      </div>
       <div className="page-grain" aria-hidden="true" />
 
       <Navbar />
 
-      <main style={{ position: 'relative', zIndex: 1 }}>
+      <main id="main" style={{ position: 'relative', zIndex: 1 }}>
         <Hero />
         <FeaturedWork />
         <ExperienceTimeline />
@@ -107,7 +102,7 @@ function HomePage() {
               </div>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem' }}>
-                <div>
+                <nav aria-label="Footer">
                   <p
                     style={{
                       fontSize: 12,
@@ -118,15 +113,17 @@ function HomePage() {
                   >
                     Navigate
                   </p>
-                  {FOOTER_NAV.map((item) => (
-                    <div key={item.href} style={{ marginBottom: 8 }}>
-                      <a href={item.href} className="footer-link">
-                        {item.label}
-                      </a>
-                    </div>
-                  ))}
-                </div>
-                <div>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                    {FOOTER_NAV.map((item) => (
+                      <li key={item.href} style={{ marginBottom: 8 }}>
+                        <a href={item.href} className="footer-link">
+                          {item.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+                <nav aria-label="Social">
                   <p
                     style={{
                       fontSize: 12,
@@ -137,19 +134,21 @@ function HomePage() {
                   >
                     Connect
                   </p>
-                  {FOOTER_SOCIAL.map(({ label, href }) => (
-                    <div key={label} style={{ marginBottom: 8 }}>
-                      <a
-                        href={href}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="footer-link"
-                      >
-                        {label}
-                      </a>
-                    </div>
-                  ))}
-                </div>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                    {FOOTER_SOCIAL.map(({ label, href }) => (
+                      <li key={label} style={{ marginBottom: 8 }}>
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer me"
+                          className="footer-link"
+                        >
+                          {label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
               </div>
             </motion.div>
 

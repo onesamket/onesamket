@@ -77,7 +77,7 @@ export const ExperienceTimeline: React.FC = () => {
   const [expanded, setExpanded] = useState<number | null>(0)
 
   return (
-    <section id="experience" className="section section-experience">
+    <section id="experience" className="section section-experience" aria-labelledby="experience-heading">
       <div className="site-wrap">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -87,7 +87,7 @@ export const ExperienceTimeline: React.FC = () => {
           className="section-head"
         >
           <PillBadge>Career</PillBadge>
-          <h2 className="section-title" style={{ marginTop: 22 }}>
+          <h2 id="experience-heading" className="section-title" style={{ marginTop: 22 }}>
             Work experience
           </h2>
         </motion.div>
@@ -133,8 +133,11 @@ export const ExperienceTimeline: React.FC = () => {
 
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <motion.button
+                    type="button"
                     onClick={() => setExpanded(isOpen ? null : i)}
                     aria-expanded={isOpen}
+                    aria-controls={`exp-panel-${i}`}
+                    aria-label={`${exp.role} at ${exp.company}, ${exp.period}`}
                     whileHover={{ x: 2 }}
                     transition={{ duration: 0.15 }}
                     style={{
@@ -228,6 +231,7 @@ export const ExperienceTimeline: React.FC = () => {
                     {isOpen && (
                       <motion.div
                         key="panel"
+                        id={`exp-panel-${i}`}
                         variants={expandVariants}
                         initial="hidden"
                         animate="visible"

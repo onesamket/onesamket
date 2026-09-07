@@ -50,7 +50,7 @@ export const Navbar: React.FC = () => {
   }, [menuOpen])
 
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 768px)')
+    const mq = window.matchMedia('(min-width: 900px)')
     const closeOnDesktop = () => {
       if (mq.matches) setMenuOpen(false)
     }
@@ -60,6 +60,9 @@ export const Navbar: React.FC = () => {
 
   return (
     <>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
       <motion.header
         className={`site-header${scrolled ? ' is-scrolled' : ''}`}
         initial={{ y: -24, opacity: 0 }}
@@ -68,9 +71,10 @@ export const Navbar: React.FC = () => {
       >
         <div className="site-wrap site-header-inner">
           <button
+            type="button"
             className="wordmark"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            aria-label="Back to top"
+            aria-label="Tewodros Birhanu — back to top"
           >
             <LogoMark />
             onesamket
@@ -84,6 +88,7 @@ export const Navbar: React.FC = () => {
                   key={href}
                   href={href}
                   className={isActive ? 'is-active' : undefined}
+                  aria-current={isActive ? 'true' : undefined}
                 >
                   {label}
                 </a>
@@ -100,10 +105,12 @@ export const Navbar: React.FC = () => {
               Download CV
             </a>
             <button
+              type="button"
               className="nav-burger"
               onClick={() => setMenuOpen((v) => !v)}
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={menuOpen}
+              aria-controls="mobile-nav"
             >
               {menuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
@@ -126,6 +133,7 @@ export const Navbar: React.FC = () => {
             />
             <motion.nav
               key="drawer"
+              id="mobile-nav"
               className="nav-drawer"
               aria-label="Mobile"
               initial={{ opacity: 0, y: -12 }}

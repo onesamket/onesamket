@@ -26,8 +26,9 @@ export const ContactSection: React.FC = () => {
   }
 
   return (
-    <section id="contact" className="section section-contact">
-      <div className="site-wrap">
+    <section id="contact" className="section section-contact" aria-labelledby="contact-heading">
+      <div className="aurora aurora-c" aria-hidden="true" />
+      <div className="site-wrap" style={{ position: 'relative', zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +37,7 @@ export const ContactSection: React.FC = () => {
           className="section-head"
         >
           <PillBadge>Contact</PillBadge>
-          <h2 className="section-title" style={{ marginTop: 22 }}>
+          <h2 id="contact-heading" className="section-title" style={{ marginTop: 22 }}>
             Let’s build together
           </h2>
           <p className="section-lead">
@@ -45,26 +46,27 @@ export const ContactSection: React.FC = () => {
           </p>
         </motion.div>
 
-        <div style={{ display: 'grid', gap: 20 }} className="lg:grid-cols-[1fr_280px]">
+        <div className="contact-grid">
           <motion.form
             onSubmit={handleSubmit}
-            className="card-surface"
+            className="card-surface form-card"
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] }}
-            style={{ padding: '1.75rem' }}
+            noValidate={false}
           >
             <div
               style={{ display: 'grid', gap: 16, marginBottom: 16 }}
               className="sm:grid-cols-2"
             >
               {[
-                { label: 'Your name', type: 'text', value: name, onChange: setName, placeholder: 'Alex Johnson' },
-                { label: 'Email', type: 'email', value: email, onChange: setEmail, placeholder: 'alex@company.com' },
-              ].map(({ label, type, value, onChange, placeholder }) => (
-                <div key={label} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                { id: 'contact-name', label: 'Your name', type: 'text', autoComplete: 'name', value: name, onChange: setName, placeholder: 'Alex Johnson' },
+                { id: 'contact-email', label: 'Email', type: 'email', autoComplete: 'email', value: email, onChange: setEmail, placeholder: 'alex@company.com' },
+              ].map(({ id, label, type, autoComplete, value, onChange, placeholder }) => (
+                <div key={id} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                   <label
+                    htmlFor={id}
                     style={{
                       fontSize: 12,
                       fontWeight: 500,
@@ -74,7 +76,10 @@ export const ContactSection: React.FC = () => {
                     {label}
                   </label>
                   <input
+                    id={id}
+                    name={id}
                     type={type}
+                    autoComplete={autoComplete}
                     required
                     value={value}
                     onChange={(e) => onChange(e.target.value)}
@@ -87,6 +92,7 @@ export const ContactSection: React.FC = () => {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 24 }}>
               <label
+                htmlFor="contact-message"
                 style={{
                   fontSize: 12,
                   fontWeight: 500,
@@ -96,6 +102,8 @@ export const ContactSection: React.FC = () => {
                 Message
               </label>
               <textarea
+                id="contact-message"
+                name="message"
                 required
                 rows={5}
                 value={message}
