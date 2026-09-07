@@ -15,11 +15,12 @@ export function ErrorState({
 }: ErrorStateProps) {
   return (
     <div
-      className={`flex min-h-[320px] flex-col items-center justify-center bg-[#050814] p-10 text-center ${className}`}
+      className={`flex min-h-[320px] flex-col items-center justify-center p-10 text-center ${className}`}
+      style={{ backgroundColor: 'var(--bg)' }}
     >
       <div
         className="mb-5 flex h-14 w-14 items-center justify-center rounded-full"
-        style={{ border: '1px solid rgba(255,255,255,0.12)', color: '#b7d4ff' }}
+        style={{ border: '1px solid var(--line)', color: 'var(--glow)' }}
       >
         <AlertTriangle size={26} strokeWidth={1.8} />
       </div>
@@ -28,8 +29,8 @@ export function ErrorState({
         style={{
           fontSize: 24,
           fontWeight: 600,
-          color: '#f4f7fb',
-          marginBottom: 10,
+        color: 'var(--text)',
+        marginBottom: 10,
           letterSpacing: '-0.02em',
         }}
       >
@@ -38,7 +39,7 @@ export function ErrorState({
 
       <p
         className="max-w-sm text-sm leading-6"
-        style={{ color: 'rgba(196,210,230,0.7)' }}
+        style={{ color: 'var(--text-muted)' }}
       >
         {message}
       </p>

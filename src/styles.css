@@ -25,6 +25,12 @@ html.dark {
   --selection-bg: rgba(183, 212, 255, 0.28);
   --scrollbar: rgba(183, 212, 255, 0.28);
   --focus-ring: #b7d4ff;
+  --photo-bg: #0a1428;
+  --photo-overlay: #1c4a9a;
+  --photo-grad-top: rgba(12, 24, 52, 0.08);
+  --photo-grad-mid: rgba(8, 16, 36, 0.22);
+  --photo-grad-bottom: rgba(5, 8, 20, 0.48);
+  --photo-glow: rgba(140, 190, 255, 0.16);
   --btn: #ffffff;
   --btn-text: #0a1020;
   --btn-hover: #e8eef8;
@@ -68,6 +74,12 @@ html.light {
   --selection-bg: rgba(61, 111, 214, 0.18);
   --scrollbar: rgba(61, 111, 214, 0.2);
   --focus-ring: #3d6fd6;
+  --photo-bg: #e4eaf4;
+  --photo-overlay: #3d6fd6;
+  --photo-grad-top: rgba(200, 220, 255, 0.06);
+  --photo-grad-mid: rgba(180, 200, 240, 0.15);
+  --photo-grad-bottom: rgba(160, 180, 220, 0.3);
+  --photo-glow: rgba(61, 111, 214, 0.1);
   --btn: #0b1220;
   --btn-text: #f4f7fb;
   --btn-hover: #1a2744;
@@ -546,8 +558,8 @@ body {
   overflow: hidden;
   min-height: 240px;
   background:
-    radial-gradient(ellipse 80% 70% at 50% 30%, rgba(126, 182, 255, 0.28), transparent 60%),
-    #0a1428;
+    radial-gradient(ellipse 80% 70% at 50% 30%, var(--photo-glow), transparent 60%),
+    var(--photo-bg);
 }
 
 .about-photo {
@@ -561,12 +573,16 @@ body {
   transform: scale(1.03);
 }
 
+html.light .about-photo {
+  filter: saturate(0.5) contrast(1.05) brightness(0.95) grayscale(0.05);
+}
+
 .about-photo-wrap::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: #1c4a9a;
+  background: var(--photo-overlay);
   mix-blend-mode: color;
   opacity: 0.42;
   pointer-events: none;
@@ -580,11 +596,11 @@ body {
   background:
     linear-gradient(
       180deg,
-      rgba(12, 24, 52, 0.08) 0%,
-      rgba(8, 16, 36, 0.22) 55%,
-      rgba(5, 8, 20, 0.48) 100%
+      var(--photo-grad-top) 0%,
+      var(--photo-grad-mid) 55%,
+      var(--photo-grad-bottom) 100%
     ),
-    radial-gradient(ellipse 90% 60% at 50% 0%, rgba(140, 190, 255, 0.16), transparent 58%);
+    radial-gradient(ellipse 90% 60% at 50% 0%, var(--photo-glow), transparent 58%);
   pointer-events: none;
 }
 
@@ -697,7 +713,7 @@ body {
 .pill-badge-line {
   width: 64px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.38));
+  background: linear-gradient(90deg, transparent, var(--pill-line));
   position: relative;
 }
 .pill-badge-line::after {
@@ -708,11 +724,11 @@ body {
   width: 6px;
   height: 6px;
   transform: translateY(-50%) rotate(45deg);
-  border: 1px solid rgba(255, 255, 255, 0.42);
+  border: 1px solid var(--pill-diamond);
   background: transparent;
 }
 .pill-badge-line-rev {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.38), transparent);
+  background: linear-gradient(90deg, var(--pill-line), transparent);
 }
 .pill-badge-line-rev::after {
   right: auto;
@@ -722,11 +738,11 @@ body {
   padding: 7px 14px;
   border-radius: 999px;
   border: 1px solid var(--line-strong);
-  background: rgba(6, 10, 22, 0.55);
+  background: var(--pill-bg);
   backdrop-filter: blur(12px);
   font-size: 13px;
   font-weight: 500;
-  color: rgba(226, 232, 240, 0.88);
+  color: var(--pill-text);
   letter-spacing: 0.01em;
   white-space: nowrap;
 }
@@ -786,7 +802,7 @@ body {
 .skill-pill {
   display: inline-flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--input-bg);
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 5px 12px;
@@ -797,8 +813,8 @@ body {
   transition: background 0.18s, border-color 0.18s, color 0.18s, transform 0.18s;
 }
 .skill-pill:hover {
-  background: rgba(183, 212, 255, 0.08);
-  border-color: rgba(183, 212, 255, 0.28);
+  background: var(--glow-bg);
+  border-color: var(--glow-border);
   color: var(--text);
   transform: translateY(-1px);
 }
@@ -871,7 +887,7 @@ body {
   transition: background 0.18s, transform 0.15s;
 }
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--input-bg);
   transform: translateY(-1px);
 }
 
@@ -884,7 +900,7 @@ body {
 .field-input:focus-visible,
 .tab-switch button:focus-visible,
 .footer-link:focus-visible {
-  outline: 2px solid #b7d4ff;
+  outline: 2px solid var(--focus-ring);
   outline-offset: 3px;
 }
 
@@ -903,7 +919,7 @@ body {
   justify-content: space-between;
   gap: 16px;
   padding: 1.35rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--divider);
 }
 
 .contact-grid {
@@ -937,8 +953,8 @@ body {
   color: var(--text-faint);
 }
 .field-input:focus {
-  border-color: rgba(183, 212, 255, 0.45);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--glow-border);
+  background: var(--input-bg);
 }
 
 .tab-switch {
@@ -948,7 +964,7 @@ body {
   overflow: hidden;
   padding: 4px;
   gap: 2px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--input-bg);
 }
 .tab-switch button {
   padding: 7px 14px;

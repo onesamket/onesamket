@@ -17,24 +17,25 @@ export function NotFoundState({
 }: NotFoundStateProps) {
   return (
     <div
-      className={`flex min-h-[320px] flex-col items-center justify-center bg-[#050814] p-10 text-center ${className}`}
+      className={`flex min-h-[320px] flex-col items-center justify-center p-10 text-center ${className}`}
+      style={{ backgroundColor: 'var(--bg)' }}
     >
       <p
-        style={{
-          fontSize: 72,
-          fontWeight: 600,
-          color: 'rgba(255,255,255,0.08)',
-          lineHeight: 1,
-          marginBottom: 16,
-          letterSpacing: '-0.04em',
-        }}
+      style={{
+        fontSize: 72,
+        fontWeight: 600,
+        color: 'var(--divider)',
+        lineHeight: 1,
+        marginBottom: 16,
+        letterSpacing: '-0.04em',
+      }}
       >
         404
       </p>
 
       <p
-        className="mb-2 text-[12px] font-medium"
-        style={{ color: 'rgba(160,178,204,0.62)' }}
+      className="mb-2 text-[12px] font-medium"
+      style={{ color: 'var(--text-faint)' }}
       >
         Resource not found
       </p>
@@ -43,8 +44,8 @@ export function NotFoundState({
         style={{
           fontSize: 24,
           fontWeight: 600,
-          color: '#f4f7fb',
-          marginBottom: 12,
+        color: 'var(--text)',
+        marginBottom: 12,
           letterSpacing: '-0.02em',
         }}
       >
@@ -53,7 +54,7 @@ export function NotFoundState({
 
       <p
         className="max-w-sm text-sm leading-6"
-        style={{ color: 'rgba(196,210,230,0.7)' }}
+        style={{ color: 'var(--text-muted)' }}
       >
         {message}
       </p>
