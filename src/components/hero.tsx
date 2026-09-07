@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { motion } from 'motion/react'
-import { Check, Copy, ArrowRight } from 'lucide-react'
 import { PillBadge } from '@/components/pill-badge'
+import { ArrowRight } from 'lucide-react'
+import { motion } from 'motion/react'
+import React, { useState } from 'react'
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 28 },
@@ -70,19 +70,6 @@ export const Hero: React.FC = () => {
             >
               Get in touch
             </motion.a>
-            <motion.button
-              type="button"
-              onClick={handleCopyEmail}
-              className="btn-outline"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ duration: 0.15 }}
-              style={{ gap: 6 }}
-              aria-label="Copy email address"
-            >
-              {copied ? <Check size={13} /> : <Copy size={13} />}
-              {copied ? 'Copied!' : 'Copy email'}
-            </motion.button>
           </motion.div>
         </div>
       </div>

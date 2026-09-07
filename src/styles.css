@@ -91,11 +91,11 @@ body {
 }
 
 .aurora-a {
-  top: 38%;
-  height: 620px;
+  top: 18%;
+  height: 460px;
   background:
     radial-gradient(
-      ellipse 78% 28% at 50% 48%,
+      ellipse 82% 26% at 50% 48%,
       rgba(255, 255, 255, 0.95) 0%,
       rgba(200, 228, 255, 0.62) 14%,
       rgba(90, 150, 235, 0.32) 32%,
