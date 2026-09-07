@@ -42,6 +42,10 @@ function RootNotFoundComponent() {
       className="min-h-screen"
       title="Page Not Found"
       message="The page you're looking for doesn't exist or has been moved."
+      showBackButton
+      onBackClick={() => {
+        window.location.href = '/'
+      }}
     />
   )
 }

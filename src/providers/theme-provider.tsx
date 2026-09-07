@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 
-type Theme = 'light' | 'dark' | 'system'
+export type Theme = 'light' | 'dark' | 'system'
 
 interface ThemeContextType {
   theme: Theme
@@ -17,75 +17,64 @@ interface ThemeProviderProps {
   storageKey?: string
 }
 
+function resolveTheme(theme: Theme): 'light' | 'dark' {
+  if (theme === 'system') {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light'
+  }
+  return theme
+}
+
+function applyTheme(resolved: 'light' | 'dark') {
+  const root = document.documentElement
+  root.classList.toggle('dark', resolved === 'dark')
+  root.classList.toggle('light', resolved === 'light')
+  root.style.colorScheme = resolved
+  root.setAttribute('data-theme', resolved)
+
+  const meta = document.querySelector('meta[name="theme-color"]')
+  if (meta) {
+    meta.setAttribute('content', resolved === 'dark' ? '#050814' : '#eef2f8')
+  }
+}
+
 export function ThemeProvider({
   children,
-  defaultTheme = 'system',
+  defaultTheme = 'dark',
   storageKey = 'theme',
 }: ThemeProviderProps) {
   const [theme, setThemeState] = useState<Theme>(defaultTheme)
-  const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('light')
-  const [mounted, setMounted] = useState(false)
+  const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('dark')
 
   useEffect(() => {
-    // Check local storage or system preference
     const storedTheme = localStorage.getItem(storageKey) as Theme | null
     const currentTheme = storedTheme || defaultTheme
+    const resolved = resolveTheme(currentTheme)
 
     setThemeState(currentTheme)
-    setMounted(true)
+    setResolvedTheme(resolved)
+    applyTheme(resolved)
 
-    if (
-      currentTheme === 'dark' ||
-      (currentTheme === 'system' &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark')
-      setResolvedTheme('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-      setResolvedTheme('light')
+    if (currentTheme !== 'system') return
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    const handleChange = (e: MediaQueryListEvent) => {
+      const next = e.matches ? 'dark' : 'light'
+      setResolvedTheme(next)
+      applyTheme(next)
     }
 
-    // Listen for system theme changes when using system theme
-    if (currentTheme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-      const handleChange = (e: MediaQueryListEvent) => {
-        if (e.matches) {
-          document.documentElement.classList.add('dark')
-          setResolvedTheme('dark')
-        } else {
-          document.documentElement.classList.remove('dark')
-          setResolvedTheme('light')
-        }
-      }
-
-      mediaQuery.addEventListener('change', handleChange)
-      return () => {
-        mediaQuery.removeEventListener('change', handleChange)
-      }
-    }
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange)
   }, [defaultTheme, storageKey])
 
   const setTheme = (newTheme: Theme) => {
-    setThemeState(newTheme)
+    const resolved = resolveTheme(newTheme)
     localStorage.setItem(storageKey, newTheme)
-
-    if (
-      newTheme === 'dark' ||
-      (newTheme === 'system' &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark')
-      setResolvedTheme('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-      setResolvedTheme('light')
-    }
-  }
-
-  // Prevent hydration mismatch by not rendering until mounted
-  if (!mounted) {
-    return <>{children}</>
+    setThemeState(newTheme)
+    setResolvedTheme(resolved)
+    applyTheme(resolved)
   }
 
   return (

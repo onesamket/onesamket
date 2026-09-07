@@ -52,7 +52,7 @@ if (rootElement && !rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
     <StrictMode>
-      <ThemeProvider defaultTheme="system" storageKey="ui-theme">
+      <ThemeProvider defaultTheme="dark" storageKey="ui-theme">
         <RouterProvider router={router} />
       </ThemeProvider>
     </StrictMode>,

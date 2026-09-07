@@ -1,14 +1,8 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { ExternalLink, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { featuredProjects, otherProjects } from '@/constants/projects'
-
-const TagIcon = () => (
-  <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-    <path d="M1 1h5.5L13 7.5 7.5 13 1 6.5V1z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
-    <circle cx="4" cy="4" r="1.2" fill="currentColor" />
-  </svg>
-)
+import { PillBadge } from '@/components/pill-badge'
 
 const cardVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -29,75 +23,130 @@ const listItemVariants = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: 'easeOut' } },
 }
 
+const THUMBS = [
+  {
+    from: '#163a6b',
+    to: '#7eb6ff',
+    art: (
+      <svg width="88" height="88" viewBox="0 0 88 88" fill="none" aria-hidden="true">
+        <circle cx="44" cy="44" r="34" stroke="rgba(255,255,255,0.55)" strokeWidth="1.4" />
+        <circle cx="44" cy="44" r="18" stroke="rgba(255,255,255,0.85)" strokeWidth="1.6" />
+        <circle cx="44" cy="44" r="6" fill="rgba(255,255,255,0.95)" />
+      </svg>
+    ),
+  },
+  {
+    from: '#10284d',
+    to: '#4f8dff',
+    art: (
+      <svg width="120" height="88" viewBox="0 0 120 88" fill="none" aria-hidden="true">
+        <rect x="18" y="18" width="54" height="36" rx="8" fill="rgba(8,14,28,0.55)" stroke="rgba(255,255,255,0.35)" />
+        <rect x="38" y="32" width="64" height="40" rx="8" fill="rgba(8,14,28,0.75)" stroke="rgba(255,255,255,0.5)" />
+        <rect x="50" y="44" width="28" height="5" rx="2" fill="rgba(255,255,255,0.7)" />
+        <rect x="50" y="54" width="40" height="4" rx="2" fill="rgba(255,255,255,0.28)" />
+      </svg>
+    ),
+  },
+  {
+    from: '#0d2f4a',
+    to: '#5ad0c8',
+    art: (
+      <svg width="88" height="88" viewBox="0 0 88 88" fill="none" aria-hidden="true">
+        <path
+          d="M28 62 L44 22 L60 62"
+          stroke="rgba(255,255,255,0.85)"
+          strokeWidth="3.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path d="M34 48h20" stroke="rgba(255,255,255,0.45)" strokeWidth="2.4" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    from: '#14204a',
+    to: '#6b8cff',
+    art: (
+      <svg width="110" height="88" viewBox="0 0 110 88" fill="none" aria-hidden="true">
+        <rect x="16" y="18" width="78" height="52" rx="12" fill="rgba(8,14,28,0.55)" stroke="rgba(255,255,255,0.35)" />
+        <rect x="26" y="50" width="10" height="12" rx="2" fill="rgba(255,255,255,0.28)" />
+        <rect x="42" y="38" width="10" height="24" rx="2" fill="rgba(255,255,255,0.45)" />
+        <rect x="58" y="30" width="10" height="32" rx="2" fill="rgba(255,255,255,0.7)" />
+        <rect x="74" y="42" width="10" height="20" rx="2" fill="rgba(255,255,255,0.4)" />
+      </svg>
+    ),
+  },
+]
+
+const ProjectThumb: React.FC<{ index: number; title: string }> = ({
+  index,
+  title,
+}) => {
+  const thumb = THUMBS[index % THUMBS.length]
+  return (
+    <div
+      className="article-thumb"
+      style={{
+        background: `radial-gradient(ellipse 80% 70% at 50% 40%, ${thumb.to} 0%, ${thumb.from} 62%, #07101f 100%)`,
+        display: 'grid',
+        placeItems: 'center',
+      }}
+      aria-hidden="true"
+      title={title}
+    >
+      {thumb.art}
+    </div>
+  )
+}
+
 export const FeaturedWork: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'featured' | 'other'>('featured')
 
   return (
-    <section id="projects" style={{ padding: '5rem 0' }}>
-      <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 2rem' }}>
-
-        {/* ── Section header ── */}
+    <section id="projects" className="section section-work" aria-labelledby="work-heading">
+      <div className="aurora aurora-b" aria-hidden="true" />
+      <div className="site-wrap" style={{ position: 'relative', zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.55, ease: 'easeOut' }}
-          style={{ marginBottom: 48, display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: 16 }}
+          className="section-head"
         >
-          <div>
-            <p style={{
-              fontSize: 10.5, fontWeight: 900, letterSpacing: '0.28em',
-              textTransform: 'uppercase', color: '#8b7d60', marginBottom: 8,
-              fontFamily: "'Lato', sans-serif",
-            }}>
-              Portfolio
-            </p>
-            <h2 style={{
-              fontFamily: "'Playfair Display', serif", fontWeight: 900,
-              fontSize: 'clamp(30px, 4vw, 44px)', color: '#1a1208', lineHeight: 1.1,
-            }}>
-              Selected Work
-            </h2>
-          </div>
-
-          {/* Tab switcher */}
-          <div style={{ display: 'flex', borderRadius: 2, border: '1.5px solid rgba(26,18,8,0.14)', overflow: 'hidden' }}>
+          <PillBadge>Work</PillBadge>
+          <h2 id="work-heading" className="section-title" style={{ marginTop: 22 }}>
+            Selected work
+          </h2>
+          <div className="tab-switch" style={{ marginTop: 22 }} role="tablist" aria-label="Project lists">
             {(['featured', 'other'] as const).map((tab) => (
-              <motion.button
+              <button
                 key={tab}
+                type="button"
+                role="tab"
+                id={`tab-${tab}`}
+                aria-selected={activeTab === tab}
+                aria-controls={`panel-${tab}`}
                 onClick={() => setActiveTab(tab)}
-                whileTap={{ scale: 0.97 }}
-                style={{
-                  padding: '8px 18px',
-                  fontSize: 11,
-                  fontWeight: 900,
-                  letterSpacing: '0.12em',
-                  textTransform: 'uppercase',
-                  cursor: 'pointer',
-                  border: 'none',
-                  background: activeTab === tab ? '#1a1208' : 'transparent',
-                  color: activeTab === tab ? '#f5f0e0' : '#8b7d60',
-                  transition: 'background 0.22s, color 0.22s',
-                  fontFamily: "'Lato', sans-serif",
-                }}
+                className={activeTab === tab ? 'is-active' : undefined}
               >
-                {tab === 'featured' ? 'Featured' : 'More Projects'}
-              </motion.button>
+                {tab === 'featured' ? 'Featured' : 'More projects'}
+              </button>
             ))}
           </div>
         </motion.div>
 
-        {/* ── Featured grid ── */}
         <AnimatePresence mode="wait">
           {activeTab === 'featured' && (
             <motion.div
               key="featured"
+              id="panel-featured"
+              role="tabpanel"
+              aria-labelledby="tab-featured"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.3 }}
-              style={{ display: 'grid', gap: 24 }}
-              className="sm:grid-cols-2"
+              style={{ display: 'grid', gap: 18 }}
             >
               {featuredProjects.map((project, i) => (
                 <motion.article
@@ -107,67 +156,81 @@ export const FeaturedWork: React.FC = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.15 }}
-                  whileHover={{ y: -4, boxShadow: '0 8px 32px rgba(26,18,8,0.1)' }}
+                  whileHover={{ y: -3 }}
                   transition={{ hover: { duration: 0.2 } }}
-                  className="card-vintage"
-                  style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+                  className="article-card"
                 >
-                  <div>
-                    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, marginBottom: 14 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 7, color: '#8b7d60' }}>
-                        <TagIcon />
-                        <span style={{ fontSize: 10.5, fontWeight: 900, letterSpacing: '0.2em', textTransform: 'uppercase', fontFamily: "'Lato', sans-serif" }}>
-                          {project.category}
-                        </span>
-                      </div>
-                      <motion.a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.12 }}
-                        whileTap={{ scale: 0.95 }}
-                        aria-label={`Visit ${project.title}`}
-                        style={{
-                          display: 'flex', alignItems: 'center', justifyContent: 'center',
-                          width: 28, height: 28, borderRadius: 2,
-                          border: '1px solid rgba(26,18,8,0.14)',
-                          color: '#8b7d60', textDecoration: 'none',
-                        }}
-                      >
-                        <ExternalLink size={12} />
-                      </motion.a>
-                    </div>
-
-                    <h3 style={{
-                      fontFamily: "'Playfair Display', serif", fontWeight: 800,
-                      fontSize: 19, color: '#1a1208', lineHeight: 1.25, marginBottom: 7,
-                    }}>
+                  <ProjectThumb index={i} title={project.title} />
+                  <div className="article-body">
+                    <p
+                      style={{
+                        fontSize: 12,
+                        fontWeight: 500,
+                        color: 'var(--text-faint)',
+                        marginBottom: 8,
+                      }}
+                    >
+                      {project.category}
+                    </p>
+                    <h3
+                      style={{
+                        fontFamily: 'inherit',
+                        fontWeight: 600,
+                        fontSize: 20,
+                        color: 'var(--text)',
+                        lineHeight: 1.3,
+                        marginBottom: 8,
+                        letterSpacing: '-0.02em',
+                      }}
+                    >
                       {project.title}
                     </h3>
-
-                    <p style={{ fontSize: 10.5, fontWeight: 900, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#c9873e', marginBottom: 14, fontFamily: "'Lato', sans-serif" }}>
-                      {project.metric}
-                    </p>
-
-                    <p style={{ fontSize: 13.5, lineHeight: 1.7, color: '#4a3f28', fontFamily: "'Lato', sans-serif" }}>
+                    <p
+                      style={{
+                        fontSize: 14.5,
+                        lineHeight: 1.65,
+                        color: 'var(--text-muted)',
+                        maxWidth: 480,
+                      }}
+                    >
                       {project.description}
                     </p>
-                  </div>
-
-                  <div style={{ marginTop: 20, display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-                    {project.technologies.map((tech) => (
-                      <span key={tech} className="skill-pill" style={{ fontSize: 10 }}>{tech}</span>
-                    ))}
+                    <div
+                      style={{
+                        marginTop: 18,
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        gap: 6,
+                      }}
+                    >
+                      {project.technologies.slice(0, 4).map((tech) => (
+                        <span key={tech} className="skill-pill" style={{ fontSize: 11 }}>
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-ink"
+                      style={{ marginTop: 22, padding: '9px 16px', fontSize: 13 }}
+                      aria-label={`View project: ${project.title}`}
+                    >
+                      View project
+                    </a>
                   </div>
                 </motion.article>
               ))}
             </motion.div>
           )}
 
-          {/* ── Other projects list ── */}
           {activeTab === 'other' && (
             <motion.div
               key="other"
+              id="panel-other"
+              role="tabpanel"
+              aria-labelledby="tab-other"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
@@ -177,32 +240,61 @@ export const FeaturedWork: React.FC = () => {
                 variants={listVariants}
                 initial="hidden"
                 animate="visible"
-                style={{ borderTop: '1px solid rgba(26,18,8,0.08)' }}
+                style={{
+                  borderTop: '1px solid var(--line)',
+                }}
               >
                 {otherProjects.map((project) => (
                   <motion.div
                     key={project.title}
                     variants={listItemVariants}
-                    style={{
-                      display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
-                      gap: 16, padding: '1.25rem 0',
-                      borderBottom: '1px solid rgba(26,18,8,0.08)',
-                    }}
+                    className="other-row"
                   >
                     <div style={{ flex: 1, minWidth: 0 }}>
-                      <span style={{ fontSize: 10, fontWeight: 900, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#8b7d60', fontFamily: "'Lato', sans-serif" }}>
+                      <span
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 500,
+                          color: 'var(--text-faint)',
+                        }}
+                      >
                         {project.category}
                       </span>
-                      <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 17, color: '#1a1208', marginTop: 2 }}>
+                      <h3
+                        style={{
+                          fontFamily: 'inherit',
+                          fontWeight: 600,
+                          fontSize: 17,
+                          color: 'var(--text)',
+                          marginTop: 4,
+                          letterSpacing: '-0.02em',
+                        }}
+                      >
                         {project.title}
                       </h3>
-                      <p style={{ fontSize: 13, color: '#4a3f28', lineHeight: 1.7, marginTop: 4, fontFamily: "'Lato', sans-serif" }}>
+                      <p
+                        style={{
+                          fontSize: 14,
+                          color: 'var(--text-muted)',
+                          lineHeight: 1.65,
+                          marginTop: 6,
+                        }}
+                      >
                         {project.description}
                       </p>
                       {project.technologies && (
-                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 8 }}>
+                        <div
+                          style={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            gap: 6,
+                            marginTop: 10,
+                          }}
+                        >
                           {project.technologies.map((t) => (
-                            <span key={t} className="skill-pill" style={{ fontSize: 10 }}>{t}</span>
+                            <span key={t} className="skill-pill" style={{ fontSize: 11 }}>
+                              {t}
+                            </span>
                           ))}
                         </div>
                       )}
@@ -212,10 +304,18 @@ export const FeaturedWork: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ x: 3 }}
+                      aria-label={`View ${project.title}`}
                       style={{
-                        marginTop: 4, display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0,
-                        fontSize: 11.5, fontWeight: 900, letterSpacing: '0.12em',
-                        textTransform: 'uppercase', color: '#8b7d60', textDecoration: 'none',
+                        marginTop: 4,
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 4,
+                        flexShrink: 0,
+                        fontSize: 13,
+                        fontWeight: 600,
+                        color: 'var(--text-muted)',
+                        textDecoration: 'none',
+                        minHeight: 44,
                       }}
                     >
                       View <ArrowRight size={11} />
@@ -226,15 +326,6 @@ export const FeaturedWork: React.FC = () => {
             </motion.div>
           )}
         </AnimatePresence>
-
-        <motion.hr
-          className="divider-dotted"
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
-          style={{ marginTop: '4rem', transformOrigin: 'left' }}
-        />
       </div>
     </section>
   )
